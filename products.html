@@ -435,38 +435,55 @@
             <span
               class="block mb-3 text-[10px]
                      font-mono tracking-widest
-                     text-slate uppercase">
+                     text-white dark:text-white uppercase">
               Select Equipment
             </span>
 
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2" role="tablist" aria-label="Equipment Selector">
 
               <button
                 type="button"
-                class="px-4 py-3 text-xs font-bold
-                       border border-amber-500
-                       bg-amber-500 text-slate">
-                Generators
+                id="hero-tab-generators"
+                data-equipment-target="generator-range-section"
+                aria-selected="false"
+                class="equipment-selector-btn
+                       px-4 py-3 text-xs font-bold
+                       border border-slate-700
+                       text-slate-300
+                       hover:border-amber-500
+                       hover:text-amber-400
+                       cursor-pointer transition-all duration-300">
+                <i class="fa-solid fa-bolt mr-1"></i> Generators
               </button>
 
               <button
                 type="button"
-                class="px-4 py-3 text-xs font-bold
+                id="hero-tab-inverters"
+                data-equipment-target="inverter-systems-section"
+                aria-selected="false"
+                class="equipment-selector-btn
+                       px-4 py-3 text-xs font-bold
                        border border-slate-700
                        text-slate-300
                        hover:border-amber-500
-                       hover:text-amber-400 transition">
-                Inverters
+                       hover:text-amber-400
+                       cursor-pointer transition-all duration-300">
+                <i class="fa-solid fa-microchip mr-1"></i> Inverters
               </button>
 
               <button
                 type="button"
-                class="px-4 py-3 text-xs font-bold
+                id="hero-tab-batteries"
+                data-equipment-target="battery-matching-section"
+                aria-selected="false"
+                class="equipment-selector-btn
+                       px-4 py-3 text-xs font-bold
                        border border-slate-700
                        text-slate-300
                        hover:border-amber-500
-                       hover:text-amber-400 transition">
-                Batteries
+                       hover:text-amber-400
+                       cursor-pointer transition-all duration-300">
+                <i class="fa-solid fa-car-battery mr-1"></i> Batteries
               </button>
 
             </div>
@@ -1529,7 +1546,7 @@
                        uppercase
                        tracking-wide
                        text-slate-500">
-                SMALL BUSINESS
+                 BUSINESS
               </span>
 
             </button>
@@ -2329,7 +2346,7 @@
          SECTION 04 — INVERTER SYSTEMS
          Inverter + Animated Power-Flow Visualization (Open Visual Nodes)
          ========================================================================= -->
-    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+    <section id="inverter-systems-section" class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Header & Segment Toggle -->
@@ -2342,10 +2359,10 @@
           </div>
 
           <!-- Segment Toggle Buttons -->
-          <div class="flex items-center p-1 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-xs font-mono">
-            <button type="button" data-inverter-seg="home" class="inverter-segment-btn px-4 py-2 rounded-lg bg-amber-500 text-slate-950 font-bold transition-all focus:outline-none">HOME</button>
-            <button type="button" data-inverter-seg="shop" class="inverter-segment-btn px-4 py-2 rounded-lg text-slate-700 dark:text-slate-300 transition-all focus:outline-none">SHOP</button>
-            <button type="button" data-inverter-seg="office" class="inverter-segment-btn px-4 py-2 rounded-lg text-slate-700 dark:text-slate-300 transition-all focus:outline-none">OFFICE</button>
+          <div class="flex items-center p-1.5 rounded-xl bg-slate-200/90 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-xs font-mono gap-1" role="tablist" aria-label="Inverter Application Segment">
+            <button type="button" data-inverter-seg="home" aria-selected="true" class="inverter-segment-btn active px-4 py-2 rounded-lg font-bold transition-all focus:outline-none">HOME</button>
+            <button type="button" data-inverter-seg="shop" aria-selected="false" class="inverter-segment-btn px-4 py-2 rounded-lg font-bold transition-all focus:outline-none">SHOP</button>
+            <button type="button" data-inverter-seg="office" aria-selected="false" class="inverter-segment-btn px-4 py-2 rounded-lg font-bold transition-all focus:outline-none">OFFICE</button>
           </div>
         </div>
 
@@ -2423,7 +2440,7 @@
          SECTION 05 — BATTERY MATCHING
          Battery Chemistry Configuration (3 Horizontal Technical Rows - No Cards)
          ========================================================================= -->
-    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+    <section id="battery-matching-section" class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Header -->

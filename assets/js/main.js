@@ -141,9 +141,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileDrawer = document.getElementById('mobile-drawer');
   const mobileMenuIcon = document.getElementById('mobile-menu-icon');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileHomeDropdownBtn = document.getElementById('mobile-home-dropdown-btn');
+  const mobileHomeDropdownList = document.getElementById('mobile-home-dropdown-list');
+  const mobileHomeChevron = document.getElementById('mobile-home-chevron');
+
+  function resetMobileHomeDropdown() {
+    if (mobileHomeDropdownList) {
+      mobileHomeDropdownList.classList.add('hidden');
+    }
+    if (mobileHomeChevron) {
+      mobileHomeChevron.classList.remove('rotate-180');
+    }
+    if (mobileHomeDropdownBtn) {
+      mobileHomeDropdownBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function toggleMobileHomeDropdown() {
+    if (!mobileHomeDropdownList) return;
+    const isHidden = mobileHomeDropdownList.classList.contains('hidden');
+    if (isHidden) {
+      mobileHomeDropdownList.classList.remove('hidden');
+      if (mobileHomeChevron) mobileHomeChevron.classList.add('rotate-180');
+      if (mobileHomeDropdownBtn) mobileHomeDropdownBtn.setAttribute('aria-expanded', 'true');
+    } else {
+      resetMobileHomeDropdown();
+    }
+  }
 
   function openMobileMenu() {
     if (!mobileDrawer) return;
+    // Always ensure Home dropdown starts CLOSED when opening mobile menu
+    resetMobileHomeDropdown();
     mobileDrawer.classList.add('open');
     document.documentElement.classList.add('menu-open');
     document.body.classList.add('menu-open', 'overflow-hidden');
@@ -158,6 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('menu-open', 'overflow-hidden');
     if (mobileMenuIcon) mobileMenuIcon.className = 'fa-solid fa-bars text-lg';
     if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    // Always reset Home dropdown to CLOSED when mobile menu closes
+    resetMobileHomeDropdown();
   }
 
   function toggleMobileMenu() {
@@ -177,8 +208,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Handle Mobile Home Accordion toggle
+  if (mobileHomeDropdownBtn) {
+    mobileHomeDropdownBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMobileHomeDropdown();
+    });
+  }
+
+  // Close mobile drawer and reset dropdown when selecting any link
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
+      resetMobileHomeDropdown();
       closeMobileMenu();
     });
   });
@@ -198,39 +240,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile Dropdown Accordion
-  const mobileHomeDropdownBtn = document.getElementById('mobile-home-dropdown-btn');
-  const mobileHomeDropdownList = document.getElementById('mobile-home-dropdown-list');
-  const mobileHomeChevron = document.getElementById('mobile-home-chevron');
-
-  if (mobileHomeDropdownBtn && mobileHomeDropdownList) {
-    mobileHomeDropdownBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isHidden = mobileHomeDropdownList.classList.contains('hidden');
-      if (isHidden) {
-        mobileHomeDropdownList.classList.remove('hidden');
-        if (mobileHomeChevron) mobileHomeChevron.classList.add('rotate-180');
-      } else {
-        mobileHomeDropdownList.classList.add('hidden');
-        if (mobileHomeChevron) mobileHomeChevron.classList.remove('rotate-180');
-      }
-    });
-  }
-
-  // Highlight Active Link in Mobile Menu
+  // Highlight Active Link in Mobile Menu (without auto-expanding Home dropdown)
   const currentPageFile = window.location.pathname.split('/').pop() || 'index.html';
   mobileNavLinks.forEach(link => {
     const linkHref = link.getAttribute('href');
     if (linkHref && (linkHref === currentPageFile || (currentPageFile === '' && linkHref === 'index.html'))) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
-      const parentDropdown = link.closest('#mobile-home-dropdown-list');
-      if (parentDropdown) {
-        parentDropdown.classList.remove('hidden');
-        if (mobileHomeChevron) mobileHomeChevron.classList.add('rotate-180');
-      }
+      // Keep Home dropdown closed by default even if active link is Home 1 / Home 2
     }
   });
+
+  // Ensure Home dropdown starts in closed state on initial load
+  resetMobileHomeDropdown();
 
   // =========================================================================
   // 5. PRODUCT CAPACITY EXPLORER (Home 1 Interactive Selector)
@@ -918,6 +940,62 @@ document.addEventListener('DOMContentLoaded', () => {
   // 11. PRODUCTS PAGE INTERACTIVE ENGINES
   // =========================================================================
 
+  // 0. Hero Equipment Selector Switcher (Generators / Inverters / Batteries)
+  const equipmentSelectorBtns = document.querySelectorAll('.equipment-selector-btn');
+  if (equipmentSelectorBtns.length > 0) {
+    function setActiveEquipmentBtn(targetBtn) {
+      equipmentSelectorBtns.forEach(btn => {
+        const isCurrent = (btn === targetBtn && targetBtn !== null);
+        btn.setAttribute('aria-selected', isCurrent ? 'true' : 'false');
+        if (isCurrent) {
+          btn.classList.add('active', 'border-amber-500', 'bg-amber-500', 'text-slate-950');
+          btn.classList.remove('border-slate-700', 'text-slate-300', 'bg-transparent');
+        } else {
+          btn.classList.remove('active', 'border-amber-500', 'bg-amber-500', 'text-slate-950');
+          btn.classList.add('border-slate-700', 'text-slate-300', 'bg-transparent');
+        }
+      });
+    }
+
+    equipmentSelectorBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = btn.getAttribute('data-equipment-target');
+        if (!targetId) return;
+
+        setActiveEquipmentBtn(btn);
+
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          const header = document.getElementById('main-header');
+          const headerOffset = header ? header.offsetHeight + 16 : 80;
+          const elementPosition = targetSection.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+
+          // Momentary visual feedback pulse on target section
+          targetSection.classList.remove('section-highlight-pulse');
+          void targetSection.offsetWidth;
+          targetSection.classList.add('section-highlight-pulse');
+          setTimeout(() => {
+            targetSection.classList.remove('section-highlight-pulse');
+          }, 1800);
+        }
+      });
+    });
+
+    // When scrolled back to top of the page (Hero area), unhighlight all selector buttons
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < 350) {
+        setActiveEquipmentBtn(null);
+      }
+    }, { passive: true });
+  }
+
   // A. Product Discovery Selector (Section 02)
   const discoveryRows = document.querySelectorAll('.product-discovery-row');
   const discoveryCapacityBadge = document.getElementById('discovery-capacity-badge');
@@ -1073,17 +1151,18 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   inverterSegmentBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       const seg = btn.getAttribute('data-inverter-seg') || 'home';
       const data = inverterData[seg];
       if (!data) return;
 
       inverterSegmentBtns.forEach(b => {
-        b.classList.remove('bg-amber-500', 'text-slate-950', 'font-bold');
-        b.classList.add('bg-slate-900', 'text-slate-300');
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
       });
-      btn.classList.add('bg-amber-500', 'text-slate-950', 'font-bold');
-      btn.classList.remove('bg-slate-900', 'text-slate-300');
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
 
       if (inverterRatingText) inverterRatingText.textContent = data.rating;
       if (inverterBatteryText) inverterBatteryText.textContent = data.battery;
