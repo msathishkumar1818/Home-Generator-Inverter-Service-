@@ -335,20 +335,79 @@
         </div>
 
         <!-- Technical HUD Framing Footer Strip -->
-        <div class="w-full max-w-4xl pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-slate-400 gap-3">
-          <div class="flex items-center space-x-2 rtl:space-x-reverse text-left rtl:text-right">
-            <i class="fa-solid fa-layer-group text-amber-500"></i>
-            <span class="font-bold text-slate-200">POWER BACKUP</span>
-            <span class="text-white">—</span>
-            <span class="text-white">DESIGNED AROUND YOUR EXACT LOAD</span>
-          </div>
-          <div class="flex items-center space-x-4 rtl:space-x-reverse">
-            <span class="text-white">CPCB-II Silenced</span>
-            <span class="text-white">•</span>
-            <span class="text-white">Pure Sine Wave</span>
-            <span class="text-white">•</span>
-            <span class="text-white">&lt; 45 Min SLA</span>
-          </div>
+<div
+  class="w-full max-w-4xl
+         pt-6
+         border-t border-slate-800/80
+         flex flex-col
+         sm:flex-row
+         sm:items-center
+         justify-between
+         gap-3 sm:gap-8 lg:gap-12
+         text-xs
+         font-mono
+         text-slate-400"
+>
+
+  <!-- Left Content -->
+  <div
+    class="flex items-center
+           shrink-0
+           space-x-2
+           rtl:space-x-reverse
+           text-left rtl:text-right"
+  >
+    <i class="fa-solid fa-layer-group text-amber-500"></i>
+
+    <span class="font-bold text-slate-200 whitespace-nowrap">
+      POWER BACKUP
+    </span>
+
+    <span class="text-white shrink-0">
+      —
+    </span>
+
+    <span class="text-white whitespace-nowrap">
+      DESIGNED AROUND YOUR EXACT LOAD
+    </span>
+  </div>
+
+
+  <!-- Right Content -->
+  <div
+    class="flex items-center
+           justify-center sm:justify-end
+           flex-nowrap
+           gap-1.5 sm:gap-3 lg:gap-4
+           whitespace-nowrap
+           w-full sm:w-auto
+           overflow-hidden
+           shrink-0"
+  >
+
+    <span class="text-white text-[8px] sm:text-xs">
+      CPCB-II Silenced
+    </span>
+
+    <span class="text-white text-[8px] sm:text-xs">
+      •
+    </span>
+
+    <span class="text-white text-[8px] sm:text-xs">
+      Pure Sine Wave
+    </span>
+
+    <span class="text-white text-[8px] sm:text-xs">
+      •
+    </span>
+
+    <span class="text-white text-[8px] sm:text-xs">
+      &lt; 45 Min SLA
+    </span>
+
+  </div>
+
+</div>
         </div>
 
       </div>
@@ -526,17 +585,17 @@
         <div class="bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xl">
           
           <!-- Comparison Column Headers -->
-          <div class="grid grid-cols-12 bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 py-4 px-4 sm:px-6 text-xs font-mono font-bold uppercase tracking-wider">
-            <div class="col-span-5 text-black dark:text-white flex items-center space-x-2 rtl:space-x-reverse">
-              <i class="fa-solid fa-gears text-amber-500"></i>
-              <span>GENERATOR SYSTEMS</span>
+          <div class="grid grid-cols-[1fr_auto_1fr] md:grid-cols-12 items-center bg-slate-100 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 py-3.5 px-3 sm:px-6 text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider gap-2 md:gap-0">
+            <div class="md:col-span-5 text-black dark:text-white flex items-center space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
+              <i class="fa-solid fa-gears text-amber-500 text-xs sm:text-sm flex-shrink-0"></i>
+              <span class="truncate sm:overflow-visible">GENERATOR SYSTEMS</span>
             </div>
-            <div class="col-span-2 text-center text-amber-500">
+            <div class="md:col-span-2 text-center text-amber-500 px-1 sm:px-2 flex-shrink-0">
               <span>PARAMETER</span>
             </div>
-            <div class="col-span-5 text-right rtl:text-left text-black dark:text-white flex items-center justify-end rtl:justify-start space-x-2 rtl:space-x-reverse">
-              <span>INVERTER + BATTERY</span>
-              <i class="fa-solid fa-car-battery text-amber-500"></i>
+            <div class="md:col-span-5 text-right rtl:text-left text-black dark:text-white flex items-center justify-end rtl:justify-start space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
+              <span class="truncate sm:overflow-visible">INVERTER + BATTERY</span>
+              <i class="fa-solid fa-car-battery text-amber-500 text-xs sm:text-sm flex-shrink-0"></i>
             </div>
           </div>
 
@@ -544,104 +603,116 @@
           <div class="divide-y divide-slate-200 dark:divide-slate-800 text-xs sm:text-sm">
             
             <!-- Row 1: LOAD -->
-            <div class="decision-row grid grid-cols-12 py-4 px-4 sm:px-6 items-center cursor-pointer transition-colors" data-decision-param="LOAD">
-              <div class="col-span-5 text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-black dark:text-white block sm:inline">High &amp; Inductive Surges</span>
-                <span class="text-xs text-black dark:text-white block">Handles compressors, heavy pumps, 3-phase commercial motors</span>
+            <div class="decision-row py-3 sm:py-4 px-3 sm:px-6 grid grid-cols-[1fr_auto_1fr] md:grid-cols-12 items-center gap-2 sm:gap-4 md:gap-0 cursor-pointer transition-colors hover:bg-amber-500/5 active:bg-amber-500/10" data-decision-param="LOAD">
+              <div class="md:col-span-5 text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">High &amp; Inductive Surges</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Handles compressors, heavy pumps, 3-phase commercial motors</span>
               </div>
-              <div class="col-span-2 text-center">
-                <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-xs">LOAD</span>
+              <div class="md:col-span-2 text-center px-1 sm:px-2 flex justify-center items-center flex-shrink-0">
+                <span class="px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-[9px] sm:text-xs whitespace-nowrap leading-none tracking-tight sm:tracking-normal">
+                  LOAD
+                </span>
               </div>
-              <div class="col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-black dark:text-white block sm:inline">Essential &amp; IT Sensitive</span>
-                <span class="text-xs text-black dark:text-white block">Pure sine wave for electronics, lights, fans, workstation PCs</span>
+              <div class="md:col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">Essential &amp; IT Sensitive</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Pure sine wave for electronics, lights, fans, workstation PCs</span>
               </div>
             </div>
 
             <!-- Row 2: BACKUP TIME -->
-            <div class="decision-row grid grid-cols-12 py-4 px-4 sm:px-6 items-center cursor-pointer transition-colors" data-decision-param="BACKUP TIME">
-              <div class="col-span-5 text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-black dark:text-white block sm:inline">Continuous Indefinite</span>
-                <span class="text-xs text-black dark:text-white block">Runs non-stop as long as fuel is refilled in tank</span>
+            <div class="decision-row py-3 sm:py-4 px-3 sm:px-6 grid grid-cols-[1fr_auto_1fr] md:grid-cols-12 items-center gap-2 sm:gap-4 md:gap-0 cursor-pointer transition-colors hover:bg-amber-500/5 active:bg-amber-500/10" data-decision-param="BACKUP TIME">
+              <div class="md:col-span-5 text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">Continuous Indefinite</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Runs non-stop as long as fuel is refilled in tank</span>
               </div>
-              <div class="col-span-2 text-center">
-                <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-xs">BACKUP TIME</span>
+              <div class="md:col-span-2 text-center px-1 sm:px-2 flex justify-center items-center flex-shrink-0">
+                <span class="px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-[9px] sm:text-xs whitespace-nowrap leading-none tracking-tight sm:tracking-normal">
+                  BACKUP TIME
+                </span>
               </div>
-              <div class="col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-black dark:text-white block sm:inline">4 – 16 Hours</span>
-                <span class="text-xs text-black dark:text-white block">Dependent on battery Ah bank rating &amp; discharge rate</span>
+              <div class="md:col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">4 – 16 Hours</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Dependent on battery Ah bank rating &amp; discharge rate</span>
               </div>
             </div>
 
             <!-- Row 3: NOISE -->
-            <div class="decision-row grid grid-cols-12 py-4 px-4 sm:px-6 items-center cursor-pointer transition-colors" data-decision-param="NOISE">
-              <div class="col-span-5 text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-black dark:text-white block sm:inline">58 – 68 dBA Acoustic</span>
-                <span class="text-xs text-black dark:text-white block">Silenced CPCB-II canopy for outdoor terrace / ground</span>
+            <div class="decision-row py-3 sm:py-4 px-3 sm:px-6 grid grid-cols-[1fr_auto_1fr] md:grid-cols-12 items-center gap-2 sm:gap-4 md:gap-0 cursor-pointer transition-colors hover:bg-amber-500/5 active:bg-amber-500/10" data-decision-param="NOISE">
+              <div class="md:col-span-5 text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">58 – 68 dBA Acoustic</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Silenced CPCB-II canopy for outdoor terrace / ground</span>
               </div>
-              <div class="col-span-2 text-center">
-                <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-xs">NOISE</span>
+              <div class="md:col-span-2 text-center px-1 sm:px-2 flex justify-center items-center flex-shrink-0">
+                <span class="px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-[9px] sm:text-xs whitespace-nowrap leading-none tracking-tight sm:tracking-normal">
+                  NOISE
+                </span>
               </div>
-              <div class="col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-emerald-600 dark:text-emerald-400 block sm:inline">0 dBA Absolute Silence</span>
-                <span class="text-xs text-black dark:text-white block">Solid-state electronics safe inside bedrooms &amp; offices</span>
+              <div class="md:col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-emerald-600 dark:text-emerald-400 block text-[11px] sm:text-sm leading-tight sm:leading-normal">0 dBA Absolute Silence</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Solid-state electronics safe inside bedrooms &amp; offices</span>
               </div>
             </div>
 
             <!-- Row 4: FUEL -->
-            <div class="decision-row grid grid-cols-12 py-4 px-4 sm:px-6 items-center cursor-pointer transition-colors" data-decision-param="FUEL">
-              <div class="col-span-5 text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-slate-950 dark:text-white block sm:inline">Diesel / Petrol / LPG</span>
-                <span class="text-xs text-black dark:text-white block">Requires fuel storage and exhaust ventilation path</span>
+            <div class="decision-row py-3 sm:py-4 px-3 sm:px-6 grid grid-cols-[1fr_auto_1fr] md:grid-cols-12 items-center gap-2 sm:gap-4 md:gap-0 cursor-pointer transition-colors hover:bg-amber-500/5 active:bg-amber-500/10" data-decision-param="FUEL">
+              <div class="md:col-span-5 text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">Diesel / Petrol / LPG</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Requires fuel storage and exhaust ventilation path</span>
               </div>
-              <div class="col-span-2 text-center">
-                <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-xs">FUEL</span>
+              <div class="md:col-span-2 text-center px-1 sm:px-2 flex justify-center items-center flex-shrink-0">
+                <span class="px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-[9px] sm:text-xs whitespace-nowrap leading-none tracking-tight sm:tracking-normal">
+                  FUEL
+                </span>
               </div>
-              <div class="col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-slate-950 dark:text-white block sm:inline">Electric Grid / Solar</span>
-                <span class="text-xs text-black dark:text-white block">Zero exhaust fumes, zero fuel replenishment hassles</span>
+              <div class="md:col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">Electric Grid / Solar</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Zero exhaust fumes, zero fuel replenishment hassles</span>
               </div>
             </div>
 
             <!-- Row 5: SPACE -->
-            <div class="decision-row grid grid-cols-12 py-4 px-4 sm:px-6 items-center cursor-pointer transition-colors" data-decision-param="SPACE">
-              <div class="col-span-5 text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-slate-950 dark:text-white block sm:inline">Terrace / Open Ground</span>
-                <span class="text-xs text-black dark:text-white block">Requires 10–25 sq ft ventilated footprint</span>
+            <div class="decision-row py-3 sm:py-4 px-3 sm:px-6 grid grid-cols-[1fr_auto_1fr] md:grid-cols-12 items-center gap-2 sm:gap-4 md:gap-0 cursor-pointer transition-colors hover:bg-amber-500/5 active:bg-amber-500/10" data-decision-param="SPACE">
+              <div class="md:col-span-5 text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">Terrace / Open Ground</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Requires 10–25 sq ft ventilated footprint</span>
               </div>
-              <div class="col-span-2 text-center">
-                <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-xs">SPACE</span>
+              <div class="md:col-span-2 text-center px-1 sm:px-2 flex justify-center items-center flex-shrink-0">
+                <span class="px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-[9px] sm:text-xs whitespace-nowrap leading-none tracking-tight sm:tracking-normal">
+                  SPACE
+                </span>
               </div>
-              <div class="col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-slate-950 dark:text-white block sm:inline">Compact Wall / Corner</span>
-                <span class="text-xs text-black dark:text-white block">Slim LiFePO4 wall-mount or compact trolley</span>
+              <div class="md:col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">Compact Wall / Corner</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Slim LiFePO4 wall-mount or compact trolley</span>
               </div>
             </div>
 
             <!-- Row 6: MAINTENANCE -->
-            <div class="decision-row grid grid-cols-12 py-4 px-4 sm:px-6 items-center cursor-pointer transition-colors" data-decision-param="MAINTENANCE">
-              <div class="col-span-5 text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-slate-950 dark:text-white block sm:inline">Engine Periodic Service</span>
-                <span class="text-xs text-black dark:text-white block">Lube oil, filters, coolant inspection every 250 hours</span>
+            <div class="decision-row py-3 sm:py-4 px-3 sm:px-6 grid grid-cols-[1fr_auto_1fr] md:grid-cols-12 items-center gap-2 sm:gap-4 md:gap-0 cursor-pointer transition-colors hover:bg-amber-500/5 active:bg-amber-500/10" data-decision-param="MAINTENANCE">
+              <div class="md:col-span-5 text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-black dark:text-white block text-[11px] sm:text-sm leading-tight sm:leading-normal">Engine Periodic Service</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Lube oil, filters, coolant inspection every 250 hours</span>
               </div>
-              <div class="col-span-2 text-center">
-                <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-xs">MAINTENANCE</span>
+              <div class="md:col-span-2 text-center px-1 sm:px-2 flex justify-center items-center flex-shrink-0">
+                <span class="px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono font-bold text-[9px] sm:text-xs whitespace-nowrap leading-none tracking-tight sm:tracking-normal">
+                  MAINTENANCE
+                </span>
               </div>
-              <div class="col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium">
-                <span class="font-bold text-emerald-600 dark:text-emerald-400 block sm:inline">Ultra-Low / Zero Maintenance</span>
-                <span class="text-xs text-black dark:text-white block">Lithium BMS self-managed; water top-up for tubular</span>
+              <div class="md:col-span-5 text-right rtl:text-left text-slate-800 dark:text-slate-200 font-medium min-w-0">
+                <span class="font-bold text-emerald-600 dark:text-emerald-400 block text-[11px] sm:text-sm leading-tight sm:leading-normal">Ultra-Low / Zero Maintenance</span>
+                <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 block mt-0.5 sm:mt-1 leading-snug">Lithium BMS self-managed; water top-up for tubular</span>
               </div>
             </div>
 
           </div>
 
           <!-- Dynamic Parameter Insight Bar -->
-          <div class="bg-slate-50 dark:bg-slate-950/80 p-4 sm:p-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div id="decision-highlight-text" class="text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-              <span class="font-mono font-bold text-black dark:text-white uppercase mr-1.5">[ENGINEER NOTE]</span>
-              <span>Hover or tap any row to view deep technical engineering considerations.</span>
+          <div class="bg-slate-50 dark:bg-slate-950/80 p-3.5 sm:p-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
+            <div id="decision-highlight-text" class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              <span class="font-mono font-bold text-amber-600 dark:text-amber-400 uppercase mr-1.5">[SPACE]</span>
+              <span>Generators require outdoor or well-ventilated terrace/ground placement; Inverters and compact LiFePO4 wall-mounts install neatly indoors in utility rooms.</span>
             </div>
-            <button type="button" data-modal-open="booking-modal" data-prefill-service="Load Audit & Recommendation Calculation" class="px-5 py-2.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider whitespace-nowrap">
+            <button type="button" data-modal-open="booking-modal" data-prefill-service="Load Audit & Recommendation Calculation" class="w-full sm:w-auto px-5 py-2.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center flex-shrink-0">
               Get a Recommendation →
             </button>
           </div>
