@@ -1,0 +1,3256 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerCore — Generator & Inverter Service Center | Reliable Power Solutions</title>
+  <meta name="description" content="Professional generator and inverter sales, installation, repair, and AMC maintenance for homes, shops, and offices. 24/7 emergency breakdown support.">
+  
+  <!-- Favicon (Matching Lightning Bolt Icon in Tab Title) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23DC2626'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            amber: {
+              400: '#EF4444',
+              500: '#DC2626',
+              600: '#991B1B',
+            },
+            sky: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            blue: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            burgundy: {
+              500: '#881337',
+              600: '#9F1239',
+              700: '#7F1D1D',
+            },
+            slate: {
+              50: '#FFF5F6',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#1E293B',
+              500: '#0F172A',
+              600: '#0F172A',
+              700: '#000000',
+              800: '#2D0F16',
+              850: '#1C0D12',
+              900: '#160A0E',
+              950: '#0F0A0C',
+            },
+            rose: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#F43F5E',
+              600: '#E11D48',
+              700: '#BE123C',
+              800: '#9F1239',
+              900: '#881337',
+              950: '#4C0519',
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'sans-serif'],
+            body: ['Inter', 'Manrope', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6.5 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-[#FFFFFF] dark:bg-[#0F0A0C] text-[#111827] dark:text-[#F9FAFB] antialiased selection:bg-[#DC2626] selection:text-white">
+
+  <!-- =========================================================================
+       GLOBAL PAGE PRELOADER
+       ========================================================================= -->
+  <div id="page-preloader" class="fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white dark:bg-[#0F0A0C] transition-all duration-500">
+    <!-- Ambient Glow Pulse -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center">
+      <div class="w-80 h-80 rounded-full bg-red-600/10 dark:bg-red-600/15 blur-3xl animate-pulse"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center text-center px-4 max-w-xs">
+      <!-- Animated Energy Core Icon -->
+      <div class="relative mb-5 flex items-center justify-center">
+        <!-- Rotating Orbit Ring -->
+        <div class="preloader-ring absolute w-20 h-20 rounded-full border-2 border-red-500/20 border-t-red-600 border-r-red-600 animate-spin"></div>
+        <!-- Pulsing Glow Ring -->
+        <div class="absolute w-16 h-16 rounded-2xl bg-red-600/20 animate-ping opacity-40"></div>
+        <!-- Core Brand Logo Box -->
+        <div class="relative w-12 h-12 rounded-xl bg-gradient-to-tr from-red-600 to-rose-600 flex items-center justify-center text-white shadow-xl shadow-red-600/30">
+          <i class="fa-solid fa-bolt-lightning text-xl text-white animate-bounce"></i>
+        </div>
+      </div>
+
+      <!-- Brand Text -->
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
+        <span class="text-xl font-heading font-extrabold tracking-tight text-slate-950 dark:text-white">Power<span class="text-red-600">Core</span></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      </div>
+
+      <!-- Monospace Loading Status -->
+      <div class="flex items-center gap-1.5 text-[11px] font-mono tracking-wider uppercase text-slate-500 dark:text-slate-400 mb-4">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
+        <span id="preloader-status-text">INITIALIZING POWER GRID...</span>
+      </div>
+
+      <!-- High-Tech Progress Bar -->
+      <div class="w-48 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden relative shadow-inner">
+        <div class="preloader-progress-bar h-full bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       GLOBAL HEADER (Single-Line Fixed Header)
+       ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-[#0F0A0C]/95 backdrop-blur-md border-b border-rose-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-14 2xl:h-16 header-inner-wrap flex items-center justify-between">
+      
+      <!-- Brand Logo & Identity -->
+      <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 rtl:space-x-reverse shrink-0 group focus:outline-none" aria-label="PowerCore Home">
+        <div class="w-8 h-8 2xl:w-9 2xl:h-9 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
+          <i class="fa-solid fa-bolt-lightning text-base 2xl:text-lg text-white"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-base 2xl:text-lg font-extrabold tracking-tight text-slate-950 dark:text-white font-heading">Power<span class="text-amber-500">Core</span></span>
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+          </div>
+          <span class="hidden sm:block text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Generator &amp; Inverter Service Center</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden 2xl:flex items-center space-x-4 2xl:space-x-7 rtl:space-x-reverse text-xs 2xl:text-sm font-medium text-slate-700 dark:text-slate-300 desktop-nav" aria-label="Primary Navigation">
+        
+        <!-- Home with Dropdown -->
+        <div class="relative nav-dropdown-trigger group py-2">
+          <button type="button" class="flex items-center space-x-1 rtl:space-x-reverse text-amber-600 dark:text-amber-400 font-semibold focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="nav-dropdown absolute top-full left-0 rtl:left-auto rtl:right-0 w-48 pt-2 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 space-y-1">
+              <a href="index.html" class="flex items-center justify-between px-3 py-2 text-xs font-semibold rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400">
+                <span>Home 1 (Editorial)</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+              </a>
+              <a href="home-2.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 2 (Industrial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">About</a>
+        <a href="products.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Products</a>
+        <a href="services.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Services</a>
+        <a href="amc-plans.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">AMC Plans</a>
+        <a href="service-areas.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Service Areas</a>
+        <a href="contact.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header Controls & CTA (Desktop & Mobile) -->
+      <div class="flex items-center space-x-1.5 sm:space-x-3 rtl:space-x-reverse shrink-0">
+        
+        <!-- Theme Switcher (Dark/Light) -->
+        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all focus:outline-none shrink-0" aria-label="Toggle dark mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
+        </button>
+
+        <!-- RTL / LTR Switcher -->
+        <button type="button" class="rtl-toggle-btn px-2 sm:px-2.5 h-8 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 text-xs font-mono font-bold text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all flex items-center space-x-1 sm:space-x-1.5 rtl:space-x-reverse focus:outline-none shrink-0" aria-label="Switch text direction" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-globe text-[10px] sm:text-[11px] text-amber-500"></i>
+          <span class="rtl-toggle-label text-[11px] sm:text-xs">RTL</span>
+        </button>
+
+        <!-- Desktop Primary CTA -->
+        <button type="button" data-modal-open="booking-modal" class="hidden 2xl:inline-flex header-desktop-cta items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg btn-primary text-xs font-bold tracking-wide uppercase shadow-sm shrink-0">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book a Service</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" id="mobile-menu-btn" class="2xl:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:border-amber-500 focus:outline-none shrink-0" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-sm sm:text-base"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div id="mobile-drawer" class="2xl:hidden fixed inset-x-0 top-14 2xl:top-16 bg-white dark:bg-[#0F0A0C] border-b border-rose-200/80 dark:border-slate-800/80 shadow-2xl z-40 max-h-[calc(100dvh-3.5rem)] 2xl:max-h-[calc(100dvh-4rem)] overflow-y-auto">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2.5">
+        
+        <!-- Mobile Dropdown Accordion for Home -->
+        <div class="border-b border-slate-100 dark:border-slate-800/60 pb-2.5">
+          <button type="button" id="mobile-home-dropdown-btn" class="w-full flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white py-1">
+            <span class="flex items-center space-x-2 rtl:space-x-reverse text-amber-600 dark:text-amber-400">
+              <i class="fa-solid fa-house text-sm"></i>
+              <span>Home Options</span>
+            </span>
+            <i id="mobile-home-chevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="mobile-home-dropdown-list" class="hidden pl-6 rtl:pr-6 rtl:pl-0 pt-2.5 space-y-2">
+            <a href="index.html" class="mobile-nav-link active block text-sm font-semibold text-amber-500" aria-current="page">Home 1 (Editorial Layout)</a>
+            <a href="home-2.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 2 (Industrial Layout)</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">About PowerCore</a>
+        <a href="products.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Products (Generators &amp; Inverters)</a>
+        <a href="services.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service &amp; Repair</a>
+        <a href="amc-plans.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">AMC Annual Plans</a>
+        <a href="service-areas.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service Area Coverage</a>
+        <a href="contact.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 pb-1">Contact &amp; Emergency Hub</a>
+
+        <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-col space-y-2">
+          <button type="button" data-modal-open="booking-modal" class="w-full py-2.5 rounded-lg btn-primary text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse shadow-md shadow-amber-500/20">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Service Online</span>
+          </button>
+          
+          <a href="tel:18001234567" class="w-full py-2.5 rounded-lg border border-red-500/40 bg-red-500/10 text-red-600 dark:text-red-400 text-center text-xs font-bold flex items-center justify-center space-x-2 rtl:space-x-reverse">
+            <i class="fa-solid fa-phone-volume animate-pulse"></i>
+            <span>24/7 Emergency: 1800 123 4567</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+    
+    <!-- =========================================================================
+     SECTION 01 — HERO / POWER PROMISE
+     "POWER THAT DOESN'T WAIT."
+     FULL BACKGROUND IMAGE + TECHNICAL EDITORIAL HERO
+     ========================================================================= -->
+<section
+  id="power-hero"
+  class="relative min-h-[680px] sm:min-h-[720px] lg:min-h-[760px]
+         py-12 sm:py-16 lg:py-20 xl:py-18
+         border-b border-slate-800
+         overflow-hidden">
+
+  <!-- ================================================================
+       FULL BACKGROUND IMAGE
+       ================================================================ -->
+  <div class="absolute inset-0 z-0">
+
+    <img
+      src="assets/images/p14.jpg"
+      alt="Electrical power infrastructure"
+      class="absolute inset-0 w-full h-full object-cover
+             hero-background-image"
+    />
+
+    <!-- Main Overlay -->
+    <div
+      class="absolute inset-0
+             bg-slate-950/60
+             dark:bg-slate-950/60">
+    </div>
+
+    <!-- Left-to-right depth -->
+    <div
+      class="absolute inset-0
+             bg-gradient-to-r
+             from-slate-950
+             via-slate-950/60
+             to-slate-950/60
+             rtl:bg-gradient-to-l">
+    </div>
+
+    <!-- Bottom fade -->
+    <div
+      class="absolute inset-0
+             bg-gradient-to-t
+             from-slate-950/80
+             via-transparent
+             to-transparent">
+    </div>
+
+    <!-- Amber ambient light -->
+    <div
+      class="absolute -top-32 -right-32
+             w-[500px] h-[500px]
+             rounded-full
+             bg-amber-500/10
+             blur-[100px]
+             pointer-events-none">
+    </div>
+
+  </div>
+
+
+  <!-- ================================================================
+       TECHNICAL GRID OVER IMAGE
+       ================================================================ -->
+  <div
+    class="absolute inset-0 z-[1] opacity-[0.13]
+           pointer-events-none"
+    style="
+      background-image:
+        linear-gradient(rgba(255,255,255,.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
+      background-size: 44px 44px;
+    ">
+  </div>
+
+
+  <!-- ================================================================
+       IMAGE SCAN LINE
+       ================================================================ -->
+  <div
+    class="absolute top-0 left-0 right-0
+           h-px bg-amber-500/40
+           z-[2] hero-scan-line
+           pointer-events-none">
+  </div>
+
+
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+           relative z-10">
+
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12
+             gap-10 lg:gap-8
+             items-center">
+
+
+      <!-- ============================================================
+           LEFT — HERO CONTENT
+           ============================================================ -->
+      <div
+        class="lg:col-span-7
+               flex flex-col
+               space-y-6
+               reveal-hero">
+
+        <!-- Technical Eyebrow -->
+        <div
+          class="inline-flex items-center
+                 space-x-2.5 rtl:space-x-reverse
+                 self-start
+                 px-3 py-1.5
+                 rounded-md
+                 bg-slate-950/65
+                 backdrop-blur-md
+                 border border-slate-700
+                 text-xs font-mono font-semibold
+                 text-white">
+
+          <span
+            class="relative flex w-2 h-2">
+            <span
+              class="absolute inline-flex
+                     h-full w-full
+                     rounded-full
+                     bg-amber-400
+                     opacity-75
+                     animate-ping">
+            </span>
+
+            <span
+              class="relative inline-flex
+                     w-2 h-2 rounded-full
+                     bg-amber-500">
+            </span>
+          </span>
+
+          <span
+            class="text-amber-400
+                   font-bold uppercase
+                   tracking-wider">
+            01 // POWER READY
+          </span>
+
+          <span class="text-slate-500">|</span>
+
+          <span
+            class="text-slate-200
+                   uppercase tracking-wider">
+            CERTIFIED POWER CONTINUITY
+          </span>
+
+        </div>
+
+
+        <!-- Main Heading -->
+        <h1
+          class="hero-title
+                 text-3xl sm:text-4xl
+                 md:text-5xl
+                 lg:text-5xl
+                 xl:text-5xl
+                 font-extrabold
+                 text-white
+                 tracking-tight
+                 leading-[1.06]
+                 font-heading">
+
+          Reliable Power.
+          <br>
+
+          <span
+            class="text-transparent
+                   bg-clip-text
+                   bg-gradient-to-r
+                   from-amber-500
+                   via-amber-400
+                   to-amber-600">
+            Ready When You Need It.
+          </span>
+
+        </h1>
+
+
+        <!-- Supporting Copy -->
+        <p
+          class="text-sm sm:text-base
+                 lg:text-lg
+                 text-slate-200
+                 max-w-2xl
+                 leading-relaxed">
+
+          Professional generator and inverter solutions for homes, shops,
+          and offices — from precision product selection and turnkey
+          installation to rapid emergency repair and long-term AMC maintenance.
+
+        </p>
+
+
+        <!-- ============================================================
+             METRICS
+             ============================================================ -->
+        <div
+          class="grid grid-cols-1
+                 sm:grid-cols-3
+                 gap-0
+                 max-w-2xl
+                 border-y
+                 border-white/15
+                 py-4">
+
+          <!-- Metric 01 -->
+          <div
+            class="py-2 sm:py-0
+                   sm:pr-4
+                   border-b sm:border-b-0
+                   border-white/10">
+
+            <span
+              class="block text-[10px] sm:text-xs
+                     font-mono
+                     text-slate-300
+                     uppercase
+                     tracking-wider">
+              Response SLA
+            </span>
+
+            <span
+              class="block mt-1
+                     text-sm sm:text-base
+                     font-bold
+                     text-white">
+              &lt; 45 Mins
+            </span>
+
+          </div>
+
+
+          <!-- Metric 02 -->
+          <div
+            class="py-3 sm:py-0
+                   sm:px-4
+                   border-b sm:border-b-0
+                   sm:border-x
+                   border-white/10">
+
+            <span
+              class="block text-[10px] sm:text-xs
+                     font-mono
+                     text-slate-300
+                     uppercase
+                     tracking-wider">
+              Capacity Span
+            </span>
+
+            <span
+              class="block mt-1
+                     text-sm sm:text-base
+                     font-bold
+                     text-white">
+              1 – 250 kVA
+            </span>
+
+          </div>
+
+
+          <!-- Metric 03 -->
+          <div
+            class="py-2 sm:py-0
+                   sm:pl-4">
+
+            <span
+              class="block text-[10px] sm:text-xs
+                     font-mono
+                     text-slate-300
+                     uppercase
+                     tracking-wider">
+              Tech Certified
+            </span>
+
+            <span
+              class="block mt-1
+                     text-sm sm:text-base
+                     font-bold
+                     text-emerald-400">
+              OEM 100%
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- ============================================================
+             CTA BUTTONS
+             ============================================================ -->
+        <div
+          class="flex flex-col
+                 sm:flex-row
+                 items-stretch sm:items-center
+                 gap-3 sm:gap-4
+                 pt-1">
+
+          <!-- Primary -->
+          <button
+            type="button"
+            data-modal-open="booking-modal"
+            class="px-6 py-3.5
+                   rounded-lg
+                   btn-primary
+                   text-sm
+                   font-bold
+                   tracking-wide
+                   flex items-center
+                   justify-center
+                   space-x-2.5
+                   rtl:space-x-reverse
+                   shadow-lg
+                   shadow-amber-500/25
+                   group">
+
+            <span>
+              Book a Service
+            </span>
+
+            <i
+              class="fa-solid fa-arrow-right
+                     text-xs
+                     transition-transform
+                     duration-200
+                     group-hover:translate-x-1
+                     rtl-flip"
+              data-rtl-flip>
+            </i>
+
+          </button>
+
+
+          <!-- Secondary -->
+          <a
+            href="products.html"
+            class="px-6 py-3.5
+                   rounded-lg
+                   bg-white/10
+                   backdrop-blur-md
+                   border border-white/25
+                   text-sm
+                   font-bold
+                   text-white
+                   hover:bg-white
+                   hover:text-slate-950
+                   transition-all
+                   duration-300
+                   flex items-center
+                   justify-center
+                   space-x-2
+                   rtl:space-x-reverse">
+
+            <span>
+              Explore Products
+            </span>
+
+            <i
+              class="fa-solid fa-microchip
+                     text-xs opacity-80">
+            </i>
+
+          </a>
+
+        </div>
+
+
+        <!-- ============================================================
+             EMERGENCY HOTLINE
+             ============================================================ -->
+        <div
+          class="pt-1
+                 flex flex-col
+                 sm:flex-row
+                 sm:items-center
+                 gap-2 sm:gap-3
+                 text-xs font-medium
+                 text-slate-300">
+
+          <div
+            class="flex items-center
+                   space-x-2
+                   rtl:space-x-reverse">
+
+            <span
+              class="w-2.5 h-2.5
+                     rounded-full
+                     bg-red-500
+                     animate-pulse">
+            </span>
+
+            <span>
+              Need immediate assistance?
+            </span>
+
+          </div>
+
+          <a
+            href="tel:18001234567"
+            class="font-bold
+                   text-red-400
+                   hover:text-red-300
+                   hover:underline
+                   flex items-center
+                   space-x-1
+                   rtl:space-x-reverse">
+
+            <span>
+              24/7 Emergency Support:
+              1800 123 4567
+            </span>
+
+            <i
+              class="fa-solid fa-phone
+                     text-[10px]">
+            </i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ============================================================
+           RIGHT — FLOATING POWER MONITOR
+           ============================================================ -->
+      <div
+        class="lg:col-span-5
+               relative
+               reveal-hero
+               lg:pl-4
+               rtl:lg:pl-0
+               rtl:lg:pr-4">
+
+        <!-- Main Monitor -->
+        <div
+          class="relative
+                 bg-slate-950/85
+                 backdrop-blur-xl
+                 text-white
+                 rounded-2xl
+                 p-5 sm:p-6
+                 border border-white/15
+                 shadow-2xl
+                 overflow-hidden
+                 hero-monitor">
+
+          <!-- Ambient Glow -->
+          <div
+            class="absolute
+                   -right-20
+                   -bottom-20
+                   w-64 h-64
+                   bg-amber-500/10
+                   rounded-full
+                   blur-3xl
+                   pointer-events-none">
+          </div>
+
+
+          <!-- Top HUD -->
+          <div
+            class="flex items-center
+                   justify-between
+                   gap-4
+                   border-b
+                   border-white/10
+                   pb-4 mb-5">
+
+            <div
+              class="flex items-center
+                     space-x-2
+                     rtl:space-x-reverse
+                     font-mono
+                     text-[10px] sm:text-xs
+                     text-amber-400
+                     font-semibold">
+
+              <i class="fa-solid fa-satellite-dish"></i>
+
+              <span>
+                GRID & POWER MONITOR
+              </span>
+
+            </div>
+
+            <span
+              class="px-2.5 py-1
+                     rounded
+                     text-[9px]
+                     font-mono
+                     font-bold
+                     bg-emerald-500/15
+                     text-emerald-400
+                     border border-emerald-500/25
+                     whitespace-nowrap">
+
+              SYSTEM READY
+
+            </span>
+
+          </div>
+
+
+          <!-- ========================================================
+               VISUAL SYSTEM
+               ======================================================== -->
+          <div
+            class="relative
+                   rounded-xl
+                   bg-black/35
+                   p-4 sm:p-5
+                   border
+                   border-white/10
+                   mb-5">
+
+            <div
+              class="flex items-center
+                     justify-between
+                     gap-3 mb-4">
+
+              <span
+                class="text-[9px] sm:text-xs
+                       font-mono
+                       text-slate-300">
+                UNIT: PC-7500X HEAVY DIESEL
+              </span>
+
+              <span
+                class="text-[9px] sm:text-xs
+                       font-mono
+                       text-amber-400">
+                230V / 50Hz
+              </span>
+
+            </div>
+
+
+            <!-- Circular Power Visual -->
+            <div
+              class="flex justify-center
+                     py-4">
+
+              <div
+                class="relative
+                       w-32 h-32
+                       sm:w-36 sm:h-36
+                       rounded-full
+                       border
+                       border-amber-500/30
+                       flex items-center
+                       justify-center">
+
+                <div
+                  class="absolute inset-3
+                         rounded-full
+                         border
+                         border-amber-500/20
+                         power-ring">
+                </div>
+
+                <div
+                  class="absolute inset-7
+                         rounded-full
+                         border
+                         border-amber-500/15">
+                </div>
+
+                <div class="text-center">
+
+                  <i
+                    class="fa-solid fa-bolt
+                           text-amber-400
+                           text-xl">
+                  </i>
+
+                  <p
+                    class="mt-1
+                           text-2xl
+                           sm:text-3xl
+                           font-extrabold
+                           font-heading
+                           text-white
+                           ">
+                    78%
+                  </p>
+
+                  <span
+                    class="text-[8px]
+                           font-mono
+                           text-white
+                           uppercase
+                           tracking-widest">
+                    ACTIVE LOAD
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Load Bar -->
+            <div>
+
+              <div
+                class="flex justify-between
+                       text-[9px] sm:text-xs
+                       font-mono mb-2">
+
+                <span class="text-slate-300">
+                  Load Simulation
+                </span>
+
+                <span
+                  class="text-white
+                         font-bold">
+                  5.85 kW
+                </span>
+
+              </div>
+
+              <div
+                class="w-full h-1.5
+                       rounded-full
+                       bg-slate-800
+                       overflow-hidden">
+
+                <div
+                  class="h-full
+                         bg-gradient-to-r
+                         from-emerald-500
+                         via-amber-400
+                         to-amber-500
+                         w-[78%]
+                         rounded-full
+                         power-load-bar">
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Battery / Transfer -->
+            <div
+              class="grid grid-cols-2
+                     gap-2.5
+                     pt-4">
+
+              <div
+                class="p-3
+                       rounded-lg
+                       bg-slate-900/80
+                       border
+                       border-white/10">
+
+                <span
+                  class="block
+                         text-[8px]
+                         text-white
+                         uppercase
+                         font-mono">
+                  Battery Health
+                </span>
+
+                <span
+                  class="block mt-1
+                         text-xs
+                         text-emerald-400
+                         font-bold">
+                  99.4%
+                </span>
+
+              </div>
+
+
+              <div
+                class="p-3
+                       rounded-lg
+                       bg-slate-900/80
+                       border
+                       border-white/10">
+
+                <span
+                  class="block
+                         text-[8px]
+                         text-white
+                         uppercase
+                         font-mono">
+                  Transfer
+                </span>
+
+                <span
+                  class="block mt-1
+                         text-xs
+                         text-amber-400
+                         font-bold">
+                  &lt; 8.2ms
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- ========================================================
+               SERVICE INDICATORS
+               ======================================================== -->
+          <div
+            class="space-y-0
+                   text-[10px] sm:text-xs">
+
+            <div
+              class="flex items-center
+                     justify-between
+                     gap-4
+                     py-3
+                     border-b
+                     border-white/10">
+
+              <span class="text-slate-300">
+                Technician Fleet
+              </span>
+
+              <span
+                class="font-mono
+                       text-emerald-400
+                       font-semibold
+                       flex items-center
+                       space-x-1.5
+                       rtl:space-x-reverse">
+
+                <span
+                  class="w-1.5 h-1.5
+                         rounded-full
+                         bg-emerald-400
+                         animate-pulse">
+                </span>
+
+                <span>
+                  18 Active Units
+                </span>
+
+              </span>
+
+            </div>
+
+
+            <div
+              class="flex items-center
+                     justify-between
+                     gap-4
+                     py-3
+                     border-b
+                     border-white/10">
+
+              <span class="text-slate-300">
+                OEM Genuine Spares
+              </span>
+
+              <span
+                class="font-mono
+                       text-white
+                       font-semibold">
+                100% Guaranteed
+              </span>
+
+            </div>
+
+
+            <div
+              class="flex items-center
+                     justify-between
+                     gap-4
+                     py-3">
+
+              <span class="text-slate-300">
+                Emergency Service
+              </span>
+
+              <span
+                class="font-mono
+                       text-amber-400
+                       font-bold">
+                24 / 7 / 365
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Floating Spec -->
+          <div
+            class="absolute
+                   bottom-3
+                   right-3
+                   bg-amber-500
+                   text-slate-950
+                   font-mono
+                   text-[9px]
+                   font-bold
+                   px-2.5 py-1.5
+                   rounded
+                   shadow-lg
+                   uppercase
+                   tracking-wider">
+
+            SPEC: 1–250 kVA
+
+          </div>
+
+
+          <!-- Corner Markers -->
+          <span
+            class="absolute
+                   top-2 left-2
+                   w-5 h-5
+                   border-l
+                   border-t
+                   border-amber-500/60">
+          </span>
+
+          <span
+            class="absolute
+                   top-2 right-2
+                   w-5 h-5
+                   border-r
+                   border-t
+                   border-amber-500/60">
+          </span>
+
+          <span
+            class="absolute
+                   bottom-2 left-2
+                   w-5 h-5
+                   border-l
+                   border-b
+                   border-amber-500/60">
+          </span>
+
+          <span
+            class="absolute
+                   bottom-2 right-2
+                   w-5 h-5
+                   border-r
+                   border-b
+                   border-amber-500/60">
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- =========================================================================
+         SECTION 02 — TRUSTED BRANDS / SERVICE CREDIBILITY
+         Horizontal Editorial Brand Strip + Distinct Metrics (No Generic Cards)
+         ========================================================================= -->
+    <section class="py-12 sm:py-16 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header Bar -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-8 border-b border-slate-200 dark:border-slate-800">
+          <div>
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">02 // MULTI-BRAND EXPERTISE</span>
+            <h2 class="text-xl sm:text-2xl font-extrabold text-black dark:text-white font-heading mt-1">
+              Authorized & Certified Service Across Leading Brands
+            </h2>
+          </div>
+          <p class="text-xs sm:text-sm text-black dark:text-white max-w-md">
+            Direct access to genuine OEM spare parts, factory diagnostic protocols, and certified technicians for all top power backup systems.
+          </p>
+        </div>
+
+        <!-- Horizontal Editorial Brand Strip with Thin Vertical Dividers -->
+        <div class="py-8 brand-strip-container">
+          <div class="flex items-center justify-between min-w-[720px] lg:min-w-full text-slate-700 dark:text-slate-300 font-heading font-extrabold tracking-tight">
+            
+            <div class="px-4 text-center group hover:text-amber-500 transition-colors">
+              <span class="text-lg sm:text-xl xl:text-2xl font-black">CUMMINS</span>
+              <span class="block text-[10px] font-mono font-normal text-black dark:text-white">Industrial Gensets</span>
+            </div>
+            
+            <div class="h-10 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+
+            <div class="px-4 text-center group hover:text-amber-500 transition-colors">
+              <span class="text-lg sm:text-xl xl:text-2xl font-black">KIRLOSKAR</span>
+              <span class="block text-[10px] font-mono font-normal text-black dark:text-white">Green Power</span>
+            </div>
+
+            <div class="h-10 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+
+            <div class="px-4 text-center group hover:text-amber-500 transition-colors">
+              <span class="text-lg sm:text-xl xl:text-2xl font-black">MAHINDRA</span>
+              <span class="block text-[10px] font-mono font-normal text-black dark:text-white">Powerol Systems</span>
+            </div>
+
+            <div class="h-10 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+
+            <div class="px-4 text-center group hover:text-amber-500 transition-colors">
+              <span class="text-lg sm:text-xl xl:text-2xl font-black">GREAVES</span>
+              <span class="block text-[10px] font-mono font-normal text-black dark:text-white">Heavy Duty</span>
+            </div>
+
+            <div class="h-10 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+
+            <div class="px-4 text-center group hover:text-amber-500 transition-colors">
+              <span class="text-lg sm:text-xl xl:text-2xl font-black">HONDA</span>
+              <span class="block text-[10px] font-mono font-normal text-black dark:text-white">Silent Inverter</span>
+            </div>
+
+            <div class="h-10 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+
+            <div class="px-4 text-center group hover:text-amber-500 transition-colors">
+              <span class="text-lg sm:text-xl xl:text-2xl font-black">LUMINOUS</span>
+              <span class="block text-[10px] font-mono font-normal text-black dark:text-white">Inverter & Battery</span>
+            </div>
+
+            <div class="h-10 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+
+            <div class="px-4 text-center group hover:text-amber-500 transition-colors">
+              <span class="text-lg sm:text-xl xl:text-2xl font-black">MICROTEK</span>
+              <span class="block text-[10px] font-mono font-normal text-black dark:text-white">Sine Wave UPS</span>
+            </div>
+
+            <div class="h-10 w-[1px] bg-slate-200 dark:bg-slate-800"></div>
+
+            <div class="px-4 text-center group hover:text-amber-500 transition-colors">
+              <span class="text-lg sm:text-xl xl:text-2xl font-black">EXIDE</span>
+              <span class="block text-[10px] font-mono font-normal text-black dark:text-white">Tubular & Li-Ion</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Credibility Statistics: Large Stat → Supporting Label → Divider (No Cards) -->
+        <div class="pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 md:grid-cols-4 gap-6 text-slate-900 dark:text-white">
+          
+          <div class="flex flex-col">
+            <span class="stat-number text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-amber-500">10+</span>
+            <span class="text-xs sm:text-sm font-semibold text-black dark:text-white mt-1">Years Field Experience</span>
+            <span class="text-xs text-black dark:text-white">Over a decade of power continuity mastery</span>
+          </div>
+
+          <div class="flex flex-col border-l rtl:border-r rtl:border-l-0 border-slate-200 dark:border-slate-800 pl-6 rtl:pr-6 rtl:pl-0">
+            <span class="stat-number text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 dark:text-white">1,500+</span>
+            <span class="text-xs sm:text-sm font-semibold text-black dark:text-white mt-1">Successful Installations</span>
+            <span class="text-xs text-black dark:text-white">Homes, retail hubs & corporate centers</span>
+          </div>
+
+          <div class="flex flex-col border-t sm:border-t-0 md:border-l rtl:md:border-r rtl:md:border-l-0 border-slate-200 dark:border-slate-800 pt-4 sm:pt-0 md:pl-6 rtl:md:pr-6 rtl:md:pl-0">
+            <span class="stat-number text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-amber-500">24/7</span>
+            <span class="text-xs sm:text-sm font-semibold text-black dark:text-white mt-1">Emergency Dispatch</span>
+            <span class="text-xs text-black dark:text-white">Live technical vans ready round-the-clock</span>
+          </div>
+
+          <div class="flex flex-col border-t sm:border-t-0 border-l rtl:border-r rtl:border-l-0 border-slate-200 dark:border-slate-800 pt-4 sm:pt-0 pl-6 rtl:pr-6 rtl:pl-0">
+            <span class="stat-number text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-slate-900 dark:text-white">100%</span>
+            <span class="text-xs sm:text-sm font-semibold text-black dark:text-white mt-1">OEM Genuine Parts</span>
+            <span class="text-xs text-black dark:text-white">Direct factory warranty on every replacement</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 03 — POWER SOLUTIONS BY NEED
+         Large Editorial Split Composition with 3 Expanding Rows (No Standard Cards)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Editorial Header -->
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">03 // SECTOR PATHWAYS</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black dark:text-white font-heading mt-2 tracking-tight">
+            The Right Power Setup Starts With The Right Load.
+          </h2>
+          <p class="text-sm sm:text-base text-black dark:text-white mt-3">
+            Every environment has distinct load characteristics, noise tolerance, and transfer time thresholds. We engineer customized configurations designed for exact power continuity.
+          </p>
+        </div>
+
+        <!-- 3 Horizontal Bands / Rows -->
+        <div class="border-t border-slate-300 dark:border-slate-800 divide-y divide-slate-300 dark:divide-slate-800">
+          
+          <!-- Row 01: HOME -->
+          <div class="power-solution-row group py-8 px-4 sm:px-6 hover:bg-white dark:hover:bg-slate-900/90 rounded-xl transition-all cursor-pointer" onclick="location.href='products.html?filter=home'">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+              
+              <!-- Number & Customer Type -->
+              <div class="md:col-span-3 flex items-baseline space-x-4 rtl:space-x-reverse">
+                <span class="text-2xl sm:text-3xl font-mono font-extrabold text-amber-500">01</span>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-heading tracking-tight">HOME</h3>
+                  <span class="text-xs font-mono text-black dark:text-white uppercase">Residential & Villas</span>
+                </div>
+              </div>
+
+              <!-- Power Requirement & Description -->
+              <div class="md:col-span-5 space-y-1">
+                <p class="text-sm font-semibold text-black dark:text-white">
+                  Everyday backup for lights, fans, inverter ACs, refrigeration, and Wi-Fi networks.
+                </p>
+                <p class="text-xs text-black dark:text-white">
+                  Silent acoustic operation (&lt;60 dBA), automated mains transfer switch, clean sinusoidal inverter wave.
+                </p>
+              </div>
+
+              <!-- Recommended Solution & Action -->
+              <div class="md:col-span-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="px-3 py-1.5 rounded bg-amber-500/10 border border-amber-500/20 text-xs font-mono font-bold text-amber-600 dark:text-amber-400">
+                  2 – 10 kVA Generator / Inverter Setup
+                </div>
+                <div class="inline-flex items-center text-sm font-bold text-black dark:text-white group-hover:text-amber-500 transition-colors">
+                  <span class="mr-2 rtl:ml-2 rtl:mr-0">Explore solutions</span>
+                  <i class="fa-solid fa-arrow-right row-arrow transition-transform duration-200 rtl-flip" data-rtl-flip></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Row 02: SHOP -->
+          <div class="power-solution-row group py-8 px-4 sm:px-6 hover:bg-white dark:hover:bg-slate-900/90 rounded-xl transition-all cursor-pointer" onclick="location.href='products.html?filter=shop'">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+              
+              <!-- Number & Customer Type -->
+              <div class="md:col-span-3 flex items-baseline space-x-4 rtl:space-x-reverse">
+                <span class="text-2xl sm:text-3xl font-mono font-extrabold text-amber-500">02</span>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-black text-black dark:text-white font-heading tracking-tight">SHOP</h3>
+                  <span class="text-xs font-mono text-black dark:text-white uppercase">Retail & Hospitality</span>
+                </div>
+              </div>
+
+              <!-- Power Requirement & Description -->
+              <div class="md:col-span-5 space-y-1">
+                <p class="text-sm font-semibold text-black dark:text-white">
+                  Reliable power for freezers, billing computers, display lighting, and customer security.
+                </p>
+                <p class="text-xs text-black dark:text-white">
+                  Zero sales downtime, high surge tolerance for compressor kick-in, compact foot-print installations.
+                </p>
+              </div>
+
+              <!-- Recommended Solution & Action -->
+              <div class="md:col-span-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="px-3 py-1.5 rounded bg-amber-500/10 border border-amber-500/20 text-xs font-mono font-bold text-amber-600 dark:text-amber-400">
+                  5 – 15 kVA Heavy-Duty Genset / Li-Pack
+                </div>
+                <div class="inline-flex items-center text-sm font-bold text-black dark:text-white group-hover:text-amber-500 transition-colors">
+                  <span class="mr-2 rtl:ml-2 rtl:mr-0">Explore solutions</span>
+                  <i class="fa-solid fa-arrow-right row-arrow transition-transform duration-200 rtl-flip" data-rtl-flip></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Row 03: OFFICE -->
+          <div class="power-solution-row group py-8 px-4 sm:px-6 hover:bg-white dark:hover:bg-slate-900/90 rounded-xl transition-all cursor-pointer" onclick="location.href='products.html?filter=office'">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+              
+              <!-- Number & Customer Type -->
+              <div class="md:col-span-3 flex items-baseline space-x-4 rtl:space-x-reverse">
+                <span class="text-2xl sm:text-3xl font-mono font-extrabold text-amber-500">03</span>
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-black text-black dark:text-white font-heading tracking-tight">OFFICE</h3>
+                  <span class="text-xs font-mono text-black dark:text-white uppercase">Commercial & Labs</span>
+                </div>
+              </div>
+
+              <!-- Power Requirement & Description -->
+              <div class="md:col-span-5 space-y-1">
+                <p class="text-sm font-semibold text-black dark:text-white">
+                  Stable 3-phase backup for servers, workstation PCs, centralized HVAC, and elevator safety.
+                </p>
+                <p class="text-xs text-black dark:text-white">
+                  True online double-conversion, instantaneous transfer (<5ms), synchronized generator backup.
+                </p>
+              </div>
+
+              <!-- Recommended Solution & Action -->
+              <div class="md:col-span-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="px-3 py-1.5 rounded bg-amber-500/10 border border-amber-500/20 text-xs font-mono font-bold text-amber-600 dark:text-amber-400">
+                  10 – 50+ kVA Synchronized 3-Phase AMF
+                </div>
+                <div class="inline-flex items-center text-sm font-bold text-black dark:text-white group-hover:text-amber-500 transition-colors">
+                  <span class="mr-2 rtl:ml-2 rtl:mr-0">Explore solutions</span>
+                  <i class="fa-solid fa-arrow-right row-arrow transition-transform duration-200 rtl-flip" data-rtl-flip></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 04 — PRODUCT CAPACITY EXPLORER
+         Interactive Technical Product Selector with Capacity Scale (Zero Card Grid)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+          <div>
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">04 // TECHNICAL SPEC SELECTOR</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black dark:text-white font-heading mt-2">
+              Choose Your Power Capacity
+            </h2>
+            <p class="text-sm text-black dark:text-white mt-2 max-w-xl">
+              Select your required kVA scale below to view exact system architectures, load capabilities, and appliance runtimes in real time.
+            </p>
+          </div>
+
+          <!-- System Technology Toggle Tabs -->
+          <div class="inline-flex p-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 gap-1.5 self-start lg:self-auto" role="tablist" aria-label="Power System Technology Selector">
+            <button type="button" role="tab" id="tab-generator" aria-selected="true" data-type="generator" class="capacity-type-btn active px-4 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse">
+              <i class="fa-solid fa-gears text-sm"></i>
+              <span>Generator Systems</span>
+            </button>
+            <button type="button" role="tab" id="tab-inverter" aria-selected="false" data-type="inverter" class="capacity-type-btn px-4 py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all flex items-center justify-center space-x-2 rtl:space-x-reverse">
+              <i class="fa-solid fa-car-battery text-sm"></i>
+              <span>Inverter + Battery Systems</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Capacity Scale Selector -->
+        <div class="mb-8">
+          <label class="block text-xs font-mono font-semibold uppercase tracking-wider text-black dark:text-white mb-3">
+            Select Rating (kVA Scale):
+          </label>
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2.5 sm:gap-3">
+            <button type="button" data-capacity="1" class="capacity-scale-btn py-3 px-3 rounded-lg border text-center transition-all focus:outline-none">
+              <span class="block text-sm sm:text-base font-extrabold font-mono">1 kVA</span>
+              <span class="block text-[10px] text-black dark:text-white">Essential Lite</span>
+            </button>
+            <button type="button" data-capacity="3" class="capacity-scale-btn py-3 px-3 rounded-lg border text-center transition-all focus:outline-none">
+              <span class="block text-sm sm:text-base font-extrabold font-mono">3 kVA</span>
+              <span class="block text-[10px] text-black dark:text-white">Standard Home</span>
+            </button>
+            <button type="button" data-capacity="5" class="capacity-scale-btn py-3 px-3 rounded-lg border text-center transition-all focus:outline-none">
+              <span class="block text-sm sm:text-base font-extrabold font-mono">5 kVA</span>
+              <span class="block text-[10px] text-black dark:text-white">Heavy Residential</span>
+            </button>
+            <button type="button" data-capacity="7.5" class="capacity-scale-btn py-3 px-3 rounded-lg border text-center transition-all focus:outline-none">
+              <span class="block text-sm sm:text-base font-extrabold font-mono">7.5 kVA</span>
+              <span class="block text-[10px] text-black dark:text-white">Retail / Clinic</span>
+            </button>
+            <button type="button" data-capacity="10" class="capacity-scale-btn py-3 px-3 rounded-lg border text-center transition-all focus:outline-none">
+              <span class="block text-sm sm:text-base font-extrabold font-mono">10 kVA</span>
+              <span class="block text-[10px] text-black dark:text-white">Commercial 3-Ph</span>
+            </button>
+            <button type="button" data-capacity="15+" class="capacity-scale-btn py-3 px-3 rounded-lg border text-center transition-all focus:outline-none">
+              <span class="block text-sm sm:text-base font-extrabold font-mono">15+ kVA</span>
+              <span class="block text-[10px] text-black dark:text-white">Industrial High</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Technical Output Specification Sheet (Clean Asymmetric Spec Panel) -->
+        <div class="bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left: Technical Specification Matrix -->
+            <div class="lg:col-span-7 space-y-6">
+              
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+                <div>
+                  <span id="explorer-segment" class="text-xs font-mono font-semibold uppercase text-amber-500 tracking-wider">Independent House / Retail Store</span>
+                  <h3 id="explorer-kva" class="text-2xl sm:text-3xl font-black text-slate-950 dark:text-white font-heading mt-0.5">3 kVA (2.4 kW)</h3>
+                </div>
+                <div class="text-right">
+                  <span class="text-[11px] font-mono text-black dark:text-white block">SYSTEM ARCHITECTURE</span>
+                  <span id="explorer-type" class="text-xs sm:text-sm font-bold text-black dark:text-white">Compact Silent Diesel / Dual-Fuel Generator</span>
+                </div>
+              </div>
+
+              <!-- Key Technical Parameters Grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs font-mono">
+                <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                  <span class="text-slate-400 uppercase text-[10px] block mb-1">Fuel / Storage Type</span>
+                  <span id="explorer-fuel" class="font-bold text-black dark:text-white">Diesel / Petrol (0.75 L/hr)</span>
+                </div>
+                <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                  <span class="text-slate-400 uppercase text-[10px] block mb-1">Continuous Runtime</span>
+                  <span id="explorer-runtime" class="font-bold text-black dark:text-white">9.0 Hours continuous @ 60%</span>
+                </div>
+                <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                  <span class="text-slate-400 uppercase text-[10px] block mb-1">Acoustic Rating</span>
+                  <span id="explorer-noise" class="font-bold text-black dark:text-white">62 dBA CPCB-II Enclosure</span>
+                </div>
+                <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 sm:col-span-3">
+                  <span class="text-black dark:text-white uppercase text-[10px] block mb-1">Mains Switchover Technology</span>
+                  <span id="explorer-transfer" class="font-bold text-amber-500">Automatic Transfer Switch (ATS) 10s</span>
+                </div>
+              </div>
+
+              <div>
+                <span class="text-xs font-mono uppercase text-black dark:text-white block mb-1">Engineer Recommendation:</span>
+                <p id="explorer-recommended" class="text-sm text-black dark:text-white">
+                  Complete essential household power, small boutique shops, dental/clinic consultation setups.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Right: Live Supported Appliances & Direct Request Action -->
+            <div class="lg:col-span-5 bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-6">
+              
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <h4 class="text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white font-heading">
+                    <i class="fa-solid fa-plug-circle-bolt text-amber-500 mr-1.5 rtl:ml-1.5 rtl:mr-0"></i>
+                    Appliance Load Coverage
+                  </h4>
+                  <span class="text-[10px] font-mono text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded">100% Tested</span>
+                </div>
+
+                <ul id="explorer-appliances" class="space-y-2.5">
+                  <!-- Dynamically populated via main.js -->
+                </ul>
+              </div>
+
+              <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+                <button type="button" id="explorer-book-btn" data-modal-open="booking-modal" data-prefill-capacity="GENERATOR - 3 kVA" class="w-full py-3.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider text-center shadow-md">
+                  Request Setup for 3 kVA →
+                </button>
+                <span class="block text-center text-[10px] font-mono text-black dark:text-white mt-2">
+                  Includes Free Site Load Audit & Delivery Estimate
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 05 — SERVICE WORKFLOW
+         "From Breakdown to Back-Up in Four Moves" (Open-Layout Connected Timeline)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-2xl mb-14">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">05 // RAPID PROTOCOL</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black dark:text-white font-heading mt-2">
+            From Breakdown to Back-Up in Four Moves.
+          </h2>
+          <p class="text-sm sm:text-base text-black dark:text-white mt-3">
+            Our disciplined field service lifecycle minimizes power outage impact with verified technical milestones at every phase.
+          </p>
+        </div>
+
+        <!-- Open Layout Connected Horizontal / Vertical Timeline (No Cards) -->
+        <div class="relative">
+          
+          <!-- Desktop connecting trace line -->
+          <div class="hidden lg:block timeline-track-h"></div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            
+            <!-- Step 01 -->
+            <div class="flex flex-col space-y-3">
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="w-12 h-12 rounded-full bg-slate-900 dark:bg-amber-500 text-amber-400 dark:text-slate-950 font-mono text-lg font-black flex items-center justify-center border-2 border-amber-500 shadow-md">
+                  01
+                </div>
+                <span class="text-xs font-mono font-bold text-amber-500">&lt; 5 MIN TRIAGE</span>
+              </div>
+              
+              <h3 class="text-lg font-bold text-black dark:text-white font-heading">
+                Tell Us What Happened
+              </h3>
+              
+              <p class="text-xs sm:text-sm text-black dark:text-white leading-relaxed">
+                Connect via 24/7 emergency hotline or online portal. Instant remote diagnostic intake and nearest technical van allocation.
+              </p>
+
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">Initial Triage</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">GPS Dispatch</span>
+              </div>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="flex flex-col space-y-3">
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="w-12 h-12 rounded-full bg-slate-900 dark:bg-amber-500 text-amber-400 dark:text-slate-950 font-mono text-lg font-black flex items-center justify-center border-2 border-amber-500 shadow-md">
+                  02
+                </div>
+                <span class="text-xs font-mono font-bold text-amber-500">45 MIN DISPATCH</span>
+              </div>
+              
+              <h3 class="text-lg font-bold text-black dark:text-white font-heading">
+                Technician Diagnoses
+              </h3>
+              
+              <p class="text-xs sm:text-sm text-black dark:text-white leading-relaxed">
+                Certified field engineer performs load check, battery conductance scan, fuel purity check, and microprocessor event trace.
+              </p>
+
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">Load Check</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">Battery Test</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">Electrical Diagnostics</span>
+              </div>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="flex flex-col space-y-3">
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="w-12 h-12 rounded-full bg-slate-900 dark:bg-amber-500 text-amber-400 dark:text-slate-950 font-mono text-lg font-black flex items-center justify-center border-2 border-amber-500 shadow-md">
+                  03
+                </div>
+                <span class="text-xs font-mono font-bold text-amber-500">OEM PROTOCOL</span>
+              </div>
+              
+              <h3 class="text-lg font-bold text-black dark:text-white font-heading">
+                Repair / Install / Replace
+              </h3>
+              
+              <p class="text-xs sm:text-sm text-black dark:text-white leading-relaxed">
+                Precision rectification using OEM genuine parts, calibrated alternator tuning, AVR recalibration, or safe battery replacement.
+              </p>
+
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">OEM Parts</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">Safety Isolation</span>
+              </div>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="flex flex-col space-y-3">
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <div class="w-12 h-12 rounded-full bg-emerald-500 text-slate-950 font-mono text-lg font-black flex items-center justify-center border-2 border-emerald-400 shadow-md">
+                  04
+                </div>
+                <span class="text-xs font-mono font-bold text-emerald-500">100% RESTORED</span>
+              </div>
+              
+              <h3 class="text-lg font-bold text-black dark:text-white font-heading">
+                Power Restored &amp; Certified
+              </h3>
+              
+              <p class="text-xs sm:text-sm text-black dark:text-white leading-relaxed">
+                Live automated transfer simulation under full load, customer digital signoff, and digital service warranty certificate issued.
+              </p>
+
+              <div class="pt-2 flex flex-wrap gap-1.5">
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400">Step-Load Certified</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400">Digital Warranty</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 06 — WHY PROFESSIONAL MAINTENANCE MATTERS
+         Split Editorial Statement + 6-Point Checklist + Interval Progress Visual
+         ========================================================================= -->
+   
+<section
+  class="py-14 sm:py-16 lg:py-20
+         bg-white dark:bg-slate-950
+         border-b border-slate-200 dark:border-slate-800
+         transition-colors duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+
+      <!-- ======================================================
+           LEFT — EDITORIAL CONTENT
+      ======================================================= -->
+      <div class="lg:col-span-5">
+
+        <!-- Section Label -->
+        <div class="flex items-center gap-3 mb-5">
+
+          <span
+            class="text-xs font-mono font-bold
+                   uppercase tracking-widest
+                   text-amber-500"
+          >
+            06 // PREVENTIVE INTEGRITY
+          </span>
+
+          <span
+            class="h-px w-12
+                   bg-amber-500/40"
+          ></span>
+
+        </div>
+
+
+        <!-- Main Heading -->
+        <h2
+          class="text-3xl sm:text-4xl lg:text-[2.65rem]
+                 font-extrabold
+                 text-slate-950 dark:text-white
+                 font-heading
+                 tracking-tight
+                 leading-[1.1]"
+        >
+          A Generator Is Only Reliable
+          <span class="block text-amber-500">
+            When It's Maintained.
+          </span>
+        </h2>
+
+
+        <!-- Main Description -->
+        <p
+          class="mt-6 text-sm sm:text-base
+                 text-black dark:text-white
+                 leading-7"
+        >
+          A generator may start perfectly today and still fail when
+          your building needs emergency power tomorrow. Preventive
+          maintenance identifies small mechanical, electrical and
+          fuel-system issues before they become expensive breakdowns.
+        </p>
+
+
+        <!-- Industry Insight -->
+        <div
+          class="mt-6
+                 pl-4
+                 border-l-2 border-amber-500"
+        >
+
+          <p
+            class="text-sm
+                   text-black dark:text-white
+                   leading-6"
+          >
+            Industry studies indicate that
+            <strong class="text-black dark:text-white">
+              85% of generator startup failures
+            </strong>
+            during grid blackouts are linked to preventable issues
+            such as battery degradation, stale fuel and loose
+            electrical terminals.
+          </p>
+
+        </div>
+
+
+        <!-- ====================================================
+             MAINTENANCE IMPACT
+        ===================================================== -->
+        <div class="mt-8">
+
+          <div
+            class="flex items-center justify-between
+                   mb-4"
+          >
+
+            <span
+              class="text-[11px]
+                     font-mono uppercase
+                     tracking-wider
+                     text-black dark:text-white"
+            >
+              Preventive Maintenance Impact
+            </span>
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     text-amber-500"
+            >
+              SYSTEM HEALTH
+            </span>
+
+          </div>
+
+
+          <!-- Impact Rows -->
+          <div
+            class="space-y-3
+                   border-y
+                   border-slate-200
+                   dark:border-slate-800
+                   py-4"
+          >
+
+            <!-- Row 01 -->
+            <div class="flex items-center gap-4">
+
+              <div
+                class="w-9 h-9 shrink-0
+                       bg-amber-500/10
+                       text-amber-500
+                       flex items-center justify-center"
+              >
+                <i class="fa-solid fa-shield-halved text-sm"></i>
+              </div>
+
+              <div class="flex-1">
+
+                <div
+                  class="flex items-center
+                         justify-between gap-3"
+                >
+
+                  <span
+                    class="text-xs sm:text-sm
+                           font-semibold
+                           text-black dark:text-white"
+                  >
+                    Startup Reliability
+                  </span>
+
+                  <span
+                    class="text-xs font-mono
+                           font-bold
+                           text-amber-500"
+                  >
+                    HIGH
+                  </span>
+
+                </div>
+
+                <div
+                  class="mt-2 h-1
+                         bg-slate-200
+                         dark:bg-slate-800
+                         overflow-hidden"
+                >
+                  <div
+                    class="h-full w-[92%]
+                           bg-amber-500"
+                  ></div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Row 02 -->
+            <div class="flex items-center gap-4">
+
+              <div
+                class="w-9 h-9 shrink-0
+                       bg-amber-500/10
+                       text-amber-500
+                       flex items-center justify-center"
+              >
+                <i class="fa-solid fa-gauge-high text-sm"></i>
+              </div>
+
+              <div class="flex-1">
+
+                <div
+                  class="flex items-center
+                         justify-between gap-3"
+                >
+
+                  <span
+                    class="text-xs sm:text-sm
+                           font-semibold
+                           text-black dark:text-white"
+                  >
+                    Equipment Lifespan
+                  </span>
+
+                  <span
+                    class="text-xs font-mono
+                           font-bold
+                           text-amber-500"
+                  >
+                    +35%
+                  </span>
+
+                </div>
+
+                <div
+                  class="mt-2 h-1
+                         bg-slate-200
+                         dark:bg-slate-800
+                         overflow-hidden"
+                >
+                  <div
+                    class="h-full w-[78%]
+                           bg-amber-500"
+                  ></div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- Row 03 -->
+            <div class="flex items-center gap-4">
+
+              <div
+                class="w-9 h-9 shrink-0
+                       bg-amber-500/10
+                       text-amber-500
+                       flex items-center justify-center"
+              >
+                <i class="fa-solid fa-gas-pump text-sm"></i>
+              </div>
+
+              <div class="flex-1">
+
+                <div
+                  class="flex items-center
+                         justify-between gap-3"
+                >
+
+                  <span
+                    class="text-xs sm:text-sm
+                           font-semibold
+                           text-black dark:text-white"
+                  >
+                    Fuel Efficiency
+                  </span>
+
+                  <span
+                    class="text-xs font-mono
+                           font-bold
+                           text-amber-500"
+                  >
+                    OPTIMIZED
+                  </span>
+
+                </div>
+
+                <div
+                  class="mt-2 h-1
+                         bg-slate-200
+                         dark:bg-slate-800
+                         overflow-hidden"
+                >
+                  <div
+                    class="h-full w-[86%]
+                           bg-amber-500"
+                  ></div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ====================================================
+             KEY PROOF POINTS
+        ===================================================== -->
+        <div class="mt-7">
+
+          <span
+            class="text-[11px]
+                   font-mono
+                   uppercase
+                   tracking-wider
+                   text-black dark:text-white
+                   block mb-4"
+          >
+            Why Scheduled Maintenance Matters
+          </span>
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+
+            <!-- Point 01 -->
+            <div class="flex items-start gap-3">
+
+              <span
+                class="w-6 h-6 shrink-0
+                       rounded
+                       bg-amber-500/15
+                       text-amber-500
+                       flex items-center justify-center"
+              >
+                <i class="fa-solid fa-check text-[10px]"></i>
+              </span>
+
+              <div>
+
+                <span
+                  class="block text-xs sm:text-sm
+                         font-semibold
+                         text-black dark:text-white"
+                >
+                  Zero Sudden Failures
+                </span>
+
+                <span
+                  class="block text-[11px]
+                         text-black dark:text-white
+                         mt-1"
+                >
+                  Catch faults early.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Point 02 -->
+            <div class="flex items-start gap-3">
+
+              <span
+                class="w-6 h-6 shrink-0
+                       rounded
+                       bg-amber-500/15
+                       text-amber-500
+                       flex items-center justify-center"
+              >
+                <i class="fa-solid fa-check text-[10px]"></i>
+              </span>
+
+              <div>
+
+                <span
+                  class="block text-xs sm:text-sm
+                         font-semibold
+                        text-black dark:text-white"
+                >
+                  Longer Equipment Life
+                </span>
+
+                <span
+                  class="block text-[11px]
+                         text-black dark:text-white
+                         mt-1"
+                >
+                  Reduce component stress.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Point 03 -->
+            <div class="flex items-start gap-3">
+
+              <span
+                class="w-6 h-6 shrink-0
+                       rounded
+                       bg-amber-500/15
+                       text-amber-500
+                       flex items-center justify-center"
+              >
+                <i class="fa-solid fa-check text-[10px]"></i>
+              </span>
+
+              <div>
+
+                <span
+                  class="block text-xs sm:text-sm
+                         font-semibold
+                         text-black dark:text-white"
+                >
+                  Better Fuel Economy
+                </span>
+
+                <span
+                  class="block text-[11px]
+                         text-black dark:text-white
+                         mt-1"
+                >
+                  Maintain peak efficiency.
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- Point 04 -->
+            <div class="flex items-start gap-3">
+
+              <span
+                class="w-6 h-6 shrink-0
+                       rounded
+                       bg-amber-500/15
+                       text-amber-500
+                       flex items-center justify-center"
+              >
+                <i class="fa-solid fa-check text-[10px]"></i>
+              </span>
+
+              <div>
+
+                <span
+                  class="block text-xs sm:text-sm
+                         font-semibold
+                         text-black dark:text-white"
+                >
+                  Lower Repair Costs
+                </span>
+
+                <span
+                  class="block text-[11px]
+                         text-black dark:text-white
+                         mt-1"
+                >
+                  Prevent major failures.
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ====================================================
+             AMC LINK
+        ===================================================== -->
+        <div class="mt-8 pt-6
+                    border-t
+                    border-slate-200
+                    dark:border-slate-800">
+
+          <div
+            class="flex flex-col sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-4"
+          >
+
+            <div>
+
+              <span
+                class="block text-[10px]
+                       font-mono
+                       uppercase
+                       tracking-wider
+                       text-black dark:text-white mb-1"
+              >
+                Recommended Protection
+              </span>
+
+              <span
+                class="text-sm font-semibold
+                       text-black dark:text-white"
+              >
+                Annual Maintenance Contract
+              </span>
+
+            </div>
+
+
+            <a
+              href="amc-plans.html"
+              class="inline-flex items-center
+                     gap-2
+                     text-sm font-bold
+                     text-amber-500
+                     hover:text-amber-600
+                     transition-colors"
+            >
+
+              <span>
+                View AMC Plans
+              </span>
+
+              <i
+                class="fa-solid fa-arrow-right
+                       rtl-flip"
+                data-rtl-flip
+              ></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ======================================================
+           RIGHT — INTERACTIVE MAINTENANCE SELECTOR
+      ======================================================= -->
+      <div
+        class="lg:col-span-7
+               bg-slate-50
+               dark:bg-slate-900/80
+               p-6 sm:p-8
+               border
+               border-slate-200
+               dark:border-slate-800
+               transition-colors duration-300"
+      >
+
+        <!-- Selector Header -->
+        <div class="mb-6">
+
+          <div
+            class="flex flex-col sm:flex-row
+                   sm:items-end
+                   sm:justify-between
+                   gap-3 mb-4"
+          >
+
+            <div>
+
+              <span
+                class="text-[10px]
+                       font-mono
+                       uppercase
+                       tracking-wider
+                       text-amber-500
+                       block mb-1"
+              >
+                Maintenance Planner
+              </span>
+
+              <span
+                class="text-xl sm:text-2xl
+                       font-heading
+                       font-bold
+                       text-black dark:text-white"
+              >
+                Select Service Frequency
+              </span>
+
+            </div>
+
+
+            <span
+              class="text-[10px]
+                     font-mono
+                    text-black dark:text-white"
+            >
+              01 — 04
+            </span>
+
+          </div>
+
+
+          <!-- Maintenance Interval Tabs -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+
+            <button
+              type="button"
+              data-interval="monthly"
+              class="interval-tab-btn
+                     py-2.5 px-3
+                     rounded-lg
+                     border
+                     text-xs
+                     font-mono
+                     text-black dark:text-white
+                     font-semibold
+                     transition-all"
+            >
+              MONTHLY
+            </button>
+
+
+            <button
+              type="button"
+              data-interval="quarterly"
+              class="interval-tab-btn
+                     py-2.5 px-3
+                     rounded-lg
+                     border
+                     text-xs
+                     font-mono
+                     font-semibold
+text-black dark:text-white
+                     transition-all"
+            >
+              QUARTERLY
+            </button>
+
+
+            <button
+              type="button"
+              data-interval="halfyearly"
+              class="interval-tab-btn
+                     py-2.5 px-3
+                     rounded-lg
+                     border
+                     text-xs
+                     font-mono
+                     font-semibold text-black dark:text-white
+                     transition-all"
+            >
+              HALF-YEARLY
+            </button>
+
+
+            <button
+              type="button"
+              data-interval="annual"
+              class="interval-tab-btn
+                     py-2.5 px-3
+                     rounded-lg
+                     border
+                     text-xs
+                     font-mono
+                     font-semibold text-black dark:text-white
+                     transition-all"
+            >
+              ANNUAL
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- ====================================================
+             DYNAMIC CONTENT
+        ===================================================== -->
+        <div
+          id="interval-detail-content"
+          class="bg-white
+                 dark:bg-slate-950
+                 p-6
+                 rounded-xl
+                 border
+                 border-slate-200
+                 dark:border-slate-800
+                 transition-colors duration-300
+                 "
+        >
+          <!-- Populated dynamically via main.js -->
+        </div>
+
+
+        <!-- ====================================================
+             SERVICE JOURNEY
+        ===================================================== -->
+        <div
+          class="mt-6
+                 grid grid-cols-1 sm:grid-cols-3
+                 gap-3"
+        >
+
+          <div
+            class="p-4
+                   border
+                   border-slate-200
+                   dark:border-slate-800
+                   bg-white
+                   dark:bg-slate-950"
+          >
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     text-amber-500"
+            >
+              01
+            </span>
+
+            <h4
+              class="text-xs font-bold
+                     text-black dark:text-white
+                     mt-2"
+            >
+              Inspect
+            </h4>
+
+            <p
+              class="text-[10px]
+                     text-black dark:text-white
+                     mt-1 leading-4"
+            >
+              Full system health inspection.
+            </p>
+
+          </div>
+
+
+          <div
+            class="p-4
+                   border
+                   border-slate-200
+                   dark:border-slate-800
+                   bg-white
+                   dark:bg-slate-950"
+          >
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     text-amber-500"
+            >
+              02
+            </span>
+
+            <h4
+              class="text-xs font-bold
+                     text-black dark:text-white
+                     mt-2"
+            >
+              Service
+            </h4>
+
+            <p
+              class="text-[10px]
+                     text-black dark:text-white
+                     mt-1 leading-4"
+            >
+              Clean, adjust and replace.
+            </p>
+
+          </div>
+
+
+          <div
+            class="p-4
+                   border
+                   border-slate-200
+                   dark:border-slate-800
+                   bg-white
+                   dark:bg-slate-950"
+          >
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     text-amber-500"
+            >
+              03
+            </span>
+
+            <h4
+              class="text-xs font-bold
+                     text-black dark:text-white
+                     dark:text-white
+                     mt-2"
+            >
+              Report
+            </h4>
+
+            <p
+              class="text-[10px]
+                    text-black dark:text-white
+                     mt-1 leading-4"
+            >
+              Receive service health report.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- ====================================================
+             6-POINT INSPECTION
+        ===================================================== -->
+        <div
+          class="mt-6 pt-5
+                 border-t
+                 border-slate-200
+                 dark:border-slate-800"
+        >
+
+          <div
+            class="flex flex-col sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-2 mb-4"
+          >
+
+            <span
+              class="text-[11px]
+                     font-mono
+                     text-slate-500
+                     uppercase"
+            >
+              Core 6-Point Diagnostic Protocol
+            </span>
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     text-black dark:text-white"
+            >
+              INCLUDED EVERY VISIT
+            </span>
+
+          </div>
+
+
+          <div
+            class="grid grid-cols-2
+                   sm:grid-cols-3
+                   gap-x-4
+                   gap-y-3
+                   text-xs
+                   text-slate-700
+                   dark:text-slate-300"
+          >
+
+            <!-- 01 -->
+            <div
+              class="flex items-center
+                     space-x-1.5
+                     rtl:space-x-reverse"
+            >
+              <i
+                class="fa-solid fa-circle-check
+                       text-black dark:text-white
+                       text-[11px]"
+              ></i>
+
+              <span>
+                Oil &amp; Filter Audit
+              </span>
+            </div>
+
+
+            <!-- 02 -->
+            <div
+              class="flex items-center
+                     space-x-1.5
+                     rtl:space-x-reverse"
+            >
+              <i
+                class="fa-solid fa-circle-check
+                       text-black dark:text-white
+                       text-[11px]"
+              ></i>
+
+              <span>
+                Battery Health Test
+              </span>
+            </div>
+
+
+            <!-- 03 -->
+            <div
+              class="flex items-center
+                     space-x-1.5
+                     rtl:space-x-reverse"
+            >
+              <i
+                class="fa-solid fa-circle-check
+                       text-black dark:text-white
+                       text-[11px]"
+              ></i>
+
+              <span>
+                Electrical Torque
+              </span>
+            </div>
+
+
+            <!-- 04 -->
+            <div
+              class="flex items-center
+                     space-x-1.5
+                     rtl:space-x-reverse"
+            >
+              <i
+                class="fa-solid fa-circle-check
+                       text-black dark:text-white
+                       text-[11px]"
+              ></i>
+
+              <span>
+                Coolant Inspection
+              </span>
+            </div>
+
+
+            <!-- 05 -->
+            <div
+              class="flex items-center
+                     space-x-1.5
+                     rtl:space-x-reverse"
+            >
+              <i
+                class="fa-solid fa-circle-check
+                       text-black dark:text-white
+                       text-[11px]"
+              ></i>
+
+              <span>
+                Load Performance
+              </span>
+            </div>
+
+
+            <!-- 06 -->
+            <div
+              class="flex items-center
+                     space-x-1.5
+                     rtl:space-x-reverse"
+            >
+              <i
+                class="fa-solid fa-circle-check
+                       text-black dark:text-white
+                       text-[11px]"
+              ></i>
+
+              <span>
+                Fuel System Scan
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- =========================================================================
+         SECTION 07 — EMERGENCY + AMC CONVERSION
+         Bold High-Contrast Split Screen (Left: Emergency Hotline | Right: AMC Plan)
+         ========================================================================= -->
+    <section
+      id="emergency-amc-hub"
+      class="py-16 sm:py-24
+             bg-gradient-to-b from-[#FFF5F6] via-white to-[#FFF5F6] text-slate-900
+             dark:from-[#0F0A0C] dark:via-[#160A0E] dark:to-[#0F0A0C] dark:text-white
+             border-b border-rose-100 dark:border-[#2D0F16]
+             relative overflow-hidden transition-colors duration-300"
+    >
+
+      <!-- Ambient Glow & Radial Grid Accents -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-red-600/10 dark:bg-red-600/15 blur-3xl rounded-full"></div>
+        <div class="absolute top-1/2 right-0 w-[36rem] h-[36rem] bg-amber-500/10 dark:bg-amber-500/10 blur-3xl rounded-full"></div>
+        <div class="absolute -bottom-32 left-1/3 w-80 h-80 bg-rose-500/10 dark:bg-rose-500/15 blur-3xl rounded-full"></div>
+        
+        <!-- Cyber Dot Grid Pattern -->
+        <div
+          class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+          style="
+            background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+            background-size: 32px 32px;
+          "
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- ========================================================
+             SECTION HEADER — HIGH IMPACT
+        ========================================================= -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-red-500/10 dark:bg-red-500/20 border border-red-500/20 dark:border-red-500/30 mb-4 shadow-sm">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+            </span>
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-red-600 dark:text-red-400">
+              Power Response Command Hub
+            </span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight text-slate-950 dark:text-white leading-[1.15]">
+            Power Fails. <span class="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 bg-clip-text text-transparent">We Take Over.</span>
+          </h2>
+
+          <p class="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-medium leading-relaxed">
+            Immediate 24/7 breakdown dispatch for urgent power outages, paired with 360° Annual Maintenance Contracts for 100% year-round uptime.
+          </p>
+        </div>
+
+        <!-- ========================================================
+             MAIN DUAL-COMMAND PANEL (GRID 12 COLS)
+        ========================================================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+
+          <!-- ====================================================
+               LEFT PANEL: EMERGENCY HOTLINE COMMAND DECK (7 COLS)
+          ===================================================== -->
+          <div class="lg:col-span-7 flex flex-col justify-between rounded-3xl bg-white dark:bg-[#1A0E12] border-2 border-red-500/30 dark:border-red-500/40 p-6 sm:p-9 lg:p-10 shadow-2xl shadow-red-500/5 dark:shadow-red-950/40 relative overflow-hidden group hover:border-red-500/60 transition-all duration-300">
+            
+            <!-- Top Hazard Corner Glow -->
+            <div class="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-red-500/15 via-red-500/5 to-transparent rounded-bl-full pointer-events-none"></div>
+
+            <div>
+              <!-- Live Dispatch Banner -->
+              <div class="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-rose-100 dark:border-red-950/80">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-3 h-3 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20 animate-pulse"></span>
+                  <span class="text-xs font-mono font-bold tracking-wider uppercase text-emerald-600 dark:text-emerald-400">
+                    Emergency Fleet Ready • 24/7/365
+                  </span>
+                </div>
+                <span class="text-[11px] font-mono font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                  <i class="fa-solid fa-location-crosshairs text-red-500 mr-1.5"></i> Zone ETA: &lt; 45 Min
+                </span>
+              </div>
+
+              <!-- Main Emergency Pitch -->
+              <div class="mt-6">
+                <span class="text-xs font-mono uppercase tracking-[0.2em] text-red-600 dark:text-red-400 font-bold block mb-2">
+                  <i class="fa-solid fa-triangle-exclamation mr-1"></i> Immediate Breakdown Support
+                </span>
+                
+                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-black tracking-tight text-slate-950 dark:text-white leading-tight">
+                  Critical Generator or Inverter Failure?
+                </h3>
+
+                <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                  Blackout, engine starting failure, AVR trip, smoke, or fuel leakage? Our certified mobile engineers carry diagnostic tools and key OEM spares for instant site triage.
+                </p>
+
+                <!-- Breakdown Symptom Pills -->
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-900/50">
+                    <i class="fa-solid fa-bolt text-red-500"></i> Generator No-Start
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-900/50">
+                    <i class="fa-solid fa-battery-quarter text-red-500"></i> Inverter Tripping / Overload
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-900/50">
+                    <i class="fa-solid fa-oil-can text-red-500"></i> Fuel / Coolant Leakage
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-900/50">
+                    <i class="fa-solid fa-triangle-exclamation text-red-500"></i> Voltage Fluctuation
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Big Hotline Interactive Action Block -->
+            <div class="mt-8 pt-6 border-t border-rose-100 dark:border-red-950/80">
+              <div class="bg-gradient-to-r from-red-50 via-rose-50 to-amber-50 dark:from-[#240F14] dark:via-[#200D12] dark:to-[#240F14] rounded-2xl p-5 sm:p-6 border border-red-200 dark:border-red-900/60 shadow-inner flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-5">
+                
+                <div>
+                  <span class="block text-[11px] uppercase tracking-[0.2em] font-mono font-bold text-black dark:text-white mb-1">
+                    <i class="fa-solid fa-headset text-red-500 mr-1"></i> Direct 24/7 Toll-Free Dispatch
+                  </span>
+                  <a
+                    href="tel:18001234567"
+                    class="text-3xl sm:text-4xl font-heading font-black text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 transition-colors tracking-tight flex items-center gap-2 group-hover:scale-[1.02] transform origin-left duration-200"
+                    aria-label="Call Emergency Hotline 1800 123 4567"
+                  >
+                    <span>1800 123 4567</span>
+                  </a>
+                  <span class="block text-xs text-black dark:text-white mt-1 font-medium">
+                    ⚡ Priority dispatch assigned upon single dial
+                  </span>
+                </div>
+
+                <!-- Action Button Group -->
+                <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                  <a
+                    href="tel:18001234567"
+                    class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-red-600 hover:bg-red-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-red-600/30 hover:shadow-red-600/50 hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <i class="fa-solid fa-phone-volume text-base animate-bounce"></i>
+                    <span>Call Now</span>
+                  </a>
+
+                  <a
+                    href="https://wa.me/18001234567?text=Emergency%20Power%20Breakdown%20Help%20Needed"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                    title="Send WhatsApp Emergency Alert"
+                  >
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="sm:hidden lg:inline">WhatsApp SOS</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ====================================================
+               RIGHT PANEL: AMC PRO PREVENTION HUB (5 COLS)
+          ===================================================== -->
+          <div class="lg:col-span-5 flex flex-col justify-between rounded-3xl bg-white dark:bg-[#1A0E12] border border-slate-200 dark:border-[#2D0F16] p-6 sm:p-9 lg:p-10 shadow-xl shadow-slate-200/50 dark:shadow-none relative overflow-hidden group hover:border-amber-500/50 transition-all duration-300">
+            
+            <!-- Top Shield Ambient Highlight -->
+            <div class="absolute top-0 right-0 w-36 h-36 bg-amber-500/10 dark:bg-amber-500/15 rounded-bl-full pointer-events-none"></div>
+
+            <div>
+              <!-- AMC Pro Header -->
+              <div class="flex items-center justify-between gap-3 pb-5 border-b border-slate-100 dark:border-slate-800">
+                <span class="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+                  <i class="fa-solid fa-shield-halved"></i> PowerGuard 360™
+                </span>
+                <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-900/50">
+                  Zero Downtime AMC
+                </span>
+              </div>
+
+              <!-- Pitch Heading -->
+              <div class="mt-6">
+                <h3 class="text-2xl sm:text-3xl font-heading font-extrabold tracking-tight text-slate-950 dark:text-white leading-tight">
+                  Protect Your Power. <br>
+                  <span class="text-amber-600 dark:text-amber-400">All Year Long.</span>
+                </h3>
+                <p class="mt-2.5 text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                  Avoid costly sudden breakdowns. Comprehensive annual contracts covering periodic health checks, zero-labor repairs, and genuine OEM parts.
+                </p>
+              </div>
+
+              <!-- 4 Value Features Grid -->
+              <div class="mt-6 space-y-3.5">
+                
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-[#200D12]/60 border border-slate-100 dark:border-slate-800/80 hover:border-amber-500/30 transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">
+                    <i class="fa-solid fa-stethoscope"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wide">
+                      Monthly 24-Point Health Scan
+                    </h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
+                      Oil purity, battery impedance, cooling levels, and governor calibration.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-[#200D12]/60 border border-slate-100 dark:border-slate-800/80 hover:border-amber-500/30 transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wide">
+                      Zero Labor on Breakdown Visits
+                    </h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
+                      Unlimited emergency service callouts with completely waived labor charges.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 dark:bg-[#200D12]/60 border border-slate-100 dark:border-slate-800/80 hover:border-amber-500/30 transition-colors">
+                  <div class="w-8 h-8 rounded-lg bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">
+                    <i class="fa-solid fa-tags"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wide">
+                      15% Flat Discount on OEM Spares
+                    </h4>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
+                      Direct factory spares with manufacturer warranty and priority allocation.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- AMC Bottom CTA -->
+            <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+              <a
+                href="amc-plans.html"
+                class="w-full inline-flex items-center justify-between p-4 rounded-2xl bg-slate-900 dark:bg-[#240F14] hover:bg-slate-800 dark:hover:bg-[#2F131A] text-white transition-all duration-300 group/btn border border-slate-800 dark:border-red-900/40 shadow-lg"
+              >
+                <div>
+                  <span class="block text-sm font-bold group-hover/btn:text-amber-400 transition-colors">
+                    Explore Annual Maintenance Plans
+                  </span>
+                  <span class="block text-[11px] text-slate-400 font-mono mt-0.5">
+                    Homes • Clinics • Data Centers • Factories
+                  </span>
+                </div>
+                <div class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-white group-hover/btn:bg-amber-500 group-hover/btn:text-slate-950 transition-all duration-300">
+                  <i class="fa-solid fa-arrow-right rtl-flip" data-rtl-flip></i>
+                </div>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ========================================================
+             BOTTOM OPERATIONAL TRUST MATRIX (4 STAT METRICS)
+        ========================================================= -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          
+          <!-- Metric 01 -->
+          <div class="p-5 rounded-2xl bg-white/80 dark:bg-[#1A0E12]/80 backdrop-blur-sm border border-slate-200/80 dark:border-[#2D0F16] shadow-sm flex items-center gap-4 hover:border-red-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-red-500/10 dark:bg-red-500/20 text-red-600 dark:text-red-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <div>
+              <span class="block text-xl sm:text-2xl font-heading font-black text-slate-950 dark:text-white">
+                24 / 7 / 365
+              </span>
+              <span class="text-[11px] uppercase tracking-wider font-mono font-semibold text-black dark:text-white">
+                Non-Stop Dispatch
+              </span>
+            </div>
+          </div>
+
+          <!-- Metric 02 -->
+          <div class="p-5 rounded-2xl bg-white/80 dark:bg-[#1A0E12]/80 backdrop-blur-sm border border-slate-200/80 dark:border-[#2D0F16] shadow-sm flex items-center gap-4 hover:border-red-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div>
+              <span class="block text-xl sm:text-2xl font-heading font-black text-black dark:text-white">
+                &lt; 45 Mins
+              </span>
+              <span class="text-[11px] uppercase tracking-wider font-mono font-semibold text-black dark:text-white">
+                Guaranteed Zone SLA
+              </span>
+            </div>
+          </div>
+
+          <!-- Metric 03 -->
+          <div class="p-5 rounded-2xl bg-white/80 dark:bg-[#1A0E12]/80 backdrop-blur-sm border border-slate-200/80 dark:border-[#2D0F16] shadow-sm flex items-center gap-4 hover:border-red-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-rose-500/10 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div>
+              <span class="block text-xl sm:text-2xl font-heading font-black text-black dark:text-white">
+                100% OEM
+              </span>
+              <span class="text-[11px] uppercase tracking-wider font-mono font-semibold text-black dark:text-white">
+                Certified Spares
+              </span>
+            </div>
+          </div>
+
+          <!-- Metric 04 -->
+          <div class="p-5 rounded-2xl bg-white/80 dark:bg-[#1A0E12]/80 backdrop-blur-sm border border-slate-200/80 dark:border-[#2D0F16] shadow-sm flex items-center gap-4 hover:border-red-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <div>
+              <span class="block text-xl sm:text-2xl font-heading font-black text-black dark:text-white">
+                99.8% Uptime
+              </span>
+              <span class="text-[11px] uppercase tracking-wider font-mono font-semibold text-black dark:text-white">
+                AMC Reliability Rate
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================================
+         SECTION 08 — FINAL SERVICE BOOKING CTA
+         Full-Width Dark Section with Animated Power-Line Graphic
+         ========================================================================= -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-[#12070A] text-white relative overflow-hidden border-b border-[#2D0F16]">
+      
+      <!-- Animated SVG Electric Power Grid Background Graphic -->
+      <div class="absolute inset-0 pointer-events-none opacity-20">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1200 400">
+          <path class="electric-line" d="M0,200 L300,200 L350,140 L400,260 L450,170 L500,200 L1200,200" fill="none" stroke="#DC2626" stroke-width="2"/>
+          <circle cx="450" cy="170" r="4" fill="#DC2626"/>
+          <circle cx="350" cy="140" r="4" fill="#DC2626"/>
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        
+        <div class="max-w-3xl mx-auto space-y-6">
+          
+          <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-mono font-semibold text-amber-400">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            <span>DIRECT FACTORY EXPERTISE</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading tracking-tight text-white leading-tight">
+            Your Next Power Backup Starts With One Conversation.
+          </h2>
+
+          <p class="text-sm sm:text-base text-white dark:text-white leading-relaxed max-w-2xl mx-auto">
+            Tell us your location, power requirement, and existing setup. Our certified engineering team will recommend the right generator, inverter system, or preventive AMC plan.
+          </p>
+
+          <!-- Sector Coverage Badges -->
+          <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">
+              <i class="fa-solid fa-house text-amber-500 mr-1.5 rtl:ml-1.5 rtl:mr-0"></i> Homes
+            </span>
+            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">
+              <i class="fa-solid fa-shop text-amber-500 mr-1.5 rtl:ml-1.5 rtl:mr-0"></i> Shops
+            </span>
+            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">
+              <i class="fa-solid fa-building text-amber-500 mr-1.5 rtl:ml-1.5 rtl:mr-0"></i> Offices
+            </span>
+            <span class="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-mono text-slate-300">
+              <i class="fa-solid fa-industry text-amber-500 mr-1.5 rtl:ml-1.5 rtl:mr-0"></i> Commercial Systems
+            </span>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-1 pt-4">
+            <button type="button" data-modal-open="booking-modal" class="px-8 py-4 rounded-lg btn-primary text-sm font-bold uppercase tracking-wider shadow-xl shadow-amber-500/25 flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Book a Service</span>
+            </button>
+
+          </div>
+
+          <!-- Response Guarantee -->
+          <p class="text-xs text-white font-mono pt-2">
+            Average response time: &lt; 15 minutes during standard hours | Zero booking fees
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================================
+       GLOBAL FOOTER
+       Consistent across all pages with Brand Identity, Quick Links & 24/7 Hotline
+       ========================================================================= -->
+  <footer class="bg-[#0F0A0C] text-slate-400 text-sm border-t border-[#2D0F16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#2D0F16]">
+        
+        <!-- Col 1: Brand & Bio (5 cols on desktop) -->
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group focus:outline-none" aria-label="PowerCore Home">
+            <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-bolt-lightning text-xl text-white"></i>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+                <span class="text-xl font-extrabold text-white tracking-tight font-heading">Power<span class="text-amber-500">Core</span></span>
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Generator &amp; Inverter Service Center</span>
+            </div>
+          </a>
+
+          <p class="text-xs sm:text-sm text-white leading-relaxed">
+            Engineered power resilience for homes, commercial complexes, and retail establishments. Multi-brand certified sales, installation, repair, and round-the-clock emergency support.
+          </p>
+
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 power-live-dot"></span>
+            <span class="text-xs font-mono text-emerald-400">Dispatch Network Online (24/7 Ready)</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Navigation
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="index.html" class="hover:text-amber-400 text-amber-500 transition-colors text-white">Home 1 (Editorial)</a></li>
+            <li><a href="home-2.html" class="hover:text-amber-400 transition-colors text-white">Home 2 (Industrial)</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors text-white">About Us</a></li>
+            <li><a href="products.html" class="hover:text-amber-400 transition-colors text-white">Products</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition-colors text-white">Services</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">AMC Plans</a></li>
+            <li><a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Service Areas</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Services (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Core Services
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="services.html?service=sales" class="hover:text-amber-400 transition-colors text-white">Generator Sales &amp; Sizing</a></li>
+            <li><a href="services.html?service=repair" class="hover:text-amber-400 transition-colors text-white">Emergency Generator Repair</a></li>
+            <li><a href="services.html?service=inverter" class="hover:text-amber-400 transition-colors text-white">Pure Sine Wave Inverters</a></li>
+            <li><a href="services.html?service=battery" class="hover:text-amber-400 transition-colors text-white">Tubular &amp; Lithium Battery Solutions</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">Annual Maintenance Contracts (AMC)</a></li>
+            <li><a href="tel:18001234567" class="hover:text-red-400 text-red-400 transition-colors text-white">24/7 Breakdown Dispatch</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Emergency (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Emergency Hotline
+          </h3>
+          <div class="p-3 rounded-lg bg-[#1A0E12] border border-[#3B1219] space-y-2">
+            <span class="text-[11px] font-mono text-white block">24/7 TOLL-FREE CALL:</span>
+            <a href="tel:18001234567" class="text-lg font-bold text-amber-400 hover:text-amber-300 block font-mono">
+              1800 123 4567
+            </a>
+            <span class="text-[11px] text-white block">service@powercore.example</span>
+          </div>
+          <p class="text-xs text-white">
+            Headquarters &amp; Central Workshop:<br>
+            PowerCore Tech Park, Industrial Corridor Hub
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white">
+        <div>
+          © 2026 PowerCore. All Rights Reserved. Generator &amp; Inverter Service Center.
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Terms of Service</a>
+          <a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Sitemap</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       SERVICE BOOKING MODAL (Interactive Modal)
+       ========================================================================= -->
+  <div id="booking-modal" class="modal-backdrop fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-content-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl w-full max-w-lg overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+        <div class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <div class="w-8 h-8 rounded bg-amber-500/20 text-amber-500 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Book a Service Visit</h3>
+            <span class="text-[10px] font-mono text-slate-500">Fast Certified Engineer Dispatch</span>
+          </div>
+        </div>
+        <button type="button" data-modal-close="booking-modal" class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg p-1.5 focus:outline-none" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6">
+        
+        <!-- Form -->
+        <form id="service-booking-form" class="space-y-4">
+          <div>
+            <label for="modal-customer-name" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Your Full Name *</label>
+            <input type="text" id="modal-customer-name" required placeholder="e.g. John Doe" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="modal-customer-phone" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Phone Number *</label>
+              <input type="tel" id="modal-customer-phone" required placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+            <div>
+              <label for="modal-customer-city" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service Location *</label>
+              <input type="text" id="modal-customer-city" required placeholder="City / Zip Code" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+          </div>
+
+          <div>
+            <label for="modal-service-requirement" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service / Power Requirement</label>
+            <input type="text" id="modal-service-requirement" placeholder="e.g. Generator Repair / 5 kVA Inverter Installation" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div>
+            <label for="modal-service-notes" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Additional Issue Details</label>
+            <textarea id="modal-service-notes" rows="2" placeholder="Describe symptoms (e.g. not starting, voltage fluctuation, battery replacement)..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full py-3.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Confirm Service Booking</span>
+            </button>
+            <span class="block text-center text-[10px] text-slate-500 dark:text-slate-400 mt-2 font-mono">
+              Technician schedule will be confirmed via SMS/Phone within 15 minutes.
+            </span>
+          </div>
+        </form>
+
+        <!-- Success Message (Shown on submit) -->
+        <div id="booking-success-message" class="hidden text-center py-8 space-y-4">
+          <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center text-2xl mx-auto">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 dark:text-white font-heading">Service Request Confirmed!</h4>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+            Your booking request has been logged into our dispatcher queue. An OEM certified engineer will contact you shortly.
+          </p>
+          <div class="pt-2">
+            <button type="button" data-modal-close="booking-modal" class="px-6 py-2.5 rounded-lg btn-secondary text-xs font-bold">
+              Done
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       SCROLL TO TOP (UP ARROW) BUTTON
+       ========================================================================= -->
+  <button type="button" id="scroll-to-top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-xl shadow-red-600/35 border border-red-500/50 flex items-center justify-center opacity-0 invisible translate-y-4 focus:outline-none" aria-label="Scroll to top" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-sm sm:text-base"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

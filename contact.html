@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerCore — Generator & Inverter Service Center | Contact & Booking</title>
+  <meta name="description" content="Book generator repair, inverter service, battery replacement, and annual maintenance contracts. 24/7 emergency dispatch and instant technician triage.">
+  
+  <!-- Favicon (Matching Lightning Bolt Icon in Tab Title) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23DC2626'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            amber: {
+              400: '#EF4444',
+              500: '#DC2626',
+              600: '#991B1B',
+            },
+            sky: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            blue: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            burgundy: {
+              500: '#881337',
+              600: '#9F1239',
+              700: '#7F1D1D',
+            },
+            slate: {
+              50: '#FFF5F6',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#1E293B',
+              500: '#0F172A',
+              600: '#0F172A',
+              700: '#000000',
+              800: '#2D0F16',
+              850: '#1C0D12',
+              900: '#160A0E',
+              950: '#0F0A0C',
+            },
+            rose: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#F43F5E',
+              600: '#E11D48',
+              700: '#BE123C',
+              800: '#9F1239',
+              900: '#881337',
+              950: '#4C0519',
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'sans-serif'],
+            body: ['Inter', 'Manrope', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6.5 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-[#FFFFFF] dark:bg-[#0F0A0C] text-[#111827] dark:text-[#F9FAFB] antialiased selection:bg-[#DC2626] selection:text-white">
+
+  <!-- =========================================================================
+       GLOBAL PAGE PRELOADER
+       ========================================================================= -->
+  <div id="page-preloader" class="fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white dark:bg-[#0F0A0C] transition-all duration-500">
+    <!-- Ambient Glow Pulse -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center">
+      <div class="w-80 h-80 rounded-full bg-red-600/10 dark:bg-red-600/15 blur-3xl animate-pulse"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center text-center px-4 max-w-xs">
+      <!-- Animated Energy Core Icon -->
+      <div class="relative mb-5 flex items-center justify-center">
+        <!-- Rotating Orbit Ring -->
+        <div class="preloader-ring absolute w-20 h-20 rounded-full border-2 border-red-500/20 border-t-red-600 border-r-red-600 animate-spin"></div>
+        <!-- Pulsing Glow Ring -->
+        <div class="absolute w-16 h-16 rounded-2xl bg-red-600/20 animate-ping opacity-40"></div>
+        <!-- Core Brand Logo Box -->
+        <div class="relative w-12 h-12 rounded-xl bg-gradient-to-tr from-red-600 to-rose-600 flex items-center justify-center text-white shadow-xl shadow-red-600/30">
+          <i class="fa-solid fa-bolt-lightning text-xl text-white animate-bounce"></i>
+        </div>
+      </div>
+
+      <!-- Brand Text -->
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
+        <span class="text-xl font-heading font-extrabold tracking-tight text-slate-950 dark:text-white">Power<span class="text-red-600">Core</span></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      </div>
+
+      <!-- Monospace Loading Status -->
+      <div class="flex items-center gap-1.5 text-[11px] font-mono tracking-wider uppercase text-slate-500 dark:text-slate-400 mb-4">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
+        <span id="preloader-status-text">INITIALIZING POWER GRID...</span>
+      </div>
+
+      <!-- High-Tech Progress Bar -->
+      <div class="w-48 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden relative shadow-inner">
+        <div class="preloader-progress-bar h-full bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       GLOBAL HEADER (Single-Line Fixed Header — Kept Consistent)
+       ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-[#0F0A0C]/95 backdrop-blur-md border-b border-rose-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-14 2xl:h-16 header-inner-wrap flex items-center justify-between">
+      
+      <!-- Brand Logo & Identity -->
+      <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse shrink-0 group focus:outline-none" aria-label="PowerCore Home">
+        <div class="w-8 h-8 2xl:w-9 2xl:h-9 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
+          <i class="fa-solid fa-bolt-lightning text-base 2xl:text-lg text-white"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-base 2xl:text-lg font-extrabold tracking-tight text-slate-950 dark:text-white font-heading">Power<span class="text-amber-500">Core</span></span>
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+          </div>
+          <span class="hidden sm:block text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Generator &amp; Inverter Service Center</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden 2xl:flex items-center space-x-4 2xl:space-x-7 rtl:space-x-reverse text-xs 2xl:text-sm font-medium text-slate-700 dark:text-slate-300 desktop-nav" aria-label="Primary Navigation">
+        
+        <!-- Home with Dropdown -->
+        <div class="relative nav-dropdown-trigger group py-2">
+          <button type="button" class="flex items-center space-x-1 rtl:space-x-reverse hover:text-amber-500 transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="nav-dropdown absolute top-full left-0 rtl:left-auto rtl:right-0 w-48 pt-2 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 space-y-1">
+              <a href="index.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 1 (Editorial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+              <a href="home-2.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 2 (Industrial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">About</a>
+        <a href="products.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Products</a>
+        <a href="services.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Services</a>
+        <a href="amc-plans.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">AMC Plans</a>
+        <a href="service-areas.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Service Areas</a>
+        <a href="contact.html" class="text-amber-600 dark:text-amber-400 font-semibold" aria-current="page">Contact</a>
+      </nav>
+
+      <!-- Header Controls & CTA (Desktop & Mobile) -->
+      <div class="flex items-center space-x-1.5 sm:space-x-3 rtl:space-x-reverse shrink-0">
+        
+        <!-- Theme Switcher (Dark/Light) -->
+        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all focus:outline-none shrink-0" aria-label="Toggle dark mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
+        </button>
+
+        <!-- RTL / LTR Switcher -->
+        <button type="button" class="rtl-toggle-btn px-2 sm:px-2.5 h-8 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 text-xs font-mono font-bold text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all flex items-center space-x-1 sm:space-x-1.5 rtl:space-x-reverse focus:outline-none shrink-0" aria-label="Switch text direction" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-globe text-[10px] sm:text-[11px] text-amber-500"></i>
+          <span class="rtl-toggle-label text-[11px] sm:text-xs">RTL</span>
+        </button>
+
+        <!-- Desktop Primary CTA -->
+        <button type="button" data-modal-open="booking-modal" class="hidden 2xl:inline-flex header-desktop-cta items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg btn-primary text-xs font-bold tracking-wide uppercase shadow-sm shrink-0">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book a Service</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" id="mobile-menu-btn" class="2xl:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:border-amber-500 focus:outline-none shrink-0" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-sm sm:text-base"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div id="mobile-drawer" class="2xl:hidden fixed inset-x-0 top-14 2xl:top-16 bg-white dark:bg-[#0F0A0C] border-b border-rose-200/80 dark:border-slate-800/80 shadow-2xl z-40 max-h-[calc(100dvh-3.5rem)] 2xl:max-h-[calc(100dvh-4rem)] overflow-y-auto">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2.5">
+        
+        <!-- Mobile Dropdown Accordion for Home -->
+        <div class="border-b border-slate-100 dark:border-slate-800/60 pb-2.5">
+          <button type="button" id="mobile-home-dropdown-btn" class="w-full flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white py-1">
+            <span class="flex items-center space-x-2 rtl:space-x-reverse text-amber-600 dark:text-amber-400">
+              <i class="fa-solid fa-house text-sm"></i>
+              <span>Home Options</span>
+            </span>
+            <i id="mobile-home-chevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="mobile-home-dropdown-list" class="hidden pl-6 rtl:pr-6 rtl:pl-0 pt-2.5 space-y-2">
+            <a href="index.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 1 (Editorial Layout)</a>
+            <a href="home-2.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 2 (Industrial Layout)</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">About PowerCore</a>
+        <a href="products.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Products (Generators &amp; Inverters)</a>
+        <a href="services.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service &amp; Repair</a>
+        <a href="amc-plans.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">AMC Annual Plans</a>
+        <a href="service-areas.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service Area Coverage</a>
+        <a href="contact.html" class="mobile-nav-link active block text-sm sm:text-base font-semibold pb-1" aria-current="page">Contact &amp; Emergency Hub</a>
+
+        <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-col space-y-2">
+          <button type="button" data-modal-open="booking-modal" class="w-full py-2.5 rounded-lg btn-primary text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse shadow-md shadow-amber-500/20">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Service Online</span>
+          </button>
+          
+          <a href="tel:18001234567" class="w-full py-2.5 rounded-lg border border-red-500/40 bg-red-500/10 text-red-600 dark:text-red-400 text-center text-xs font-bold flex items-center justify-center space-x-2 rtl:space-x-reverse">
+            <i class="fa-solid fa-phone-volume animate-pulse"></i>
+            <span>24/7 Emergency: 1800 123 4567</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+    
+    <!-- =========================================================================
+     SECTION 01 — CONTACT HERO
+     "TELL US WHAT YOUR POWER SYSTEM NEEDS."
+     ========================================================================= -->
+<section
+  class="relative min-h-[620px] lg:min-h-[700px] flex items-center
+         bg-white dark:bg-slate-950
+         border-b border-slate-200 dark:border-slate-800
+         tech-grid-bg overflow-hidden"
+>
+  <!-- Decorative Technical Elements -->
+  <div
+    class="absolute top-0 right-0 w-[420px] h-[420px]
+           border border-amber-500/10 rounded-full
+           translate-x-1/3 -translate-y-1/3 pointer-events-none"
+  ></div>
+
+  <div
+    class="absolute top-10 right-20 w-2 h-2
+           rounded-full bg-amber-500/60 pointer-events-none"
+  ></div>
+
+  <div
+    class="absolute bottom-16 left-10 w-1.5 h-1.5
+           rounded-full bg-amber-500/50 pointer-events-none"
+  ></div>
+
+  <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12
+             gap-12 lg:gap-16 items-center"
+    >
+
+      <!-- ================================================================
+           LEFT — HERO CONTENT
+           ================================================================ -->
+      <div class="lg:col-span-7">
+
+        <!-- Eyebrow -->
+        <div
+          class="flex items-center gap-3
+                 text-xs font-mono font-bold tracking-[0.18em]
+                 text-amber-500 uppercase mb-6"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-amber-500
+                   shadow-[0_0_12px_rgba(245,158,11,0.7)]"
+          ></span>
+
+          <span>
+            SERVICE SUPPORT CENTER // INTAKE DESK
+          </span>
+        </div>
+
+
+        <!-- Main Hero Heading -->
+        <h1
+          class="hero-title
+                 text-5xl sm:text-6xl md:text-7xl
+                 lg:text-[72px] xl:text-[60px]
+                 font-black
+                 text-slate-950 dark:text-white
+                 font-heading
+                 tracking-[-0.045em]
+                 leading-[0.95]"
+        >
+          Tell Us What Your
+          <span
+            class="block mt-2
+                   text-transparent bg-clip-text
+                   bg-gradient-to-r
+                   from-amber-500 via-amber-400 to-amber-600"
+          >
+            Power System Needs.
+          </span>
+        </h1>
+
+
+        <!-- Description -->
+        <p
+          class="mt-7
+                 text-base sm:text-lg
+                 text-slate-600 dark:text-slate-300
+                 max-w-2xl
+                 leading-8"
+        >
+          Whether you need turnkey new equipment sizing, urgent breakdown
+          repair, battery bank replacement, or routine preventive AMC
+          maintenance, start by describing what your system is doing.
+        </p>
+
+
+        <!-- CTA -->
+        <div
+          class="flex flex-col sm:flex-row
+                 items-stretch sm:items-center
+                 gap-4 mt-9"
+        >
+
+          <a
+            href="#booking-form-section"
+            class="px-7 py-4 rounded-lg
+                   btn-primary
+                   text-xs font-bold uppercase tracking-wider
+                   shadow-lg shadow-amber-500/20
+                   flex items-center justify-center
+                   gap-2
+                   transition-all duration-300
+                   hover:-translate-y-0.5"
+          >
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Service</span>
+          </a>
+
+
+          <a
+            href="tel:18001234567"
+            class="px-7 py-4 rounded-lg
+                   btn-secondary
+                   text-xs font-bold
+                   text-red-600 dark:text-red-400
+                   border border-red-500/30
+                   bg-red-500/5
+                   hover:bg-red-500/10
+                   flex items-center justify-center
+                   gap-2
+                   transition-all duration-300"
+          >
+            <i class="fa-solid fa-phone-volume animate-pulse"></i>
+            <span>Emergency Support: 1800 123 4567</span>
+          </a>
+
+        </div>
+
+
+        <!-- Hero Bottom Metadata -->
+        <div
+          class="mt-10 pt-5
+                 border-t border-slate-200 dark:border-slate-800
+                 flex flex-wrap items-center
+                 gap-x-7 gap-y-3"
+        >
+
+          <div class="flex items-center gap-2">
+            <span
+              class="text-[10px] font-mono text-amber-500 font-bold"
+            >
+              01
+            </span>
+
+            <span
+              class="text-[10px] font-mono
+                     tracking-widest
+                     text-slate-500 dark:text-slate-400"
+            >
+              DIAGNOSE
+            </span>
+          </div>
+
+
+          <div class="flex items-center gap-2">
+            <span
+              class="text-[10px] font-mono text-amber-500 font-bold"
+            >
+              02
+            </span>
+
+            <span
+              class="text-[10px] font-mono
+                     tracking-widest
+                     text-slate-500 dark:text-slate-400"
+            >
+              REPAIR
+            </span>
+          </div>
+
+
+          <div class="flex items-center gap-2">
+            <span
+              class="text-[10px] font-mono text-amber-500 font-bold"
+            >
+              03
+            </span>
+
+            <span
+              class="text-[10px] font-mono
+                     tracking-widest
+                     text-slate-500 dark:text-slate-400"
+            >
+              TEST
+            </span>
+          </div>
+
+
+          <div class="flex items-center gap-2">
+            <span
+              class="text-[10px] font-mono text-amber-500 font-bold"
+            >
+              04
+            </span>
+
+            <span
+              class="text-[10px] font-mono
+                     tracking-widest
+                     text-slate-500 dark:text-slate-400"
+            >
+              RESTORE
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================================================================
+           RIGHT — HERO COMMAND VISUAL
+           ================================================================ -->
+      <div class="lg:col-span-5">
+
+        <div
+          class="relative
+                 min-h-[430px]
+                 bg-slate-950
+                 dark:bg-slate-900
+                 border border-slate-800
+                 overflow-hidden
+                 tech-corner
+                 shadow-2xl"
+        >
+
+          <!-- Console Grid -->
+          <div
+            class="absolute inset-0 opacity-[0.06]"
+            style="
+              background-image:
+                linear-gradient(rgba(255,255,255,.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.4) 1px, transparent 1px);
+              background-size: 32px 32px;
+            "
+          ></div>
+
+
+          <!-- Header -->
+          <div
+            class="relative z-10
+                   flex items-center justify-between
+                   px-5 sm:px-7 py-4
+                   border-b border-slate-800"
+          >
+
+            <span
+              class="text-[10px] sm:text-xs
+                     font-mono font-bold
+                     tracking-[0.18em]
+                     text-amber-400"
+            >
+              DISPATCH COMMAND
+            </span>
+
+            <span
+              class="flex items-center gap-2
+                     text-[9px] font-mono
+                     tracking-widest
+                     text-emerald-400"
+            >
+              <span
+                class="w-1.5 h-1.5
+                       rounded-full
+                       bg-emerald-400
+                       power-live-dot"
+              ></span>
+
+              READY
+            </span>
+
+          </div>
+
+
+          <!-- Main Visual -->
+          <div
+            class="relative z-10
+                   flex items-center justify-center
+                   py-10"
+          >
+
+            <!-- Outer Circle -->
+            <div
+              class="relative
+                     w-52 h-52 sm:w-60 sm:h-60
+                     rounded-full
+                     border border-slate-700
+                     flex items-center justify-center"
+            >
+
+              <!-- Rotating Ring -->
+              <div
+                class="absolute inset-4
+                       rounded-full
+                       border border-dashed
+                       border-amber-500/50"
+              ></div>
+
+              <!-- Inner Ring -->
+              <div
+                class="absolute inset-10
+                       rounded-full
+                       border border-slate-800"
+              ></div>
+
+              <!-- Center -->
+              <div class="relative text-center">
+
+                <i
+                  class="fa-solid fa-headset
+                         text-4xl sm:text-5xl
+                         text-amber-500 mb-4"
+                ></i>
+
+                <div
+                  class="text-3xl sm:text-4xl
+                         font-black text-white"
+                >
+                  24/7
+                </div>
+
+                <div
+                  class="text-[9px]
+                         font-mono
+                         tracking-[0.25em]
+                         text-white
+                         mt-1"
+                >
+                  SUPPORT ACTIVE
+                </div>
+
+              </div>
+
+
+              <!-- Orbit Labels -->
+              <span
+                class="absolute -top-2 left-1/2
+                       -translate-x-1/2
+                       bg-slate-950
+                       px-2
+                       text-[8px]
+                       font-mono
+                       tracking-widest
+                       text-white"
+              >
+                INTAKE
+              </span>
+
+              <span
+                class="absolute -bottom-2 left-1/2
+                       -translate-x-1/2
+                       bg-slate-950
+                       px-2
+                       text-[8px]
+                       font-mono
+                       tracking-widest
+                       text-white"
+              >
+                DISPATCH
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Service Status -->
+          <div
+            class="relative z-10
+                   border-t border-slate-800
+                   px-5 sm:px-7 py-5"
+          >
+
+            <div
+              class="grid grid-cols-2 gap-x-6 gap-y-4"
+            >
+
+              <div>
+                <div
+                  class="text-[9px]
+                         font-mono
+                         tracking-widest
+                         text-white"
+                >
+                  GENERATOR
+                </div>
+
+                <div
+                  class="mt-1
+                         text-xs
+                         font-bold
+                         text-emerald-400"
+                >
+                  ENGINEERS ONLINE
+                </div>
+              </div>
+
+
+              <div>
+                <div
+                  class="text-[9px]
+                         font-mono
+                         tracking-widest
+                         text-white"
+                >
+                  INVERTER
+                </div>
+
+                <div
+                  class="mt-1
+                         text-xs
+                         font-bold
+                         text-emerald-400"
+                >
+                  DIAGNOSTICS ACTIVE
+                </div>
+              </div>
+
+
+              <div>
+                <div
+                  class="text-[9px]
+                         font-mono
+                         tracking-widest
+                         text-white"
+                >
+                  BATTERY
+                </div>
+
+                <div
+                  class="mt-1
+                         text-xs
+                         font-bold
+                         text-emerald-400"
+                >
+                  STOCK READY
+                </div>
+              </div>
+
+
+              <div>
+                <div
+                  class="text-[9px]
+                         font-mono
+                         tracking-widest
+                         text-white"
+                >
+                  AMC
+                </div>
+
+                <div
+                  class="mt-1
+                         text-xs
+                         font-bold
+                         text-amber-400"
+                >
+                  SCHEDULING OPEN
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Bottom Console Status -->
+          <div
+            class="relative z-10
+                   flex items-center justify-between
+                   px-5 sm:px-7 py-3
+                   border-t border-slate-800
+                   text-[9px] font-mono
+                   tracking-widest
+                   text-white"
+          >
+
+            <span>
+              TRIAGE TIME
+            </span>
+
+            <span class="text-amber-400">
+              &lt; 15 MINS CALLBACK
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    
+
+
+    <!-- =========================================================================
+         SECTION 03 — SERVICE BOOKING FORM
+         "BOOK A TECHNICIAN." (Multi-Step Service Intake Experience)
+         ========================================================================= -->
+    <section id="booking-form-section" class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">02 // TECHNICIAN DISPATCH</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            Book a Technician.
+          </h2>
+          <p class="text-sm sm:text-base text-black dark:text-white mt-2">
+            Complete the 4-step intake form below to schedule certified on-site service.
+          </p>
+        </div>
+
+        <!-- Multi-Step Progress Pills Bar -->
+        <div class="grid grid-cols-4 gap-2 sm:gap-4 mb-8">
+          <div class="form-step-pill active py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 text-center font-mono text-xs">
+            <span class="hidden sm:inline">01. </span>DETAILS
+          </div>
+          <div class="form-step-pill py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 text-center font-mono text-xs">
+            <span class="hidden sm:inline">02. </span>EQUIPMENT
+          </div>
+          <div class="form-step-pill py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 text-center font-mono text-xs">
+            <span class="hidden sm:inline">03. </span>SERVICE
+          </div>
+          <div class="form-step-pill py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-800 text-center font-mono text-xs">
+            <span class="hidden sm:inline">04. </span>CONFIRM
+          </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="bg-[#FFF5F6] dark:bg-[#1A0E12] p-6 sm:p-10 rounded-2xl border border-rose-200 dark:border-[#3B1219] shadow-xl tech-corner">
+          
+          <form id="multi-step-booking-form">
+            
+            <!-- STEP 01: YOUR DETAILS -->
+            <div class="form-step-panel space-y-4">
+              <h3 class="text-base font-bold font-heading text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3">
+                Step 01: Your Contact Information &amp; Location
+              </h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="bf-name" class="block text-xs font-mono uppercase text-slate-500 mb-1">Full Name *</label>
+                  <input type="text" id="bf-name" required placeholder="e.g. David Miller" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                  <label for="bf-phone" class="block text-xs font-mono uppercase text-slate-500 mb-1">Phone Number *</label>
+                  <input type="tel" id="bf-phone" required placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="bf-email" class="block text-xs font-mono uppercase text-slate-500 mb-1">Email Address</label>
+                  <input type="email" id="bf-email" placeholder="name@domain.example" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                  <label for="bf-location" class="block text-xs font-mono uppercase text-slate-500 mb-1">Location / Service Area *</label>
+                  <input type="text" id="bf-location" required placeholder="City or Postal Zone" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div class="pt-4 flex justify-end">
+                <button type="button" id="step-next-1" class="px-6 py-3 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider">
+                  Next: Equipment Details →
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 02: EQUIPMENT -->
+            <div class="form-step-panel hidden space-y-4">
+              <h3 class="text-base font-bold font-heading text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3">
+                Step 02: Power Equipment Specifications
+              </h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="bf-eq-type" class="block text-xs font-mono uppercase text-slate-500 mb-1">Equipment Category</label>
+                  <select id="bf-eq-type" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <option value="Generator (Diesel / Petrol)">Generator (Diesel / Petrol)</option>
+                    <option value="Pure Sine Wave Inverter">Pure Sine Wave Inverter</option>
+                    <option value="Battery Bank (Tubular / Lithium)">Battery Bank (Tubular / Lithium)</option>
+                    <option value="Hybrid Inverter + Genset Package">Hybrid Inverter + Genset Package</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="bf-eq-brand" class="block text-xs font-mono uppercase text-slate-500 mb-1">Brand / Make</label>
+                  <input type="text" id="bf-eq-brand" placeholder="e.g. Cummins, Kirloskar, Honda, Luminous" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="bf-eq-capacity" class="block text-xs font-mono uppercase text-slate-500 mb-1">Capacity / Rating</label>
+                  <input type="text" id="bf-eq-capacity" placeholder="e.g. 5 kVA / 150 Ah" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                  <label for="bf-eq-age" class="block text-xs font-mono uppercase text-slate-500 mb-1">Approximate Age</label>
+                  <input type="text" id="bf-eq-age" placeholder="e.g. 2 Years / Brand New" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div class="pt-4 flex justify-between">
+                <button type="button" id="step-prev-2" class="px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300">
+                  ← Back
+                </button>
+                <button type="button" id="step-next-2" class="px-6 py-3 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider">
+                  Next: Service Need →
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 03: SERVICE NEED -->
+            <div class="form-step-panel hidden space-y-4">
+              <h3 class="text-base font-bold font-heading text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3">
+                Step 03: Service Type &amp; Preferred Time
+              </h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="bf-service-type" class="block text-xs font-mono uppercase text-slate-500 mb-1">Required Service</label>
+                  <select id="bf-service-type" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                    <option value="Emergency Breakdown Diagnostic">Emergency Breakdown Diagnostic</option>
+                    <option value="Periodic Preventive Maintenance">Periodic Preventive Maintenance</option>
+                    <option value="Annual Maintenance Contract (AMC)">Annual Maintenance Contract (AMC)</option>
+                    <option value="Turnkey Installation & Commissioning">Turnkey Installation & Commissioning</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="bf-date" class="block text-xs font-mono uppercase text-slate-500 mb-1">Preferred Date</label>
+                  <input type="date" id="bf-date" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div>
+                <label for="bf-time" class="block text-xs font-mono uppercase text-slate-500 mb-1">Preferred Time Window</label>
+                <select id="bf-time" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none">
+                  <option value="Immediate / Emergency SLA">Immediate / Emergency SLA (&lt; 45 Mins)</option>
+                  <option value="Morning (9:00 AM – 1:00 PM)">Morning (9:00 AM – 1:00 PM)</option>
+                  <option value="Afternoon (1:00 PM – 5:00 PM)">Afternoon (1:00 PM – 5:00 PM)</option>
+                  <option value="Evening (5:00 PM – 8:00 PM)">Evening (5:00 PM – 8:00 PM)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="bf-problem-desc" class="block text-xs font-mono uppercase text-slate-500 mb-1">Problem Description / Notes</label>
+                <textarea id="bf-problem-desc" rows="2" placeholder="Explain symptoms (e.g. cranking but not firing, error code E04, low battery backup)..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500 focus:outline-none"></textarea>
+              </div>
+
+              <div class="pt-4 flex justify-between">
+                <button type="button" id="step-prev-3" class="px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300">
+                  ← Back
+                </button>
+                <button type="button" id="step-next-3" class="px-6 py-3 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider">
+                  Review &amp; Confirm →
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 04: REVIEW & CONFIRM -->
+            <div class="form-step-panel hidden space-y-4">
+              <h3 class="text-base font-bold font-heading text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3">
+                Step 04: Review &amp; Submit Dispatch Request
+              </h3>
+
+              <!-- Live Summary Table -->
+              <div class="p-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-2 text-xs font-mono">
+                <div class="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800"><span class="text-slate-500">CUSTOMER:</span> <strong id="sum-customer-name" class="text-slate-900 dark:text-white">David Miller</strong></div>
+                <div class="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800"><span class="text-slate-500">PHONE:</span> <strong id="sum-customer-phone" class="text-slate-900 dark:text-white">+1 (555) 000-0000</strong></div>
+                <div class="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800"><span class="text-slate-500">LOCATION:</span> <strong id="sum-location" class="text-slate-900 dark:text-white">Central Metro</strong></div>
+                <div class="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800"><span class="text-slate-500">EQUIPMENT:</span> <strong id="sum-equipment" class="text-slate-900 dark:text-white">Generator (Cummins, 5 kVA)</strong></div>
+                <div class="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800"><span class="text-slate-500">SERVICE:</span> <strong id="sum-service" class="text-amber-500">Emergency Breakdown</strong></div>
+                <div class="flex justify-between py-1"><span class="text-slate-500">SCHEDULE:</span> <strong id="sum-datetime" class="text-emerald-500">Immediate / Emergency SLA</strong></div>
+              </div>
+
+              <div class="pt-4 flex justify-between">
+                <button type="button" id="step-prev-4" class="px-5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300">
+                  ← Back
+                </button>
+                <button type="submit" class="px-8 py-3.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider shadow-lg shadow-amber-500/20">
+                  Submit Service Request →
+                </button>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- Success Feedback Message -->
+          <div id="multi-booking-success" class="hidden text-center py-10 space-y-4">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center text-3xl mx-auto">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white font-heading">Dispatch Request Logged!</h3>
+            <span class="inline-block px-3 py-1 rounded bg-amber-500/10 text-amber-500 font-mono text-xs font-bold">
+              REQUEST ID: #SERVICE-8492
+            </span>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto leading-relaxed">
+              Our central dispatch coordinator has received your specification. A factory certified engineer will call to confirm on-site arrival timing within 15 minutes.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 04 — EMERGENCY SUPPORT
+         "POWER FAILURE? START HERE." (High-Impact Dark Section)
+         ========================================================================= -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-slate-950 text-white border-b border-slate-800 tech-grid-bg relative overflow-hidden">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-mono font-bold">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+              <span>24/7 EMERGENCY TRIAGE ACTIVE</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+              Power Failure?<br>
+              <span class="text-red-500">Start Here.</span>
+            </h2>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              For urgent generator stalls, hospital inverter failures, and critical commercial power emergencies, contact our 24/7 emergency hotline for direct triage and rapid van dispatch.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="tel:18001234567" class="px-7 py-4 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider flex items-center space-x-2 rtl:space-x-reverse shadow-lg shadow-red-600/30">
+                <i class="fa-solid fa-phone-volume animate-pulse"></i>
+                <span>Call Emergency: 1800 123 4567</span>
+              </a>
+
+              <a href="#booking-form-section" class="px-7 py-4 rounded-lg btn-secondary text-xs font-bold text-black hover:text-amber-400">
+                Request Urgent Service
+              </a>
+            </div>
+          </div>
+
+          <!-- Emergency Command Sheet -->
+          <div class="lg:col-span-6 bg-slate-900/95 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4 tech-corner">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <span class="text-xs font-mono font-bold text-red-400">EMERGENCY COMMUNICATION DESK</span>
+              <span class="text-[10px] font-mono text-white">TOLL-FREE CALL</span>
+            </div>
+            <div class="text-2xl sm:text-3xl font-black font-mono text-amber-400">
+              1800 123 4567
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-xs font-mono text-slate-300 pt-2">
+              <div>• GENERATOR SHUTDOWNS</div>
+              <div>• INVERTER TRIPS</div>
+              <div>• BATTERY CELL FAILURE</div>
+              <div>• ATS SWITCHING FAULT</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 05 — OTHER WAYS TO REACH US
+         "CHOOSE THE WAY THAT WORKS FOR YOU." (4 Multi-Channel Communication Rows)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">05 // CHANNELS</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            Choose the Way That Works for You.
+          </h2>
+        </div>
+
+        <!-- 4 Communication Channels (No Cards) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Channel 1: PHONE -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+            <i class="fa-solid fa-phone text-amber-500 text-xl"></i>
+            <h3 class="text-base font-bold font-heading text-slate-900 dark:text-white">DIRECT PHONE</h3>
+            <a href="tel:18001234567" class="text-sm font-mono font-bold text-amber-500 block hover:underline">1800 123 4567</a>
+            <p class="text-xs text-slate-500">Immediate telephone triage with technical support engineers.</p>
+          </div>
+
+          <!-- Channel 2: WHATSAPP -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+            <i class="fa-brands fa-whatsapp text-emerald-500 text-xl"></i>
+            <h3 class="text-base font-bold font-heading text-slate-900 dark:text-white">WHATSAPP</h3>
+            <a href="https://wa.me/15559876543" target="_blank" rel="noopener noreferrer" class="text-sm font-mono font-bold text-emerald-500 block hover:underline">+1 (555) 987-6543</a>
+            <p class="text-xs text-slate-500">Send equipment photos, error codes &amp; location drops instantly.</p>
+          </div>
+
+          <!-- Channel 3: EMAIL -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+            <i class="fa-solid fa-envelope text-blue-500 text-xl"></i>
+            <h3 class="text-base font-bold font-heading text-slate-900 dark:text-white">EMAIL DESK</h3>
+            <a href="mailto:service@powercore.example" class="text-sm font-mono font-bold text-blue-500 block hover:underline">service@powercore.example</a>
+            <p class="text-xs text-slate-500">Submit commercial tender documents, blueprints &amp; proposals.</p>
+          </div>
+
+          <!-- Channel 4: WORKSHOP VISIT -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-3">
+            <i class="fa-solid fa-building-shield text-amber-500 text-xl"></i>
+            <h3 class="text-base font-bold font-heading text-slate-900 dark:text-white">VISIT WORKSHOP</h3>
+            <span class="text-xs font-mono text-slate-700 dark:text-slate-300 block font-bold">PowerCore Tech Park, Hub 01</span>
+            <p class="text-xs text-slate-500">Direct component drop-off and showroom load-testing demo.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 06 — CENTRAL WORKSHOP & GOOGLE MAP LOCATION
+         "VISIT OUR CENTRAL SERVICE CENTER & TESTING FACILITY" (Google Maps Embed)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div class="max-w-3xl">
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">06 // WORKSHOP LOCATION &amp; MAP</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+              Visit Our Central Workshop &amp; Testing Facility.
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2">
+              Walk in for instant inverter diagnostics, heavy genset drop-off, battery health scanning, and genuine spare parts pickup.
+            </p>
+          </div>
+          <div class="shrink-0">
+            <a href="https://maps.google.com/?q=PowerCore+Tech+Park+Industrial+Corridor+Hub" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl btn-primary text-xs font-bold uppercase tracking-wider inline-flex items-center space-x-2 rtl:space-x-reverse shadow-md shadow-amber-500/20">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span>Open in Google Maps →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map & Facility Info Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Left: Workshop Hub Specifications & Details Card (4 cols) -->
+          <div class="lg:col-span-4 bg-white dark:bg-slate-900 p-6 sm:p-7 rounded-2xl border border-rose-200 dark:border-slate-800 shadow-xl flex flex-col justify-between space-y-6 tech-corner">
+            
+            <div class="space-y-5">
+              <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+                <div>
+                  <span class="text-[10px] font-mono font-bold text-amber-500 uppercase tracking-widest block">CENTRAL FACILITY</span>
+                  <h3 class="text-base font-bold font-heading text-slate-950 dark:text-white mt-0.5">PowerCore Tech Park</h3>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-emerald-500/10 border border-emerald-500/30 text-emerald-500">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 power-live-dot"></span>
+                  OPEN NOW
+                </span>
+              </div>
+
+              <!-- Address Details -->
+              <div class="space-y-1.5 text-xs">
+                <span class="font-mono text-slate-500 uppercase text-[10px] block font-bold">Physical Address</span>
+                <p class="text-slate-800 dark:text-slate-200 font-semibold leading-relaxed flex items-start space-x-2 rtl:space-x-reverse">
+                  <i class="fa-solid fa-location-dot text-amber-500 mt-0.5 shrink-0"></i>
+                  <span>Building 4, Industrial Corridor Hub, PowerCore Tech Park, Metro Sector 9</span>
+                </p>
+              </div>
+
+              <!-- Working Hours -->
+              <div class="space-y-1.5 text-xs">
+                <span class="font-mono text-slate-500 uppercase text-[10px] block font-bold">Operating Hours</span>
+                <div class="space-y-1 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+                  <div class="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800/80">
+                    <span>Emergency Mobile Vans:</span>
+                    <strong class="text-emerald-500">24/7 / 365 Days</strong>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-100 dark:border-slate-800/80">
+                    <span>Workshop Walk-in:</span>
+                    <strong class="text-slate-900 dark:text-white">Mon – Sat (8:00 AM – 8:00 PM)</strong>
+                  </div>
+                  <div class="flex justify-between py-1">
+                    <span>Parts &amp; Testing Counter:</span>
+                    <strong class="text-slate-900 dark:text-white">Mon – Sun (9:00 AM – 6:00 PM)</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Facility Features List -->
+              <div class="space-y-2 pt-1 text-xs font-mono text-slate-700 dark:text-slate-300">
+                <div class="flex items-center space-x-2 rtl:space-x-reverse">
+                  <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                  <span>Heavy Genset Unloading Crane Bay</span>
+                </div>
+                <div class="flex items-center space-x-2 rtl:space-x-reverse">
+                  <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                  <span>Inverter Computerized Load Testing Bench</span>
+                </div>
+                <div class="flex items-center space-x-2 rtl:space-x-reverse">
+                  <i class="fa-solid fa-circle-check text-emerald-500 text-xs"></i>
+                  <span>Free Customer Vehicle Parking on Site</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Quick Call button -->
+            <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+              <a href="tel:18001234567" class="w-full py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white text-xs font-bold font-mono flex items-center justify-center space-x-2 rtl:space-x-reverse hover:border-amber-500 transition-colors">
+                <i class="fa-solid fa-phone text-amber-500"></i>
+                <span>Direct Desk: 1800 123 4567</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right: Interactive Google Map Embed (8 cols) -->
+          <div class="lg:col-span-8 rounded-2xl overflow-hidden border border-rose-200 dark:border-slate-800 shadow-2xl relative min-h-[380px] sm:min-h-[440px] lg:min-h-full bg-slate-950 tech-corner flex flex-col">
+            
+            <!-- Map Top Bar HUD -->
+            <div class="bg-slate-950 px-4 py-3 border-b border-slate-800 flex items-center justify-between z-10 text-xs font-mono">
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-300">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+                <span class="font-bold text-white">LIVE GOOGLE MAPS GPS VIEW</span>
+              </div>
+              <div class="hidden sm:flex items-center space-x-3 rtl:space-x-reverse text-[11px] text-slate-400">
+                <span>LAT: 13.0400° N</span>
+                <span>•</span>
+                <span>LNG: 80.2000° E</span>
+              </div>
+            </div>
+
+            <!-- Google Map Iframe Container -->
+            <div class="relative flex-1 w-full min-h-[340px] sm:min-h-[400px]">
+              <iframe
+                title="PowerCore Service Center Central Workshop Google Map"
+                src="https://maps.google.com/maps?q=PowerCore%20Tech%20Park,%20Industrial%20Corridor%20Hub&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0; min-height: 380px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-full inset-0 absolute google-map-iframe">
+              </iframe>
+            </div>
+
+            <!-- Map Bottom Quick Bar -->
+            <div class="bg-slate-900 px-4 py-2.5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-400 z-10">
+              <div class="flex items-center space-x-2 rtl:space-x-reverse">
+                <i class="fa-solid fa-truck-fast text-emerald-400"></i>
+                <span class="text-slate-300">Rapid Response Mobile Service Vans Stationed On-Site</span>
+              </div>
+              <a href="https://maps.google.com/?q=PowerCore+Tech+Park+Industrial+Corridor+Hub" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline flex items-center space-x-1 rtl:space-x-reverse font-bold">
+                <span>Get Driving Directions</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 07 — BEFORE YOU BOOK
+         "A FEW DETAILS CAN SAVE A LOT OF TIME." (Preparation Checklist)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">07 // PREPARATION CHECKLIST</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            A Few Details Can Save a Lot of Time.
+          </h2>
+        </div>
+
+        <!-- 4 Checklist Items Grid (No Cards) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-b border-slate-300 dark:border-slate-800 pb-10">
+          
+          <div class="space-y-2">
+            <span class="text-2xl font-black font-mono text-amber-500">01</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">EQUIPMENT DETAILS</h3>
+            <p class="text-xs text-slate-500">Keep brand name, model number and kVA rating ready.</p>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-2xl font-black font-mono text-amber-500">02</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">PROBLEM SYMPTOMS</h3>
+            <p class="text-xs text-slate-500">Note when it happens, error codes displayed, or noise.</p>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-2xl font-black font-mono text-amber-500">03</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">EXACT LOCATION</h3>
+            <p class="text-xs text-slate-500">Provide landmark or GPS pin for fastest mobile routing.</p>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-2xl font-black font-mono text-amber-500">04</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">EQUIPMENT ACCESS</h3>
+            <p class="text-xs text-slate-500">Ensure clear physical space around canopy &amp; battery rack.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 08 — AFTER YOU SUBMIT
+         "WHAT HAPPENS NEXT?" (Service Request Status Interface)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">08 // STATUS PROGRESSION</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            What Happens Next?
+          </h2>
+        </div>
+
+        <!-- 5-Stage Status Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 font-mono text-xs text-center mb-10">
+          <div class="p-3 rounded-xl bg-slate-900 text-emerald-400 font-bold border border-slate-800">01. RECEIVED</div>
+          <div class="p-3 rounded-xl bg-slate-900 text-emerald-400 font-bold border border-slate-800">02. REVIEWED</div>
+          <div class="p-3 rounded-xl bg-slate-900 text-emerald-400 font-bold border border-slate-800">03. CONFIRMED</div>
+          <div class="p-3 rounded-xl bg-amber-500/20 text-amber-400 font-bold border border-amber-500/40">04. IN TRANSIT</div>
+          <div class="p-3 rounded-xl bg-slate-900 text-white border border-slate-800 col-span-2 sm:col-span-1">05. VERIFIED</div>
+        </div>
+
+        <!-- Demo Status Check Interface -->
+        <div class="bg-white dark:bg-[#1A0E12] p-6 sm:p-8 rounded-2xl border border-rose-200 dark:border-[#3B1219] space-y-4 tech-corner shadow-lg">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase block">CHECK EXISTING REQUEST STATUS:</span>
+          
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input type="text" id="status-query-input" placeholder="Enter Request ID (e.g. SERVICE-8492)..." class="flex-1 px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-xs sm:text-sm focus:border-amber-500 focus:outline-none">
+            <button type="button" id="status-check-btn" class="px-6 py-2.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider">
+              Check Status
+            </button>
+          </div>
+
+          <div id="status-result-display" class="pt-2">
+            <span class="text-xs font-mono text-slate-500">Enter a request ID above to inspect live technician dispatch and arrival status.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 09 — FINAL CONTACT / BOOKING CTA
+         "YOUR NEXT STEP STARTS HERE." (Signal-To-Service Closing)
+         ========================================================================= -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-[#12070A] text-white border-b border-[#2D0F16] tech-grid-bg relative overflow-hidden">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
+        
+        <div class="inline-flex items-center space-x-2 rtl:space-x-reverse text-xs font-mono font-bold text-amber-400 uppercase mb-4">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 power-live-dot"></span>
+          <span>DIRECT COMMAND DISPATCH</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight max-w-3xl mb-4">
+          Your Next Step Starts Here.
+        </h2>
+
+        <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed mb-8">
+          Tell us what you need, share the equipment details, and let our field service team guide you from there.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-8">
+          <a href="#booking-form-section" class="px-8 py-4 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider shadow-lg shadow-amber-500/20">
+            Book a Service Now →
+          </a>
+
+          <a href="tel:18001234567" class="px-8 py-4 rounded-lg btn-secondary text-xs font-bold text-black hover:text-amber-400">
+            Call Support: 1800 123 4567
+          </a>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800 text-[11px] font-mono text-white">
+          GENERATOR • INVERTER • BATTERY • AMC • INSTALLATION
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================================
+       GLOBAL FOOTER
+       Consistent across all pages with Brand Identity, Quick Links & 24/7 Hotline
+       ========================================================================= -->
+  <footer class="bg-[#0F0A0C] text-slate-400 text-sm border-t border-[#2D0F16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#2D0F16]">
+        
+        <!-- Col 1: Brand & Bio (5 cols on desktop) -->
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group focus:outline-none" aria-label="PowerCore Home">
+            <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-bolt-lightning text-xl text-white"></i>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+                <span class="text-xl font-extrabold text-white tracking-tight font-heading">Power<span class="text-amber-500">Core</span></span>
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Generator &amp; Inverter Service Center</span>
+            </div>
+          </a>
+
+          <p class="text-xs sm:text-sm text-white leading-relaxed">
+            Engineered power resilience for homes, commercial complexes, and retail establishments. Multi-brand certified sales, installation, repair, and round-the-clock emergency support.
+          </p>
+
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 power-live-dot"></span>
+            <span class="text-xs font-mono text-emerald-400">Dispatch Network Online (24/7 Ready)</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Navigation
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="index.html" class="hover:text-amber-400 text-amber-500 transition-colors text-white">Home 1 (Editorial)</a></li>
+            <li><a href="home-2.html" class="hover:text-amber-400 transition-colors text-white">Home 2 (Industrial)</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors text-white">About Us</a></li>
+            <li><a href="products.html" class="hover:text-amber-400 transition-colors text-white">Products</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition-colors text-white">Services</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">AMC Plans</a></li>
+            <li><a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Service Areas</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Services (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Core Services
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="services.html?service=sales" class="hover:text-amber-400 transition-colors text-white">Generator Sales &amp; Sizing</a></li>
+            <li><a href="services.html?service=repair" class="hover:text-amber-400 transition-colors text-white">Emergency Generator Repair</a></li>
+            <li><a href="services.html?service=inverter" class="hover:text-amber-400 transition-colors text-white">Pure Sine Wave Inverters</a></li>
+            <li><a href="services.html?service=battery" class="hover:text-amber-400 transition-colors text-white">Tubular &amp; Lithium Battery Solutions</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">Annual Maintenance Contracts (AMC)</a></li>
+            <li><a href="tel:18001234567" class="hover:text-red-400 text-red-400 transition-colors text-white">24/7 Breakdown Dispatch</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Emergency (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Emergency Hotline
+          </h3>
+          <div class="p-3 rounded-lg bg-[#1A0E12] border border-[#3B1219] space-y-2">
+            <span class="text-[11px] font-mono text-white block">24/7 TOLL-FREE CALL:</span>
+            <a href="tel:18001234567" class="text-lg font-bold text-amber-400 hover:text-amber-300 block font-mono">
+              1800 123 4567
+            </a>
+            <span class="text-[11px] text-white block">service@powercore.example</span>
+          </div>
+          <p class="text-xs text-white">
+            Headquarters &amp; Central Workshop:<br>
+            PowerCore Tech Park, Industrial Corridor Hub
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white">
+        <div>
+          © 2026 PowerCore. All Rights Reserved. Generator &amp; Inverter Service Center.
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Terms of Service</a>
+          <a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Sitemap</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       SERVICE BOOKING MODAL (Universal Modal)
+       ========================================================================= -->
+  <div id="booking-modal" class="modal-backdrop fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-content-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl w-full max-w-lg overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+        <div class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <div class="w-8 h-8 rounded bg-amber-500/20 text-amber-500 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Book a Service Visit</h3>
+            <span class="text-[10px] font-mono text-slate-500">Fast Certified Engineer Dispatch</span>
+          </div>
+        </div>
+        <button type="button" data-modal-close="booking-modal" class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg p-1.5 focus:outline-none" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6">
+        
+        <!-- Form -->
+        <form id="service-booking-form" class="space-y-4">
+          <div>
+            <label for="modal-customer-name" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Your Full Name *</label>
+            <input type="text" id="modal-customer-name" required placeholder="e.g. John Doe" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="modal-customer-phone" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Phone Number *</label>
+              <input type="tel" id="modal-customer-phone" required placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+            <div>
+              <label for="modal-customer-city" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service Location *</label>
+              <input type="text" id="modal-customer-city" required placeholder="City / Zip Code" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+          </div>
+
+          <div>
+            <label for="modal-service-requirement" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service / Power Requirement</label>
+            <input type="text" id="modal-service-requirement" placeholder="e.g. Generator Repair / 5 kVA Inverter Installation" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div>
+            <label for="modal-service-notes" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Additional Issue Details</label>
+            <textarea id="modal-service-notes" rows="2" placeholder="Describe symptoms (e.g. not starting, voltage fluctuation, battery replacement)..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full py-3.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Confirm Service Booking</span>
+            </button>
+            <span class="block text-center text-[10px] text-slate-500 dark:text-slate-400 mt-2 font-mono">
+              Technician schedule will be confirmed via SMS/Phone within 15 minutes.
+            </span>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="booking-success-message" class="hidden text-center py-8 space-y-4">
+          <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center text-2xl mx-auto">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 dark:text-white font-heading">Service Request Confirmed!</h4>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+            Your booking request has been logged into our dispatcher queue. An OEM certified engineer will contact you shortly.
+          </p>
+          <div class="pt-2">
+            <button type="button" data-modal-close="booking-modal" class="px-6 py-2.5 rounded-lg btn-secondary text-xs font-bold">
+              Done
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       SCROLL TO TOP (UP ARROW) BUTTON
+       ========================================================================= -->
+  <button type="button" id="scroll-to-top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-xl shadow-red-600/35 border border-red-500/50 flex items-center justify-center opacity-0 invisible translate-y-4 focus:outline-none" aria-label="Scroll to top" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-sm sm:text-base"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

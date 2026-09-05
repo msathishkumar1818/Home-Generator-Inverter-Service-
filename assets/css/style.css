@@ -1,0 +1,2741 @@
+/* ==========================================================================
+   PowerCore Design System — Core Stylesheet
+   Theme: Deep Red & Burgundy / Bright Red / Crisp White / Very Light Gray / Dark Gray & Black
+   Clean + Fresh + High Contrast + Sharp + Accessible
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --color-primary: #DC2626;         /* Bright Red for Highlights & Buttons */
+  --color-primary-hover: #991B1B;   /* Deep Red / Burgundy Hover */
+  --color-primary-light: #FEE2E2;   /* Soft Light Red / Rose Tint */
+  --color-accent-deep: #881337;     /* Deep Red / Burgundy for Primary Accents */
+  --color-dark: #111827;            /* Dark Gray / Black for Headings & Text */
+  --color-deep-bg: #0F0A0C;         /* Dark Mode Deep Dark Gray/Burgundy BG */
+  --color-surface-dark: #1A0E12;    /* Dark Mode Deep Card */
+  --color-light-bg: #FFFFFF;        /* Crisp White Main Background */
+  --color-light-subtle: #F9FAFB;    /* Very Light Gray Subtle Background */
+  --color-surface-light: #FFFFFF;   /* Crisp Clean White Card */
+  --color-text-main: #111827;       /* Dark Gray / Black Text */
+  --color-text-muted: #4B5563;      /* Highly Readable Slate-Gray Text */
+  --color-border-light: #FECDD3;    /* Soft Light Red / Gray Border */
+  --color-border-dark: #3B1219;     /* Crisp Dark Mode Burgundy Border */
+  --font-heading: 'Plus Jakarta Sans', 'Manrope', -apple-system, sans-serif;
+  --font-body: 'Inter', 'Manrope', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --header-height: 3.5rem;          /* 56px compact on mobile, tablet & iPad Pro (< 1367px) */
+}
+
+@media (min-width: 1367px) {
+  :root {
+    --header-height: 4rem;          /* 64px compact & premium on desktop (>= 1367px) */
+  }
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-light-bg);
+  color: #0F172A;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+#main-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 50 !important;
+  transform: none !important;
+}
+
+#main-content {
+  padding-top: var(--header-height);
+}
+
+.dark body {
+  background-color: var(--color-deep-bg);
+  color: #FFFFFF !important;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+  color: #0F172A;
+  font-weight: 800;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark .font-heading {
+  color: #FFFFFF !important;
+}
+
+p, span, li, dt, dd, td, th {
+  text-rendering: optimizeLegibility;
+}
+
+/* Light mode crisp dark text overrides */
+p {
+  color: #1E293B;
+}
+
+.text-slate-600, .text-slate-500, .text-slate-400 {
+  color: #1E293B;
+}
+
+/* Dark mode and dark section crystal-bright text overrides */
+.dark p,
+.dark .text-slate-600,
+.dark .text-slate-500,
+.dark .text-slate-400,
+.dark .text-slate-300,
+.dark .text-slate-200,
+.dark span,
+.dark li {
+  color: #FFFFFF;
+}
+
+.dark .text-slate-400,
+.dark .text-slate-500 {
+  color: #F1F5F9 !important;
+}
+
+/* Specific bright styling for deep dark sections & footers */
+.bg-\[\#12070A\] p,
+.bg-\[\#12070A\] span,
+.bg-\[\#12070A\] li,
+.bg-\[\#12070A\] h2,
+.bg-\[\#12070A\] h3,
+.bg-\[\#12070A\] div,
+.bg-\[\#0F0A0C\] p,
+.bg-\[\#0F0A0C\] span,
+.bg-\[\#0F0A0C\] li,
+.bg-\[\#0F0A0C\] a,
+footer p,
+footer span,
+footer li,
+footer a {
+  color: #FFFFFF !important;
+}
+
+.bg-\[\#12070A\] .text-slate-400,
+.bg-\[\#12070A\] .text-slate-300,
+.bg-\[\#0F0A0C\] .text-slate-400,
+.bg-\[\#0F0A0C\] .text-slate-300,
+footer .text-slate-400,
+footer .text-slate-300 {
+  color: #F3F4F6 !important;
+}
+
+/* Universal pure-white text overrides for dark cards, HUDs, and dynamic search panels */
+.text-white,
+h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.text-white,
+.bg-slate-900 > div > div > h4,
+.bg-slate-900 h1.text-white, .bg-slate-900 h2.text-white, .bg-slate-900 h3.text-white, .bg-slate-900 h4.text-white,
+.bg-slate-950 h1.text-white, .bg-slate-950 h2.text-white, .bg-slate-950 h3.text-white, .bg-slate-950 h4.text-white,
+#area-search-result h4,
+#area-search-result .font-heading,
+#area-search-result .text-white,
+#zone-inspector-title,
+.service-zone-btn.active h3 {
+  color: #FFFFFF !important;
+}
+
+/* AMC Maintenance Interval & Dynamic Switcher Dark Mode Text */
+.dark #interval-detail-content p,
+.dark #interval-detail-content .focus-description-text,
+.dark #interval-detail-content span:not(.text-amber-500):not(.text-amber-600):not(.text-amber-400),
+.dark #interval-detail-content li {
+  color: #FFFFFF !important;
+}
+
+:root:not(.dark) #interval-detail-content p,
+:root:not(.dark) #interval-detail-content .focus-description-text {
+  color: #1E293B !important;
+}
+
+/* ==========================================================================
+   Home 1 Section 04: Capacity Type Toggle Buttons (Generator vs Inverter)
+   ========================================================================== */
+.capacity-type-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-weight: 700 !important;
+  min-height: 40px !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Inactive Button State (High Contrast Readable Text, NEVER white on light) */
+.capacity-type-btn:not(.active),
+.capacity-type-btn[aria-selected="false"] {
+  background-color: rgba(255, 241, 242, 0.85) !important; /* Soft rose/pink container */
+  color: #881337 !important; /* Rich readable burgundy/dark rose */
+  border: 1px solid rgba(253, 164, 175, 0.6) !important;
+}
+
+.capacity-type-btn:not(.active) i,
+.capacity-type-btn[aria-selected="false"] i {
+  color: #DC2626 !important;
+}
+
+.capacity-type-btn:not(.active) span,
+.capacity-type-btn[aria-selected="false"] span {
+  color: #881337 !important;
+}
+
+.capacity-type-btn:not(.active):hover,
+.capacity-type-btn[aria-selected="false"]:hover {
+  background-color: #FFE4E6 !important;
+  color: #9F1239 !important;
+  border-color: #FDA4AF !important;
+}
+
+/* Dark Mode Inactive State */
+.dark .capacity-type-btn:not(.active),
+.dark .capacity-type-btn[aria-selected="false"] {
+  background-color: rgba(30, 41, 59, 0.7) !important;
+  color: #E2E8F0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .capacity-type-btn:not(.active) i,
+.dark .capacity-type-btn[aria-selected="false"] i {
+  color: #CBD5E1 !important;
+}
+
+.dark .capacity-type-btn:not(.active) span,
+.dark .capacity-type-btn[aria-selected="false"] span {
+  color: #E2E8F0 !important;
+}
+
+.dark .capacity-type-btn:not(.active):hover,
+.dark .capacity-type-btn[aria-selected="false"]:hover {
+  background-color: rgba(51, 65, 85, 0.9) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Active Button State (Strong Dark/Black Background with White / Amber Text) */
+.capacity-type-btn.active,
+.capacity-type-btn[aria-selected="true"] {
+  background-color: #0F172A !important; /* Deep dark slate/black */
+  color: #FFFFFF !important; /* Pure white text */
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.capacity-type-btn.active i,
+.capacity-type-btn[aria-selected="true"] i {
+  color: #F59E0B !important; /* Amber icon */
+}
+
+.capacity-type-btn.active span,
+.capacity-type-btn[aria-selected="true"] span {
+  color: #FFFFFF !important;
+}
+
+/* Dark Mode Active State */
+.dark .capacity-type-btn.active,
+.dark .capacity-type-btn[aria-selected="true"] {
+  background-color: #1E293B !important;
+  color: #FFFFFF !important;
+  border: 1px solid #F59E0B !important;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.25) !important;
+}
+
+.dark .capacity-type-btn.active i,
+.dark .capacity-type-btn[aria-selected="true"] i {
+  color: #FBBF24 !important;
+}
+
+.dark .capacity-type-btn.active span,
+.dark .capacity-type-btn[aria-selected="true"] span {
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   Mobile Navigation Active Link Styling
+   ========================================================================== */
+.mobile-nav-link.active,
+.mobile-nav-link[aria-current="page"] {
+  color: #D97706 !important; /* amber-600 */
+  font-weight: 700 !important;
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  border-left: 3px solid #F59E0B !important;
+  padding-left: 0.65rem !important;
+  padding-right: 0.65rem !important;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+[dir="rtl"] .mobile-nav-link.active,
+[dir="rtl"] .mobile-nav-link[aria-current="page"] {
+  border-left: none !important;
+  border-right: 3px solid #F59E0B !important;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.dark .mobile-nav-link.active,
+.dark .mobile-nav-link[aria-current="page"] {
+  color: #FBBF24 !important; /* amber-400 */
+  background-color: rgba(245, 158, 11, 0.16) !important;
+  border-color: #F59E0B !important;
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Universal Icon Vertical Centering & Alignment
+   ========================================================================== */
+.fa, .fas, .far, .fal, .fad, .fab, .fa-solid, .fa-regular, .fa-brands {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  vertical-align: middle !important;
+  flex-shrink: 0 !important;
+  line-height: 1 !important;
+}
+
+/* Ensure flex containers with icons center perfectly */
+.btn-primary, .btn-secondary, .badge, .tech-chip, [data-modal-open], .theme-toggle-btn, .rtl-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Fluid responsive image handling */
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   Technical Grid & Decorative Patterns (Burgundy & Red Tones)
+   ========================================================================== */
+.tech-grid-bg {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(220, 38, 38, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 38, 38, 0.08) 1px, transparent 1px);
+}
+
+.dark .tech-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(248, 113, 113, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(248, 113, 113, 0.06) 1px, transparent 1px);
+}
+
+.tech-dot-bg {
+  background-image: radial-gradient(rgba(220, 38, 38, 0.18) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .tech-dot-bg {
+  background-image: radial-gradient(rgba(248, 113, 113, 0.18) 1px, transparent 1px);
+}
+
+/* Technical Corner Markers */
+.tech-corner {
+  position: relative;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.tech-corner::before,
+.tech-corner::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--color-primary);
+  pointer-events: none;
+}
+
+.tech-corner::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--color-primary);
+  border-left: 2px solid var(--color-primary);
+}
+
+.tech-corner::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+}
+
+/* Card Interactive Hover & Glow Effects */
+.tech-corner:hover {
+  border-color: rgba(220, 38, 38, 0.45);
+}
+
+.dark .tech-corner:hover {
+  border-color: rgba(239, 68, 68, 0.6);
+  box-shadow: 0 12px 32px -8px rgba(220, 38, 38, 0.2);
+}
+
+/* Active Card & Interactive Row Highlights */
+.active-card, 
+.product-discovery-row.active, 
+.service-zone-btn.active, 
+.generator-range-row.active, 
+.location-type-band.active, 
+.gen-zone-btn.active,
+.symptom-tag-btn.active {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 0 1px #DC2626, 0 8px 24px -4px rgba(220, 38, 38, 0.25) !important;
+}
+
+/* Power Pulse Animation */
+@keyframes powerGlow {
+  0%, 100% {
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 22px rgba(239, 68, 68, 0.85);
+  }
+}
+
+.power-live-dot {
+  animation: powerGlow 2s infinite ease-in-out;
+}
+
+/* Technical Animated Line */
+@keyframes drawHorizontal {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.animate-draw-line {
+  transform-origin: left;
+  animation: drawHorizontal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[dir="rtl"] .animate-draw-line {
+  transform-origin: right;
+}
+
+/* Electric Grid Pulse Line */
+@keyframes electricPulse {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.electric-line {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: electricPulse 3.5s linear infinite;
+}
+
+/* ==========================================================================
+   Header & Navigation (100% Fixed Header System)
+   ========================================================================== */
+#main-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 50 !important;
+  margin: 0 !important;
+  transform: none !important;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(254, 205, 211, 0.8);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+
+.dark #main-header {
+  background-color: rgba(15, 10, 12, 0.95);
+  border-bottom: 1px solid rgba(59, 18, 25, 0.8);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(254, 205, 211, 0.9) !important;
+  box-shadow: 0 4px 20px -2px rgba(220, 38, 38, 0.08) !important;
+}
+
+.dark .header-scrolled {
+  background-color: rgba(15, 10, 12, 0.98) !important;
+  border-bottom: 1px solid rgba(59, 18, 25, 0.9) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* Dropdown styling */
+.nav-dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-dropdown-trigger:hover .nav-dropdown,
+.nav-dropdown-trigger:focus-within .nav-dropdown,
+.nav-dropdown.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Mobile Menu Drawer (Solid Opaque System & Clear High Contrast)
+   ========================================================================== */
+#mobile-drawer {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid rgba(254, 205, 211, 0.9) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.dark #mobile-drawer {
+  background-color: #0F0A0C !important;
+  border-bottom: 1px solid rgba(59, 18, 25, 0.9) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8) !important;
+}
+
+#mobile-drawer a.mobile-nav-link {
+  color: #1E293B;
+  transition: color 0.2s ease, padding 0.2s ease;
+}
+
+.dark #mobile-drawer a.mobile-nav-link {
+  color: #F3F4F6 !important;
+}
+
+#mobile-drawer a.mobile-nav-link:hover {
+  color: #DC2626 !important;
+}
+
+.dark #mobile-drawer a.mobile-nav-link:hover {
+  color: #EF4444 !important;
+}
+
+/* ==========================================================================
+   Interactive Row Hover Effects (Section 03)
+   ========================================================================== */
+.power-solution-row {
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.power-solution-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background-color: var(--color-primary);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[dir="rtl"] .power-solution-row::before {
+  left: auto;
+  right: 0;
+}
+
+.power-solution-row:hover::before {
+  width: 4px;
+}
+
+.power-solution-row:hover .row-arrow {
+  transform: translateX(8px);
+  color: var(--color-primary);
+}
+
+[dir="rtl"] .power-solution-row:hover .row-arrow {
+  transform: translateX(-8px) scaleX(-1);
+}
+
+/* ==========================================================================
+   Timeline System (Section 05)
+   ========================================================================== */
+.timeline-track {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-primary) 0%, rgba(220, 38, 38, 0.2) 100%);
+}
+
+[dir="rtl"] .timeline-track {
+  left: auto;
+  right: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .timeline-track-h {
+    position: absolute;
+    left: 4rem;
+    right: 4rem;
+    top: 2.25rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, rgba(220, 38, 38, 0.2) 100%);
+  }
+
+  [dir="rtl"] .timeline-track-h {
+    background: linear-gradient(270deg, var(--color-primary) 0%, rgba(220, 38, 38, 0.2) 100%);
+  }
+}
+
+/* ==========================================================================
+   RTL Directional Adjustments
+   ========================================================================== */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .rtl-mr-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+[dir="rtl"] .rtl-ml-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Buttons and Interactive Elements */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-border-light);
+  background: #FFFFFF;
+  color: var(--color-text-main);
+  transition: all 0.25s ease;
+}
+
+.dark .btn-secondary {
+  border-color: var(--color-border-dark);
+  background: rgba(26, 14, 18, 0.8);
+  color: #F9FAFB;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: #FEE2E2;
+  transform: translateY(-1px);
+}
+
+.dark .btn-secondary:hover {
+  background-color: rgba(220, 38, 38, 0.15);
+}
+
+/* Accessibility Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Reveal Animations */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[dir="rtl"] .reveal-left {
+  transform: translateX(32px);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[dir="rtl"] .reveal-right {
+  transform: translateX(-32px);
+}
+
+.reveal-left.reveal-active,
+.reveal-right.reveal-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100 !important;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100 !important;
+}
+
+.modal-content-box {
+  transform: scale(0.95) translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-content-box {
+  transform: scale(1) translateY(0);
+}
+
+/* ==========================================================================
+   About Page Custom Interactions & Animations
+   ========================================================================= */
+@keyframes scanLineAnim {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  box-shadow: 0 0 12px var(--color-primary);
+  animation: scanLineAnim 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Expertise Matrix Technical Hover */
+.expertise-matrix-col {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.expertise-matrix-col::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: var(--color-primary);
+  transition: height 0.3s ease;
+}
+
+.expertise-matrix-col:hover::before {
+  height: 3px;
+}
+
+/* Team Role Interactive Row */
+.team-role-item {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 2px solid transparent;
+}
+
+[dir="rtl"] .team-role-item {
+  border-left: none;
+  border-right: 2px solid transparent;
+}
+
+.team-role-item:hover,
+.team-role-item.active {
+  border-left-color: var(--color-primary);
+  padding-left: 1.25rem;
+  background-color: rgba(220, 38, 38, 0.08);
+}
+
+[dir="rtl"] .team-role-item:hover,
+[dir="rtl"] .team-role-item.active {
+  border-right-color: var(--color-primary);
+  padding-right: 1.25rem;
+  padding-left: 0;
+}
+
+/* ==========================================================================
+   Products Page Custom Interactions & Animations
+   ========================================================================== */
+
+/* Power Flow Particle Animation */
+@keyframes flowParticle {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.power-flow-particle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 12px var(--color-primary);
+  animation: flowParticle 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+[dir="rtl"] .power-flow-particle {
+  animation-direction: reverse;
+}
+
+/* Product Discovery Row */
+.product-discovery-row {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 3px solid transparent;
+}
+
+[dir="rtl"] .product-discovery-row {
+  border-left: none;
+  border-right: 3px solid transparent;
+}
+
+.product-discovery-row.active {
+  border-left-color: var(--color-primary);
+  background-color: rgba(220, 38, 38, 0.08);
+}
+
+[dir="rtl"] .product-discovery-row.active {
+  border-right-color: var(--color-primary);
+}
+
+/* Generator Range Vertical Row */
+.generator-range-row {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.generator-range-row:hover,
+.generator-range-row.active {
+  border-color: var(--color-primary);
+  background-color: rgba(220, 38, 38, 0.08);
+}
+
+/* Decision Tree Option Buttons */
+.dt-choice-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dt-choice-btn.selected {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+}
+
+/* ==========================================================================
+   Repair Services Page Custom Interactions & Animations
+   ========================================================================== */
+
+/* Symptom Map Pin / Label */
+.symptom-tag-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.symptom-tag-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.symptom-tag-btn.active {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+}
+
+/* Generator Lab Inspection Zone Button */
+.gen-zone-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gen-zone-btn:hover,
+.gen-zone-btn.active {
+  background-color: rgba(220, 38, 38, 0.12);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Circuit Diagnostic Testing Flash */
+@keyframes testingPulse {
+  0% {
+    border-color: #FB7185;
+    box-shadow: 0 0 10px rgba(251, 113, 133, 0.5);
+  }
+  50% {
+    border-color: #DC2626;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.8);
+  }
+  100% {
+    border-color: #881337;
+    box-shadow: 0 0 10px rgba(136, 19, 55, 0.5);
+  }
+}
+
+.circuit-node-testing {
+  animation: testingPulse 1.2s ease-in-out infinite;
+}
+
+/* Priority Indicator Scanner */
+@keyframes priorityScan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+.priority-scan-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #EF4444, transparent);
+  box-shadow: 0 0 15px #EF4444;
+  animation: priorityScan 3.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   AMC Plans Page Custom Interactions & Animations
+   ========================================================================== */
+
+/* Circular Maintenance Dial / Service Gauge */
+@keyframes slowGaugeSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gauge-ring-outer {
+  animation: slowGaugeSpin 30s linear infinite;
+}
+
+/* 12-Month Calendar Month Button */
+.calendar-month-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.calendar-month-btn.active {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+}
+
+/* Horizontal AMC Plan Band */
+.amc-plan-band {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.amc-plan-band.highlighted {
+  border-color: var(--color-primary);
+  background-color: rgba(220, 38, 38, 0.08);
+  box-shadow: 0 0 25px rgba(220, 38, 38, 0.18);
+}
+
+/* Document Verified Badge */
+@keyframes stampIn {
+  0% {
+    transform: scale(1.4) rotate(-10deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(-5deg);
+    opacity: 1;
+  }
+}
+
+.verified-stamp {
+  animation: stampIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   Service Areas Page Custom Interactions & Animations
+   ========================================================================== */
+
+/* Animated SVG Route Dash */
+@keyframes routeDash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.map-route-line {
+  stroke-dasharray: 6 6;
+  animation: routeDash 2.5s linear infinite;
+}
+
+[dir="rtl"] .map-route-line {
+  animation-direction: reverse;
+}
+
+/* Expanding Radius Rings */
+@keyframes radiusRipple {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.radius-ring-anim {
+  animation: radiusRipple 3.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Service Zone Selectors */
+.service-zone-btn {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-zone-btn:hover,
+.service-zone-btn.active {
+  border-color: var(--color-primary);
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+/* Location Type Bands */
+.location-type-band {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.location-type-band:hover,
+.location-type-band.active {
+  border-color: var(--color-primary);
+  background-color: rgba(220, 38, 38, 0.08);
+}
+
+/* ==========================================================================
+   Contact & Booking Page Custom Interactions & Animations
+   ========================================================================== */
+
+/* Service Intake Option Row */
+.intake-option-row {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intake-option-row:hover,
+.intake-option-row.active {
+  border-color: var(--color-primary);
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+/* Multi-Step Form Step Pill */
+.form-step-pill {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form-step-pill.active {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+  font-weight: 800;
+}
+
+.form-step-pill.completed {
+  background-color: rgba(136, 19, 55, 0.15);
+  border-color: #881337;
+  color: #881337;
+}
+
+/* Signal Wave Keyframes */
+@keyframes signalWave {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.signal-wave-anim {
+  animation: signalWave 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* ==========================================================================
+   Scroll-To-Top (Up Arrow) Floating Button
+   ========================================================================== */
+#scroll-to-top {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#scroll-to-top.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+#scroll-to-top:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 0 12px 28px -4px rgba(220, 38, 38, 0.5) !important;
+}
+
+#scroll-to-top:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .gauge-ring-outer, .verified-stamp, .map-route-line, .radius-ring-anim, .signal-wave-anim {
+    animation: none !important;
+  }
+  .reveal-init, .reveal-left, .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+
+/* <!-- =========================================================================
+     SECTION 05 — ANIMATIONS
+     ========================================================================= --> */
+
+
+  /* -------------------------------------------------------------
+     IMAGE ZOOM
+     ------------------------------------------------------------- */
+  #reliability-section.reliability-visible
+  .reliability-image {
+    transform: scale(1.045);
+  }
+
+
+  /* -------------------------------------------------------------
+     IMAGE SCAN
+     ------------------------------------------------------------- */
+  .reliability-scan-line {
+    animation:
+      reliabilityScan 4.5s
+      cubic-bezier(.4, 0, .2, 1)
+      infinite;
+    opacity: .7;
+  }
+
+  @keyframes reliabilityScan {
+
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: .8;
+    }
+
+    90% {
+      opacity: .8;
+    }
+
+    100% {
+      transform: translateY(600px);
+      opacity: 0;
+    }
+
+  }
+
+
+  /* -------------------------------------------------------------
+     PROCESS LINE
+     ------------------------------------------------------------- */
+  .reliability-progress {
+    transform: scaleY(0);
+    transition:
+      transform 1.8s
+      cubic-bezier(.65, 0, .35, 1);
+  }
+
+  #reliability-section.reliability-visible
+  .reliability-progress {
+    transform: scaleY(1);
+  }
+
+
+  /* -------------------------------------------------------------
+     PROCESS ITEM REVEAL
+     ------------------------------------------------------------- */
+  .reliability-item {
+    opacity: 0;
+    transform: translateX(25px);
+
+    transition:
+      opacity .65s ease,
+      transform .65s cubic-bezier(.22, 1, .36, 1);
+  }
+
+  .reliability-item.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+
+  .reliability-item:nth-child(1) {
+    transition-delay: .10s;
+  }
+
+  .reliability-item:nth-child(2) {
+    transition-delay: .20s;
+  }
+
+  .reliability-item:nth-child(3) {
+    transition-delay: .30s;
+  }
+
+  .reliability-item:nth-child(4) {
+    transition-delay: .40s;
+  }
+
+  .reliability-item:nth-child(5) {
+    transition-delay: .50s;
+  }
+
+  .reliability-item:nth-child(6) {
+    transition-delay: .60s;
+  }
+
+
+  /* -------------------------------------------------------------
+     MOBILE
+     ------------------------------------------------------------- */
+  @media (max-width: 639px) {
+
+    #reliability-section {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .reliability-item {
+      transform: translateY(18px);
+    }
+
+    .reliability-item.is-visible {
+      transform: translateY(0);
+    }
+
+    .reliability-scan-line {
+      animation-duration: 5s;
+    }
+
+  }
+
+
+  /* -------------------------------------------------------------
+     TABLET
+     ------------------------------------------------------------- */
+  @media (min-width: 640px) and (max-width: 1023px) {
+
+    #reliability-section .reliability-image {
+      object-position: center;
+    }
+
+  }
+
+
+  /* -------------------------------------------------------------
+     REDUCED MOTION
+     ------------------------------------------------------------- */
+  @media (prefers-reduced-motion: reduce) {
+
+    .reliability-image,
+    .reliability-scan-line,
+    .reliability-progress,
+    .reliability-item {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    .reliability-progress {
+      transform: scaleY(1);
+    }
+
+    .reliability-item {
+      opacity: 1;
+      transform: none;
+    }
+
+  }
+
+/* <!-- =========================================================================
+     SECTION 06 — CSS ANIMATIONS
+     ========================================================================= --> */
+
+
+
+  /* ================================================================
+     REVEAL
+     ================================================================ */
+
+  .section06-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+
+    transition:
+      opacity .8s ease,
+      transform .8s cubic-bezier(.2,.7,.2,1);
+  }
+
+  #engineering-intelligence.s06-visible
+  .section06-reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #engineering-intelligence.s06-visible
+  .section06-reveal:nth-child(1) {
+    transition-delay: .05s;
+  }
+
+  #engineering-intelligence.s06-visible
+  .section06-reveal:nth-child(2) {
+    transition-delay: .12s;
+  }
+
+
+  /* ================================================================
+     IMAGE ZOOM
+     ================================================================ */
+
+  .section06-image {
+    transform: scale(1.1);
+
+    transition:
+      transform 1.8s cubic-bezier(.2,.7,.2,1),
+      filter 1s ease;
+
+    filter: saturate(.75) contrast(1.08);
+  }
+
+  #engineering-intelligence.s06-visible
+  .section06-image {
+    transform: scale(1);
+    filter: saturate(.9) contrast(1.05);
+  }
+
+
+  /* ================================================================
+     IMAGE SCAN
+     ================================================================ */
+
+  .section06-scan {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    height: 1px;
+
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(245,158,11,.9),
+      transparent
+    );
+
+    box-shadow:
+      0 0 16px rgba(245,158,11,.8);
+
+    animation:
+      section06Scan 5s linear infinite;
+
+    pointer-events: none;
+  }
+
+  @keyframes section06Scan {
+
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(500px);
+      opacity: 0;
+    }
+
+  }
+
+
+  /* ================================================================
+     CORNERS
+     ================================================================ */
+
+  .s06-corner {
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    border-color: rgba(245,158,11,.75);
+  }
+
+  .s06-tl {
+    top: 14px;
+    left: 14px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+
+  .s06-tr {
+    top: 14px;
+    right: 14px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+  }
+
+  .s06-bl {
+    bottom: 14px;
+    left: 14px;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+  }
+
+  .s06-br {
+    bottom: 14px;
+    right: 14px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+
+
+  /* ================================================================
+     DATA HOVER
+     ================================================================ */
+
+  .s06-data {
+    position: relative;
+
+    transition:
+      background .3s ease,
+      padding-left .3s ease;
+  }
+
+  .s06-data:hover {
+    background: rgba(245,158,11,.035);
+  }
+
+
+  /* ================================================================
+     RESPONSIVE
+     ================================================================ */
+
+  @media (max-width: 639px) {
+
+    .section06-scan {
+      animation-duration: 4s;
+    }
+
+  }
+
+
+  /* ================================================================
+     REDUCED MOTION
+     ================================================================ */
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .section06-reveal,
+    .section06-image,
+    .section06-scan {
+      animation: none !important;
+      transition: none !important;
+    }
+
+    .section06-reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+  }
+
+
+  /* <!-- =========================================================================
+     SECTION 08 ANIMATION
+     ========================================================================= --> */
+
+
+  .future-reveal,
+  .future-item {
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s cubic-bezier(.22,1,.36,1);
+  }
+
+  .future-visible .future-reveal,
+  .future-visible .future-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .future-visible .future-item:nth-child(1) {
+    transition-delay: 0.15s;
+  }
+
+  .future-visible .future-item:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+
+  .future-visible .future-item:nth-child(3) {
+    transition-delay: 0.45s;
+  }
+
+  .future-visible .future-image {
+    transform: scale(1);
+  }
+
+  .future-visible .future-progress {
+    width: 100%;
+    transition:
+      width 1.6s cubic-bezier(.22,1,.36,1) 0.5s;
+  }
+
+
+  /* Image subtle movement */
+  @keyframes futureImageFloat {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.035);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  .future-visible .future-image {
+    animation:
+      futureImageFloat 8s ease-in-out infinite;
+  }
+
+
+  /* Mobile adjustments */
+  @media (max-width: 639px) {
+
+    #jcdiux {
+      overflow: hidden;
+    }
+
+    #jcdiux h2 {
+      letter-spacing: -0.035em;
+    }
+
+  }
+
+
+  /* Tablet / iPad */
+  @media (min-width: 640px) and (max-width: 1023px) {
+
+    #jcdiux .future-image {
+      object-position: center;
+    }
+
+  }
+
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+
+    .future-reveal,
+    .future-item {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    .future-image {
+      animation: none !important;
+      transform: scale(1) !important;
+    }
+
+    .future-progress {
+      width: 100% !important;
+      transition: none !important;
+    }
+
+  }
+
+/* <!-- ================================================================
+     DISCOVERY ACTIVE STATE
+     ================================================================ --> */
+
+
+
+  .product-discovery-row {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-discovery-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    background: transparent;
+    transition: background 0.3s ease;
+  }
+
+  .product-discovery-row.active {
+    border-color: rgba(245, 158, 11, 0.45);
+    box-shadow:
+      0 10px 30px rgba(245, 158, 11, 0.06);
+  }
+
+  .product-discovery-row.active::before {
+    background: rgb(245 158 11);
+  }
+
+  .dark .product-discovery-row.active {
+    background-color: rgb(15 23 42);
+    border-color: rgba(245, 158, 11, 0.45);
+  }
+
+
+  /* ==============================================================
+     MOBILE
+     ============================================================== */
+
+  @media (max-width: 1023px) {
+
+    .product-discovery-row {
+      flex: none;
+    }
+
+    #discovery-section .lg\:col-span-7 {
+      height: auto;
+    }
+
+    #discovery-section .lg\:col-span-7 > div {
+      min-height: auto;
+    }
+
+  }
+
+
+  /* ==============================================================
+     SMALL MOBILE
+     ============================================================== */
+
+  @media (max-width: 479px) {
+
+    .product-discovery-row {
+      padding: 14px;
+      min-height: 82px;
+    }
+
+    .product-discovery-row h3 {
+      font-size: 12px;
+    }
+
+    .product-discovery-row span {
+      font-size: 9px;
+    }
+
+    .product-discovery-row > span {
+      font-size: 9px;
+    }
+
+  }
+
+
+/* <!-- =========================================================================
+     SECTION 03 — STYLES
+     ========================================================================= --> */
+
+
+  /* ================================================================
+     SCALE POINT
+     ================================================================ */
+
+  .generator-scale-point {
+    position: relative;
+  }
+
+  .generator-scale-point:hover
+  .generator-scale-dot {
+
+    border-color: rgb(245 158 11);
+
+    color: rgb(245 158 11);
+
+    transform: translateY(-2px);
+
+  }
+
+
+  .generator-scale-point.active
+  .generator-scale-dot {
+
+    border-color: rgb(245 158 11);
+
+    background: rgb(245 158 11);
+
+    color: #12070A;
+
+    box-shadow:
+      0 0 0 5px rgba(245,158,11,.10);
+
+  }
+
+
+  /* ================================================================
+     IMAGE TRANSITION
+     ================================================================ */
+
+  #generator-detail-image {
+
+    transform: scale(1.04);
+
+  }
+
+  #generator-range-section.generator-loaded
+  #generator-detail-image {
+
+    transform: scale(1);
+
+  }
+
+
+  /* ================================================================
+     MOBILE SCALE
+     ================================================================ */
+
+  @media (max-width: 639px) {
+
+    #generator-range-section
+    .generator-scale-point {
+
+      min-width: 0;
+
+    }
+
+    #generator-range-section
+    .generator-scale-dot {
+
+      width: 32px;
+      height: 32px;
+
+      font-size: 9px;
+
+    }
+
+    #generator-range-section
+    .generator-scale-point span:nth-child(2) {
+
+      font-size: 9px;
+
+    }
+
+    #generator-range-section
+    .generator-scale-point span:nth-child(3) {
+
+      font-size: 8px;
+
+      line-height: 1.3;
+
+    }
+
+  }
+
+
+  /* ================================================================
+     RTL
+     ================================================================ */
+
+  [dir="rtl"]
+  #generator-range-section
+  .generator-scale-point {
+
+    text-align: right;
+
+  }
+
+
+  /* ================================================================
+     REDUCED MOTION
+     ================================================================ */
+
+  @media (prefers-reduced-motion: reduce) {
+
+    #generator-range-section *,
+    #generator-range-section *::before,
+    #generator-range-section *::after {
+
+      transition: none !important;
+      animation: none !important;
+
+    }
+
+  }
+
+/* <!-- =========================================================================
+     SECTION 02 — DIAGNOSTIC ANIMATION + INTERACTION
+     ========================================================================= --> */
+
+
+
+  /* Signal scan */
+  @keyframes signalScan {
+    0% {
+      transform: translateX(-110%);
+      opacity: .25;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(180%);
+      opacity: .25;
+    }
+  }
+
+
+  /* Active symptom */
+  .symptom-tag-btn {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .symptom-tag-btn.active {
+    border-color: rgba(245, 158, 11, .45) !important;
+    background: rgba(245, 158, 11, .08) !important;
+  }
+
+  .symptom-tag-btn.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15%;
+    bottom: 15%;
+    width: 2px;
+    background: #f59e0b;
+    border-radius: 999px;
+  }
+
+  .symptom-tag-btn.active i {
+    color: #f59e0b;
+  }
+
+
+  /* Report transition */
+  #symptom-detail-title,
+  #symptom-detail-cause,
+  #symptom-detail-inspect,
+  #symptom-detail-action,
+  #symptom-detail-priority {
+    transition:
+      opacity .25s ease,
+      transform .25s ease;
+  }
+
+  .symptom-content-refresh {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+
+  /* RTL */
+  [dir="rtl"] .symptom-tag-btn.active::before {
+    left: auto;
+    right: 0;
+  }
+
+
+  /* Mobile optimization */
+  @media (max-width: 640px) {
+
+    #symptom-map-section {
+      overflow: hidden;
+    }
+
+    .symptom-tag-btn {
+      min-height: 56px;
+    }
+
+  }
+
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+    }
+
+  }
+
+/* <!-- =========================================================================
+     SECTION 03 — STYLES
+     ========================================================================= --> */
+
+
+
+  /* ==============================================================
+     ZONE BUTTON HOVER
+     ============================================================== */
+
+  .gen-zone-btn {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gen-zone-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: transparent;
+    transition: background .3s ease;
+  }
+
+  .gen-zone-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .gen-zone-btn:hover::before {
+    background: #f59e0b;
+  }
+
+
+  /* ==============================================================
+     ACTIVE ZONE
+     ============================================================== */
+
+  .gen-zone-btn.active {
+    border-color: rgba(245, 158, 11, .45) !important;
+    background: rgba(245, 158, 11, .08) !important;
+    box-shadow: inset 3px 0 0 #f59e0b;
+  }
+
+  .gen-zone-btn.active .zone-number {
+    background: #f59e0b !important;
+    color: #020617 !important;
+  }
+
+  .gen-zone-btn.active::before {
+    background: #f59e0b;
+  }
+
+
+  /* RTL */
+  [dir="rtl"] .gen-zone-btn {
+    text-align: right;
+  }
+
+  [dir="rtl"] .gen-zone-btn.active {
+    box-shadow: inset -3px 0 0 #f59e0b;
+  }
+
+  [dir="rtl"] .gen-zone-btn::before {
+    left: auto;
+    right: 0;
+  }
+
+
+  /* ==============================================================
+     CONTENT ANIMATION
+     ============================================================== */
+
+  #gen-zone-title,
+  #gen-zone-desc,
+  #gen-zone-action,
+  #gen-zone-code,
+  #gen-zone-test,
+  #gen-zone-status {
+    transition:
+      opacity .25s ease,
+      transform .25s ease;
+  }
+
+  .gen-zone-refresh {
+    opacity: 0;
+    transform: translateY(7px);
+  }
+
+
+  /* ==============================================================
+     RESPONSIVE
+     ============================================================== */
+
+  @media (max-width: 1023px) {
+
+    .gen-zone-btn {
+      min-height: 112px;
+    }
+
+  }
+
+
+  @media (max-width: 639px) {
+
+    .gen-zone-btn {
+      min-height: 108px;
+    }
+
+  }
+
+
+  /* ==============================================================
+     REDUCED MOTION
+     ============================================================== */
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .gen-zone-btn,
+    #gen-zone-title,
+    #gen-zone-desc,
+    #gen-zone-action,
+    #gen-zone-code,
+    #gen-zone-test,
+    #gen-zone-status {
+      transition: none !important;
+    }
+
+    .gen-zone-btn:hover {
+      transform: none;
+    }
+
+  }
+
+
+
+/* <!-- =========================================================================
+     SECTION 04 ANIMATION
+     ========================================================================= --> */
+
+  #inverter-battery-diagnostics .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity .7s ease,
+      transform .7s ease;
+  }
+
+  #inverter-battery-diagnostics .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #inverter-battery-diagnostics .group:hover img {
+    transform: scale(1.05);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #inverter-battery-diagnostics .reveal-on-scroll {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    #inverter-battery-diagnostics .group:hover img {
+      transform: none;
+    }
+  }
+
+
+
+  /* <!-- =========================================================================
+     DYNAMIC CONTENT TRANSITION
+     ======================================================================== --> */
+
+
+#service-network-section
+.zone-content-refresh {
+
+  opacity: .25;
+  transform: translateY(7px);
+
+  transition:
+    opacity .16s ease,
+    transform .16s ease;
+
+}
+
+
+
+/* <!-- =========================================================================
+     SECTION 04 — CSS
+     ========================================================================= --> */
+
+
+  /* ================================================================
+     REVEAL
+     ================================================================ */
+  #service-network-section .reveal-network {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity .7s ease,
+      transform .7s ease;
+  }
+
+  #service-network-section .reveal-network.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  /* ================================================================
+     IMAGE
+     ================================================================ */
+  #service-network-section .service-network-image {
+    transition: transform 1.2s ease;
+  }
+
+  #service-network-section:hover .service-network-image {
+    transform: scale(1.04);
+  }
+
+
+  /* ================================================================
+     NETWORK LINES
+     ================================================================ */
+  #service-network-section .network-line {
+    animation: networkDash 8s linear infinite;
+  }
+
+  @keyframes networkDash {
+    from {
+      stroke-dashoffset: 0;
+    }
+
+    to {
+      stroke-dashoffset: -120;
+    }
+  }
+
+
+  /* ================================================================
+     CENTER HUB
+     ================================================================ */
+  #service-network-section .network-center-ring {
+    animation: hubPulse 2.8s ease-out infinite;
+  }
+
+  #service-network-section .network-center-ring.delay {
+    animation-delay: 1.4s;
+  }
+
+  @keyframes hubPulse {
+    0% {
+      opacity: .65;
+      transform: scale(.75);
+    }
+
+    70% {
+      opacity: 0;
+      transform: scale(1.25);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1.25);
+    }
+  }
+
+
+  /* ================================================================
+     ZONE MARKERS
+     ================================================================ */
+  #service-network-section .network-zone-marker {
+    position: absolute;
+    z-index: 25;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+  }
+
+  #service-network-section .zone-dot {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 9999px;
+    background: #64748b;
+    border: 3px solid #020617;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.2);
+    transition:
+      transform .3s ease,
+      background .3s ease,
+      box-shadow .3s ease;
+  }
+
+  #service-network-section .zone-pulse {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 34px;
+    height: 34px;
+    transform: translate(-50%, -50%);
+    border-radius: 9999px;
+    border: 1px solid rgba(245,158,11,.7);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #service-network-section
+  .network-zone-marker.active
+  .zone-dot {
+    background: #f59e0b;
+    transform: scale(1.25);
+    box-shadow:
+      0 0 0 4px rgba(245,158,11,.15),
+      0 0 24px rgba(245,158,11,.65);
+  }
+
+  #service-network-section
+  .network-zone-marker.active
+  .zone-pulse {
+    opacity: 1;
+    animation: zonePulse 2s ease-out infinite;
+  }
+
+  @keyframes zonePulse {
+    0% {
+      transform: translate(-50%, -50%) scale(.7);
+      opacity: .8;
+    }
+
+    70% {
+      transform: translate(-50%, -50%) scale(1.7);
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+  /* ================================================================
+     ZONE LABEL
+     ================================================================ */
+  #service-network-section .zone-label {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+
+    padding: 6px 9px;
+
+    border-radius: 6px;
+
+    background: rgba(2,6,23,.86);
+    border: 1px solid rgba(148,163,184,.22);
+
+    color: #cbd5e1;
+
+    font-size: 8px;
+    font-family: monospace;
+    font-weight: 700;
+    letter-spacing: .08em;
+
+    transition:
+      border-color .3s ease,
+      color .3s ease,
+      background .3s ease;
+  }
+
+  #service-network-section .zone-label strong {
+    color: #f59e0b;
+    margin-right: 5px;
+  }
+
+  #service-network-section
+  .network-zone-marker:hover
+  .zone-dot {
+    background: #f59e0b;
+    transform: scale(1.2);
+  }
+
+  #service-network-section
+  .network-zone-marker:hover
+  .zone-label,
+  #service-network-section
+  .network-zone-marker.active
+  .zone-label {
+    border-color: rgba(245,158,11,.45);
+    color: #fff;
+    background: rgba(2,6,23,.95);
+  }
+
+
+  /* ================================================================
+     COVERAGE BAR
+     ================================================================ */
+  #service-network-section .zone-coverage-bar {
+    transform-origin: left;
+    animation: coverageLoad 1.2s ease forwards;
+  }
+
+  @keyframes coverageLoad {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+
+  /* ================================================================
+     RTL
+     ================================================================ */
+  html[dir="rtl"]
+  #service-network-section .zone-label {
+    left: auto;
+    right: 22px;
+  }
+
+
+  /* ================================================================
+     MOBILE
+     ================================================================ */
+  @media (max-width: 639px) {
+
+    #service-network-section .zone-label {
+      font-size: 7px;
+      padding: 5px 6px;
+      left: 17px;
+    }
+
+    html[dir="rtl"]
+    #service-network-section .zone-label {
+      right: 17px;
+      left: auto;
+    }
+
+    #service-network-section .zone-dot {
+      width: 13px;
+      height: 13px;
+    }
+
+    #service-network-section .network-center-ring {
+      display: none;
+    }
+
+  }
+
+
+  /* ================================================================
+     REDUCED MOTION
+     ================================================================ */
+  @media (prefers-reduced-motion: reduce) {
+
+    #service-network-section .reveal-network {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    #service-network-section .service-network-image {
+      transition: none;
+    }
+
+    #service-network-section .network-line,
+    #service-network-section .network-center-ring,
+    #service-network-section .zone-pulse {
+      animation: none !important;
+    }
+
+  }
+
+  /* ================================================================
+     GOOGLE MAPS EMBED STYLING
+     ================================================================ */
+  .google-map-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .google-map-iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    border: 0;
+    display: block;
+    border-radius: 0.75rem;
+  }
+
+  .dark .google-map-iframe {
+    filter: contrast(1.08) brightness(0.9) saturate(0.9);
+  }
+
+/* <!-- =========================================================================
+     SECTION 01 — CSS
+     ========================================================================= --> */
+
+
+  /* ================================================================
+     HERO IMAGE
+     ================================================================ */
+
+  #power-hero .hero-background-image {
+    transform: scale(1.04);
+    animation: heroImageZoom 14s ease-in-out infinite alternate;
+  }
+
+  @keyframes heroImageZoom {
+
+    from {
+      transform: scale(1.04);
+    }
+
+    to {
+      transform: scale(1.10);
+    }
+
+  }
+
+
+  /* ================================================================
+     SCAN LINE
+     ================================================================ */
+
+  #power-hero .hero-scan-line {
+    animation: heroScan 6s linear infinite;
+  }
+
+  @keyframes heroScan {
+
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+
+    10% {
+      opacity: .5;
+    }
+
+    50% {
+      opacity: .35;
+    }
+
+    90% {
+      opacity: .5;
+    }
+
+    100% {
+      transform: translateY(760px);
+      opacity: 0;
+    }
+
+  }
+
+
+  /* ================================================================
+     REVEAL
+     ================================================================ */
+
+  #power-hero .reveal-hero {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+      opacity .8s ease,
+      transform .8s ease;
+  }
+
+  #power-hero .reveal-hero.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  /* ================================================================
+     MONITOR
+     ================================================================ */
+
+  #power-hero .hero-monitor {
+    animation: monitorFloat 5s ease-in-out infinite;
+  }
+
+  @keyframes monitorFloat {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-7px);
+    }
+
+  }
+
+
+  /* ================================================================
+     POWER RING
+     ================================================================ */
+
+  #power-hero .power-ring {
+    animation:
+      powerRingRotate 8s linear infinite;
+  }
+
+  @keyframes powerRingRotate {
+
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+
+  }
+
+
+  /* ================================================================
+     LOAD BAR
+     ================================================================ */
+
+  #power-hero .power-load-bar {
+    transform-origin: left;
+    animation: loadBar 1.5s ease forwards;
+  }
+
+  @keyframes loadBar {
+
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+
+  }
+
+
+  /* ================================================================
+     RTL
+     ================================================================ */
+
+  html[dir="rtl"]
+  #power-hero .power-load-bar {
+    transform-origin: right;
+  }
+
+
+  /* ================================================================
+     MOBILE
+     ================================================================ */
+
+  @media (max-width: 639px) {
+
+    #power-hero {
+      min-height: auto;
+    }
+
+    #power-hero .hero-scan-line {
+      animation-duration: 8s;
+    }
+
+    #power-hero .hero-monitor {
+      animation: none;
+    }
+
+  }
+
+
+  /* ================================================================
+     REDUCED MOTION
+     ================================================================ */
+
+  @media (prefers-reduced-motion: reduce) {
+
+    #power-hero .hero-background-image,
+    #power-hero .hero-scan-line,
+    #power-hero .hero-monitor,
+    #power-hero .power-ring,
+    #power-hero .power-load-bar {
+      animation: none !important;
+    }
+
+    #power-hero .reveal-hero {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+  }
+
+/* ==========================================================================
+   GLOBAL PAGE PRELOADER STYLES
+   ========================================================================== */
+#page-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), 
+              visibility 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, visibility, transform;
+}
+
+.dark #page-preloader {
+  background-color: #0F0A0C !important;
+}
+
+#page-preloader.preloader-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: scale(1.02);
+}
+
+.preloader-ring {
+  animation: preloaderSpin 1s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+@keyframes preloaderSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.preloader-progress-bar {
+  animation: preloaderFill 0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes preloaderFill {
+  0% { width: 0%; }
+  35% { width: 45%; }
+  70% { width: 85%; }
+  100% { width: 100%; }
+}
+
+

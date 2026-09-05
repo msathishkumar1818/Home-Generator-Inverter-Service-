@@ -1,0 +1,3356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerCore — Generator & Inverter Service Center | Repair & Diagnostics</title>
+  <meta name="description" content="Factory certified generator repair, pure sine wave inverter diagnostics, battery testing, and 24/7 emergency breakdown support.">
+  
+  <!-- Favicon (Matching Lightning Bolt Icon in Tab Title) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23DC2626'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            amber: {
+              400: '#EF4444',
+              500: '#DC2626',
+              600: '#991B1B',
+            },
+            sky: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            blue: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            burgundy: {
+              500: '#881337',
+              600: '#9F1239',
+              700: '#7F1D1D',
+            },
+            slate: {
+              50: '#FFF5F6',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#1E293B',
+              500: '#0F172A',
+              600: '#0F172A',
+              700: '#000000',
+              800: '#2D0F16',
+              850: '#1C0D12',
+              900: '#160A0E',
+              950: '#0F0A0C',
+            },
+            rose: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#F43F5E',
+              600: '#E11D48',
+              700: '#BE123C',
+              800: '#9F1239',
+              900: '#881337',
+              950: '#4C0519',
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'sans-serif'],
+            body: ['Inter', 'Manrope', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6.5 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-[#FFFFFF] dark:bg-[#0F0A0C] text-[#111827] dark:text-[#F9FAFB] antialiased selection:bg-[#DC2626] selection:text-white">
+
+  <!-- =========================================================================
+       GLOBAL PAGE PRELOADER
+       ========================================================================= -->
+  <div id="page-preloader" class="fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white dark:bg-[#0F0A0C] transition-all duration-500">
+    <!-- Ambient Glow Pulse -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center">
+      <div class="w-80 h-80 rounded-full bg-red-600/10 dark:bg-red-600/15 blur-3xl animate-pulse"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center text-center px-4 max-w-xs">
+      <!-- Animated Energy Core Icon -->
+      <div class="relative mb-5 flex items-center justify-center">
+        <!-- Rotating Orbit Ring -->
+        <div class="preloader-ring absolute w-20 h-20 rounded-full border-2 border-red-500/20 border-t-red-600 border-r-red-600 animate-spin"></div>
+        <!-- Pulsing Glow Ring -->
+        <div class="absolute w-16 h-16 rounded-2xl bg-red-600/20 animate-ping opacity-40"></div>
+        <!-- Core Brand Logo Box -->
+        <div class="relative w-12 h-12 rounded-xl bg-gradient-to-tr from-red-600 to-rose-600 flex items-center justify-center text-white shadow-xl shadow-red-600/30">
+          <i class="fa-solid fa-bolt-lightning text-xl text-white animate-bounce"></i>
+        </div>
+      </div>
+
+      <!-- Brand Text -->
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
+        <span class="text-xl font-heading font-extrabold tracking-tight text-slate-950 dark:text-white">Power<span class="text-red-600">Core</span></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      </div>
+
+      <!-- Monospace Loading Status -->
+      <div class="flex items-center gap-1.5 text-[11px] font-mono tracking-wider uppercase text-slate-500 dark:text-slate-400 mb-4">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
+        <span id="preloader-status-text">INITIALIZING POWER GRID...</span>
+      </div>
+
+      <!-- High-Tech Progress Bar -->
+      <div class="w-48 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden relative shadow-inner">
+        <div class="preloader-progress-bar h-full bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       GLOBAL HEADER (Single-Line Fixed Header — Kept Consistent)
+       ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-[#0F0A0C]/95 backdrop-blur-md border-b border-rose-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-14 2xl:h-16 header-inner-wrap flex items-center justify-between">
+      
+      <!-- Brand Logo & Identity -->
+      <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse shrink-0 group focus:outline-none" aria-label="PowerCore Home">
+        <div class="w-8 h-8 2xl:w-9 2xl:h-9 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
+          <i class="fa-solid fa-bolt-lightning text-base 2xl:text-lg text-white"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-base 2xl:text-lg font-extrabold tracking-tight text-slate-950 dark:text-white font-heading">Power<span class="text-amber-500">Core</span></span>
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+          </div>
+          <span class="hidden sm:block text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Generator &amp; Inverter Service Center</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden 2xl:flex items-center space-x-4 2xl:space-x-7 rtl:space-x-reverse text-xs 2xl:text-sm font-medium text-slate-700 dark:text-slate-300 desktop-nav" aria-label="Primary Navigation">
+        
+        <!-- Home with Dropdown -->
+        <div class="relative nav-dropdown-trigger group py-2">
+          <button type="button" class="flex items-center space-x-1 rtl:space-x-reverse hover:text-amber-500 transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="nav-dropdown absolute top-full left-0 rtl:left-auto rtl:right-0 w-48 pt-2 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 space-y-1">
+              <a href="index.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 1 (Editorial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+              <a href="home-2.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 2 (Industrial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">About</a>
+        <a href="products.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Products</a>
+        <a href="services.html" class="text-amber-600 dark:text-amber-400 font-semibold" aria-current="page">Services</a>
+        <a href="amc-plans.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">AMC Plans</a>
+        <a href="service-areas.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Service Areas</a>
+        <a href="contact.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header Controls & CTA (Desktop & Mobile) -->
+      <div class="flex items-center space-x-1.5 sm:space-x-3 rtl:space-x-reverse shrink-0">
+        
+        <!-- Theme Switcher (Dark/Light) -->
+        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all focus:outline-none shrink-0" aria-label="Toggle dark mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
+        </button>
+
+        <!-- RTL / LTR Switcher -->
+        <button type="button" class="rtl-toggle-btn px-2 sm:px-2.5 h-8 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 text-xs font-mono font-bold text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all flex items-center space-x-1 sm:space-x-1.5 rtl:space-x-reverse focus:outline-none shrink-0" aria-label="Switch text direction" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-globe text-[10px] sm:text-[11px] text-amber-500"></i>
+          <span class="rtl-toggle-label text-[11px] sm:text-xs">RTL</span>
+        </button>
+
+        <!-- Desktop Primary CTA -->
+        <button type="button" data-modal-open="booking-modal" class="hidden 2xl:inline-flex header-desktop-cta items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg btn-primary text-xs font-bold tracking-wide uppercase shadow-sm shrink-0">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book a Service</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" id="mobile-menu-btn" class="2xl:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:border-amber-500 focus:outline-none shrink-0" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-sm sm:text-base"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div id="mobile-drawer" class="2xl:hidden fixed inset-x-0 top-14 2xl:top-16 bg-white dark:bg-[#0F0A0C] border-b border-rose-200/80 dark:border-slate-800/80 shadow-2xl z-40 max-h-[calc(100dvh-3.5rem)] 2xl:max-h-[calc(100dvh-4rem)] overflow-y-auto">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2.5">
+        
+        <!-- Mobile Dropdown Accordion for Home -->
+        <div class="border-b border-slate-100 dark:border-slate-800/60 pb-2.5">
+          <button type="button" id="mobile-home-dropdown-btn" class="w-full flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white py-1">
+            <span class="flex items-center space-x-2 rtl:space-x-reverse text-amber-600 dark:text-amber-400">
+              <i class="fa-solid fa-house text-sm"></i>
+              <span>Home Options</span>
+            </span>
+            <i id="mobile-home-chevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="mobile-home-dropdown-list" class="hidden pl-6 rtl:pr-6 rtl:pl-0 pt-2.5 space-y-2">
+            <a href="index.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 1 (Editorial Layout)</a>
+            <a href="home-2.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 2 (Industrial Layout)</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">About PowerCore</a>
+        <a href="products.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Products (Generators &amp; Inverters)</a>
+        <a href="services.html" class="mobile-nav-link active block text-sm sm:text-base font-semibold border-b border-slate-100 dark:border-slate-800/60 pb-2.5" aria-current="page">Service &amp; Repair</a>
+        <a href="amc-plans.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">AMC Annual Plans</a>
+        <a href="service-areas.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service Area Coverage</a>
+        <a href="contact.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 pb-1">Contact &amp; Emergency Hub</a>
+
+        <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-col space-y-2">
+          <button type="button" data-modal-open="booking-modal" class="w-full py-2.5 rounded-lg btn-primary text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse shadow-md shadow-amber-500/20">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Service Online</span>
+          </button>
+          
+          <a href="tel:18001234567" class="w-full py-2.5 rounded-lg border border-red-500/40 bg-red-500/10 text-red-600 dark:text-red-400 text-center text-xs font-bold flex items-center justify-center space-x-2 rtl:space-x-reverse">
+            <i class="fa-solid fa-phone-volume animate-pulse"></i>
+            <span>24/7 Emergency: 1800 123 4567</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+    
+    <!-- =========================
+     REPAIR HERO SECTION
+========================= -->
+<section
+  id="repair-hero"
+  class="relative min-h-[680px] lg:min-h-[760px] bg-slate-950 text-white overflow-hidden"
+>
+  <!-- Technical Background Grid -->
+  <div
+    class="absolute inset-0 opacity-[0.07] pointer-events-none"
+    style="
+      background-image:
+        linear-gradient(rgba(255,255,255,.25) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.25) 1px, transparent 1px);
+      background-size: 48px 48px;
+    "
+  ></div>
+
+  <!-- Large Background Word -->
+  <div
+    class="absolute -right-10 top-20 text-[20vw] leading-none font-black tracking-tighter text-white/[0.025] select-none pointer-events-none"
+  >
+    REPAIR
+  </div>
+
+  <!-- Background Glow -->
+  <div
+    class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-amber-500/10 blur-[120px] pointer-events-none"
+  ></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <!-- Top Technical Line -->
+    <div
+      class="flex items-center justify-between gap-6 py-6 border-b border-slate-800"
+    >
+      <div class="flex items-center gap-3">
+        <span class="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
+
+        <span
+          class="text-[10px] sm:text-xs font-mono font-bold tracking-[0.25em] text-white uppercase"
+        >
+          POWERCORE // SERVICE & REPAIR
+        </span>
+      </div>
+
+      <div
+        class="hidden sm:flex items-center gap-3 text-[10px] font-mono tracking-widest text-slate-500 uppercase"
+      >
+        <span>SYSTEM STATUS</span>
+        <span class="text-emerald-400">● OPERATIONAL</span>
+      </div>
+    </div>
+
+
+    <!-- Main Hero -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12 min-h-[570px] items-center gap-14 lg:gap-10 py-16 lg:py-20"
+    >
+
+      <!-- LEFT CONTENT -->
+      <div class="lg:col-span-8">
+
+        <!-- Eyebrow -->
+        <div
+          class="flex items-center gap-4 mb-7"
+        >
+          <span class="h-px w-12 bg-amber-500"></span>
+
+          <span
+            class="text-xs sm:text-sm font-mono font-bold tracking-[0.22em] text-amber-500 uppercase"
+          >
+            GENERATOR • INVERTER • BATTERY REPAIR LAB
+          </span>
+        </div>
+
+
+        <!-- Main Heading -->
+        <h1
+          class="hero-title text-white text-5xl sm:text-6xl md:text-5xl lg:text-[60px] xl:text-[60px] leading-[0.92] tracking-[-0.045em] font-black max-w-5xl"
+        >
+          When Power
+          <span class="block text-white">
+            Stops.
+          </span>
+
+          <span class="block text-amber-500">
+            We Get It Running.
+          </span>
+        </h1>
+
+
+        <!-- Description -->
+        <p
+          class="mt-8 max-w-2xl text-base sm:text-lg leading-8 text-white"
+        >
+          From sudden shutdowns to recurring faults, our technicians diagnose
+          the real problem, restore performance, and load-test your power
+          equipment before it goes back into service.
+        </p>
+
+
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4 mt-9">
+
+          <a
+            href="#book-repair"
+            class="group inline-flex items-center justify-center gap-3 px-7 py-4 bg-amber-500 text-slate-950 font-bold text-sm uppercase tracking-wide transition-all duration-300 hover:bg-amber-400"
+          >
+            Book a Repair
+
+            <i
+              class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+            ></i>
+          </a>
+
+
+          <a
+            href="tel:+919999999999"
+            class="inline-flex items-center justify-center gap-3 px-7 py-4 border border-slate-700 text-white font-bold text-sm uppercase tracking-wide hover:border-amber-500 hover:text-amber-500 transition-all duration-300"
+          >
+            <i class="fa-solid fa-phone"></i>
+
+            Emergency Support
+          </a>
+
+        </div>
+
+
+        <!-- Small Hero Meta -->
+        <div
+          class="flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 text-[10px] sm:text-xs font-mono tracking-widest text-slate uppercase"
+        >
+          <span>01 // Diagnose</span>
+          <span>02 // Repair</span>
+          <span>03 // Load Test</span>
+          <span>04 // Restore</span>
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT VISUAL -->
+      <div class="lg:col-span-4 relative">
+
+        <!-- Vertical Technical Rail -->
+        <div class="relative pl-8 sm:pl-10 border-l border-slate-800">
+
+          <!-- Big Diagnostic Visual -->
+          <div
+            class="relative w-64 h-64 sm:w-72 sm:h-72 mx-auto lg:mx-0"
+          >
+
+            <!-- Outer Ring -->
+            <div
+              class="absolute inset-0 rounded-full border border-slate-700"
+            ></div>
+
+            <!-- Dashed Ring -->
+            <div
+              class="absolute inset-5 rounded-full border border-dashed border-amber-500/40"
+            ></div>
+
+            <!-- Inner Ring -->
+            <div
+              class="absolute inset-12 rounded-full border border-slate-800"
+            ></div>
+
+            <!-- Cross Lines -->
+            <div
+              class="absolute top-1/2 left-0 right-0 h-px bg-slate-800"
+            ></div>
+
+            <div
+              class="absolute left-1/2 top-0 bottom-0 w-px bg-slate-800"
+            ></div>
+
+
+            <!-- Center -->
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-screwdriver-wrench text-4xl sm:text-5xl text-amber-500 mb-4"
+              ></i>
+
+              <span
+                class="text-3xl font-black tracking-tight"
+              >
+                24/7
+              </span>
+
+              <span
+                class="mt-1 text-[9px] font-mono tracking-[0.25em] text-slate uppercase"
+              >
+                TECH SUPPORT
+              </span>
+            </div>
+
+
+            <!-- Diagnostic Labels -->
+            <span
+              class="absolute -top-2 left-1/2 -translate-x-1/2 px-2 bg-slate-950 text-[8px] font-mono tracking-widest text-slate"
+            >
+              SYSTEM CHECK
+            </span>
+
+            <span
+              class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 bg-slate-950 text-[8px] font-mono tracking-widest text-amber-500"
+            >
+              SERVICE ACTIVE
+            </span>
+
+            <span
+              class="absolute top-1/2 -left-7 -translate-y-1/2 rotate-[-90deg] text-[8px] font-mono tracking-[0.2em] text-slate"
+            >
+              DIAGNOSTIC
+            </span>
+
+          </div>
+
+
+          <!-- Diagnostic Steps -->
+          <div class="mt-12 space-y-6">
+
+            <div class="flex items-start gap-4">
+              <span
+                class="text-xs font-mono text-amber-500 font-bold"
+              >
+                01
+              </span>
+
+              <div>
+                <p class="text-sm font-bold text-white">
+                  Fault Diagnosis
+                </p>
+
+                <p class="text-xs text-white mt-1">
+                  Identify the actual failure point.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="flex items-start gap-4">
+              <span
+                class="text-xs font-mono text-amber-500 font-bold"
+              >
+                02
+              </span>
+
+              <div>
+                <p class="text-sm font-bold text-white">
+                  Component Repair
+                </p>
+
+                <p class="text-xs text-white mt-1">
+                  Repair with tested replacement parts.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="flex items-start gap-4">
+              <span
+                class="text-xs font-mono text-amber-500 font-bold"
+              >
+                03
+              </span>
+
+              <div>
+                <p class="text-sm font-bold text-white">
+                  Load Testing
+                </p>
+
+                <p class="text-xs text-white mt-1">
+                  Verify stable performance before delivery.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BOTTOM HERO RAIL -->
+    <div
+      class="border-t border-slate-800"
+    >
+      <div
+        class="grid grid-cols-2 md:grid-cols-4"
+      >
+
+        <div
+          class="py-5 pr-5 border-r border-slate-800"
+        >
+          <p
+            class="text-[9px] font-mono tracking-[0.2em] text-white uppercase"
+          >
+            SERVICE
+          </p>
+
+          <p class="mt-2 text-sm font-bold text-white">
+            Generator Repair
+          </p>
+        </div>
+
+
+        <div
+          class="py-5 px-5 md:px-6 border-r border-slate-800"
+        >
+          <p
+            class="text-[9px] font-mono tracking-[0.2em] text-white uppercase"
+          >
+            RESPONSE
+          </p>
+
+          <p class="mt-2 text-sm font-bold text-white">
+            Rapid Technician Dispatch
+          </p>
+        </div>
+
+
+        <div
+          class="py-5 px-5 md:px-6 border-r border-slate-800"
+        >
+          <p
+            class="text-[9px] font-mono tracking-[0.2em] text-white uppercase"
+          >
+            TESTING
+          </p>
+
+          <p class="mt-2 text-sm font-bold text-white">
+            Full Load Tested
+          </p>
+        </div>
+
+
+        <div
+          class="py-5 pl-5 md:pl-6"
+        >
+          <p
+            class="text-[9px] font-mono tracking-[0.2em] text-white uppercase"
+          >
+            COVERAGE
+          </p>
+
+          <p class="mt-2 text-sm font-bold text-amber-500">
+            Generator • Inverter • Battery
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- =========================================================================
+     SECTION 02 — THE SYMPTOM MAP
+     "WHAT IS YOUR SYSTEM TELLING YOU?"
+     NEW LAYOUT — DIAGNOSTIC CONTROL ROOM / SIGNAL ANALYSIS
+     ========================================================================= -->
+
+<section id="symptom-map-section"
+  class="relative overflow-hidden py-14 sm:py-16 lg:py-20 xl:py-24
+         bg-[#FFF5F6] dark:bg-[#12070A]
+         border-b border-rose-100 dark:border-[#2D0F16]">
+
+  <!-- Technical Background -->
+  <div class="absolute inset-0 pointer-events-none opacity-[0.035] dark:opacity-[0.06]"
+       style="background-image:
+       linear-gradient(rgba(15,23,42,.8) 1px, transparent 1px),
+       linear-gradient(90deg, rgba(15,23,42,.8) 1px, transparent 1px);
+       background-size: 42px 42px;">
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+    <!-- ================================================================
+         HEADER
+         ================================================================ -->
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between
+                gap-6 mb-10 lg:mb-12">
+
+      <div class="max-w-3xl">
+
+        <div class="flex items-center gap-3 mb-3">
+          <span class="w-8 h-px bg-amber-500"></span>
+
+          <span class="text-xs font-mono font-bold uppercase
+                       tracking-[0.18em] text-amber-500">
+            02 // DIAGNOSTIC SYMPTOM MAP
+          </span>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl
+                   font-extrabold tracking-tight
+                   text-slate-950 dark:text-white font-heading">
+          What Is Your System
+          <span class="text-amber-500">Telling You?</span>
+        </h2>
+
+        <p class="text-sm sm:text-base text-black dark:text-white
+                  leading-relaxed mt-3 max-w-2xl">
+          Select a symptom and trace the likely fault path,
+          inspection protocol, and recommended service response.
+        </p>
+
+      </div>
+
+      <!-- Live Status -->
+      <div class="shrink-0 flex items-center gap-3
+                  border border-slate-200 dark:border-[#2D0F16]
+                  bg-white/70 dark:bg-slate-950/40
+                  px-4 py-3 rounded-xl backdrop-blur">
+
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="absolute inline-flex h-full w-full
+                       animate-ping rounded-full bg-amber-400 opacity-60"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5
+                       bg-amber-500"></span>
+        </span>
+
+        <div>
+          <p class="text-[10px] font-mono font-bold uppercase
+                    tracking-widest text-slate-500">
+            Diagnostic Network
+          </p>
+
+          <p class="text-xs font-bold text-slate-900 dark:text-white">
+            LIVE ANALYSIS READY
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================================================================
+         MAIN CONTROL ROOM
+         ================================================================ -->
+    <div class="grid grid-cols-1 lg:grid-cols-12
+                border border-slate-200 dark:border-[#2D0F16]
+                bg-white/60 dark:bg-slate-950/40
+                rounded-2xl lg:rounded-3xl overflow-hidden
+                shadow-xl">
+
+
+      <!-- ==============================================================
+           LEFT — SYSTEM VISUAL
+           ============================================================== -->
+      <div class="lg:col-span-4 relative min-h-[300px] sm:min-h-[360px]
+                  lg:min-h-[560px]
+                  bg-slate-950 overflow-hidden">
+
+        <!-- Grid -->
+        <div class="absolute inset-0 opacity-20"
+             style="background-image:
+             linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+             linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+             background-size: 34px 34px;">
+        </div>
+
+        <!-- Glow -->
+        <div class="absolute w-64 h-64 bg-amber-500/10
+                    rounded-full blur-3xl
+                    left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+
+        <!-- Header -->
+        <div class="absolute top-0 left-0 right-0 z-10
+                    flex items-center justify-between
+                    px-5 py-4 border-b border-white/10">
+
+          <span class="text-[10px] font-mono uppercase
+                       tracking-widest text-white">
+            SYSTEM / SIGNAL
+          </span>
+
+          <span class="text-[10px] font-mono font-bold
+                       text-amber-400">
+            NODE 02
+          </span>
+
+        </div>
+
+
+        <!-- Central Diagnostic Diagram -->
+        <div class="absolute inset-0 flex items-center justify-center">
+
+          <div class="relative w-44 h-44 sm:w-52 sm:h-52">
+
+            <!-- Outer Rings -->
+            <div class="absolute inset-0 rounded-full
+                        border border-amber-500/20
+                        animate-[spin_18s_linear_infinite]">
+            </div>
+
+            <div class="absolute inset-4 rounded-full
+                        border border-dashed border-amber-500/30
+                        animate-[spin_12s_linear_infinite_reverse]">
+            </div>
+
+            <div class="absolute inset-10 rounded-full
+                        border border-white/10">
+            </div>
+
+
+            <!-- Pulse -->
+            <div class="absolute inset-1/2
+                        -translate-x-1/2 -translate-y-1/2
+                        w-5 h-5 rounded-full bg-amber-500">
+
+              <span class="absolute inset-0 rounded-full
+                           bg-amber-500 animate-ping opacity-40">
+              </span>
+
+            </div>
+
+
+            <!-- Crosshair -->
+            <div class="absolute left-1/2 top-0 bottom-0
+                        w-px bg-amber-500/20"></div>
+
+            <div class="absolute top-1/2 left-0 right-0
+                        h-px bg-amber-500/20"></div>
+
+
+            <!-- Signal Points -->
+            <span class="absolute top-5 left-1/2
+                         w-2 h-2 -translate-x-1/2
+                         rounded-full bg-amber-400"></span>
+
+            <span class="absolute bottom-7 right-8
+                         w-2 h-2 rounded-full bg-red-400"></span>
+
+            <span class="absolute top-1/2 left-4
+                         w-2 h-2 rounded-full bg-slate-400"></span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Floating Technical Labels -->
+        <div class="absolute left-5 top-24
+                    px-3 py-2 border border-white/10
+                    bg-black/30 backdrop-blur rounded-lg">
+
+          <span class="block text-[9px] font-mono
+                       uppercase text-white">
+            Signal
+          </span>
+
+          <span id="symptom-signal-status"
+                class="block text-xs font-bold text-amber-400 mt-0.5">
+            ABNORMAL
+          </span>
+
+        </div>
+
+
+        <div class="absolute right-5 top-32
+                    px-3 py-2 border border-white/10
+                    bg-black/30 backdrop-blur rounded-lg">
+
+          <span class="block text-[9px] font-mono
+                       uppercase text-white">
+            Priority
+          </span>
+
+          <span id="symptom-visual-priority"
+                class="block text-xs font-bold text-red-400 mt-0.5">
+            HIGH
+          </span>
+
+        </div>
+
+
+        <!-- Bottom -->
+        <div class="absolute bottom-0 left-0 right-0
+                    p-5 border-t border-white/10
+                    bg-black/30 backdrop-blur">
+
+          <div class="flex items-center justify-between mb-2">
+
+            <span class="text-[10px] font-mono
+                         uppercase tracking-widest text-white">
+              Current Signal
+            </span>
+
+            <span class="text-[10px] font-mono text-amber-400">
+              SCANNING
+            </span>
+
+          </div>
+
+          <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+
+            <div class="h-full w-[72%] bg-amber-500
+                        rounded-full
+                        animate-[signalScan_2.4s_ease-in-out_infinite]">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==============================================================
+           CENTER — SYMPTOM SIGNALS
+           ============================================================== -->
+      <div class="lg:col-span-4
+                  border-t lg:border-t-0
+                  lg:border-l lg:border-r
+                  border-slate-200 dark:border-[#2D0F16]
+                  bg-white/70 dark:bg-slate-900/30">
+
+        <!-- Panel Header -->
+        <div class="px-5 sm:px-6 py-5
+                    border-b border-slate-200 dark:border-[#2D0F16]">
+
+          <div class="flex items-center justify-between">
+
+            <div>
+              <p class="text-[10px] font-mono font-bold
+                        uppercase tracking-widest text-slate-500">
+                Fault Signals
+              </p>
+
+              <h3 class="text-sm font-bold
+                         text-slate-900 dark:text-white mt-1">
+                Select a system symptom
+              </h3>
+            </div>
+
+            <span class="text-[10px] font-mono
+                         text-amber-500">
+              10 NODES
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Symptom List -->
+        <div class="p-3 sm:p-4 space-y-1.5">
+
+          <!-- 01 -->
+          <button type="button"
+                  data-symptom="gen-not-start"
+                  class="symptom-tag-btn active group w-full text-left
+                         flex items-center gap-3
+                         px-3.5 py-3 rounded-lg
+                         border border-amber-500/40
+                         bg-amber-500/10
+                         transition-all duration-300
+                         focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md
+                         bg-amber-500 text-slate-950
+                         text-[10px] font-mono font-bold">
+              01
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-900 dark:text-white truncate">
+                Generator Won't Start
+              </span>
+
+              <span class="block text-[9px] font-mono
+                           text-slate-500 mt-0.5">
+                START / CRANK
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right
+                      text-[9px] text-amber-500
+                      group-hover:translate-x-1 transition-transform"></i>
+
+          </button>
+
+
+          <!-- 02 -->
+          <button type="button"
+                  data-symptom="gen-stops-sudden"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3
+                         px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300
+                         focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md
+                         bg-red-500/10 text-red-500
+                         text-[10px] font-mono font-bold">
+              02
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Generator Stops Suddenly
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                ENGINE / TRIP
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px]
+                      text-slate-400"></i>
+
+          </button>
+
+
+          <!-- 03 -->
+          <button type="button"
+                  data-symptom="low-power-output"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3 px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300 focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md bg-amber-500/10
+                         text-amber-500 text-[10px] font-mono font-bold">
+              03
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Low Power Output
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                LOAD / OUTPUT
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+
+          </button>
+
+
+          <!-- 04 -->
+          <button type="button"
+                  data-symptom="excessive-smoke"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3 px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300 focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md bg-slate-400/10
+                         text-slate-500 text-[10px] font-mono font-bold">
+              04
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Excessive Smoke
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                EXHAUST / COMBUSTION
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+
+          </button>
+
+
+          <!-- 05 -->
+          <button type="button"
+                  data-symptom="battery-not-charge"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3 px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300 focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md bg-amber-500/10
+                         text-amber-500 text-[10px] font-mono font-bold">
+              05
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Battery Not Charging
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                BATTERY / CHARGING
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+
+          </button>
+
+
+          <!-- 06 -->
+          <button type="button"
+                  data-symptom="inverter-not-on"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3 px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300 focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md bg-red-500/10
+                         text-red-500 text-[10px] font-mono font-bold">
+              06
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Inverter Not Turning On
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                INVERTER / DC
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+
+          </button>
+
+
+          <!-- 07 -->
+          <button type="button"
+                  data-symptom="backup-time-low"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3 px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300 focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md bg-amber-500/10
+                         text-amber-500 text-[10px] font-mono font-bold">
+              07
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Backup Time Too Low
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                CAPACITY / BATTERY
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+
+          </button>
+
+
+          <!-- 08 -->
+          <button type="button"
+                  data-symptom="overheating"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3 px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300 focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md bg-red-500/10
+                         text-red-500 text-[10px] font-mono font-bold">
+              08
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Overheating Alarm
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                TEMPERATURE / COOLING
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+
+          </button>
+
+
+          <!-- 09 -->
+          <button type="button"
+                  data-symptom="unusual-noise"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3 px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300 focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md bg-slate-400/10
+                         text-slate-500 text-[10px] font-mono font-bold">
+              09
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Unusual Noise / Clatter
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                MECHANICAL / ENGINE
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+
+          </button>
+
+
+          <!-- 10 -->
+          <button type="button"
+                  data-symptom="voltage-fluctuation"
+                  class="symptom-tag-btn group w-full text-left
+                         flex items-center gap-3 px-3.5 py-3 rounded-lg
+                         border border-transparent
+                         hover:border-slate-300 dark:hover:border-slate-700
+                         hover:bg-slate-50 dark:hover:bg-slate-900
+                         transition-all duration-300 focus:outline-none">
+
+            <span class="flex items-center justify-center
+                         w-7 h-7 rounded-md bg-amber-500/10
+                         text-amber-500 text-[10px] font-mono font-bold">
+              10
+            </span>
+
+            <span class="flex-1 min-w-0">
+              <span class="block text-xs font-bold
+                           text-slate-800 dark:text-slate-200 truncate">
+                Voltage Fluctuation
+              </span>
+              <span class="block text-[9px] font-mono text-slate-500 mt-0.5">
+                VOLTAGE / AVR
+              </span>
+            </span>
+
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==============================================================
+           RIGHT — LIVE DIAGNOSTIC REPORT
+           ============================================================== -->
+      <div class="lg:col-span-4 p-5 sm:p-6 lg:p-7 xl:p-8
+                  bg-slate-50/70 dark:bg-slate-950/50
+                  flex flex-col">
+
+        <!-- Report Header -->
+        <div class="flex items-start justify-between gap-4
+                    pb-5 border-b border-slate-200 dark:border-[#2D0F16]">
+
+          <div>
+
+            <span class="text-[10px] font-mono font-bold
+                         uppercase tracking-widest text-amber-500">
+              LIVE DIAGNOSTIC REPORT
+            </span>
+
+            <h3 id="symptom-detail-title"
+                class="text-lg sm:text-xl font-bold
+                       font-heading text-slate-950 dark:text-white mt-2">
+              Generator Will Not Crank / Start
+            </h3>
+
+          </div>
+
+          <span id="symptom-detail-priority"
+                class="shrink-0 px-2.5 py-1 rounded-md
+                       bg-amber-500/10
+                       text-amber-500
+                       font-mono font-bold text-[9px] uppercase">
+            HIGH PRIORITY
+          </span>
+
+        </div>
+
+
+        <!-- Cause -->
+        <div class="py-5 border-b border-slate-200 dark:border-[#2D0F16]">
+
+          <div class="flex items-center gap-2 mb-2">
+
+            <span class="w-5 h-5 rounded
+                         bg-amber-500/10
+                         flex items-center justify-center">
+
+              <i class="fa-solid fa-triangle-exclamation
+                        text-[9px] text-amber-500"></i>
+
+            </span>
+
+            <span class="text-[10px] font-mono font-bold
+                         uppercase tracking-wider text-slate-500">
+              Possible Cause
+            </span>
+
+          </div>
+
+          <p id="symptom-detail-cause"
+             class="text-xs sm:text-sm
+                    text-slate-700 dark:text-slate-300
+                    leading-relaxed font-medium">
+            Depleted 12V starter battery, choked fuel solenoid,
+            faulty ignition key switch, or air-locked diesel line.
+          </p>
+
+        </div>
+
+
+        <!-- Inspection -->
+        <div class="py-5 border-b border-slate-200 dark:border-[#2D0F16]">
+
+          <div class="flex items-center gap-2 mb-2">
+
+            <span class="w-5 h-5 rounded
+                         bg-slate-500/10
+                         flex items-center justify-center">
+
+              <i class="fa-solid fa-magnifying-glass
+                        text-[9px] text-slate-500"></i>
+
+            </span>
+
+            <span class="text-[10px] font-mono font-bold
+                         uppercase tracking-wider text-slate-500">
+              What We Inspect
+            </span>
+
+          </div>
+
+          <p id="symptom-detail-inspect"
+             class="text-xs sm:text-sm
+                    text-black dark:text-white
+                    leading-relaxed">
+            Starter motor draw, battery cranking CCA,
+            fuel cut-off solenoid continuity, and fuel filter cleanliness.
+          </p>
+
+        </div>
+
+
+        <!-- Service Action -->
+        <div class="py-5">
+
+          <div class="flex items-center gap-2 mb-2">
+
+            <span class="w-5 h-5 rounded
+                         bg-emerald-500/10
+                         flex items-center justify-center">
+
+              <i class="fa-solid fa-screwdriver-wrench
+                        text-[9px] text-emerald-500"></i>
+
+            </span>
+
+            <span class="text-[10px] font-mono font-bold
+                         uppercase tracking-wider text-slate-500">
+              Typical Service Action
+            </span>
+
+          </div>
+
+          <p id="symptom-detail-action"
+             class="text-xs sm:text-sm
+                    text-black dark:text-white
+                    leading-relaxed">
+            Electrolyte recharge / battery replacement,
+            bleeding fuel system, solenoid terminal cleaning.
+          </p>
+
+        </div>
+
+
+        <!-- CTA -->
+        <div class="mt-auto pt-5
+                    border-t border-slate-200 dark:border-[#2D0F16]">
+
+          <div class="flex flex-col gap-3">
+
+            <button type="button"
+                    id="symptom-prefill-btn"
+                    data-modal-open="booking-modal"
+                    data-prefill-service="Emergency Repair: Generator Won't Start"
+                    class="w-full px-5 py-3.5 rounded-lg
+                           btn-primary text-xs font-bold
+                           uppercase tracking-wider
+                           flex items-center justify-center gap-2
+                           transition-all duration-300
+                           hover:-translate-y-0.5">
+
+              <i class="fa-solid fa-bolt"></i>
+
+              <span>
+                Dispatch Diagnostic Engineer
+              </span>
+
+              <span>→</span>
+
+            </button>
+
+
+            <div class="flex items-center justify-center gap-2">
+
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+
+              <span class="text-[10px] font-mono text-slate-500">
+                UNDER 45M EMERGENCY SLA
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================================================================
+         BOTTOM SIGNAL BAR
+         ================================================================ -->
+    <div class="grid grid-cols-2 sm:grid-cols-4
+                border-x border-b border-slate-200
+                dark:border-[#2D0F16]
+                bg-white/50 dark:bg-slate-950/30">
+
+      <div class="px-4 py-4 border-r border-slate-200
+                  dark:border-[#2D0F16]">
+
+        <span class="block text-[9px] font-mono
+                     uppercase tracking-widest text-slate-500">
+          Detection
+        </span>
+
+        <span class="block text-xs font-bold
+                     text-slate-900 dark:text-white mt-1">
+          SYMPTOM
+        </span>
+
+      </div>
+
+      <div class="px-4 py-4 sm:border-r
+                  border-slate-200 dark:border-[#2D0F16]">
+
+        <span class="block text-[9px] font-mono
+                     uppercase tracking-widest text-slate-500">
+          Analysis
+        </span>
+
+        <span class="block text-xs font-bold
+                     text-slate-900 dark:text-white mt-1">
+          ROOT CAUSE
+        </span>
+
+      </div>
+
+      <div class="px-4 py-4 border-r border-slate-200
+                  dark:border-[#2D0F16]">
+
+        <span class="block text-[9px] font-mono
+                     uppercase tracking-widest text-slate-500">
+          Validation
+        </span>
+
+        <span class="block text-xs font-bold
+                     text-slate-900 dark:text-white mt-1">
+          TEST PROTOCOL
+        </span>
+
+      </div>
+
+      <div class="px-4 py-4">
+
+        <span class="block text-[9px] font-mono
+                     uppercase tracking-widest text-slate-500">
+          Response
+        </span>
+
+        <span class="block text-xs font-bold
+                     text-amber-500 mt-1">
+          ENGINEER DISPATCH
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- =========================================================================
+     SECTION 03 — GENERATOR REPAIR LAB
+     "FROM ENGINE ROOM TO CONTROL PANEL."
+     8 INSPECTION ZONES — EQUAL HEIGHT LAYOUT
+     ========================================================================= -->
+
+<section id="generator-repair-lab"
+  class="py-14 sm:py-16 lg:py-20 xl:py-24
+         bg-[#FFF5F6] dark:bg-[#12070A]
+         border-b border-rose-100 dark:border-[#2D0F16]">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ================================================================
+         HEADER
+         ================================================================ -->
+    <div class="max-w-3xl mb-10 sm:mb-12">
+
+      <div class="flex items-center gap-3 mb-3">
+        <span class="w-8 h-px bg-amber-500"></span>
+
+        <span class="text-xs font-mono font-bold uppercase
+                     tracking-widest text-amber-500">
+          03 // COMPONENT LAB
+        </span>
+      </div>
+
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl
+                 font-extrabold text-slate-950 dark:text-white
+                 font-heading tracking-tight">
+        From Engine Room to Control Panel.
+      </h2>
+
+      <p class="text-sm sm:text-base
+                text-black dark:text-white
+                mt-3 leading-relaxed max-w-2xl">
+        Click any numbered inspection zone on the engineering map
+        to view laboratory test procedures and calibrated parameters.
+      </p>
+
+    </div>
+
+
+    <!-- ================================================================
+         MAIN EQUAL HEIGHT GRID
+         ================================================================ -->
+
+    <div class="grid grid-cols-1 lg:grid-cols-12
+                gap-6 lg:gap-8
+                items-stretch">
+
+
+      <!-- ==============================================================
+           LEFT — 8 INSPECTION ZONES
+           ============================================================== -->
+
+      <div class="lg:col-span-6
+                  grid grid-cols-1 sm:grid-cols-2
+                  gap-3 h-full">
+
+
+        <!-- ZONE 01 -->
+        <button type="button"
+                data-gen-zone="01"
+                class="gen-zone-btn active
+                       min-h-[112px] sm:min-h-0
+                       p-4 sm:p-5
+                       rounded-xl
+                       border border-amber-500/40
+                       bg-amber-500/10
+                       dark:bg-amber-500/[0.07]
+                       text-left rtl:text-right
+                       focus:outline-none
+                       transition-all duration-300
+                       flex flex-col justify-between
+                       group">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span class="zone-number
+                         flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500 text-slate-950
+                         text-[10px] font-mono font-bold">
+              01
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square
+                      text-[10px] text-amber-500
+                      opacity-100 transition-all duration-300
+                      group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            </i>
+
+          </div>
+
+          <div class="mt-4">
+
+            <span class="block text-[10px] font-mono
+                         font-bold uppercase tracking-wider
+                         text-amber-500 mb-1">
+              ZONE 01
+            </span>
+
+            <span class="block text-sm font-bold
+                         text-slate-900 dark:text-white">
+              ENGINE BLOCK
+            </span>
+
+            <span class="block text-xs text-slate-500
+                         dark:text-slate-400 mt-1">
+              Compression &amp; Rings
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ZONE 02 -->
+        <button type="button"
+                data-gen-zone="02"
+                class="gen-zone-btn
+                       min-h-[112px] sm:min-h-0
+                       p-4 sm:p-5
+                       rounded-xl
+                       border border-slate-200 dark:border-slate-800
+                       bg-white/70 dark:bg-slate-900/60
+                       text-left rtl:text-right
+                       focus:outline-none
+                       transition-all duration-300
+                       flex flex-col justify-between
+                       group">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span class="zone-number
+                         flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500/10
+                         text-amber-500
+                         text-[10px] font-mono font-bold">
+              02
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square
+                      text-[10px] text-slate-400
+                      transition-all duration-300
+                      group-hover:text-amber-500
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5">
+            </i>
+
+          </div>
+
+          <div class="mt-4">
+
+            <span class="block text-[10px] font-mono
+                         font-bold uppercase tracking-wider
+                         text-amber-500 mb-1">
+              ZONE 02
+            </span>
+
+            <span class="block text-sm font-bold
+                         text-slate-900 dark:text-white">
+              FUEL SYSTEM
+            </span>
+
+            <span class="block text-xs text-slate-500
+                         dark:text-slate-400 mt-1">
+              Injectors &amp; Timing
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ZONE 03 -->
+        <button type="button"
+                data-gen-zone="03"
+                class="gen-zone-btn
+                       min-h-[112px] sm:min-h-0
+                       p-4 sm:p-5
+                       rounded-xl
+                       border border-slate-200 dark:border-slate-800
+                       bg-white/70 dark:bg-slate-900/60
+                       text-left rtl:text-right
+                       focus:outline-none
+                       transition-all duration-300
+                       flex flex-col justify-between
+                       group">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span class="zone-number
+                         flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500/10
+                         text-amber-500
+                         text-[10px] font-mono font-bold">
+              03
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square
+                      text-[10px] text-slate-400
+                      transition-all duration-300
+                      group-hover:text-amber-500
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5">
+            </i>
+
+          </div>
+
+          <div class="mt-4">
+
+            <span class="block text-[10px] font-mono
+                         font-bold uppercase tracking-wider
+                         text-amber-500 mb-1">
+              ZONE 03
+            </span>
+
+            <span class="block text-sm font-bold
+                         text-slate-900 dark:text-white">
+              COOLING CIRCUIT
+            </span>
+
+            <span class="block text-xs text-slate-500
+                         dark:text-slate-400 mt-1">
+              Radiator &amp; Thermostat
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ZONE 04 -->
+        <button type="button"
+                data-gen-zone="04"
+                class="gen-zone-btn
+                       min-h-[112px] sm:min-h-0
+                       p-4 sm:p-5
+                       rounded-xl
+                       border border-slate-200 dark:border-slate-800
+                       bg-white/70 dark:bg-slate-900/60
+                       text-left rtl:text-right
+                       focus:outline-none
+                       transition-all duration-300
+                       flex flex-col justify-between
+                       group">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span class="zone-number
+                         flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500/10
+                         text-amber-500
+                         text-[10px] font-mono font-bold">
+              04
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square
+                      text-[10px] text-slate-400
+                      transition-all duration-300
+                      group-hover:text-amber-500
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5">
+            </i>
+
+          </div>
+
+          <div class="mt-4">
+
+            <span class="block text-[10px] font-mono
+                         font-bold uppercase tracking-wider
+                         text-amber-500 mb-1">
+              ZONE 04
+            </span>
+
+            <span class="block text-sm font-bold
+                         text-slate-900 dark:text-white">
+              ALTERNATOR
+            </span>
+
+            <span class="block text-xs text-slate-500
+                         dark:text-slate-400 mt-1">
+              Rotor &amp; Stator Megger
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ZONE 05 -->
+        <button type="button"
+                data-gen-zone="05"
+                class="gen-zone-btn
+                       min-h-[112px] sm:min-h-0
+                       p-4 sm:p-5
+                       rounded-xl
+                       border border-slate-200 dark:border-slate-800
+                       bg-white/70 dark:bg-slate-900/60
+                       text-left rtl:text-right
+                       focus:outline-none
+                       transition-all duration-300
+                       flex flex-col justify-between
+                       group">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span class="zone-number
+                         flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500/10
+                         text-amber-500
+                         text-[10px] font-mono font-bold">
+              05
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square
+                      text-[10px] text-slate-400
+                      transition-all duration-300
+                      group-hover:text-amber-500
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5">
+            </i>
+
+          </div>
+
+          <div class="mt-4">
+
+            <span class="block text-[10px] font-mono
+                         font-bold uppercase tracking-wider
+                         text-amber-500 mb-1">
+              ZONE 05
+            </span>
+
+            <span class="block text-sm font-bold
+                         text-slate-900 dark:text-white">
+              STARTER BATTERY
+            </span>
+
+            <span class="block text-xs text-slate-500
+                         dark:text-slate-400 mt-1">
+              Conductance &amp; CCA
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ZONE 06 -->
+        <button type="button"
+                data-gen-zone="06"
+                class="gen-zone-btn
+                       min-h-[112px] sm:min-h-0
+                       p-4 sm:p-5
+                       rounded-xl
+                       border border-slate-200 dark:border-slate-800
+                       bg-white/70 dark:bg-slate-900/60
+                       text-left rtl:text-right
+                       focus:outline-none
+                       transition-all duration-300
+                       flex flex-col justify-between
+                       group">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span class="zone-number
+                         flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500/10
+                         text-amber-500
+                         text-[10px] font-mono font-bold">
+              06
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square
+                      text-[10px] text-slate-400
+                      transition-all duration-300
+                      group-hover:text-amber-500
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5">
+            </i>
+
+          </div>
+
+          <div class="mt-4">
+
+            <span class="block text-[10px] font-mono
+                         font-bold uppercase tracking-wider
+                         text-amber-500 mb-1">
+              ZONE 06
+            </span>
+
+            <span class="block text-sm font-bold
+                         text-slate-900 dark:text-white">
+              CONTROL PANEL
+            </span>
+
+            <span class="block text-xs text-slate-500
+                         dark:text-slate-400 mt-1">
+              AMF Digital Controller
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ZONE 07 -->
+        <button type="button"
+                data-gen-zone="07"
+                class="gen-zone-btn
+                       min-h-[112px] sm:min-h-0
+                       p-4 sm:p-5
+                       rounded-xl
+                       border border-slate-200 dark:border-slate-800
+                       bg-white/70 dark:bg-slate-900/60
+                       text-left rtl:text-right
+                       focus:outline-none
+                       transition-all duration-300
+                       flex flex-col justify-between
+                       group">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span class="zone-number
+                         flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500/10
+                         text-amber-500
+                         text-[10px] font-mono font-bold">
+              07
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square
+                      text-[10px] text-slate-400
+                      transition-all duration-300
+                      group-hover:text-amber-500
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5">
+            </i>
+
+          </div>
+
+          <div class="mt-4">
+
+            <span class="block text-[10px] font-mono
+                         font-bold uppercase tracking-wider
+                         text-amber-500 mb-1">
+              ZONE 07
+            </span>
+
+            <span class="block text-sm font-bold
+                         text-slate-900 dark:text-white">
+              BUSBAR WIRING
+            </span>
+
+            <span class="block text-xs text-slate-500
+                         dark:text-slate-400 mt-1">
+              Neutral Earth &lt;2Ω
+            </span>
+
+          </div>
+
+        </button>
+
+
+        <!-- ZONE 08 -->
+        <button type="button"
+                data-gen-zone="08"
+                class="gen-zone-btn
+                       min-h-[112px] sm:min-h-0
+                       p-4 sm:p-5
+                       rounded-xl
+                       border border-slate-200 dark:border-slate-800
+                       bg-white/70 dark:bg-slate-900/60
+                       text-left rtl:text-right
+                       focus:outline-none
+                       transition-all duration-300
+                       flex flex-col justify-between
+                       group">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span class="zone-number
+                         flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500/10
+                         text-amber-500
+                         text-[10px] font-mono font-bold">
+              08
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square
+                      text-[10px] text-slate-400
+                      transition-all duration-300
+                      group-hover:text-amber-500
+                      group-hover:translate-x-0.5
+                      group-hover:-translate-y-0.5">
+            </i>
+
+          </div>
+
+          <div class="mt-4">
+
+            <span class="block text-[10px] font-mono
+                         font-bold uppercase tracking-wider
+                         text-amber-500 mb-1">
+              ZONE 08
+            </span>
+
+            <span class="block text-sm font-bold
+                         text-slate-900 dark:text-white">
+              STEP-LOAD OUTPUT
+            </span>
+
+            <span class="block text-xs text-slate-500
+                         dark:text-slate-400 mt-1">
+              100% Load Bank Test
+            </span>
+
+          </div>
+
+        </button>
+
+      </div>
+
+
+      <!-- ==============================================================
+           RIGHT — INSPECTION SPECIFICATION SHEET
+           EXACT SAME HEIGHT AS LEFT GRID
+           ============================================================== -->
+
+      <div class="lg:col-span-6
+                  h-full
+                  bg-slate-950 dark:bg-slate-950
+                  p-5 sm:p-6 lg:p-7 xl:p-8
+                  rounded-2xl
+                  border border-slate-800
+                  text-white
+                  shadow-2xl
+                  tech-corner
+                  flex flex-col">
+
+
+        <!-- Top Status -->
+        <div class="flex flex-col sm:flex-row
+                    sm:items-center sm:justify-between
+                    gap-3
+                    pb-4
+                    border-b border-slate-800">
+
+          <div class="flex items-center gap-3">
+
+            <span class="flex items-center justify-center
+                         w-8 h-8 rounded-lg
+                         bg-amber-500/10">
+
+              <i class="fa-solid fa-microscope
+                        text-amber-400 text-xs"></i>
+
+            </span>
+
+            <div>
+
+              <span class="block text-[10px]
+                           font-mono font-bold
+                           uppercase tracking-widest
+                           text-amber-400">
+                ENGINEERING INSPECTION SHEET
+              </span>
+
+              <span class="block text-[9px]
+                           font-mono text-white mt-0.5">
+                COMPONENT DIAGNOSTIC / LIVE
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <span class="self-start sm:self-auto
+                       text-[9px] font-mono font-bold
+                       px-2.5 py-1 rounded-md
+                       bg-amber-500/10
+                       text-amber-400
+                       border border-amber-500/20">
+            ISO 9001 VERIFIED
+          </span>
+
+        </div>
+
+
+        <!-- ============================================================
+             Main Information
+             ============================================================ -->
+
+        <div class="flex-1 flex flex-col justify-center
+                    py-6 sm:py-8">
+
+
+          <!-- Zone Indicator -->
+          <div class="flex items-center gap-3 mb-4">
+
+            <span class="h-px w-8 bg-amber-500"></span>
+
+            <span id="gen-zone-code"
+                  class="text-[10px] font-mono
+                         uppercase tracking-widest
+                         text-amber-400">
+              ZONE 01 / ENGINE
+            </span>
+
+          </div>
+
+
+          <!-- Title -->
+          <h3 id="gen-zone-title"
+              class="text-xl sm:text-2xl lg:text-2xl xl:text-3xl
+                     font-bold font-heading
+                     text-white leading-tight">
+            01. Diesel / Petrol Internal Combustion Engine
+          </h3>
+
+
+          <!-- Description -->
+          <p id="gen-zone-desc"
+             class="text-xs sm:text-sm
+                    text-slate-300
+                    leading-relaxed
+                    mt-4 max-w-xl">
+            Cylinder compression measurement, piston ring blow-by
+            inspection, valve tappet clearance adjustment,
+            and oil pump pressure calibration.
+          </p>
+
+
+          <!-- Technical Metrics -->
+          <div class="grid grid-cols-2 gap-px
+                      bg-slate-800
+                      border border-slate-800
+                      rounded-xl overflow-hidden
+                      mt-6">
+
+            <div class="bg-slate-950 px-4 py-4">
+
+              <span class="block text-[9px]
+                           font-mono uppercase
+                           tracking-widest text-white">
+                TEST TYPE
+              </span>
+
+              <span id="gen-zone-test"
+                    class="block text-xs font-bold
+                           text-white mt-1.5">
+                ENGINE ANALYSIS
+              </span>
+
+            </div>
+
+
+            <div class="bg-slate-950 px-4 py-4">
+
+              <span class="block text-[9px]
+                           font-mono uppercase
+                           tracking-widest text-white">
+                STATUS
+              </span>
+
+              <span id="gen-zone-status"
+                    class="flex items-center gap-2
+                           text-xs font-bold
+                           text-emerald-400 mt-1.5">
+
+                <span class="w-1.5 h-1.5 rounded-full
+                             bg-emerald-400"></span>
+
+                READY FOR TEST
+
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Procedure -->
+          <div class="mt-5
+                      p-4 rounded-xl
+                      bg-black/30
+                      border border-slate-800">
+
+            <div class="flex items-center gap-2 mb-2">
+
+              <i class="fa-solid fa-terminal
+                        text-[10px] text-amber-400"></i>
+
+              <span class="text-[9px]
+                           font-mono font-bold
+                           uppercase tracking-widest
+                           text-white">
+                CALIBRATED PROCEDURE
+              </span>
+
+            </div>
+
+            <p id="gen-zone-action"
+               class="text-xs sm:text-sm
+                      font-mono
+                      text-amber-400
+                      leading-relaxed">
+              Procedure: Compression gauge testing +
+              head gasket thermal inspection
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- ============================================================
+             Bottom CTA
+             ============================================================ -->
+
+        <div class="pt-5
+                    border-t border-slate-800">
+
+          <div class="flex flex-col sm:flex-row
+                      sm:items-center
+                      sm:justify-between
+                      gap-4">
+
+            <div>
+
+              <span class="block text-[9px]
+                           font-mono uppercase
+                           tracking-widest
+                           text-white">
+                FIELD RESPONSE
+              </span>
+
+              <span class="block text-xs
+                           font-bold text-white mt-1">
+                Certified diagnostic engineer
+              </span>
+
+            </div>
+
+
+            <button type="button"
+                    data-modal-open="booking-modal"
+                    data-prefill-service="Comprehensive Generator Lab Inspection Visit"
+                    class="w-full sm:w-auto
+                           px-5 sm:px-6
+                           py-3.5
+                           rounded-lg
+                           btn-primary
+                           text-xs font-bold
+                           uppercase tracking-wider
+                           flex items-center
+                           justify-center
+                           gap-2
+                           transition-all duration-300
+                           hover:-translate-y-0.5">
+
+              <i class="fa-solid fa-clipboard-check"></i>
+
+              <span>
+                Schedule Component Diagnostic
+              </span>
+
+              <span>→</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================================================================
+         BOTTOM ENGINEERING STATUS STRIP
+         ================================================================ -->
+
+    <div class="grid grid-cols-2 sm:grid-cols-4
+                mt-4
+                border border-slate-200
+                dark:border-[#2D0F16]
+                rounded-xl overflow-hidden
+                bg-white/60 dark:bg-slate-950/30">
+
+      <div class="px-4 py-3.5
+                  border-r border-b sm:border-b-0
+                  border-slate-200 dark:border-[#2D0F16]">
+
+        <span class="block text-[9px] font-mono
+                     uppercase tracking-widest
+                     text-slate-500">
+          01
+        </span>
+
+        <span class="block text-xs font-bold
+                     text-slate-900 dark:text-white mt-1">
+          ENGINE TEST
+        </span>
+
+      </div>
+
+
+      <div class="px-4 py-3.5
+                  border-b sm:border-b-0 sm:border-r
+                  border-slate-200 dark:border-[#2D0F16]">
+
+        <span class="block text-[9px] font-mono
+                     uppercase tracking-widest
+                     text-slate-500">
+          02
+        </span>
+
+        <span class="block text-xs font-bold
+                     text-slate-900 dark:text-white mt-1">
+          ELECTRICAL TEST
+        </span>
+
+      </div>
+
+
+      <div class="px-4 py-3.5
+                  border-r border-slate-200
+                  dark:border-[#2D0F16]">
+
+        <span class="block text-[9px] font-mono
+                     uppercase tracking-widest
+                     text-slate-500">
+          03
+        </span>
+
+        <span class="block text-xs font-bold
+                     text-slate-900 dark:text-white mt-1">
+          LOAD VALIDATION
+        </span>
+
+      </div>
+
+
+      <div class="px-4 py-3.5">
+
+        <span class="block text-[9px] font-mono
+                     uppercase tracking-widest
+                     text-slate-500">
+          04
+        </span>
+
+        <span class="block text-xs font-bold
+                     text-amber-500 mt-1">
+          FIELD READY
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+    <!-- =========================================================================
+     SECTION 04 — INVERTER & BATTERY DIAGNOSTICS
+     "THE BACKUP SYSTEM IS ONLY AS STRONG AS ITS WEAKEST LINK."
+     FRESH SIMPLE IMAGE-BASED TEMPLATE
+     ========================================================================= -->
+<section
+  id="inverter-battery-diagnostics"
+  class="py-14 sm:py-16 lg:py-20 xl:py-24
+         bg-[#FFF5F6] dark:bg-[#12070A]
+         border-b border-rose-100 dark:border-[#2D0F16] overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ================================================================
+         SECTION HEADER
+         ================================================================ -->
+    <div class="max-w-3xl mb-10 sm:mb-12 reveal-on-scroll">
+
+      <div class="flex items-center gap-3 mb-3">
+        <span class="w-8 h-px bg-amber-500"></span>
+
+        <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">
+          04 // BACKUP DIAGNOSTICS
+        </span>
+      </div>
+
+      <h2
+        class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl
+               font-extrabold font-heading tracking-tight
+               text-slate-950 dark:text-white">
+        Your Backup System Deserves
+        <span class="text-amber-500">More Than a Quick Check.</span>
+      </h2>
+
+      <p
+        class="mt-4 text-sm sm:text-base leading-7
+               text-slate-black dark:text-white max-w-2xl">
+        We inspect the complete power path — from incoming supply and inverter
+        electronics to battery health and final connected-load performance.
+      </p>
+
+    </div>
+
+
+    <!-- ================================================================
+         MAIN IMAGE + CONTENT
+         ================================================================ -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12
+             gap-6 lg:gap-8 items-stretch">
+
+      <!-- ============================================================
+           IMAGE PANEL
+           ============================================================ -->
+      <div
+        class="lg:col-span-7 relative min-h-[360px] sm:min-h-[440px]
+               lg:min-h-[520px] overflow-hidden rounded-2xl
+               bg-slate-950 group reveal-on-scroll">
+
+        <!-- Image -->
+        <img
+          src="assets/images/p12.jpg"
+          alt="Electrical power system and backup diagnostics"
+          class="absolute inset-0 w-full h-full object-cover
+                 transition-transform duration-1000
+                 group-hover:scale-105"
+        />
+
+        <!-- Dark image overlay -->
+        <div
+          class="absolute inset-0
+                 bg-gradient-to-t from-slate-950 via-slate-950/35 to-transparent">
+        </div>
+
+        <!-- Technical grid -->
+        <div
+          class="absolute inset-0 opacity-20 pointer-events-none"
+          style="
+            background-image:
+              linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+            background-size: 36px 36px;
+          ">
+        </div>
+
+        <!-- Top label -->
+        <div
+          class="absolute top-5 left-5 right-5
+                 flex items-center justify-between gap-4">
+
+          <span
+            class="px-3 py-1.5 rounded-md
+                   bg-slate-950/75 backdrop-blur-sm
+                   border border-slate-700
+                   text-[10px] sm:text-xs font-mono
+                   font-bold tracking-widest text-white">
+            BACKUP POWER LAB
+          </span>
+
+          <span
+            class="flex items-center gap-2
+                   text-[10px] sm:text-xs font-mono
+                   text-white/80">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            SYSTEM READY
+          </span>
+
+        </div>
+
+
+        <!-- Image bottom information -->
+        <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-7 lg:p-8">
+
+          <div class="max-w-xl">
+
+            <span
+              class="text-[10px] sm:text-xs font-mono
+                     uppercase tracking-[0.2em] text-amber-400">
+              CONTINUOUS POWER PATH
+            </span>
+
+            <h3
+              class="mt-2 text-xl sm:text-2xl lg:text-3xl
+                     font-bold font-heading text-white">
+              Every connection matters.
+            </h3>
+
+            <p
+              class="mt-2 text-xs sm:text-sm leading-6
+                     text-slate-300 max-w-lg">
+              Battery condition, charging performance, inverter output,
+              transfer response and connected-load behavior are checked
+              as one complete system.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- Corner markers -->
+        <span class="absolute top-3 left-3 w-5 h-5 border-l border-t border-amber-500/70"></span>
+        <span class="absolute top-3 right-3 w-5 h-5 border-r border-t border-amber-500/70"></span>
+        <span class="absolute bottom-3 left-3 w-5 h-5 border-l border-b border-amber-500/70"></span>
+        <span class="absolute bottom-3 right-3 w-5 h-5 border-r border-b border-amber-500/70"></span>
+
+      </div>
+
+
+      <!-- ============================================================
+           RIGHT CONTENT
+           ============================================================ -->
+      <div
+        class="lg:col-span-5 flex flex-col
+               reveal-on-scroll">
+
+        <!-- Main content -->
+        <div
+          class="flex-1 p-6 sm:p-7 lg:p-8
+                 rounded-2xl
+                 bg-white dark:bg-slate-900
+                 border border-slate-200 dark:border-[#2D0F16]">
+
+          <!-- Small heading -->
+          <div class="flex items-center justify-between gap-4 mb-7">
+
+            <span
+              class="text-xs font-mono font-bold
+                     uppercase tracking-widest
+                     text-slate-500 dark:text-slate-400">
+              DIAGNOSTIC SCOPE
+            </span>
+
+            <span
+              class="text-xs font-mono font-bold
+                     text-amber-500">
+              04 / 06
+            </span>
+
+          </div>
+
+
+          <!-- Heading -->
+          <h3
+            class="text-xl sm:text-2xl lg:text-3xl
+                   font-bold font-heading
+                   text-slate-950 dark:text-white
+                   leading-tight">
+            Find the weak link before
+            <span class="text-amber-500">backup power fails.</span>
+          </h3>
+
+          <p
+            class="mt-4 text-sm leading-6
+                   text-black dark:text-white">
+            Our diagnostic process checks the electrical and battery chain
+            together instead of treating every component as an isolated fault.
+          </p>
+
+
+          <!-- ========================================================
+               DIAGNOSTIC CHECKS
+               ======================================================== -->
+          <div class="mt-7 space-y-3">
+
+            <!-- Item 01 -->
+            <div
+              class="flex items-center gap-4 p-3.5
+                     rounded-xl
+                     bg-[#FFF5F6] dark:bg-[#12070A]
+                     border border-rose-100 dark:border-[#2D0F16]">
+
+              <div
+                class="w-9 h-9 shrink-0 rounded-lg
+                       flex items-center justify-center
+                       bg-amber-500/10
+                       border border-amber-500/20
+                       text-amber-500">
+                <i class="fa-solid fa-bolt text-sm"></i>
+              </div>
+
+              <div class="min-w-0">
+                <p
+                  class="text-xs font-bold uppercase tracking-wide
+                         text-slate-900 dark:text-white">
+                  Input Power
+                </p>
+
+                <p
+                  class="text-[11px] mt-0.5
+                         text-slate-500 dark:text-slate-400">
+                  Voltage stability & surge condition
+                </p>
+              </div>
+
+              <span class="ml-auto text-emerald-500 text-xs">
+                <i class="fa-solid fa-circle-check"></i>
+              </span>
+
+            </div>
+
+
+            <!-- Item 02 -->
+            <div
+              class="flex items-center gap-4 p-3.5
+                     rounded-xl
+                     bg-[#FFF5F6] dark:bg-[#12070A]
+                     border border-rose-100 dark:border-[#2D0F16]">
+
+              <div
+                class="w-9 h-9 shrink-0 rounded-lg
+                       flex items-center justify-center
+                       bg-amber-500/10
+                       border border-amber-500/20
+                       text-amber-500">
+                <i class="fa-solid fa-microchip text-sm"></i>
+              </div>
+
+              <div class="min-w-0">
+                <p
+                  class="text-xs font-bold uppercase tracking-wide
+                         text-slate-900 dark:text-white">
+                  Inverter Electronics
+                </p>
+
+                <p
+                  class="text-[11px] mt-0.5
+                         text-slate-500 dark:text-slate-400">
+                  PCB, MOSFET & output waveform
+                </p>
+              </div>
+
+              <span class="ml-auto text-emerald-500 text-xs">
+                <i class="fa-solid fa-circle-check"></i>
+              </span>
+
+            </div>
+
+
+            <!-- Item 03 -->
+            <div
+              class="flex items-center gap-4 p-3.5
+                     rounded-xl
+                     bg-[#FFF5F6] dark:bg-[#12070A]
+                     border border-rose-100 dark:border-[#2D0F16]">
+
+              <div
+                class="w-9 h-9 shrink-0 rounded-lg
+                       flex items-center justify-center
+                       bg-amber-500/10
+                       border border-amber-500/20
+                       text-amber-500">
+                <i class="fa-solid fa-car-battery text-sm"></i>
+              </div>
+
+              <div class="min-w-0">
+                <p
+                  class="text-xs font-bold uppercase tracking-wide
+                         text-slate-900 dark:text-white">
+                  Battery Health
+                </p>
+
+                <p
+                  class="text-[11px] mt-0.5
+                         text-slate-500 dark:text-slate-400">
+                  Capacity, impedance & charging curve
+                </p>
+              </div>
+
+              <span class="ml-auto text-emerald-500 text-xs">
+                <i class="fa-solid fa-circle-check"></i>
+              </span>
+
+            </div>
+
+
+            <!-- Item 04 -->
+            <div
+              class="flex items-center gap-4 p-3.5
+                     rounded-xl
+                     bg-[#FFF5F6] dark:bg-[#12070A]
+                     border border-rose-100 dark:border-[#2D0F16]">
+
+              <div
+                class="w-9 h-9 shrink-0 rounded-lg
+                       flex items-center justify-center
+                       bg-amber-500/10
+                       border border-amber-500/20
+                       text-amber-500">
+                <i class="fa-solid fa-plug-circle-bolt text-sm"></i>
+              </div>
+
+              <div class="min-w-0">
+                <p
+                  class="text-xs font-bold uppercase tracking-wide
+                         text-slate-900 dark:text-white">
+                  Output & Load
+                </p>
+
+                <p
+                  class="text-[11px] mt-0.5
+                         text-slate-500 dark:text-slate-400">
+                  Transfer time & connected-load response
+                </p>
+              </div>
+
+              <span class="ml-auto text-emerald-500 text-xs">
+                <i class="fa-solid fa-circle-check"></i>
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ========================================================
+               CTA
+               ======================================================== -->
+          <div
+            class="mt-7 pt-6
+                   border-t border-slate-200
+                   dark:border-slate-800">
+
+            <button
+              type="button"
+              id="run-circuit-diagnostic-btn"
+              data-modal-open="booking-modal"
+              data-prefill-service="Inverter & Battery Diagnostic"
+              class="w-full px-5 py-3.5
+                     rounded-lg btn-primary
+                     text-xs font-bold uppercase tracking-wider
+                     shadow-md
+                     flex items-center justify-center
+                     gap-2">
+
+              <i class="fa-solid fa-wave-square"></i>
+
+              <span>
+                Book Backup System Diagnostic
+              </span>
+
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- ============================================================
+             BOTTOM QUICK STATS
+             ============================================================ -->
+        <div
+          class="grid grid-cols-3 gap-px mt-3
+                 overflow-hidden rounded-xl
+                 bg-slate-200 dark:bg-[#2D0F16]
+                 border border-slate-200 dark:border-[#2D0F16]">
+
+          <div
+            class="p-4 bg-white dark:bg-slate-900 text-center">
+
+            <p
+              class="text-lg sm:text-xl font-extrabold
+                     font-heading text-slate-950 dark:text-white">
+              230V
+            </p>
+
+            <p
+              class="mt-1 text-[9px] sm:text-[10px]
+                     font-mono uppercase tracking-wider
+                     text-slate-500 dark:text-slate-400">
+              Output
+            </p>
+
+          </div>
+
+          <div
+            class="p-4 bg-white dark:bg-slate-900 text-center">
+
+            <p
+              class="text-lg sm:text-xl font-extrabold
+                     font-heading text-slate-950 dark:text-white">
+              <span class="text-amber-500">10</span>ms
+            </p>
+
+            <p
+              class="mt-1 text-[9px] sm:text-[10px]
+                     font-mono uppercase tracking-wider
+                     text-slate-500 dark:text-slate-400">
+              Transfer
+            </p>
+
+          </div>
+
+          <div
+            class="p-4 bg-white dark:bg-slate-900 text-center">
+
+            <p
+              class="text-lg sm:text-xl font-extrabold
+                     font-heading text-slate-950 dark:text-white">
+              360°
+            </p>
+
+            <p
+              class="mt-1 text-[9px] sm:text-[10px]
+                     font-mono uppercase tracking-wider
+                     text-slate-500 dark:text-slate-400">
+              Inspection
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+    <!-- =========================================================================
+         SECTION 05 — REPAIR VS REPLACE
+         "SHOULD IT BE REPAIRED?" (3 Large Vertical Pathways - No Cards)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-14">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">05 // TECHNICAL DECISION</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            Repair It. Replace It. Or Maintain It?
+          </h2>
+          <p class="text-sm sm:text-base text-black dark:text-white mt-2">
+            We provide transparent engineering assessments so you never spend money on unviable machines.
+          </p>
+        </div>
+
+        <!-- 3 Vertical Pathways with Thin Dividers (No Cards) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-12 border-b border-slate-200 dark:border-slate-800">
+          
+          <!-- Pathway 01: REPAIR -->
+          <div class="space-y-3">
+            <span class="text-2xl font-black font-mono text-amber-500">01</span>
+            <h3 class="text-xl font-black font-heading text-slate-900 dark:text-white">REPAIR</h3>
+            <span class="text-xs font-mono text-emerald-500 font-bold block">RECOMMENDED WHEN:</span>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Component failure is isolated (AVR, starter, fuse)</span></li>
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Engine compression and alternator coils are healthy</span></li>
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Total repair cost is under 30% of replacement value</span></li>
+            </ul>
+          </div>
+
+          <!-- Pathway 02: REPLACE COMPONENT -->
+          <div class="space-y-3 border-t md:border-t-0 md:border-l rtl:md:border-r rtl:md:border-l-0 border-slate-200 dark:border-slate-800 pt-6 md:pt-0 md:pl-8 rtl:md:pr-8 rtl:md:pl-0">
+            <span class="text-2xl font-black font-mono text-amber-500">02</span>
+            <h3 class="text-xl font-black font-heading text-slate-900 dark:text-white">REPLACE COMPONENT</h3>
+            <span class="text-xs font-mono text-amber-500 font-bold block">RECOMMENDED WHEN:</span>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Battery bank has exceeded 4-5 year cycle lifetime</span></li>
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Alternator diode bridge or radiator is beyond repair</span></li>
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Upgrading to LiFePO4 for 3x longer operating life</span></li>
+            </ul>
+          </div>
+
+          <!-- Pathway 03: REPLACE SYSTEM -->
+          <div class="space-y-3 border-t md:border-t-0 md:border-l rtl:md:border-r rtl:md:border-l-0 border-slate-200 dark:border-slate-800 pt-6 md:pt-0 md:pl-8 rtl:md:pr-8 rtl:md:pl-0">
+            <span class="text-2xl font-black font-mono text-amber-500">03</span>
+            <h3 class="text-xl font-black font-heading text-slate-900 dark:text-white">REPLACE SYSTEM</h3>
+            <span class="text-xs font-mono text-red-500 font-bold block">RECOMMENDED WHEN:</span>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Equipment is outdated (&gt;12 years) with obsolete spares</span></li>
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Building load has grown beyond current kVA ceiling</span></li>
+              <li class="flex items-center space-x-2 rtl:space-x-reverse"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span>Repeated major engine breakdowns cause business loss</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Concluding Statement -->
+        <div class="pt-8 text-center sm:text-left rtl:sm:text-right flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span class="text-lg sm:text-xl font-bold font-heading text-slate-900 dark:text-white">
+            “We diagnose first. We recommend second.”
+          </span>
+          <button type="button" data-modal-open="booking-modal" data-prefill-service="Repair vs Replace Technical Evaluation" class="px-6 py-3 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider">
+            Get Technical Assessment →
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 06 — OUR REPAIR WORKFLOW
+         "NO GUESSWORK. JUST A CLEAR DIAGNOSIS." (Diagnostic Workflow Ribbon)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-14">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">06 // WORKSHOP PROCESS</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            No Guesswork. Just a Clear Diagnosis.
+          </h2>
+          <p class="text-sm sm:text-base text-black dark:text-white mt-2">
+            Every repair follows a strict 6-stage engineering verification protocol before signoff.
+          </p>
+        </div>
+
+        <!-- 6 Step Horizontal Workflow Ribbon -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 relative pb-10 border-b border-slate-300 dark:border-slate-800">
+          
+          <div class="space-y-2 border-t-2 border-amber-500 pt-4">
+            <span class="text-xs font-mono font-bold text-amber-500">STEP 01</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">REPORT ISSUE</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Share symptoms with our dispatcher for instant triage.</p>
+          </div>
+
+          <div class="space-y-2 border-t-2 border-slate-300 dark:border-slate-700 pt-4">
+            <span class="text-xs font-mono font-bold text-amber-500">STEP 02</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">INSPECT SYSTEM</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">On-site physical, thermal &amp; electrical inspection.</p>
+          </div>
+
+          <div class="space-y-2 border-t-2 border-slate-300 dark:border-slate-700 pt-4">
+            <span class="text-xs font-mono font-bold text-amber-500">STEP 03</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">TEST COMPONENTS</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Megger insulation, battery impedance &amp; fuel tests.</p>
+          </div>
+
+          <div class="space-y-2 border-t-2 border-slate-300 dark:border-slate-700 pt-4">
+            <span class="text-xs font-mono font-bold text-amber-500">STEP 04</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">IDENTIFY CAUSE</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Pinpoint root fault with transparent cost estimate.</p>
+          </div>
+
+          <div class="space-y-2 border-t-2 border-slate-300 dark:border-slate-700 pt-4">
+            <span class="text-xs font-mono font-bold text-amber-500">STEP 05</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">OEM REPAIR</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Genuine replacement parts installed by certified team.</p>
+          </div>
+
+          <div class="space-y-2 border-t-2 border-emerald-500 pt-4">
+            <span class="text-xs font-mono font-bold text-emerald-500">STEP 06</span>
+            <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">TEST UNDER LOAD</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">100% Load bank verification before digital handover.</p>
+          </div>
+
+        </div>
+
+        <div class="pt-6 text-center text-xs sm:text-sm font-mono text-slate-600 dark:text-slate-400">
+          <i class="fa-solid fa-certificate text-amber-500 mr-1.5 rtl:ml-1.5 rtl:mr-0"></i>
+          <span>Every repair ends with testing — not assumptions.</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 07 — EMERGENCY REPAIR / SERVICE PRIORITY
+         "SOME POWER PROBLEMS CAN'T WAIT." (Dark Immersive Priority Matrix)
+         ========================================================================= -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-slate-950 text-white border-b border-slate-800 tech-grid-bg relative overflow-hidden">
+      
+      <!-- Scanning Bar -->
+      <div class="priority-scan-bar"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left: Emergency Statement -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="inline-block px-3 py-1 rounded bg-red-500/10 text-red-400 border border-red-500/20 text-xs font-mono font-bold">
+              07 // EMERGENCY PROTOCOL
+            </span>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+              Power Down Is Not Always an Option.
+            </h2>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              For urgent generator breakdowns, hospital backup failures, and retail server stalls, our GPS-tracked mobile emergency units dispatch within 15 minutes.
+            </p>
+
+            <div class="pt-2">
+              <a href="tel:18001234567" class="inline-flex items-center space-x-3 rtl:space-x-reverse px-6 py-3.5 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow-lg shadow-red-600/30">
+                <i class="fa-solid fa-phone-volume animate-pulse text-sm"></i>
+                <span>Call Emergency Support: 1800 123 4567</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Service Priority Tier Matrix -->
+          <div class="lg:col-span-7 bg-slate-900/90 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-4">
+            
+            <div class="p-4 rounded-xl bg-slate-950 border-l-4 border-red-500 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-red-400">CRITICAL PRIORITY &bull; &lt; 45 MIN SLA</span>
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Complete Power Cut &bull; Generator Shut Down &bull; Critical Care</h3>
+              <p class="text-xs text-white">Immediate mobile emergency engineer dispatch with onboard temporary spares.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950 border-l-4 border-amber-500 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-amber-400">HIGH PRIORITY &bull; &lt; 2 HOUR SLA</span>
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Battery Bank Depletion &bull; Inverter Overheat &bull; Voltage Fluctuation</h3>
+              <p class="text-xs text-white">Same-day technician visit with digital circuit analyzers and replacement cells.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950 border-l-4 border-slate-600 space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-white">STANDARD PRIORITY &bull; SAME DAY / SCHEDULED</span>
+                <span class="w-2 h-2 rounded-full bg-slate-600"></span>
+              </div>
+              <h3 class="text-sm font-bold text-white">Preventive Fluid Flush &bull; Periodic Overhaul &bull; Minor Vibrations</h3>
+              <p class="text-xs text-white">Convenient appointment booking for thorough multi-point health audits.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 08 — FINAL REPAIR BOOKING
+         "LET'S GET YOUR POWER SYSTEM WORKING AGAIN." (Full-Width Closing Composition)
+         ========================================================================= -->
+    <section class="py-16 sm:py-20 lg:py-18 bg-[#12070A] text-white border-b border-[#2D0F16] relative overflow-hidden">
+      
+      <!-- Subtle Background Glow -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-500/15 via-transparent to-transparent pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="max-w-4xl mb-14 space-y-4">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">08 // REPAIR DISPATCH</span>
+          
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight">
+            Let's Get Your Power System Working Again.
+          </h2>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl">
+            Tell us what your system is doing. Our certified technicians will help identify the exact diagnostic and restoration steps.
+          </p>
+        </div>
+
+        <!-- 3 Connected Simple Action Paths -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-14 border-b border-slate-800">
+          
+          <div class="space-y-2">
+            <span class="text-xs font-mono font-bold text-amber-400">ACTION 01</span>
+            <h3 class="text-lg font-black font-heading text-white">DESCRIBE THE PROBLEM</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Share symptoms, error codes, or emergency blackout details online or by phone.
+            </p>
+          </div>
+
+          <div class="space-y-2 border-t md:border-t-0 md:border-l rtl:md:border-r rtl:md:border-l-0 border-slate-800 pt-6 md:pt-0 md:pl-8 rtl:md:pr-8 rtl:md:pl-0">
+            <span class="text-xs font-mono font-bold text-amber-400">ACTION 02</span>
+            <h3 class="text-lg font-black font-heading text-white">GET A DIAGNOSIS</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Certified engineer conducts calibrated physical, thermal, and electrical tests.
+            </p>
+          </div>
+
+          <div class="space-y-2 border-t md:border-t-0 md:border-l rtl:md:border-r rtl:md:border-l-0 border-slate-800 pt-6 md:pt-0 md:pl-8 rtl:md:pr-8 rtl:md:pl-0">
+            <span class="text-xs font-mono font-bold text-amber-400">ACTION 03</span>
+            <h3 class="text-lg font-black font-heading text-white">BOOK THE SERVICE</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Turnkey repair execution with genuine OEM parts and 100% full-load verification.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Final Action Bar -->
+        <div class="pt-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+          
+          <div class="space-y-1 text-center sm:text-left rtl:sm:text-right">
+            <h4 class="text-lg font-bold font-heading text-white">Need an engineer dispatched immediately?</h4>
+            <span class="text-xs font-mono text-slate-400">GENERATOR • INVERTER • BATTERY • ELECTRICAL SUPPORT</span>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <button type="button" data-modal-open="booking-modal" data-prefill-service="Immediate Technician Repair Booking" class="px-7 py-3.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider shadow-lg shadow-amber-500/20">
+              Book a Repair →
+            </button>
+
+            <a href="tel:18001234567" class="px-7 py-3.5 rounded-lg border border-red-500/40 bg-red-500/10 text-red-400 hover:bg-red-500/20 text-xs font-mono font-bold flex items-center space-x-2 rtl:space-x-reverse">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span>Emergency Hotline: 1800 123 4567</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================================
+       GLOBAL FOOTER
+       Consistent across all pages with Brand Identity, Quick Links & 24/7 Hotline
+       ========================================================================= -->
+  <footer class="bg-[#0F0A0C] text-slate-400 text-sm border-t border-[#2D0F16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#2D0F16]">
+        
+        <!-- Col 1: Brand & Bio (5 cols on desktop) -->
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group focus:outline-none" aria-label="PowerCore Home">
+            <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-bolt-lightning text-xl text-white"></i>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+                <span class="text-xl font-extrabold text-white tracking-tight font-heading">Power<span class="text-amber-500">Core</span></span>
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Generator &amp; Inverter Service Center</span>
+            </div>
+          </a>
+
+          <p class="text-xs sm:text-sm text-white leading-relaxed">
+            Engineered power resilience for homes, commercial complexes, and retail establishments. Multi-brand certified sales, installation, repair, and round-the-clock emergency support.
+          </p>
+
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 power-live-dot"></span>
+            <span class="text-xs font-mono text-emerald-400">Dispatch Network Online (24/7 Ready)</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Navigation
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="index.html" class="hover:text-amber-400 text-amber-500 transition-colors text-white">Home 1 (Editorial)</a></li>
+            <li><a href="home-2.html" class="hover:text-amber-400 transition-colors text-white">Home 2 (Industrial)</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors text-white">About Us</a></li>
+            <li><a href="products.html" class="hover:text-amber-400 transition-colors text-white">Products</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition-colors text-white">Services</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">AMC Plans</a></li>
+            <li><a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Service Areas</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Services (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Core Services
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="services.html?service=sales" class="hover:text-amber-400 transition-colors text-white">Generator Sales &amp; Sizing</a></li>
+            <li><a href="services.html?service=repair" class="hover:text-amber-400 transition-colors text-white">Emergency Generator Repair</a></li>
+            <li><a href="services.html?service=inverter" class="hover:text-amber-400 transition-colors text-white">Pure Sine Wave Inverters</a></li>
+            <li><a href="services.html?service=battery" class="hover:text-amber-400 transition-colors text-white">Tubular &amp; Lithium Battery Solutions</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">Annual Maintenance Contracts (AMC)</a></li>
+            <li><a href="tel:18001234567" class="hover:text-red-400 text-red-400 transition-colors text-white">24/7 Breakdown Dispatch</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Emergency (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Emergency Hotline
+          </h3>
+          <div class="p-3 rounded-lg bg-[#1A0E12] border border-[#3B1219] space-y-2">
+            <span class="text-[11px] font-mono text-white block">24/7 TOLL-FREE CALL:</span>
+            <a href="tel:18001234567" class="text-lg font-bold text-amber-400 hover:text-amber-300 block font-mono">
+              1800 123 4567
+            </a>
+            <span class="text-[11px] text-white block">service@powercore.example</span>
+          </div>
+          <p class="text-xs text-white">
+            Headquarters &amp; Central Workshop:<br>
+            PowerCore Tech Park, Industrial Corridor Hub
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white">
+        <div>
+          © 2026 PowerCore. All Rights Reserved. Generator &amp; Inverter Service Center.
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Terms of Service</a>
+          <a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Sitemap</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       SERVICE BOOKING MODAL (Universal Modal)
+       ========================================================================= -->
+  <div id="booking-modal" class="modal-backdrop fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-content-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl w-full max-w-lg overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+        <div class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <div class="w-8 h-8 rounded bg-amber-500/20 text-amber-500 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Book a Service Visit</h3>
+            <span class="text-[10px] font-mono text-slate-500">Fast Certified Engineer Dispatch</span>
+          </div>
+        </div>
+        <button type="button" data-modal-close="booking-modal" class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg p-1.5 focus:outline-none" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6">
+        
+        <!-- Form -->
+        <form id="service-booking-form" class="space-y-4">
+          <div>
+            <label for="modal-customer-name" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Your Full Name *</label>
+            <input type="text" id="modal-customer-name" required placeholder="e.g. John Doe" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="modal-customer-phone" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Phone Number *</label>
+              <input type="tel" id="modal-customer-phone" required placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+            <div>
+              <label for="modal-customer-city" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service Location *</label>
+              <input type="text" id="modal-customer-city" required placeholder="City / Zip Code" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+          </div>
+
+          <div>
+            <label for="modal-service-requirement" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service / Power Requirement</label>
+            <input type="text" id="modal-service-requirement" placeholder="e.g. Generator Repair / 5 kVA Inverter Installation" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div>
+            <label for="modal-service-notes" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Additional Issue Details</label>
+            <textarea id="modal-service-notes" rows="2" placeholder="Describe symptoms (e.g. not starting, voltage fluctuation, battery replacement)..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full py-3.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Confirm Service Booking</span>
+            </button>
+            <span class="block text-center text-[10px] text-slate-500 dark:text-slate-400 mt-2 font-mono">
+              Technician schedule will be confirmed via SMS/Phone within 15 minutes.
+            </span>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="booking-success-message" class="hidden text-center py-8 space-y-4">
+          <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center text-2xl mx-auto">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 dark:text-white font-heading">Service Request Confirmed!</h4>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+            Your booking request has been logged into our dispatcher queue. An OEM certified engineer will contact you shortly.
+          </p>
+          <div class="pt-2">
+            <button type="button" data-modal-close="booking-modal" class="px-6 py-2.5 rounded-lg btn-secondary text-xs font-bold">
+              Done
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       SCROLL TO TOP (UP ARROW) BUTTON
+       ========================================================================= -->
+  <button type="button" id="scroll-to-top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-xl shadow-red-600/35 border border-red-500/50 flex items-center justify-center opacity-0 invisible translate-y-4 focus:outline-none" aria-label="Scroll to top" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-sm sm:text-base"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,2892 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerCore — Generator & Inverter Service Center | Product Showroom</title>
+  <meta name="description" content="Explore certified power backup equipment: silent residential generators, pure sine wave inverters, LiFePO4 lithium batteries, and heavy industrial gensets.">
+  
+  <!-- Favicon (Matching Lightning Bolt Icon in Tab Title) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23DC2626'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            amber: {
+              400: '#EF4444',
+              500: '#DC2626',
+              600: '#991B1B',
+            },
+            sky: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            blue: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            burgundy: {
+              500: '#881337',
+              600: '#9F1239',
+              700: '#7F1D1D',
+            },
+            slate: {
+              50: '#FFF5F6',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#1E293B',
+              500: '#0F172A',
+              600: '#0F172A',
+              700: '#000000',
+              800: '#2D0F16',
+              850: '#1C0D12',
+              900: '#160A0E',
+              950: '#0F0A0C',
+            },
+            rose: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#F43F5E',
+              600: '#E11D48',
+              700: '#BE123C',
+              800: '#9F1239',
+              900: '#881337',
+              950: '#4C0519',
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'sans-serif'],
+            body: ['Inter', 'Manrope', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6.5 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-[#FFFFFF] dark:bg-[#0F0A0C] text-[#111827] dark:text-[#F9FAFB] antialiased selection:bg-[#DC2626] selection:text-white">
+
+  <!-- =========================================================================
+       GLOBAL PAGE PRELOADER
+       ========================================================================= -->
+  <div id="page-preloader" class="fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white dark:bg-[#0F0A0C] transition-all duration-500">
+    <!-- Ambient Glow Pulse -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center">
+      <div class="w-80 h-80 rounded-full bg-red-600/10 dark:bg-red-600/15 blur-3xl animate-pulse"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center text-center px-4 max-w-xs">
+      <!-- Animated Energy Core Icon -->
+      <div class="relative mb-5 flex items-center justify-center">
+        <!-- Rotating Orbit Ring -->
+        <div class="preloader-ring absolute w-20 h-20 rounded-full border-2 border-red-500/20 border-t-red-600 border-r-red-600 animate-spin"></div>
+        <!-- Pulsing Glow Ring -->
+        <div class="absolute w-16 h-16 rounded-2xl bg-red-600/20 animate-ping opacity-40"></div>
+        <!-- Core Brand Logo Box -->
+        <div class="relative w-12 h-12 rounded-xl bg-gradient-to-tr from-red-600 to-rose-600 flex items-center justify-center text-white shadow-xl shadow-red-600/30">
+          <i class="fa-solid fa-bolt-lightning text-xl text-white animate-bounce"></i>
+        </div>
+      </div>
+
+      <!-- Brand Text -->
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
+        <span class="text-xl font-heading font-extrabold tracking-tight text-slate-950 dark:text-white">Power<span class="text-red-600">Core</span></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      </div>
+
+      <!-- Monospace Loading Status -->
+      <div class="flex items-center gap-1.5 text-[11px] font-mono tracking-wider uppercase text-slate-500 dark:text-slate-400 mb-4">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
+        <span id="preloader-status-text">INITIALIZING POWER GRID...</span>
+      </div>
+
+      <!-- High-Tech Progress Bar -->
+      <div class="w-48 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden relative shadow-inner">
+        <div class="preloader-progress-bar h-full bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       GLOBAL HEADER (Single-Line Fixed Header — Kept Consistent)
+       ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-[#0F0A0C]/95 backdrop-blur-md border-b border-rose-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-14 2xl:h-16 header-inner-wrap flex items-center justify-between">
+      
+      <!-- Brand Logo & Identity -->
+      <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse shrink-0 group focus:outline-none" aria-label="PowerCore Home">
+        <div class="w-8 h-8 2xl:w-9 2xl:h-9 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
+          <i class="fa-solid fa-bolt-lightning text-base 2xl:text-lg text-white"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-base 2xl:text-lg font-extrabold tracking-tight text-slate-950 dark:text-white font-heading">Power<span class="text-amber-500">Core</span></span>
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+          </div>
+          <span class="hidden sm:block text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Generator &amp; Inverter Service Center</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden 2xl:flex items-center space-x-4 2xl:space-x-7 rtl:space-x-reverse text-xs 2xl:text-sm font-medium text-slate-700 dark:text-slate-300 desktop-nav" aria-label="Primary Navigation">
+        
+        <!-- Home with Dropdown -->
+        <div class="relative nav-dropdown-trigger group py-2">
+          <button type="button" class="flex items-center space-x-1 rtl:space-x-reverse hover:text-amber-500 transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="nav-dropdown absolute top-full left-0 rtl:left-auto rtl:right-0 w-48 pt-2 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 space-y-1">
+              <a href="index.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 1 (Editorial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+              <a href="home-2.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 2 (Industrial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">About</a>
+        <a href="products.html" class="text-amber-600 dark:text-amber-400 font-semibold" aria-current="page">Products</a>
+        <a href="services.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Services</a>
+        <a href="amc-plans.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">AMC Plans</a>
+        <a href="service-areas.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Service Areas</a>
+        <a href="contact.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header Controls & CTA (Desktop & Mobile) -->
+      <div class="flex items-center space-x-1.5 sm:space-x-3 rtl:space-x-reverse shrink-0">
+        
+        <!-- Theme Switcher (Dark/Light) -->
+        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all focus:outline-none shrink-0" aria-label="Toggle dark mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
+        </button>
+
+        <!-- RTL / LTR Switcher -->
+        <button type="button" class="rtl-toggle-btn px-2 sm:px-2.5 h-8 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 text-xs font-mono font-bold text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all flex items-center space-x-1 sm:space-x-1.5 rtl:space-x-reverse focus:outline-none shrink-0" aria-label="Switch text direction" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-globe text-[10px] sm:text-[11px] text-amber-500"></i>
+          <span class="rtl-toggle-label text-[11px] sm:text-xs">RTL</span>
+        </button>
+
+        <!-- Desktop Primary CTA -->
+        <button type="button" data-modal-open="booking-modal" class="hidden 2xl:inline-flex header-desktop-cta items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg btn-primary text-xs font-bold tracking-wide uppercase shadow-sm shrink-0">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book a Service</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" id="mobile-menu-btn" class="2xl:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:border-amber-500 focus:outline-none shrink-0" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-sm sm:text-base"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div id="mobile-drawer" class="2xl:hidden fixed inset-x-0 top-14 2xl:top-16 bg-white dark:bg-[#0F0A0C] border-b border-rose-200/80 dark:border-slate-800/80 shadow-2xl z-40 max-h-[calc(100dvh-3.5rem)] 2xl:max-h-[calc(100dvh-4rem)] overflow-y-auto">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2.5">
+        
+        <!-- Mobile Dropdown Accordion for Home -->
+        <div class="border-b border-slate-100 dark:border-slate-800/60 pb-2.5">
+          <button type="button" id="mobile-home-dropdown-btn" class="w-full flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white py-1">
+            <span class="flex items-center space-x-2 rtl:space-x-reverse text-amber-600 dark:text-amber-400">
+              <i class="fa-solid fa-house text-sm"></i>
+              <span>Home Options</span>
+            </span>
+            <i id="mobile-home-chevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="mobile-home-dropdown-list" class="hidden pl-6 rtl:pr-6 rtl:pl-0 pt-2.5 space-y-2">
+            <a href="index.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 1 (Editorial Layout)</a>
+            <a href="home-2.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 2 (Industrial Layout)</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">About PowerCore</a>
+        <a href="products.html" class="mobile-nav-link active block text-sm sm:text-base font-semibold border-b border-slate-100 dark:border-slate-800/60 pb-2.5" aria-current="page">Products (Generators &amp; Inverters)</a>
+        <a href="services.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service &amp; Repair</a>
+        <a href="amc-plans.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">AMC Annual Plans</a>
+        <a href="service-areas.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service Area Coverage</a>
+        <a href="contact.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 pb-1">Contact &amp; Emergency Hub</a>
+
+        <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-col space-y-2">
+          <button type="button" data-modal-open="booking-modal" class="w-full py-2.5 rounded-lg btn-primary text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse shadow-md shadow-amber-500/20">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Service Online</span>
+          </button>
+          
+          <a href="tel:18001234567" class="w-full py-2.5 rounded-lg border border-red-500/40 bg-red-500/10 text-red-600 dark:text-red-400 text-center text-xs font-bold flex items-center justify-center space-x-2 rtl:space-x-reverse">
+            <i class="fa-solid fa-phone-volume animate-pulse"></i>
+            <span>24/7 Emergency: 1800 123 4567</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+    
+    <!-- =========================================================================
+     SECTION 01 — PRODUCT SHOWCASE HERO
+     Large Product Visual + Technical Information Rail
+     ========================================================================= -->
+<section
+  class="relative overflow-hidden bg-slate-950 text-white border-b border-slate-800">
+
+  <!-- Background Grid -->
+  <div class="absolute inset-0 opacity-30 tech-grid-bg"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Top Navigation Label -->
+    <div class="pt-8 lg:pt-10 flex items-center justify-between">
+
+      <div class="flex items-center gap-3">
+        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+
+        <span
+          class="text-[10px] sm:text-xs font-mono font-bold
+                 tracking-[0.2em] text-amber-400 uppercase">
+          Power Equipment
+        </span>
+      </div>
+
+      <span
+        class="hidden sm:block text-[10px] font-mono
+               tracking-widest text-white">
+        SYSTEM / 01
+      </span>
+
+    </div>
+
+
+    <!-- Main Showcase -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12
+             min-h-[620px] lg:min-h-[680px]
+             items-center gap-8 lg:gap-12 py-12 lg:py-14">
+
+      <!-- Product Image -->
+      <div class="lg:col-span-7 relative order-2 lg:order-1">
+
+        <div
+          class="relative aspect-[4/3] overflow-hidden
+                 border border-slate-800 bg-slate-900">
+
+          <img
+            src="assets/images/p2.jpg"
+            alt="Power generation equipment"
+            class="w-full h-full object-cover">
+
+          <!-- Image Overlay -->
+          <div
+            class="absolute inset-0
+                   bg-gradient-to-t from-slate-950/80
+                   via-transparent to-transparent">
+          </div>
+
+
+          <!-- Image Technical Marker -->
+          <div
+            class="absolute top-5 left-5
+                   flex items-center gap-2
+                   px-3 py-2
+                   bg-slate-950/80
+                   border border-white/10
+                   backdrop-blur-sm">
+
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+
+            <span
+              class="text-[10px] font-mono
+                     tracking-widest text-slate-300">
+              AVAILABLE
+            </span>
+
+          </div>
+
+
+          <!-- Image Bottom Label -->
+          <div
+            class="absolute bottom-5 left-5 right-5
+                   flex items-end justify-between gap-5">
+
+            <div>
+
+              <span
+                class="text-[10px] font-mono
+                       tracking-widest text-amber-400 uppercase">
+                Featured System
+              </span>
+
+              <h2
+                class="mt-1 text-2xl sm:text-3xl
+                       font-bold font-heading text-white">
+                Industrial Generator
+              </h2>
+
+            </div>
+
+            <span
+              class="hidden sm:block text-[10px]
+                     font-mono text-slate">
+              PWR-GEN / 250
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Product Information -->
+      <div class="lg:col-span-5 order-1 lg:order-2">
+
+        <div class="max-w-xl">
+
+          <span
+            class="text-xs font-mono font-bold
+                   tracking-[0.18em] text-amber-400 uppercase">
+            Engineered Power Systems
+          </span>
+
+
+          <h1
+            class="mt-5 text-4xl sm:text-5xl lg:text-5xl
+                   font-black font-heading
+                   tracking-tight leading-[1.02] text-white">
+
+            Power that works
+            <span class="text-amber-400">
+              when it matters.
+            </span>
+
+          </h1>
+
+
+          <p
+            class="mt-6 text-sm sm:text-base
+                   leading-7 text-white max-w-lg">
+
+            Discover dependable generators, inverter systems, and
+            battery solutions engineered around your actual power
+            requirements.
+
+          </p>
+
+
+          <!-- Product Selector -->
+          <div class="mt-8">
+
+            <span
+              class="block mb-3 text-[10px]
+                     font-mono tracking-widest
+                     text-slate uppercase">
+              Select Equipment
+            </span>
+
+            <div class="flex flex-wrap gap-2">
+
+              <button
+                type="button"
+                class="px-4 py-3 text-xs font-bold
+                       border border-amber-500
+                       bg-amber-500 text-slate">
+                Generators
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 text-xs font-bold
+                       border border-slate-700
+                       text-slate-300
+                       hover:border-amber-500
+                       hover:text-amber-400 transition">
+                Inverters
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-3 text-xs font-bold
+                       border border-slate-700
+                       text-slate-300
+                       hover:border-amber-500
+                       hover:text-amber-400 transition">
+                Batteries
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- CTA -->
+          <div class="mt-8 flex flex-wrap gap-3">
+
+            <a
+              href="#discovery-section"
+              class="inline-flex items-center gap-3
+                     px-6 py-3.5
+                     bg-amber-500 text-slate-950
+                     text-xs font-bold uppercase
+                     tracking-wider
+                     hover:bg-amber-400 transition">
+
+              Explore Equipment
+
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+
+            </a>
+
+            <button
+              type="button"
+              data-modal-open="booking-modal"
+              class="inline-flex items-center gap-3
+                     px-6 py-3.5
+                     border border-slate-700
+                     text-white text-xs font-bold
+                     uppercase tracking-wider
+                     hover:border-amber-500
+                     hover:text-amber-400 transition">
+
+              <i class="fa-solid fa-headset"></i>
+
+              Talk to Expert
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Technical Information Rail -->
+    <div
+      class="border-t border-slate-800
+             grid grid-cols-2 md:grid-cols-4">
+
+      <!-- Item -->
+      <div
+        class="py-6 md:pr-6
+               border-b md:border-b-0
+               md:border-r border-slate-800">
+
+        <span
+          class="block text-[9px] font-mono
+                 tracking-widest text-slate uppercase">
+          Capacity
+        </span>
+
+        <span
+          class="block mt-2 text-sm font-bold text-white">
+          1 kVA — 250+ kVA
+        </span>
+
+      </div>
+
+
+      <!-- Item -->
+      <div
+        class="py-6 md:px-6
+               border-b md:border-b-0
+               md:border-r border-slate-800">
+
+        <span
+          class="block text-[9px] font-mono
+                 tracking-widest text-slate uppercase">
+          Applications
+        </span>
+
+        <span
+          class="block mt-2 text-sm font-bold text-white">
+          Home / Commercial
+        </span>
+
+      </div>
+
+
+      <!-- Item -->
+      <div
+        class="py-6 md:px-6
+               border-r border-slate-800">
+
+        <span
+          class="block text-[9px] font-mono
+                 tracking-widest text-slate uppercase">
+          Installation
+        </span>
+
+        <span
+          class="block mt-2 text-sm font-bold text-white">
+          Turnkey Setup
+        </span>
+
+      </div>
+
+
+      <!-- Item -->
+      <div class="py-6 md:pl-6">
+
+        <span
+          class="block text-[9px] font-mono
+                 tracking-widest text-slate uppercase">
+          Support
+        </span>
+
+        <span
+          class="block mt-2 text-sm font-bold text-emerald-400">
+          365 AMC Support
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- =========================================================================
+         SECTION 02 — FIND YOUR POWER SYSTEM
+         Interactive Product Discovery Interface (Large Selectable Rows - No Cards)
+         ========================================================================= -->
+    <section
+  id="discovery-section"
+  class="py-14 sm:py-16 lg:py-20 xl:py-24
+         bg-[#FFF5F6] dark:bg-[#12070A]
+         border-b border-rose-100 dark:border-[#2D0F16]">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- ================================================================
+         HEADER
+         ================================================================ -->
+    <div class="max-w-3xl mb-10 sm:mb-12">
+
+      <span
+        class="text-[10px] sm:text-xs
+               font-mono font-bold uppercase tracking-widest
+               text-amber-500">
+        02 // APPLICATION DISCOVERY
+      </span>
+
+      <h2
+        class="text-2xl sm:text-3xl lg:text-4xl
+               font-extrabold
+               text-slate-950 dark:text-white
+               font-heading
+               mt-2 tracking-tight">
+        Start With What You Need to Power.
+      </h2>
+
+      <p
+        class="text-sm sm:text-base
+               text-black dark:text-white
+               mt-2 leading-relaxed max-w-2xl">
+        Select your operational space below to inspect matched capacity
+        ratings, connected appliance lists, and recommended system architecture.
+      </p>
+
+    </div>
+
+
+    <!-- ================================================================
+         MAIN DISCOVERY AREA
+         BOTH SIDES SAME HEIGHT ON DESKTOP
+         ================================================================ -->
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12
+             gap-6 lg:gap-8
+             items-stretch">
+
+
+      <!-- ==============================================================
+           LEFT — APPLICATION SELECTOR
+           ============================================================== -->
+      <div
+        class="lg:col-span-5
+               flex flex-col
+               gap-3
+               h-full">
+
+
+        <!-- HOME -->
+        <div
+          class="product-discovery-row active
+                 flex-1
+                 min-h-[92px]
+                 p-4 sm:p-5
+                 rounded-2xl
+                 bg-white dark:bg-slate-900
+                 border border-slate-200 dark:border-slate-800
+                 cursor-pointer
+                 flex items-center justify-between
+                 gap-4
+                 transition-all duration-300
+                 hover:-translate-y-0.5
+                 hover:border-amber-400/50
+                 hover:shadow-lg
+                 hover:shadow-amber-500/5"
+          data-discovery-type="home">
+
+          <div
+            class="flex items-center
+                   space-x-3 rtl:space-x-reverse
+                   min-w-0">
+
+            <div
+              class="shrink-0
+                     w-10 h-10
+                     rounded-lg
+                     bg-amber-500/10
+                     text-amber-600
+                     dark:text-amber-400
+                     flex items-center justify-center
+                     font-bold">
+
+              <i class="fa-solid fa-house"></i>
+
+            </div>
+
+            <div class="min-w-0">
+
+              <h3
+                class="text-sm sm:text-base
+                       font-bold font-heading
+                       text-slate-900 dark:text-white
+                       truncate">
+                HOME RESIDENCE
+              </h3>
+
+              <span
+                class="block mt-0.5
+                       text-[10px] sm:text-xs
+                       font-mono
+                       text-slate-500
+                       truncate">
+                Apartments, Duplexes &amp; Villas
+              </span>
+
+            </div>
+
+          </div>
+
+          <span
+            class="shrink-0
+                   text-[10px] sm:text-xs
+                   font-mono font-bold
+                   text-amber-500">
+            1–10 kVA
+          </span>
+
+        </div>
+
+
+        <!-- RETAIL -->
+        <div
+          class="product-discovery-row
+                 flex-1
+                 min-h-[92px]
+                 p-4 sm:p-5
+                 rounded-2xl
+                 bg-white dark:bg-slate-900
+                 border border-slate-200 dark:border-slate-800
+                 cursor-pointer
+                 flex items-center justify-between
+                 gap-4
+                 transition-all duration-300
+                 hover:-translate-y-0.5
+                 hover:border-amber-400/50
+                 hover:shadow-lg
+                 hover:shadow-amber-500/5"
+          data-discovery-type="shop">
+
+          <div
+            class="flex items-center
+                   space-x-3 rtl:space-x-reverse
+                   min-w-0">
+
+            <div
+              class="shrink-0
+                     w-10 h-10
+                     rounded-lg
+                     bg-amber-500/10
+                     text-amber-600
+                     dark:text-amber-400
+                     flex items-center justify-center
+                     font-bold">
+
+              <i class="fa-solid fa-shop"></i>
+
+            </div>
+
+            <div class="min-w-0">
+
+              <h3
+                class="text-sm sm:text-base
+                       font-bold font-heading
+                       text-slate-900 dark:text-white
+                       truncate">
+                RETAIL SHOP &amp; CLINIC
+              </h3>
+
+              <span
+                class="block mt-0.5
+                       text-[10px] sm:text-xs
+                       font-mono
+                       text-slate-500
+                       truncate">
+                Stores, Pharmacies &amp; Labs
+              </span>
+
+            </div>
+
+          </div>
+
+          <span
+            class="shrink-0
+                   text-[10px] sm:text-xs
+                   font-mono font-bold
+                   text-amber-500">
+            5–25 kVA
+          </span>
+
+        </div>
+
+
+        <!-- OFFICE -->
+        <div
+          class="product-discovery-row
+                 flex-1
+                 min-h-[92px]
+                 p-4 sm:p-5
+                 rounded-2xl
+                 bg-white dark:bg-slate-900
+                 border border-slate-200 dark:border-slate-800
+                 cursor-pointer
+                 flex items-center justify-between
+                 gap-4
+                 transition-all duration-300
+                 hover:-translate-y-0.5
+                 hover:border-amber-400/50
+                 hover:shadow-lg
+                 hover:shadow-amber-500/5"
+          data-discovery-type="office">
+
+          <div
+            class="flex items-center
+                   space-x-3 rtl:space-x-reverse
+                   min-w-0">
+
+            <div
+              class="shrink-0
+                     w-10 h-10
+                     rounded-lg
+                     bg-amber-500/10
+                     text-amber-600
+                     dark:text-amber-400
+                     flex items-center justify-center
+                     font-bold">
+
+              <i class="fa-solid fa-building"></i>
+
+            </div>
+
+            <div class="min-w-0">
+
+              <h3
+                class="text-sm sm:text-base
+                       font-bold font-heading
+                       text-slate-900 dark:text-white
+                       truncate">
+                OFFICE &amp; WORKSPACE
+              </h3>
+
+              <span
+                class="block mt-0.5
+                       text-[10px] sm:text-xs
+                       font-mono
+                       text-slate-500
+                       truncate">
+                IT Racks, Desktops &amp; HVAC
+              </span>
+
+            </div>
+
+          </div>
+
+          <span
+            class="shrink-0
+                   text-[10px] sm:text-xs
+                   font-mono font-bold
+                   text-amber-500">
+            10–50+ kVA
+          </span>
+
+        </div>
+
+
+        <!-- INDUSTRIAL -->
+        <div
+          class="product-discovery-row
+                 flex-1
+                 min-h-[92px]
+                 p-4 sm:p-5
+                 rounded-2xl
+                 bg-white dark:bg-slate-900
+                 border border-slate-200 dark:border-slate-800
+                 cursor-pointer
+                 flex items-center justify-between
+                 gap-4
+                 transition-all duration-300
+                 hover:-translate-y-0.5
+                 hover:border-amber-400/50
+                 hover:shadow-lg
+                 hover:shadow-amber-500/5"
+          data-discovery-type="commercial">
+
+          <div
+            class="flex items-center
+                   space-x-3 rtl:space-x-reverse
+                   min-w-0">
+
+            <div
+              class="shrink-0
+                     w-10 h-10
+                     rounded-lg
+                     bg-amber-500/10
+                     text-amber-600
+                     dark:text-amber-400
+                     flex items-center justify-center
+                     font-bold">
+
+              <i class="fa-solid fa-industry"></i>
+
+            </div>
+
+            <div class="min-w-0">
+
+              <h3
+                class="text-sm sm:text-base
+                       font-bold font-heading
+                       text-slate-900 dark:text-white
+                       truncate">
+                COMMERCIAL &amp; INDUSTRIAL
+              </h3>
+
+              <span
+                class="block mt-0.5
+                       text-[10px] sm:text-xs
+                       font-mono
+                       text-slate-500
+                       truncate">
+                Elevators, Pumps &amp; Plants
+              </span>
+
+            </div>
+
+          </div>
+
+          <span
+            class="shrink-0
+                   text-[10px] sm:text-xs
+                   font-mono font-bold
+                   text-amber-500">
+            25–250+ kVA
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==============================================================
+           RIGHT — DYNAMIC SPECIFICATION PANEL
+           SAME HEIGHT AS LEFT COLUMN
+           ============================================================== -->
+      <div
+        class="lg:col-span-7
+               h-full
+               flex">
+
+        <div
+          class="w-full h-full
+                 bg-white dark:bg-slate-900
+                 p-5 sm:p-6 lg:p-7
+                 rounded-2xl
+                 border border-slate-200 dark:border-slate-800
+                 shadow-xl
+                 tech-corner
+                 flex flex-col
+                 justify-between
+                 gap-5">
+
+
+          <!-- ========================================================
+               TOP RANGE
+               ======================================================== -->
+          <div
+            class="flex flex-col
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-4
+                   border-b
+                   border-slate-200 dark:border-slate-800
+                   pb-4">
+
+            <div>
+
+              <span
+                class="text-[10px] sm:text-xs
+                       font-mono uppercase
+                       text-slate-500">
+                RECOMMENDED RANGE
+              </span>
+
+              <span
+                id="discovery-capacity-badge"
+                class="block
+                       text-2xl sm:text-3xl
+                       font-black font-mono
+                       text-amber-500
+                       mt-0.5">
+                1 – 10 kVA
+              </span>
+
+            </div>
+
+            <span
+              class="self-start sm:self-auto
+                     inline-flex
+                     px-3 py-1.5
+                     rounded-md
+                     bg-amber-500/10
+                     text-amber-600
+                     dark:text-amber-400
+                     font-mono
+                     text-[10px] sm:text-xs
+                     font-bold">
+              Tailored Sizing
+            </span>
+
+          </div>
+
+
+          <!-- ========================================================
+               SYSTEM INFORMATION
+               ======================================================== -->
+          <div>
+
+            <h4
+              id="discovery-system-title"
+              class="text-base sm:text-lg
+                     font-bold font-heading
+                     text-slate-900 dark:text-white">
+              Residential Pure Sine Inverter or Silent Petrol/Diesel Genset
+            </h4>
+
+            <p
+              id="discovery-system-desc"
+              class="text-xs sm:text-sm
+                     text-black dark:text-white
+                     leading-relaxed
+                     mt-2">
+              Designed for residential silent night backup, zero flicker
+              for sensitive computers, and automatic utility failover.
+            </p>
+
+          </div>
+
+
+          <!-- ========================================================
+               LOAD LIST
+               ======================================================== -->
+          <div class="space-y-3">
+
+            <span
+              class="text-[10px] sm:text-xs
+                     font-mono font-bold
+                     uppercase tracking-wider
+                     text-slate-900 dark:text-white
+                     block">
+              TYPICAL APPLIANCE &amp; EQUIPMENT LOADS:
+            </span>
+
+            <div
+              id="discovery-loads-list"
+              class="grid grid-cols-1 sm:grid-cols-2
+                     gap-x-5 gap-y-3">
+
+              <div
+                class="flex items-start
+                       space-x-2 rtl:space-x-reverse
+                       text-xs
+                       text-slate-700 dark:text-slate-300">
+
+                <i
+                  class="fa-solid fa-circle-check
+                         text-amber-500 mt-0.5 shrink-0">
+                </i>
+
+                <span>
+                  LED Lighting &amp; 4–6 Ceiling Fans
+                </span>
+
+              </div>
+
+
+              <div
+                class="flex items-start
+                       space-x-2 rtl:space-x-reverse
+                       text-xs
+                       text-slate-700 dark:text-slate-300">
+
+                <i
+                  class="fa-solid fa-circle-check
+                         text-amber-500 mt-0.5 shrink-0">
+                </i>
+
+                <span>
+                  Smart TVs, Gaming Consoles &amp; Wi-Fi 6 Routers
+                </span>
+
+              </div>
+
+
+              <div
+                class="flex items-start
+                       space-x-2 rtl:space-x-reverse
+                       text-xs
+                       text-slate-700 dark:text-slate-300">
+
+                <i
+                  class="fa-solid fa-circle-check
+                         text-amber-500 mt-0.5 shrink-0">
+                </i>
+
+                <span>
+                  Inverter Refrigerators &amp; RO Water Purifiers
+                </span>
+
+              </div>
+
+
+              <div
+                class="flex items-start
+                       space-x-2 rtl:space-x-reverse
+                       text-xs
+                       text-slate-700 dark:text-slate-300">
+
+                <i
+                  class="fa-solid fa-circle-check
+                         text-amber-500 mt-0.5 shrink-0">
+                </i>
+
+                <span>
+                  1.5-Ton Inverter AC
+                  (with 5+ kVA systems)
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- ========================================================
+               CTA
+               ======================================================== -->
+          <div
+            class="pt-4
+                   border-t
+                   border-slate-200 dark:border-slate-800
+                   flex flex-col
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-4">
+
+            <button
+              type="button"
+              id="discovery-prefill-btn"
+              data-modal-open="booking-modal"
+              data-prefill-service="HOME Backup System Consultation (1 – 10 kVA)"
+              class="w-full sm:w-auto
+                     px-5 sm:px-6 py-3
+                     rounded-lg
+                     btn-primary
+                     text-xs
+                     font-bold
+                     uppercase
+                     tracking-wider
+                     flex items-center
+                     justify-center
+                     space-x-2
+                     rtl:space-x-reverse
+                     transition-all duration-300
+                     hover:-translate-y-0.5">
+
+              <i class="fa-solid fa-bolt"></i>
+
+              <span>
+                Consult On This System →
+              </span>
+
+            </button>
+
+
+            <span
+              class="text-[10px] sm:text-xs
+                     font-mono
+                     text-slate-500
+                     text-center sm:text-right">
+              On-Site Load Audit Included
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+    <!-- =========================================================================
+     SECTION 03 — GENERATOR RANGE
+     FRESH MODEL — CAPACITY EXPLORER / ENGINEERING SCALE
+     ========================================================================= -->
+
+<section
+  id="generator-range-section"
+  class="relative overflow-hidden
+         py-14 sm:py-16 lg:py-20 xl:py-24
+         bg-[#FFF5F6] dark:bg-[#12070A]
+         border-b border-rose-100 dark:border-[#2D0F16]">
+
+  <!-- ================================================================
+       TECHNICAL BACKGROUND
+       ================================================================ -->
+  <div
+    class="absolute inset-0 pointer-events-none opacity-40 dark:opacity-20"
+    style="
+      background-image:
+        linear-gradient(rgba(120,60,70,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120,60,70,.045) 1px, transparent 1px);
+      background-size: 44px 44px;
+    ">
+  </div>
+
+  <div
+    class="absolute -top-32 -right-32
+           w-80 h-80
+           rounded-full
+           bg-amber-500/10
+           blur-3xl
+           pointer-events-none">
+  </div>
+
+
+  <div
+    class="relative z-10
+           max-w-7xl mx-auto
+           px-4 sm:px-6 lg:px-8">
+
+
+    <!-- ================================================================
+         HEADER
+         ================================================================ -->
+    <div
+      class="max-w-4xl
+             mb-10 sm:mb-12 lg:mb-14">
+
+      <div
+        class="flex items-center gap-3 mb-4">
+
+        <span
+          class="text-[10px] sm:text-xs
+                 font-mono font-bold
+                 tracking-[0.2em]
+                 text-amber-500">
+          03 //
+        </span>
+
+        <span
+          class="h-px w-10
+                 bg-amber-500/50">
+        </span>
+
+        <span
+          class="text-[10px] sm:text-xs
+                 font-mono font-bold
+                 uppercase
+                 tracking-[0.18em]
+                 text-slate-500 dark:text-slate-400">
+          GENERATOR CAPACITY EXPLORER
+        </span>
+
+      </div>
+
+
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl
+               font-extrabold
+               font-heading
+               tracking-tight
+               leading-[1.05]
+               text-slate-950 dark:text-white">
+
+        One Range.
+        <span class="text-amber-500">
+          Five Power Classes.
+        </span>
+
+      </h2>
+
+
+      <p
+        class="mt-4
+               max-w-2xl
+               text-sm sm:text-base
+               leading-7
+               text-black
+                     dark:text-white">
+
+        Explore our generator capacity spectrum from compact
+        residential backup to high-demand industrial power systems.
+        Select a range to inspect the recommended architecture.
+
+      </p>
+
+    </div>
+
+
+    <!-- ================================================================
+         CAPACITY EXPLORER
+         ================================================================ -->
+    <div
+      class="relative
+             rounded-3xl
+             border border-rose-200
+             dark:border-[#2D0F16]
+             bg-white/70
+             dark:bg-[#16080C]
+             overflow-hidden
+             shadow-xl
+             shadow-rose-950/5 dark:shadow-black/20">
+
+
+      <!-- ============================================================
+           TOP CONTROL BAR
+           ============================================================ -->
+      <div
+        class="px-5 sm:px-6 lg:px-8
+               py-4
+               border-b border-slate-200
+               dark:border-[#2D0F16]
+               flex flex-col
+               sm:flex-row
+               sm:items-center
+               sm:justify-between
+               gap-3">
+
+        <div
+          class="flex items-center gap-3">
+
+          <span
+            class="w-2 h-2
+                   rounded-full
+                   bg-emerald-500
+                   shadow-[0_0_0_4px_rgba(16,185,129,.10)]">
+          </span>
+
+          <span
+            class="text-[10px]
+                   font-mono font-bold
+                   uppercase
+                   tracking-widest
+                   text-slate-500 dark:text-slate-400">
+            POWER RANGE ACTIVE
+          </span>
+
+        </div>
+
+
+        <span
+          class="text-[10px]
+                 font-mono
+                 uppercase
+                 tracking-widest
+                 text-slate-400">
+          SELECT CAPACITY TO INSPECT
+        </span>
+
+      </div>
+
+
+      <!-- ============================================================
+           CAPACITY SCALE
+           ============================================================ -->
+      <div
+        class="px-5 sm:px-6 lg:px-10
+               pt-8 sm:pt-10
+               pb-6">
+
+
+        <div
+          class="relative">
+
+          <!-- Scale Line -->
+          <div
+            class="absolute
+                   left-0 right-0
+                   top-[19px]
+                   h-px
+                   bg-slate-300
+                   dark:bg-slate-700">
+          </div>
+
+
+          <!-- Active Progress -->
+          <div
+            id="generator-scale-progress"
+            class="absolute
+                   left-0
+                   top-[18px]
+                   h-[3px]
+                   w-0
+                   bg-amber-500
+                   transition-all
+                   duration-700
+                   ease-out">
+          </div>
+
+
+          <!-- Scale Items -->
+          <div
+            class="relative
+                   grid grid-cols-5
+                   gap-1">
+
+
+            <!-- 01 -->
+            <button
+              type="button"
+              class="generator-scale-point active
+                     group
+                     text-left
+                     focus:outline-none"
+              data-gen-range="01">
+
+              <span
+                class="generator-scale-dot
+                       relative z-10
+                       flex items-center justify-center
+                       w-10 h-10
+                       rounded-full
+                       border-2
+                       border-amber-500
+                       bg-[#FFF5F6]
+                       dark:bg-[#12070A]
+                       text-[10px]
+                       font-mono
+                       font-bold
+                       text-amber-500
+                       transition-all duration-300">
+                01
+              </span>
+
+              <span
+                class="block mt-4
+                       text-[11px] sm:text-xs
+                       font-mono font-bold
+                       text-slate-900
+                       dark:text-white">
+                1–5
+              </span>
+
+              <span
+                class="block mt-1
+                       text-[9px] sm:text-[10px]
+                       uppercase
+                       tracking-wide
+                       text-slate-500">
+                HOME
+              </span>
+
+            </button>
+
+
+            <!-- 02 -->
+            <button
+              type="button"
+              class="generator-scale-point
+                     group
+                     text-left
+                     focus:outline-none"
+              data-gen-range="02">
+
+              <span
+                class="generator-scale-dot
+                       relative z-10
+                       flex items-center justify-center
+                       w-10 h-10
+                       rounded-full
+                       border-2
+                       border-slate-300
+                       dark:border-slate-700
+                       bg-white
+                       dark:bg-[#12070A]
+                       text-[10px]
+                       font-mono
+                       font-bold
+                       text-slate-400
+                       transition-all duration-300">
+                02
+              </span>
+
+              <span
+                class="block mt-4
+                       text-[11px] sm:text-xs
+                       font-mono font-bold
+                       text-slate-900
+                       dark:text-white">
+                5–10
+              </span>
+
+              <span
+                class="block mt-1
+                       text-[9px] sm:text-[10px]
+                       uppercase
+                       tracking-wide
+                       text-slate-500">
+                SMALL BUSINESS
+              </span>
+
+            </button>
+
+
+            <!-- 03 -->
+            <button
+              type="button"
+              class="generator-scale-point
+                     group
+                     text-left
+                     focus:outline-none"
+              data-gen-range="03">
+
+              <span
+                class="generator-scale-dot
+                       relative z-10
+                       flex items-center justify-center
+                       w-10 h-10
+                       rounded-full
+                       border-2
+                       border-slate-300
+                       dark:border-slate-700
+                       bg-white
+                       dark:bg-[#12070A]
+                       text-[10px]
+                       font-mono
+                       font-bold
+                       text-slate-400
+                       transition-all duration-300">
+                03
+              </span>
+
+              <span
+                class="block mt-4
+                       text-[11px] sm:text-xs
+                       font-mono font-bold
+                       text-slate-900
+                       dark:text-white">
+                10–25
+              </span>
+
+              <span
+                class="block mt-1
+                       text-[9px] sm:text-[10px]
+                       uppercase
+                       tracking-wide
+                       text-slate-500">
+                OFFICE
+              </span>
+
+            </button>
+
+
+            <!-- 04 -->
+            <button
+              type="button"
+              class="generator-scale-point
+                     group
+                     text-left
+                     focus:outline-none"
+              data-gen-range="04">
+
+              <span
+                class="generator-scale-dot
+                       relative z-10
+                       flex items-center justify-center
+                       w-10 h-10
+                       rounded-full
+                       border-2
+                       border-slate-300
+                       dark:border-slate-700
+                       bg-white
+                       dark:bg-[#12070A]
+                       text-[10px]
+                       font-mono
+                       font-bold
+                       text-slate-400
+                       transition-all duration-300">
+                04
+              </span>
+
+              <span
+                class="block mt-4
+                       text-[11px] sm:text-xs
+                       font-mono font-bold
+                       text-slate-900
+                       dark:text-white">
+                25–100
+              </span>
+
+              <span
+                class="block mt-1
+                       text-[9px] sm:text-[10px]
+                       uppercase
+                       tracking-wide
+                       text-slate-500">
+                COMMERCIAL
+              </span>
+
+            </button>
+
+
+            <!-- 05 -->
+            <button
+              type="button"
+              class="generator-scale-point
+                     group
+                     text-left
+                     focus:outline-none"
+              data-gen-range="05">
+
+              <span
+                class="generator-scale-dot
+                       relative z-10
+                       flex items-center justify-center
+                       w-10 h-10
+                       rounded-full
+                       border-2
+                       border-slate-300
+                       dark:border-slate-700
+                       bg-white
+                       dark:bg-[#12070A]
+                       text-[10px]
+                       font-mono
+                       font-bold
+                       text-slate-400
+                       transition-all duration-300">
+                05
+              </span>
+
+              <span
+                class="block mt-4
+                       text-[11px] sm:text-xs
+                       font-mono font-bold
+                       text-slate-900
+                       dark:text-white">
+                100+
+              </span>
+
+              <span
+                class="block mt-1
+                       text-[9px] sm:text-[10px]
+                       uppercase
+                       tracking-wide
+                       text-slate-500">
+                INDUSTRIAL
+              </span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ============================================================
+           MAIN DETAIL AREA
+           ============================================================ -->
+      <div
+        class="grid grid-cols-1
+               lg:grid-cols-12
+               border-t
+               border-slate-200
+               dark:border-[#2D0F16]">
+
+
+        <!-- ==========================================================
+             VISUAL POWER PANEL
+             ========================================================== -->
+        <div
+          class="lg:col-span-5
+                 relative
+                 min-h-[320px]
+                 sm:min-h-[360px]
+                 lg:min-h-[430px]
+                 overflow-hidden
+                 bg-[#12070A]">
+
+
+          <!-- Generator Image -->
+          <img
+            id="generator-detail-image"
+            src="assets/images/p11.jpg"
+            alt="Generator power system"
+            class="absolute inset-0
+                   w-full h-full
+                   object-cover
+                   opacity-80
+                   transition-all
+                   duration-700">
+
+
+          <!-- Dark Overlay -->
+          <div
+            class="absolute inset-0
+                   bg-[#12070A]/65">
+          </div>
+
+
+          <!-- Technical Grid -->
+          <div
+            class="absolute inset-0 opacity-30"
+            style="
+              background-image:
+                linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px);
+              background-size: 30px 30px;
+            ">
+          </div>
+
+
+          <!-- Top Label -->
+          <div
+            class="absolute top-5 left-5 right-5
+                   flex items-center
+                   justify-between">
+
+            <span
+              class="px-3 py-1.5
+                     rounded-md
+                     bg-black/30
+                     backdrop-blur-md
+                     border border-white/10
+                     text-[9px]
+                     font-mono font-bold
+                     uppercase
+                     tracking-widest
+                     text-white">
+              GENERATOR / 03
+            </span>
+
+            <span
+              class="text-[9px]
+                     font-mono
+                     text-emerald-400">
+              SYSTEM READY
+            </span>
+
+          </div>
+
+
+          <!-- Center Capacity -->
+          <div
+            class="absolute
+                   inset-0
+                   flex items-center
+                   justify-center">
+
+            <div class="text-center">
+
+              <span
+                class="block
+                       text-[10px]
+                       font-mono
+                       uppercase
+                       tracking-[0.25em]
+                       text-white/60">
+                SELECTED OUTPUT
+              </span>
+
+              <span
+                id="gen-detail-capacity"
+                class="block
+                       mt-2
+                       text-5xl sm:text-6xl
+                       font-black
+                       font-mono
+                       tracking-tight
+                       text-amber-400">
+                1–5
+              </span>
+
+              <span
+                class="block mt-1
+                       text-xs
+                       font-mono
+                       text-white/70">
+                kVA CAPACITY
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Bottom Data -->
+          <div
+            class="absolute
+                   bottom-5 left-5 right-5
+                   flex items-end
+                   justify-between
+                   gap-4">
+
+            <div>
+
+              <span
+                class="block
+                       text-[9px]
+                       font-mono
+                       uppercase
+                       tracking-widest
+                       text-white/50">
+                APPLICATION
+              </span>
+
+              <span
+                id="gen-detail-application"
+                class="block mt-1
+                       text-xs
+                       font-mono
+                       font-bold
+                       text-white">
+                HOME BACKUP
+              </span>
+
+            </div>
+
+
+            <div class="text-right">
+
+              <span
+                class="block
+                       text-[9px]
+                       font-mono
+                       uppercase
+                       tracking-widest
+                       text-white/50">
+                NOISE
+              </span>
+
+              <span
+                id="gen-detail-noise"
+                class="block mt-1
+                       text-xs
+                       font-mono
+                       font-bold
+                       text-emerald-400">
+                &lt;58 dBA
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Corner Markers -->
+          <span
+            class="absolute top-3 left-3
+                   w-5 h-5
+                   border-t border-l
+                   border-amber-400/70">
+          </span>
+
+          <span
+            class="absolute top-3 right-3
+                   w-5 h-5
+                   border-t border-r
+                   border-amber-400/70">
+          </span>
+
+          <span
+            class="absolute bottom-3 left-3
+                   w-5 h-5
+                   border-b border-l
+                   border-amber-400/70">
+          </span>
+
+          <span
+            class="absolute bottom-3 right-3
+                   w-5 h-5
+                   border-b border-r
+                   border-amber-400/70">
+          </span>
+
+        </div>
+
+
+        <!-- ==========================================================
+             ENGINEERING INFORMATION
+             ========================================================== -->
+        <div
+          class="lg:col-span-7
+                 p-5 sm:p-7 lg:p-9
+                 bg-white
+                 dark:bg-slate-900">
+
+
+          <!-- Title -->
+          <div
+            class="flex flex-col
+                   sm:flex-row
+                   sm:items-start
+                   sm:justify-between
+                   gap-4
+                   pb-5
+                   border-b
+                   border-slate-200
+                   dark:border-slate-800">
+
+            <div>
+
+              <span
+                class="text-[10px]
+                       font-mono
+                       font-bold
+                       uppercase
+                       tracking-widest
+                       text-amber-500">
+                RECOMMENDED ARCHITECTURE
+              </span>
+
+              <h3
+                id="gen-detail-title"
+                class="mt-2
+                       text-xl sm:text-2xl
+                       font-black
+                       font-heading
+                       text-slate-950
+                       dark:text-white">
+                Compact Silent Residential Genset
+              </h3>
+
+            </div>
+
+
+            <span
+              id="gen-detail-fuel"
+              class="shrink-0
+                     self-start
+                     px-3 py-1.5
+                     rounded-md
+                     bg-amber-500/10
+                     text-amber-600
+                     dark:text-amber-400
+                     text-[10px]
+                     font-mono
+                     font-bold">
+              PETROL / LPG
+            </span>
+
+          </div>
+
+
+          <!-- Description -->
+          <p
+            id="gen-detail-benefit"
+            class="mt-5
+                   max-w-2xl
+                   text-sm
+                   leading-7
+                  text-black
+                     dark:text-white">
+            Ultra-portable compact footprint with acoustic
+            soundproofing for apartments, villas, and small clinics.
+          </p>
+
+
+          <!-- ========================================================
+               TECHNICAL DATA
+               ======================================================== -->
+          <div
+            class="mt-7
+                   grid grid-cols-2
+                   sm:grid-cols-4
+                   border-y
+                   border-slate-200
+                   dark:border-slate-800">
+
+
+            <div
+              class="py-4
+                     pr-4
+                     border-r
+                     border-slate-200
+                     dark:border-slate-800">
+
+              <span
+                class="block
+                       text-[9px]
+                       font-mono
+                       uppercase
+                       tracking-wider
+                       text-slate-400">
+                OUTPUT
+              </span>
+
+              <span
+                id="gen-detail-output"
+                class="block mt-1
+                       text-sm
+                       font-mono
+                       font-bold
+                       text-slate-900
+                       dark:text-white">
+                1–5 kVA
+              </span>
+
+            </div>
+
+
+            <div
+              class="py-4
+                     px-4
+                     border-r
+                     border-slate-200
+                     dark:border-slate-800">
+
+              <span
+                class="block
+                       text-[9px]
+                       font-mono
+                       uppercase
+                       tracking-wider
+                       text-slate-400">
+                PHASE
+              </span>
+
+              <span
+                id="gen-detail-phase"
+                class="block mt-1
+                       text-sm
+                       font-mono
+                       font-bold
+                       text-slate-900
+                       dark:text-white">
+                SINGLE
+              </span>
+
+            </div>
+
+
+            <div
+              class="py-4
+                     px-4
+                     border-r
+                     border-slate-200
+                     dark:border-slate-800">
+
+              <span
+                class="block
+                       text-[9px]
+                       font-mono
+                       uppercase
+                       tracking-wider
+                       text-slate-400">
+                FUEL
+              </span>
+
+              <span
+                id="gen-detail-fuel-short"
+                class="block mt-1
+                       text-sm
+                       font-mono
+                       font-bold
+                       text-slate-900
+                       dark:text-white">
+                LPG
+              </span>
+
+            </div>
+
+
+            <div
+              class="py-4
+                     pl-4">
+
+              <span
+                class="block
+                       text-[9px]
+                       font-mono
+                       uppercase
+                       tracking-wider
+                       text-slate-400">
+                USE
+              </span>
+
+              <span
+                id="gen-detail-use"
+                class="block mt-1
+                       text-sm
+                       font-mono
+                       font-bold
+                       text-slate-900
+                       dark:text-white">
+                RESIDENTIAL
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- ========================================================
+               BENEFIT + CTA
+               ======================================================== -->
+          <div
+            class="mt-7
+                   flex flex-col
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-5">
+
+
+            <div
+              class="flex items-start
+                     gap-3">
+
+              <span
+                class="mt-1
+                       flex items-center
+                       justify-center
+                       w-5 h-5
+                       rounded-full
+                       bg-emerald-500/10
+                       text-emerald-500
+                       text-[9px]">
+                <i class="fa-solid fa-check"></i>
+              </span>
+
+              <div>
+
+                <span
+                  class="block
+                         text-[10px]
+                         font-mono
+                         font-bold
+                         uppercase
+                         tracking-wider
+                         text-slate-900
+                         dark:text-white">
+                  TURNKEY DELIVERY
+                </span>
+
+                <span
+                  class="block mt-1
+                         text-[10px]
+                         text-slate-500">
+                  Installation • Testing • Commissioning
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="button"
+              id="gen-detail-cta"
+              data-modal-open="booking-modal"
+              data-prefill-service="1-5 kVA Compact Silent Genset"
+              class="w-full sm:w-auto
+                     px-6 py-3.5
+                     rounded-lg
+                     btn-primary
+                     text-xs
+                     font-bold
+                     uppercase
+                     tracking-wider
+                     flex items-center
+                     justify-center
+                     gap-2
+                     transition-all
+                     duration-300
+                     hover:-translate-y-0.5">
+
+              <i class="fa-solid fa-bolt"></i>
+
+              <span>
+                Request Quote
+              </span>
+
+              <span>
+                →
+              </span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ============================================================
+           BOTTOM ENGINEERING STRIP
+           ============================================================ -->
+      <div
+        class="border-t
+               border-slate-200
+               dark:border-[#2D0F16]
+               px-5 sm:px-6 lg:px-10
+               py-4
+               bg-[#FFF5F6]
+               dark:bg-[#12070A]">
+
+        <div
+          class="flex flex-wrap
+                 items-center
+                 justify-between
+                 gap-x-6 gap-y-3">
+
+          <span
+            class="text-[9px]
+                   font-mono
+                   uppercase
+                   tracking-[0.16em]
+                   text-black
+                     dark:text-white">
+            ENGINEERED FOR
+          </span>
+
+          <div
+            class="flex flex-wrap
+                   items-center
+                   gap-x-5 gap-y-2">
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     font-bold
+                     text-black
+                     dark:text-white">
+              LOAD ASSESSMENT
+            </span>
+
+            <span
+              class="hidden sm:block
+                     w-1 h-1
+                     rounded-full
+                     bg-amber-500">
+            </span>
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     font-bold
+                     text-black
+                     dark:text-white">
+              ATS INTEGRATION
+            </span>
+
+            <span
+              class="hidden sm:block
+                     w-1 h-1
+                     rounded-full
+                     bg-amber-500">
+            </span>
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     font-bold
+                    text-black
+                     dark:text-white">
+              INSTALLATION
+            </span>
+
+            <span
+              class="hidden sm:block
+                     w-1 h-1
+                     rounded-full
+                     bg-amber-500">
+            </span>
+
+            <span
+              class="text-[10px]
+                     font-mono
+                     font-bold
+                     text-black
+                     dark:text-white">
+              COMMISSIONING
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+    <!-- =========================================================================
+         SECTION 04 — INVERTER SYSTEMS
+         Inverter + Animated Power-Flow Visualization (Open Visual Nodes)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header & Segment Toggle -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div>
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">04 // SOLID-STATE BACKUP</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+              Quiet Backup. Smart Energy Management.
+            </h2>
+          </div>
+
+          <!-- Segment Toggle Buttons -->
+          <div class="flex items-center p-1 rounded-xl bg-slate-200 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-xs font-mono">
+            <button type="button" data-inverter-seg="home" class="inverter-segment-btn px-4 py-2 rounded-lg bg-amber-500 text-slate-950 font-bold transition-all focus:outline-none">HOME</button>
+            <button type="button" data-inverter-seg="shop" class="inverter-segment-btn px-4 py-2 rounded-lg text-slate-700 dark:text-slate-300 transition-all focus:outline-none">SHOP</button>
+            <button type="button" data-inverter-seg="office" class="inverter-segment-btn px-4 py-2 rounded-lg text-slate-700 dark:text-slate-300 transition-all focus:outline-none">OFFICE</button>
+          </div>
+        </div>
+
+        <!-- Animated Power Flow Architecture (Open Visual Nodes) -->
+        <div class="relative bg-white dark:bg-slate-900/90 rounded-2xl border border-slate-200 dark:border-slate-800 p-8 sm:p-10 overflow-hidden shadow-xl mb-8">
+          
+          <!-- Animated Power Flow Track -->
+          <div class="hidden lg:block absolute top-1/2 left-16 right-16 h-1 bg-slate-200 dark:bg-slate-800 -translate-y-1/2 z-0">
+            <div class="power-flow-particle"></div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+            
+            <!-- Node 1: GRID -->
+            <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center space-y-2">
+              <div class="w-10 h-10 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-lg mx-auto">
+                <i class="fa-solid fa-tower-broadcast"></i>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">GRID</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Incoming utility 230V / 415V electrical AC supply.</p>
+            </div>
+
+            <!-- Node 2: INVERTER -->
+            <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-950 border-2 border-amber-500 text-center space-y-2">
+              <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-500 flex items-center justify-center text-lg mx-auto">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-amber-500">INVERTER</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Pure sine wave DSP microprocessor conversion &amp; smart charging.</p>
+            </div>
+
+            <!-- Node 3: BATTERY -->
+            <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center space-y-2">
+              <div class="w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg mx-auto">
+                <i class="fa-solid fa-car-battery"></i>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">BATTERY</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Tubular deep-cycle or wall-mounted LiFePO4 energy bank.</p>
+            </div>
+
+            <!-- Node 4: LOAD -->
+            <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center space-y-2">
+              <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center text-lg mx-auto">
+                <i class="fa-solid fa-plug"></i>
+              </div>
+              <h3 class="text-sm font-bold font-heading text-slate-900 dark:text-white">LOAD</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Zero-millisecond continuous power to mission-critical appliances.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Dynamic Segment Configuration Strip -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+            <span class="text-slate-500 text-[10px] uppercase">SUGGESTED CAPACITY</span>
+            <span id="inverter-rating-text" class="text-amber-500 font-bold block">2 – 5 kVA Pure Sine Wave</span>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+            <span class="text-slate-500 text-[10px] uppercase">BATTERY CONFIGURATION</span>
+            <span id="inverter-battery-text" class="text-slate-900 dark:text-white font-bold block">1 – 4 Tubular or LiFePO4 Wall-Pack</span>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
+            <span class="text-slate-500 text-[10px] uppercase">TYPICAL APPLIANCES</span>
+            <span id="inverter-app-text" class="text-slate-700 dark:text-slate-300 font-medium block">Lights, Fans, Refrigerator, Smart TV, Wi-Fi router</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 05 — BATTERY MATCHING
+         Battery Chemistry Configuration (3 Horizontal Technical Rows - No Cards)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">05 // CHEMICAL ENERGY STORAGE</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            The Inverter Is Only Half the System.
+          </h2>
+          <p class="text-sm sm:text-base text-black dark:text-white mt-2">
+            Choose the right battery capacity and chemistry for your operational cycle and space footprint.
+          </p>
+        </div>
+
+        <!-- 3 Horizontal Technical Rows -->
+        <div class="space-y-4">
+          
+          <!-- Row 1: TUBULAR LEAD-ACID -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-amber-500/50 transition-all">
+            <div class="lg:w-1/4">
+              <span class="text-xs font-mono font-bold text-amber-500 uppercase">CHEMISTRY 01</span>
+              <h3 class="text-lg font-black font-heading text-slate-900 dark:text-white">TUBULAR LEAD-ACID</h3>
+              <span class="text-xs font-mono text-slate-500">100Ah – 240Ah C10/C20</span>
+            </div>
+            <div class="lg:w-1/2 space-y-1">
+              <span class="text-xs font-semibold text-slate-900 dark:text-white">Cost-Conscious Deep Discharge Workhorse</span>
+              <p class="text-xs text-black dark:text-white">
+                Heavy-duty positive spine plates withstand deep blackout discharge cycles. Requires distilled water top-up every 90 days. Ideal for residential homes and budget-conscious retail shops.
+              </p>
+            </div>
+            <div class="lg:w-1/4 flex lg:justify-end">
+              <button type="button" data-modal-open="booking-modal" data-prefill-service="Tubular Lead-Acid Battery Consultation" class="px-5 py-2.5 rounded-lg btn-secondary text-xs font-bold text-slate-800 dark:text-white hover:text-amber-500">
+                Select Tubular →
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2: SMF / VRLA -->
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-amber-500/50 transition-all">
+            <div class="lg:w-1/4">
+              <span class="text-xs font-mono font-bold text-amber-500 uppercase">CHEMISTRY 02</span>
+              <h3 class="text-lg font-black font-heading text-slate-900 dark:text-white">SMF / VRLA SEALED</h3>
+              <span class="text-xs font-mono text-slate-500">26Ah – 200Ah AGM Valve</span>
+            </div>
+            <div class="lg:w-1/2 space-y-1">
+              <span class="text-xs font-semibold text-slate-900 dark:text-white">Zero Maintenance Sealed Cleanrooms</span>
+              <p class="text-xs text-black dark:text-white">
+                Fully sealed with zero acid fumes or liquid top-up requirements. Perfect for office server rooms, diagnostic medical equipment, and compact utility closets.
+              </p>
+            </div>
+            <div class="lg:w-1/4 flex lg:justify-end">
+              <button type="button" data-modal-open="booking-modal" data-prefill-service="SMF / VRLA Battery Consultation" class="px-5 py-2.5 rounded-lg btn-secondary text-xs font-bold text-slate-800 dark:text-white hover:text-amber-500">
+                Select SMF →
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 3: LITHIUM (LiFePO4) -->
+          <div class="p-6 rounded-2xl bg-slate-950 dark:bg-slate-900 border-2 border-amber-500/80 flex flex-col lg:flex-row lg:items-center justify-between gap-6 text-white shadow-xl">
+            <div class="lg:w-1/4">
+              <span class="text-xs font-mono font-bold text-amber-400 uppercase">CHEMISTRY 03 // PREMIUM</span>
+              <h3 class="text-lg font-black font-heading text-white">LITHIUM (LiFePO4)</h3>
+              <span class="text-xs font-mono text-amber-400">48V / 5.12 kWh Wall-Mount</span>
+            </div>
+            <div class="lg:w-1/2 space-y-1">
+              <span class="text-xs font-semibold text-white">6,000+ Cycles &bull; 2-Hour Ultra-Fast Recharge</span>
+              <p class="text-xs text-slate-300">
+                Advanced BMS battery management, 3x longer lifespan, 70% space reduction, zero maintenance, and 10-year design life for premium residences and high-density offices.
+              </p>
+            </div>
+            <div class="lg:w-1/4 flex lg:justify-end">
+              <button type="button" data-modal-open="booking-modal" data-prefill-service="Lithium LiFePO4 Battery Consultation" class="px-5 py-2.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider">
+                Select Lithium →
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    
+
+   
+
+
+    <!-- =========================================================================
+         SECTION 08 — EQUIPMENT QUOTE & SIZING ENGINE
+         Interactive Showroom Quote Desk (Completely Bespoke - Distinct from About Page)
+         ========================================================================= -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-[#12070A] text-white border-b border-[#2D0F16] tech-grid-bg relative overflow-hidden">
+      
+      <!-- Ambient Radiance Background -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-500/20 via-slate-950/80 to-slate-950 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left: Technical Showroom Terminal & Sizing Specifications -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <div class="inline-flex items-center space-x-2 rtl:space-x-reverse px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 text-xs font-mono font-semibold text-amber-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 power-live-dot"></span>
+              <span>EQUIPMENT SHOWROOM DESK // ON-DEMAND SIZING</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-4xl font-black font-heading text-white tracking-tight leading-tight">
+              Need Custom kVA Sizing or Multi-Brand Fleet Pricing?
+            </h2>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Our factory-certified engineers calculate precise inductive surge margins, soundproof canopy boundaries, and fuel economics before issuing your turnkey proposal.
+            </p>
+
+            <!-- Technical Guarantees List -->
+            <div class="space-y-3 pt-2 font-mono text-xs text-slate-300">
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <i class="fa-solid fa-certificate text-amber-400"></i>
+                <span>Direct OEM Authorized Distributor (Cummins, Kirloskar, Honda)</span>
+              </div>
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                <span>100% Load-Tested Before Dispatch with Warranty Card</span>
+              </div>
+              <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                <i class="fa-solid fa-truck-fast text-emerald-400"></i>
+                <span>Same-Day Site Sizing &amp; Verification in Service Hubs</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-mono text-slate-500 uppercase block">DIRECT POWER DESK</span>
+                <a href="tel:18001234567" class="text-xl font-bold font-mono text-amber-400 hover:underline">
+                  1800 123 4567
+                </a>
+              </div>
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">
+                24/7 Available
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Right: Instant Equipment Quote Console (Interactive Form) -->
+          <div class="lg:col-span-7 bg-slate-900/95 p-6 sm:p-8 rounded-2xl border border-slate-800 tech-corner shadow-2xl">
+            
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+              <div>
+                <h3 class="text-base font-bold font-heading text-white">Instant Equipment Specification Request</h3>
+                <span class="text-[11px] font-mono text-slate-400">Receive accurate equipment model &amp; price estimate</span>
+              </div>
+              <i class="fa-solid fa-calculator text-amber-500 text-lg"></i>
+            </div>
+
+            <!-- Form -->
+            <form id="product-quote-form" class="space-y-4">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="pq-equipment-type" class="block text-xs font-mono uppercase text-slate-400 mb-1">Equipment Required *</label>
+                  <select id="pq-equipment-type" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-700 bg-slate-950 text-white text-xs sm:text-sm focus:border-amber-500 focus:outline-none">
+                    <option value="">Select equipment type...</option>
+                    <option value="Silent Inverter (1–5 kVA)">Pure Sine Wave Inverter (1–5 kVA)</option>
+                    <option value="Residential Generator (3–10 kVA)">Silent Residential Generator (3–10 kVA)</option>
+                    <option value="Commercial 3-Phase Genset (15–50 kVA)">Commercial 3-Phase Genset (15–50 kVA)</option>
+                    <option value="Industrial Fleet (50–250+ kVA)">Industrial Power Fleet (50–250+ kVA)</option>
+                    <option value="LiFePO4 Lithium Battery Rack">LiFePO4 Lithium Battery Wall-Mount / Rack</option>
+                    <option value="Full Hybrid Inverter + Genset Setup">Full Hybrid Inverter + Genset Package</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="pq-target-load" class="block text-xs font-mono uppercase text-slate-400 mb-1">Estimated Load / Space *</label>
+                  <select id="pq-target-load" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-700 bg-slate-950 text-white text-xs sm:text-sm focus:border-amber-500 focus:outline-none">
+                    <option value="Home (Apartment / Duplex)">Home (Apartment / Duplex)</option>
+                    <option value="Retail Shop / Clinic">Retail Shop / Clinic</option>
+                    <option value="Corporate Office Floor">Corporate Office Floor</option>
+                    <option value="Commercial Facility / Tower">Commercial Facility / Tower</option>
+                    <option value="Industrial Factory / Plant">Industrial Factory / Plant</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="pq-customer-name" class="block text-xs font-mono uppercase text-slate-400 mb-1">Full Name *</label>
+                  <input type="text" id="pq-customer-name" required placeholder="e.g. David Miller" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-700 bg-slate-950 text-white text-xs sm:text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+                <div>
+                  <label for="pq-customer-phone" class="block text-xs font-mono uppercase text-slate-400 mb-1">Phone Number *</label>
+                  <input type="tel" id="pq-customer-phone" required placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-700 bg-slate-950 text-white text-xs sm:text-sm focus:border-amber-500 focus:outline-none">
+                </div>
+              </div>
+
+              <div>
+                <label for="pq-location" class="block text-xs font-mono uppercase text-slate-400 mb-1">Installation City / Postal Zone</label>
+                <input type="text" id="pq-location" placeholder="City or Service Area" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-700 bg-slate-950 text-white text-xs sm:text-sm focus:border-amber-500 focus:outline-none">
+              </div>
+
+             <button
+  type="submit"
+  class="w-full
+         min-h-[52px]
+         px-4 sm:px-6
+         py-3 sm:py-3.5
+         rounded-lg
+         btn-primary
+         text-[10px] xs:text-xs sm:text-sm
+         font-bold
+         uppercase
+         tracking-wide sm:tracking-wider
+         flex
+         flex-col sm:flex-row
+         items-center
+         justify-center
+         gap-1.5 sm:gap-2
+         text-center
+         leading-tight
+         whitespace-normal
+         break-words
+         shadow-lg
+         shadow-amber-500/20
+         transition-all
+         duration-300"
+>
+  <i
+    class="fa-solid fa-file-invoice-dollar
+           shrink-0
+           text-sm sm:text-base"
+  ></i>
+
+  <span class="max-w-full">
+    Calculate &amp; Get Equipment Estimate
+    <span class="inline-block">→</span>
+  </span>
+</button>
+              <div class="pt-2 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Free On-Site Load Measurement</span>
+                <span>•</span>
+                <span>Zero Obligation Quotation</span>
+              </div>
+
+            </form>
+
+            <!-- Success State for Product Quote -->
+            <div id="product-quote-success" class="hidden text-center py-10 space-y-4">
+              <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mx-auto">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h4 class="text-xl font-bold font-heading text-white">Equipment Estimate Queued!</h4>
+              <p class="text-xs sm:text-sm text-slate-300 max-w-sm mx-auto">
+                Our application engineering team is preparing your custom kVA recommendation and pricing sheet. We will contact you within 15 minutes.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================================
+       GLOBAL FOOTER
+       Consistent across all pages with Brand Identity, Quick Links & 24/7 Hotline
+       ========================================================================= -->
+  <footer class="bg-[#0F0A0C] text-slate-400 text-sm border-t border-[#2D0F16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#2D0F16]">
+        
+        <!-- Col 1: Brand & Bio (5 cols on desktop) -->
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group focus:outline-none" aria-label="PowerCore Home">
+            <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-bolt-lightning text-xl text-white"></i>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+                <span class="text-xl font-extrabold text-white tracking-tight font-heading">Power<span class="text-amber-500">Core</span></span>
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Generator &amp; Inverter Service Center</span>
+            </div>
+          </a>
+
+          <p class="text-xs sm:text-sm text-white leading-relaxed">
+            Engineered power resilience for homes, commercial complexes, and retail establishments. Multi-brand certified sales, installation, repair, and round-the-clock emergency support.
+          </p>
+
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 power-live-dot"></span>
+            <span class="text-xs font-mono text-emerald-400">Dispatch Network Online (24/7 Ready)</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Navigation
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="index.html" class="hover:text-amber-400 text-amber-500 transition-colors text-white">Home 1 (Editorial)</a></li>
+            <li><a href="home-2.html" class="hover:text-amber-400 transition-colors text-white">Home 2 (Industrial)</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors text-white">About Us</a></li>
+            <li><a href="products.html" class="hover:text-amber-400 transition-colors text-white">Products</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition-colors text-white">Services</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">AMC Plans</a></li>
+            <li><a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Service Areas</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Services (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Core Services
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="services.html?service=sales" class="hover:text-amber-400 transition-colors text-white">Generator Sales &amp; Sizing</a></li>
+            <li><a href="services.html?service=repair" class="hover:text-amber-400 transition-colors text-white">Emergency Generator Repair</a></li>
+            <li><a href="services.html?service=inverter" class="hover:text-amber-400 transition-colors text-white">Pure Sine Wave Inverters</a></li>
+            <li><a href="services.html?service=battery" class="hover:text-amber-400 transition-colors text-white">Tubular &amp; Lithium Battery Solutions</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">Annual Maintenance Contracts (AMC)</a></li>
+            <li><a href="tel:18001234567" class="hover:text-red-400 text-red-400 transition-colors text-white">24/7 Breakdown Dispatch</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Emergency (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Emergency Hotline
+          </h3>
+          <div class="p-3 rounded-lg bg-[#1A0E12] border border-[#3B1219] space-y-2">
+            <span class="text-[11px] font-mono text-white block">24/7 TOLL-FREE CALL:</span>
+            <a href="tel:18001234567" class="text-lg font-bold text-amber-400 hover:text-amber-300 block font-mono">
+              1800 123 4567
+            </a>
+            <span class="text-[11px] text-white block">service@powercore.example</span>
+          </div>
+          <p class="text-xs text-white">
+            Headquarters &amp; Central Workshop:<br>
+            PowerCore Tech Park, Industrial Corridor Hub
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white">
+        <div>
+          © 2026 PowerCore. All Rights Reserved. Generator &amp; Inverter Service Center.
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Terms of Service</a>
+          <a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Sitemap</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       SERVICE BOOKING MODAL (Universal Modal)
+       ========================================================================= -->
+  <div id="booking-modal" class="modal-backdrop fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-content-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl w-full max-w-lg overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+        <div class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <div class="w-8 h-8 rounded bg-amber-500/20 text-amber-500 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Book a Service Visit</h3>
+            <span class="text-[10px] font-mono text-slate-500">Fast Certified Engineer Dispatch</span>
+          </div>
+        </div>
+        <button type="button" data-modal-close="booking-modal" class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg p-1.5 focus:outline-none" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6">
+        
+        <!-- Form -->
+        <form id="service-booking-form" class="space-y-4">
+          <div>
+            <label for="modal-customer-name" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Your Full Name *</label>
+            <input type="text" id="modal-customer-name" required placeholder="e.g. John Doe" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="modal-customer-phone" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Phone Number *</label>
+              <input type="tel" id="modal-customer-phone" required placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+            <div>
+              <label for="modal-customer-city" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service Location *</label>
+              <input type="text" id="modal-customer-city" required placeholder="City / Zip Code" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+          </div>
+
+          <div>
+            <label for="modal-service-requirement" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service / Power Requirement</label>
+            <input type="text" id="modal-service-requirement" placeholder="e.g. Generator Repair / 5 kVA Inverter Installation" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div>
+            <label for="modal-service-notes" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Additional Issue Details</label>
+            <textarea id="modal-service-notes" rows="2" placeholder="Describe symptoms (e.g. not starting, voltage fluctuation, battery replacement)..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full py-3.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Confirm Service Booking</span>
+            </button>
+            <span class="block text-center text-[10px] text-slate-500 dark:text-slate-400 mt-2 font-mono">
+              Technician schedule will be confirmed via SMS/Phone within 15 minutes.
+            </span>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="booking-success-message" class="hidden text-center py-8 space-y-4">
+          <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center text-2xl mx-auto">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 dark:text-white font-heading">Service Request Confirmed!</h4>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+            Your booking request has been logged into our dispatcher queue. An OEM certified engineer will contact you shortly.
+          </p>
+          <div class="pt-2">
+            <button type="button" data-modal-close="booking-modal" class="px-6 py-2.5 rounded-lg btn-secondary text-xs font-bold">
+              Done
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       SCROLL TO TOP (UP ARROW) BUTTON
+       ========================================================================= -->
+  <button type="button" id="scroll-to-top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-xl shadow-red-600/35 border border-red-500/50 flex items-center justify-center opacity-0 invisible translate-y-4 focus:outline-none" aria-label="Scroll to top" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-sm sm:text-base"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

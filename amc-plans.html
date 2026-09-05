@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerCore — Generator & Inverter Service Center | AMC Maintenance Plans</title>
+  <meta name="description" content="Explore PowerCore's preventive Annual Maintenance Contracts (AMC) for home generators, commercial diesel gensets, pure sine wave inverters, and battery banks.">
+  
+  <!-- Favicon (Matching Lightning Bolt Icon in Tab Title) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23DC2626'%3E%3Cpath d='M13 2L3 14h9l-1 8 10-12h-9l1-8z'/%3E%3C/svg%3E">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            amber: {
+              400: '#EF4444',
+              500: '#DC2626',
+              600: '#991B1B',
+            },
+            sky: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            blue: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#EF4444',
+              600: '#DC2626',
+              700: '#B91C1C',
+              800: '#991B1B',
+              900: '#881337',
+              950: '#4C0519',
+            },
+            burgundy: {
+              500: '#881337',
+              600: '#9F1239',
+              700: '#7F1D1D',
+            },
+            slate: {
+              50: '#FFF5F6',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#1E293B',
+              500: '#0F172A',
+              600: '#0F172A',
+              700: '#000000',
+              800: '#2D0F16',
+              850: '#1C0D12',
+              900: '#160A0E',
+              950: '#0F0A0C',
+            },
+            rose: {
+              50: '#FFF1F2',
+              100: '#FFE4E6',
+              200: '#FECDD3',
+              300: '#FDA4AF',
+              400: '#FB7185',
+              500: '#F43F5E',
+              600: '#E11D48',
+              700: '#BE123C',
+              800: '#9F1239',
+              900: '#881337',
+              950: '#4C0519',
+            }
+          },
+          fontFamily: {
+            heading: ['Plus Jakarta Sans', 'Manrope', 'sans-serif'],
+            body: ['Inter', 'Manrope', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6.5 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-[#FFFFFF] dark:bg-[#0F0A0C] text-[#111827] dark:text-[#F9FAFB] antialiased selection:bg-[#DC2626] selection:text-white">
+
+  <!-- =========================================================================
+       GLOBAL PAGE PRELOADER
+       ========================================================================= -->
+  <div id="page-preloader" class="fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white dark:bg-[#0F0A0C] transition-all duration-500">
+    <!-- Ambient Glow Pulse -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center">
+      <div class="w-80 h-80 rounded-full bg-red-600/10 dark:bg-red-600/15 blur-3xl animate-pulse"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center text-center px-4 max-w-xs">
+      <!-- Animated Energy Core Icon -->
+      <div class="relative mb-5 flex items-center justify-center">
+        <!-- Rotating Orbit Ring -->
+        <div class="preloader-ring absolute w-20 h-20 rounded-full border-2 border-red-500/20 border-t-red-600 border-r-red-600 animate-spin"></div>
+        <!-- Pulsing Glow Ring -->
+        <div class="absolute w-16 h-16 rounded-2xl bg-red-600/20 animate-ping opacity-40"></div>
+        <!-- Core Brand Logo Box -->
+        <div class="relative w-12 h-12 rounded-xl bg-gradient-to-tr from-red-600 to-rose-600 flex items-center justify-center text-white shadow-xl shadow-red-600/30">
+          <i class="fa-solid fa-bolt-lightning text-xl text-white animate-bounce"></i>
+        </div>
+      </div>
+
+      <!-- Brand Text -->
+      <div class="flex items-center space-x-1.5 rtl:space-x-reverse mb-2">
+        <span class="text-xl font-heading font-extrabold tracking-tight text-slate-950 dark:text-white">Power<span class="text-red-600">Core</span></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      </div>
+
+      <!-- Monospace Loading Status -->
+      <div class="flex items-center gap-1.5 text-[11px] font-mono tracking-wider uppercase text-slate-500 dark:text-slate-400 mb-4">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
+        <span id="preloader-status-text">INITIALIZING POWER GRID...</span>
+      </div>
+
+      <!-- High-Tech Progress Bar -->
+      <div class="w-48 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden relative shadow-inner">
+        <div class="preloader-progress-bar h-full bg-gradient-to-r from-red-600 via-rose-500 to-amber-500 rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       GLOBAL HEADER (Single-Line Fixed Header — Kept Consistent)
+       ========================================================================= -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 bg-white/95 dark:bg-[#0F0A0C]/95 backdrop-blur-md border-b border-rose-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-14 2xl:h-16 header-inner-wrap flex items-center justify-between">
+      
+      <!-- Brand Logo & Identity -->
+      <a href="index.html" class="flex items-center space-x-2.5 sm:space-x-3 rtl:space-x-reverse shrink-0 group focus:outline-none" aria-label="PowerCore Home">
+        <div class="w-8 h-8 2xl:w-9 2xl:h-9 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform shrink-0">
+          <i class="fa-solid fa-bolt-lightning text-base 2xl:text-lg text-white"></i>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+            <span class="text-base 2xl:text-lg font-extrabold tracking-tight text-slate-950 dark:text-white font-heading">Power<span class="text-amber-500">Core</span></span>
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+          </div>
+          <span class="hidden sm:block text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Generator &amp; Inverter Service Center</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden 2xl:flex items-center space-x-4 2xl:space-x-7 rtl:space-x-reverse text-xs 2xl:text-sm font-medium text-slate-700 dark:text-slate-300 desktop-nav" aria-label="Primary Navigation">
+        
+        <!-- Home with Dropdown -->
+        <div class="relative nav-dropdown-trigger group py-2">
+          <button type="button" class="flex items-center space-x-1 rtl:space-x-reverse hover:text-amber-500 transition-colors focus:outline-none" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="nav-dropdown absolute top-full left-0 rtl:left-auto rtl:right-0 w-48 pt-2 z-50">
+            <div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 space-y-1">
+              <a href="index.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 1 (Editorial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+              <a href="home-2.html" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span>Home 2 (Industrial)</span>
+                <i class="fa-solid fa-arrow-right text-[10px] opacity-40 rtl-flip" data-rtl-flip></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">About</a>
+        <a href="products.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Products</a>
+        <a href="services.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Services</a>
+        <a href="amc-plans.html" class="text-amber-600 dark:text-amber-400 font-semibold" aria-current="page">AMC Plans</a>
+        <a href="service-areas.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Service Areas</a>
+        <a href="contact.html" class="hover:text-amber-500 dark:hover:text-amber-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header Controls & CTA (Desktop & Mobile) -->
+      <div class="flex items-center space-x-1.5 sm:space-x-3 rtl:space-x-reverse shrink-0">
+        
+        <!-- Theme Switcher (Dark/Light) -->
+        <button type="button" class="theme-toggle-btn w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all focus:outline-none shrink-0" aria-label="Toggle dark mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-toggle-icon text-xs sm:text-sm"></i>
+        </button>
+
+        <!-- RTL / LTR Switcher -->
+        <button type="button" class="rtl-toggle-btn px-2 sm:px-2.5 h-8 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 text-xs font-mono font-bold text-slate-700 dark:text-slate-300 hover:border-amber-500 transition-all flex items-center space-x-1 sm:space-x-1.5 rtl:space-x-reverse focus:outline-none shrink-0" aria-label="Switch text direction" title="Toggle RTL / LTR">
+          <i class="fa-solid fa-globe text-[10px] sm:text-[11px] text-amber-500"></i>
+          <span class="rtl-toggle-label text-[11px] sm:text-xs">RTL</span>
+        </button>
+
+        <!-- Desktop Primary CTA -->
+        <button type="button" data-modal-open="booking-modal" class="hidden 2xl:inline-flex header-desktop-cta items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg btn-primary text-xs font-bold tracking-wide uppercase shadow-sm shrink-0">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book a Service</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" id="mobile-menu-btn" class="2xl:hidden w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-800 dark:text-slate-200 hover:border-amber-500 focus:outline-none shrink-0" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-sm sm:text-base"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu Overlay -->
+    <div id="mobile-drawer" class="2xl:hidden fixed inset-x-0 top-14 2xl:top-16 bg-white dark:bg-[#0F0A0C] border-b border-rose-200/80 dark:border-slate-800/80 shadow-2xl z-40 max-h-[calc(100dvh-3.5rem)] 2xl:max-h-[calc(100dvh-4rem)] overflow-y-auto">
+      <div class="max-w-7xl mx-auto px-4 py-4 space-y-2.5">
+        
+        <!-- Mobile Dropdown Accordion for Home -->
+        <div class="border-b border-slate-100 dark:border-slate-800/60 pb-2.5">
+          <button type="button" id="mobile-home-dropdown-btn" class="w-full flex items-center justify-between text-sm sm:text-base font-bold text-slate-900 dark:text-white py-1">
+            <span class="flex items-center space-x-2 rtl:space-x-reverse text-amber-600 dark:text-amber-400">
+              <i class="fa-solid fa-house text-sm"></i>
+              <span>Home Options</span>
+            </span>
+            <i id="mobile-home-chevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
+          </button>
+          <div id="mobile-home-dropdown-list" class="hidden pl-6 rtl:pr-6 rtl:pl-0 pt-2.5 space-y-2">
+            <a href="index.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 1 (Editorial Layout)</a>
+            <a href="home-2.html" class="mobile-nav-link block text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-amber-500">Home 2 (Industrial Layout)</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">About PowerCore</a>
+        <a href="products.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Products (Generators &amp; Inverters)</a>
+        <a href="services.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service &amp; Repair</a>
+        <a href="amc-plans.html" class="mobile-nav-link active block text-sm sm:text-base font-semibold border-b border-slate-100 dark:border-slate-800/60 pb-2.5" aria-current="page">AMC Annual Plans</a>
+        <a href="service-areas.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 border-b border-slate-100 dark:border-slate-800/60 pb-2.5">Service Area Coverage</a>
+        <a href="contact.html" class="mobile-nav-link block text-sm sm:text-base font-semibold text-slate-800 dark:text-slate-200 hover:text-amber-500 pb-1">Contact &amp; Emergency Hub</a>
+
+        <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-col space-y-2">
+          <button type="button" data-modal-open="booking-modal" class="w-full py-2.5 rounded-lg btn-primary text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse shadow-md shadow-amber-500/20">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span>Book a Service Online</span>
+          </button>
+          
+          <a href="tel:18001234567" class="w-full py-2.5 rounded-lg border border-red-500/40 bg-red-500/10 text-red-600 dark:text-red-400 text-center text-xs font-bold flex items-center justify-center space-x-2 rtl:space-x-reverse">
+            <i class="fa-solid fa-phone-volume animate-pulse"></i>
+            <span>24/7 Emergency: 1800 123 4567</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+    
+    <!-- =========================================================================
+         SECTION 01 — AMC HERO
+         "DON’T WAIT FOR FAILURE." (Maintenance Control Dial & Service Gauge)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 tech-grid-bg relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left: Oversized Typographic Opening -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <div class="inline-flex items-center space-x-2 rtl:space-x-reverse text-xs font-mono font-bold tracking-widest text-amber-500 uppercase">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+              <span>PREVENTIVE UPTIME ASSURANCE // AMC PROGRAM</span>
+            </div>
+
+            <h1 class="hero-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-slate-950 dark:text-white font-heading tracking-tight leading-[1.08]">
+              Don't Wait<br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600">
+                For Failure.
+              </span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+              Keep your generator, inverter and battery systems inspected, serviced, calibrated and ready before the next sudden power interruption strikes your home or facility.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#plans-section" class="px-7 py-4 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider shadow-lg shadow-amber-500/20 flex items-center space-x-2 rtl:space-x-reverse">
+                <span>Explore AMC Plans</span>
+                <i class="fa-solid fa-arrow-down text-xs"></i>
+              </a>
+
+              <button type="button" data-modal-open="booking-modal" data-prefill-service="AMC Contract Consultation" class="px-7 py-4 rounded-lg btn-secondary text-xs font-bold text-slate-800 dark:text-white hover:text-amber-500 flex items-center space-x-2 rtl:space-x-reverse">
+                <i class="fa-solid fa-user-gear text-amber-500"></i>
+                <span>Talk to a Technician</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Right: Circular Maintenance Dial / Service Gauge (No Cards) -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full border-2 border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/80 p-4 flex items-center justify-center shadow-2xl">
+              
+              <!-- Outer Rotating Calibration Ring -->
+              <div class="gauge-ring-outer absolute inset-2 rounded-full border border-dashed border-amber-500/40 pointer-events-none"></div>
+
+              <!-- 4 Service Gauge Markers -->
+              <span class="absolute top-3 font-mono text-[10px] font-bold text-amber-500 tracking-wider">01. INSPECT</span>
+              <span class="absolute right-3 font-mono text-[10px] font-bold text-amber-500 tracking-wider">02. SERVICE</span>
+              <span class="absolute bottom-3 font-mono text-[10px] font-bold text-amber-500 tracking-wider">03. TEST</span>
+              <span class="absolute left-3 font-mono text-[10px] font-bold text-amber-500 tracking-wider">04. READY</span>
+
+              <!-- Central Power Readiness Gauge Hub -->
+              <div class="w-44 h-44 rounded-full bg-slate-950 border-2 border-amber-500 text-white flex flex-col items-center justify-center text-center p-4 shadow-xl relative z-10">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 power-live-dot mb-1.5"></span>
+                <span class="text-xs font-mono uppercase text-slate-400">STATUS</span>
+                <span class="text-base font-black font-heading text-amber-400 leading-tight">POWER READINESS</span>
+                <span class="text-[10px] font-mono text-emerald-400 mt-1">365 DAYS ACTIVE</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 02 — WHY AMC?
+         "A POWER SYSTEM DOESN'T FAIL ALL AT ONCE." (Deterioration vs Prevention Paths)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left: Big Editorial Statement -->
+          <div class="lg:col-span-5 space-y-4">
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">02 // CAUSE &amp; EFFECT</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-slate-950 dark:text-white font-heading tracking-tight leading-tight">
+              Small Problems Become Expensive Failures When Nobody Checks Them.
+            </h2>
+            <p class="text-sm sm:text-base text-black dark:text-white leading-relaxed">
+              Power cuts happen during the worst possible weather or peak working hours. Regular preventive AMC visits eliminate creeping component failure before grid blackouts occur.
+            </p>
+          </div>
+
+          <!-- Right: Two Contrasting Pathways (No Cards) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Path A: Progressive Deterioration (WITHOUT AMC) -->
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border-l-4 border-red-500 shadow-md space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-red-500 uppercase">UNMANAGED DECAY // WITHOUT AMC</span>
+                <i class="fa-solid fa-triangle-exclamation text-red-500"></i>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs font-mono">
+                <div class="p-2 rounded bg-red-500/5 text-red-600 dark:text-red-400 font-semibold">01 Minor Wear</div>
+                <div class="p-2 rounded bg-red-500/5 text-red-600 dark:text-red-400 font-semibold">02 Performance Drop</div>
+                <div class="p-2 rounded bg-red-500/5 text-red-600 dark:text-red-400 font-semibold">03 Unstable Output</div>
+                <div class="p-2 rounded bg-red-500/5 text-red-600 dark:text-red-400 font-semibold">04 Component Damage</div>
+                <div class="p-2 rounded bg-red-500/10 text-red-600 dark:text-red-400 font-bold col-span-2 sm:col-span-1">05 Unexpected Failure</div>
+              </div>
+              <p class="text-xs text-slate-500 dark:text-slate-400">
+                Unnoticed battery dry-out, contaminated fuel filters, or stuck starting solenoids cause 85% of blackout startup failures.
+              </p>
+            </div>
+
+            <!-- Path B: Controlled Reliability (WITH AMC) -->
+            <div class="p-6 rounded-2xl bg-slate-950 text-white border-l-4 border-emerald-500 shadow-xl space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-emerald-400 uppercase">CONTROLLED ASSURANCE // WITH POWERCORE AMC</span>
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs font-mono">
+                <div class="p-2 rounded bg-slate-900 text-slate-200 border border-slate-800">01 Regular Inspection</div>
+                <div class="p-2 rounded bg-slate-900 text-slate-200 border border-slate-800">02 Early Detection</div>
+                <div class="p-2 rounded bg-slate-900 text-slate-200 border border-slate-800">03 Corrective Service</div>
+                <div class="p-2 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30 font-bold col-span-2 sm:col-span-1">04 Reliable Backup</div>
+              </div>
+              <p class="text-xs text-white">
+                Quarterly scheduled audits, calibrated Megger scans, and fluid renewals guarantee 99.8% first-crank startup readiness.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 03 — WHAT YOUR AMC COVERS
+         "ONE CONTRACT. A COMPLETE MAINTENANCE ROUTINE." (Structured Matrix - No Cards)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">03 // COVERAGE MATRIX</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            One Contract. A Complete Maintenance Routine.
+          </h2>
+          <p class="text-sm sm:text-base text-black dark:text-white mt-2">
+            Every PowerCore AMC contract systematically covers inspection, servicing, load testing, and advisory recommendations.
+          </p>
+        </div>
+
+        <!-- Structured Technical Table / Matrix -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xl">
+          
+          <div class="overflow-x-auto">
+            <table class="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
+              
+              <thead>
+                <tr class="border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-xs font-mono uppercase text-slate-500">
+                  <th class="py-4 px-6">SYSTEM</th>
+                  <th class="py-4 px-6">INSPECTION CHECKPOINTS</th>
+                  <th class="py-4 px-6">PREVENTIVE SERVICE</th>
+                  <th class="py-4 px-6">DIAGNOSTIC TESTING</th>
+                  <th class="py-4 px-6">RECOMMENDATION</th>
+                </tr>
+              </thead>
+
+              <tbody class="divide-y divide-slate-200 dark:divide-slate-800 font-medium">
+                
+                <tr class="hover:bg-amber-500/5 transition-colors">
+                  <td class="py-5 px-6 font-bold text-slate-900 dark:text-white">
+                    <span class="block text-amber-500 font-mono text-xs">01</span>
+                    GENERATOR
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 dark:text-slate-300">
+                    Engine lube, fuel filters, radiator coolant, starter motor, alternator belt, AMF panel wiring.
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 dark:text-slate-300">
+                    Lube oil renewal, fuel line de-aeration, radiator pressure flush, valve tappet adjustment.
+                  </td>
+                  <td class="py-5 px-6 text-emerald-600 dark:text-emerald-400 font-bold font-mono">
+                    ✓ 100% Step-Load Bank Test
+                  </td>
+                  <td class="py-5 px-6 text-slate-500 text-xs">
+                    Digital Health Score Log + Life Forecast
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-amber-500/5 transition-colors">
+                  <td class="py-5 px-6 font-bold text-slate-900 dark:text-white">
+                    <span class="block text-amber-500 font-mono text-xs">02</span>
+                    INVERTER
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 dark:text-slate-300">
+                    DSP micro-controller, pure sine wave PWM, MOSFET heatsink thermal paste, DC bus capacitor ESR.
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 dark:text-slate-300">
+                    Dry nitrogen dust purge, terminal busbar torque tightening, firmware calibration.
+                  </td>
+                  <td class="py-5 px-6 text-emerald-600 dark:text-emerald-400 font-bold font-mono">
+                    ✓ Sub-10ms Transfer Test
+                  </td>
+                  <td class="py-5 px-6 text-slate-500 text-xs">
+                    THD Harmonic Distortion Certificate
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-amber-500/5 transition-colors">
+                  <td class="py-5 px-6 font-bold text-slate-900 dark:text-white">
+                    <span class="block text-amber-500 font-mono text-xs">03</span>
+                    BATTERY BANK
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 dark:text-slate-300">
+                    Terminal post corrosion, inter-cell resistance, specific gravity across all tubular cells.
+                  </td>
+                  <td class="py-5 px-6 text-slate-600 dark:text-slate-300">
+                    Distilled water replenishment, petroleum jelly terminal sealing, equalization charge cycle.
+                  </td>
+                  <td class="py-5 px-6 text-emerald-600 dark:text-emerald-400 font-bold font-mono">
+                    ✓ Conductance Impedance Scan
+                  </td>
+                  <td class="py-5 px-6 text-slate-500 text-xs">
+                    Early Cell Failure Replacement Advisory
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+          </div>
+
+          <!-- Status Legend Strip -->
+          <div class="p-4 sm:p-5 bg-slate-50 dark:bg-slate-950 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 dark:border-slate-800 text-xs font-mono">
+            <div class="flex items-center space-x-4 rtl:space-x-reverse">
+              <span class="text-emerald-500 font-bold">✓ INCLUDED IN ALL PLANS</span>
+              <span class="text-amber-500 font-bold">○ INSPECTED AT EVERY VISIT</span>
+              <span class="text-slate-400">— AS REQUIRED BY LOAD PROFILE</span>
+            </div>
+            <span class="text-slate-500">ISO 9001:2015 Preventive Maintenance Standards</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 04 — MAINTENANCE CALENDAR
+         "YOUR POWER SYSTEM HAS A SCHEDULE." (12-Month Interactive Calendar)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">04 // 12-MONTH SCHEDULE</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            Your Power System Has a Schedule.
+          </h2>
+          <p class="text-sm sm:text-base text-black dark:text-white mt-2">
+            Click any month along the annual maintenance calendar to inspect seasonal service actions and diagnostic checks.
+          </p>
+        </div>
+
+        <!-- 12-Month Horizontal Selector -->
+        <div class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-2 mb-8">
+          <button type="button" data-month="jan" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">JAN</button>
+          <button type="button" data-month="feb" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">FEB</button>
+          <button type="button" data-month="mar" class="calendar-month-btn active py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">MAR</button>
+          <button type="button" data-month="apr" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">APR</button>
+          <button type="button" data-month="may" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">MAY</button>
+          <button type="button" data-month="jun" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">JUN</button>
+          <button type="button" data-month="jul" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">JUL</button>
+          <button type="button" data-month="aug" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">AUG</button>
+          <button type="button" data-month="sep" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">SEP</button>
+          <button type="button" data-month="oct" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">OCT</button>
+          <button type="button" data-month="nov" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">NOV</button>
+          <button type="button" data-month="dec" class="calendar-month-btn py-3 px-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-bold focus:outline-none text-center">DEC</button>
+        </div>
+
+        <!-- Dynamic Month Service Activity Detail Sheet -->
+        <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-6 shadow-xl tech-corner">
+          
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+            <h3 id="cal-active-month" class="text-lg font-bold font-heading text-slate-900 dark:text-white">
+              MARCH // PRE-SUMMER PEAK SURGE AUDIT
+            </h3>
+            <span id="cal-service-note" class="px-3 py-1 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 font-mono text-xs font-bold">
+              Pre-Summer Critical Load Preparedness Audit
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
+            
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-2">
+              <span class="text-xs font-mono font-bold text-amber-500 uppercase flex items-center space-x-1.5 rtl:space-x-reverse">
+                <i class="fa-solid fa-gears"></i>
+                <span>GENERATOR ROUTINE</span>
+              </span>
+              <p id="cal-gen-action" class="text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                Lube oil replacement (15W-40 CI-4), spin-on fuel filter renewal &amp; valve tappet check.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-2">
+              <span class="text-xs font-mono font-bold text-amber-500 uppercase flex items-center space-x-1.5 rtl:space-x-reverse">
+                <i class="fa-solid fa-microchip"></i>
+                <span>INVERTER ROUTINE</span>
+              </span>
+              <p id="cal-inv-action" class="text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                Full step-load inverter transfer simulation &amp; harmonic THD waveform capture.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-2">
+              <span class="text-xs font-mono font-bold text-emerald-500 uppercase flex items-center space-x-1.5 rtl:space-x-reverse">
+                <i class="fa-solid fa-car-battery"></i>
+                <span>BATTERY ROUTINE</span>
+              </span>
+              <p id="cal-bat-action" class="text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+                Conductance impedance measurement to identify aging or high-resistance cells.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 05 — CHOOSE THE RIGHT AMC
+         "MAINTENANCE SHOULD MATCH YOUR POWER DEMAND." (3 Full-Width Plan Bands)
+         ========================================================================= -->
+    <section id="plans-section" class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header & Dependency Interactive Filter -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">05 // TAILORED COVERAGE</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+              Maintenance Should Match Your Power Demand.
+            </h2>
+          </div>
+
+          <!-- Dependency Filter Buttons -->
+          <div class="space-y-1">
+            <span class="text-[11px] font-mono uppercase text-slate-500 block">WHAT DO YOU DEPEND ON BACKUP FOR?</span>
+            <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+              <button type="button" data-amc-dep="home" class="amc-dep-btn px-3 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold focus:outline-none">HOME</button>
+              <button type="button" data-amc-dep="shop" class="amc-dep-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 focus:outline-none">SHOP</button>
+              <button type="button" data-amc-dep="office" class="amc-dep-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 focus:outline-none">OFFICE</button>
+              <button type="button" data-amc-dep="critical" class="amc-dep-btn px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 focus:outline-none">CRITICAL OPERATIONS</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Full-Width Horizontal Plan Bands (No Cards) -->
+        <div class="space-y-4">
+          
+          <!-- Band 1: ESSENTIAL AMC -->
+          <div class="amc-plan-band highlighted p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6" data-plan-key="essential">
+            <div class="lg:w-1/4">
+              <span class="text-xs font-mono font-bold text-amber-500 uppercase">TIER 01 // RESIDENTIAL</span>
+              <h3 class="text-xl font-black font-heading text-slate-900 dark:text-white">ESSENTIAL AMC</h3>
+              <span class="text-xs font-mono text-slate-500">2 Scheduled Visits / Year</span>
+            </div>
+            <div class="lg:w-1/2 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              <p>For essential residential inverters, silent petrol/diesel generators, and tubular battery banks.</p>
+              <div class="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-slate-500 dark:text-slate-400">
+                <span>• Bi-Annual Multi-Point Health Audit</span>
+                <span>• Battery Specific Gravity Top-Up</span>
+                <span>• Standard &lt; 2-Hour Dispatch</span>
+              </div>
+            </div>
+            <div class="lg:w-1/4 flex lg:justify-end">
+              <button type="button" data-modal-open="booking-modal" data-prefill-service="Enroll: Essential Residential AMC Plan" class="px-6 py-3 rounded-lg btn-secondary text-xs font-bold text-slate-800 dark:text-white hover:text-amber-500">
+                Enroll Essential →
+              </button>
+            </div>
+          </div>
+
+          <!-- Band 2: PROFESSIONAL AMC -->
+          <div class="amc-plan-band p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6" data-plan-key="professional">
+            <div class="lg:w-1/4">
+              <span class="text-xs font-mono font-bold text-amber-500 uppercase">TIER 02 // COMMERCIAL PRO</span>
+              <h3 class="text-xl font-black font-heading text-slate-900 dark:text-white">PROFESSIONAL AMC</h3>
+              <span class="text-xs font-mono text-amber-500 font-bold">4 Quarterly Visits / Year</span>
+            </div>
+            <div class="lg:w-1/2 space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              <p>For busy retail shops, clinics, restaurant kitchens, and corporate office workstation floors.</p>
+              <div class="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-slate-500 dark:text-slate-400">
+                <span>• 100% Full Step-Load Bank Test</span>
+                <span>• Priority &lt; 45-Minute Emergency SLA</span>
+                <span>• Lube &amp; Filters Included</span>
+              </div>
+            </div>
+            <div class="lg:w-1/4 flex lg:justify-end">
+              <button type="button" data-modal-open="booking-modal" data-prefill-service="Enroll: Professional Commercial AMC Plan" class="px-6 py-3 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider">
+                Enroll Professional →
+              </button>
+            </div>
+          </div>
+
+          <!-- Band 3: CRITICAL POWER AMC -->
+          <div class="amc-plan-band p-6 sm:p-8 rounded-2xl bg-slate-950 text-white border-2 border-amber-500/80 shadow-2xl flex flex-col lg:flex-row lg:items-center justify-between gap-6" data-plan-key="critical-power">
+            <div class="lg:w-1/4">
+              <span class="text-xs font-mono font-bold text-amber-400 uppercase">TIER 03 // 24/7 ENTERPRISE</span>
+              <h3 class="text-xl font-black font-heading text-white">CRITICAL POWER AMC</h3>
+              <span class="text-xs font-mono text-emerald-400 font-bold">6 Bi-Monthly + 24/7 VIP SLA</span>
+            </div>
+            <div class="lg:w-1/2 space-y-2 text-xs sm:text-sm text-white">
+              <p class="text-white">For data server rooms, multi-story passenger elevators, diagnostic hospitals, and manufacturing lines.</p>
+              <div class="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-white">
+                <span>• Dedicated Mobile Van Dispatch SLA &lt; 30m</span>
+                <span>• Comprehensive Spares &amp; AMF Cover</span>
+                <span>• Oil Spectral Lab Diagnostics</span>
+              </div>
+            </div>
+            <div class="lg:w-1/4 flex lg:justify-end">
+              <button type="button" data-modal-open="booking-modal" data-prefill-service="Enroll: Critical Power Enterprise AMC Plan" class="px-6 py-3 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider shadow-lg shadow-amber-500/20">
+                Enroll Critical Power →
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 06 — WHAT HAPPENS DURING A VISIT
+         "EVERY SERVICE VISIT HAS A PURPOSE." (Service Inspection Document)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-[#FFF5F6] dark:bg-[#12070A] border-b border-rose-100 dark:border-[#2D0F16]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          
+          <!-- Left: Document-Style Inspection Log Sheet -->
+          <div class="lg:col-span-6 bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl space-y-4 tech-corner relative">
+            
+            <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+              <div>
+                <span class="text-xs font-mono font-bold text-amber-500 block">POWERCORE FIELD LOG</span>
+                <span class="text-sm font-bold text-slate-900 dark:text-white">AMC SERVICE VISIT REPORT</span>
+              </div>
+              <span class="verified-stamp px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 text-xs font-mono font-black">
+                [VERIFIED]
+              </span>
+            </div>
+
+            <!-- Log Header Parameters -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] font-mono text-slate-500 pb-3 border-b border-slate-100 dark:border-slate-800">
+              <div><span>VISIT:</span> <strong class="text-slate-800 dark:text-slate-200">#Q2-2026</strong></div>
+              <div><span>SYSTEM:</span> <strong class="text-slate-800 dark:text-slate-200">15 kVA 3-Ph</strong></div>
+              <div><span>TECH:</span> <strong class="text-slate-800 dark:text-slate-200">ENG-409</strong></div>
+              <div><span>STATUS:</span> <strong class="text-emerald-500 font-bold">100% PASS</strong></div>
+            </div>
+
+            <!-- Inspection 8-Point Checklist -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono">
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-700 dark:text-slate-300"><i class="fa-solid fa-circle-check text-emerald-500"></i><span>ENGINE LUBE &amp; FILTER</span></div>
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-700 dark:text-slate-300"><i class="fa-solid fa-circle-check text-emerald-500"></i><span>BATTERY SG (1.250 SG)</span></div>
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-700 dark:text-slate-300"><i class="fa-solid fa-circle-check text-emerald-500"></i><span>VOLTAGE 230V ±0.8%</span></div>
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-700 dark:text-slate-300"><i class="fa-solid fa-circle-check text-emerald-500"></i><span>AMF TRANSFER &lt; 8.2s</span></div>
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-700 dark:text-slate-300"><i class="fa-solid fa-circle-check text-emerald-500"></i><span>RADIATOR COOLANT pH</span></div>
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-700 dark:text-slate-300"><i class="fa-solid fa-circle-check text-emerald-500"></i><span>MEGGER INSULATION</span></div>
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-700 dark:text-slate-300"><i class="fa-solid fa-circle-check text-emerald-500"></i><span>SAFETY SHUTDOWNS</span></div>
+              <div class="flex items-center space-x-2 rtl:space-x-reverse text-slate-700 dark:text-slate-300"><i class="fa-solid fa-circle-check text-emerald-500"></i><span>100% LOAD BANK TEST</span></div>
+            </div>
+
+            <div class="pt-2 text-[11px] font-mono text-slate-500 text-center">
+              Digital Service Audit Certificate delivered instantly after every visit.
+            </div>
+
+          </div>
+
+          <!-- Right: Verification Statement & Service Sequence -->
+          <div class="lg:col-span-6 space-y-6">
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">06 // VERIFICATION STANDARD</span>
+            
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading tracking-tight leading-tight">
+              “We Don't Just Service the Machine. We Verify the System.”
+            </h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 font-mono text-xs text-center">
+              <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200">INSPECT</div>
+              <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200">MEASURE</div>
+              <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200">SERVICE</div>
+              <div class="p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 font-bold text-slate-800 dark:text-slate-200">TEST</div>
+              <div class="p-3 rounded-lg bg-amber-500 text-slate-950 font-black col-span-2 sm:col-span-1">REPORT</div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-black dark:text-white leading-relaxed">
+              Every maintenance technician follows strict standard operating procedures with calibrated multimeters, hydrometers, and resistive load banks.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 07 — AMC VALUE / COST OF DOWNTIME
+         "WHAT DOES ONE UNEXPECTED FAILURE COST YOU?" (Oversized Statistics & Data Vis)
+         ========================================================================= -->
+    <section class="py-14 sm:py-16 lg:py-20 xl:py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 stats-section-trigger">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-500">07 // ECONOMIC IMPACT</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white font-heading mt-2 tracking-tight">
+            What Does One Unexpected Failure Cost You?
+          </h2>
+          <p class="text-base sm:text-lg font-bold text-amber-500 mt-2 font-mono">
+            “Maintenance is cheaper than interruption.”
+          </p>
+        </div>
+
+        <!-- 4 Large Statistical Columns (No Cards) -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 border-y border-slate-200 dark:border-slate-800 py-10">
+          
+          <div class="space-y-1">
+            <span class="stat-counter text-4xl sm:text-5xl lg:text-6xl font-black font-mono text-red-500 tracking-tight" data-target="85" data-suffix="%">85%</span>
+            <span class="block text-xs font-mono font-bold uppercase text-slate-900 dark:text-white pt-2">PREVENTABLE</span>
+            <span class="block text-xs text-slate-500">Blackout failures avoided with regular AMC checkups</span>
+          </div>
+
+          <div class="space-y-1 border-l rtl:border-r rtl:border-l-0 border-slate-200 dark:border-slate-800 pl-6 rtl:pr-6 rtl:pl-0">
+            <span class="stat-counter text-4xl sm:text-5xl lg:text-6xl font-black font-mono text-slate-900 dark:text-white tracking-tight" data-target="35" data-suffix="%">35%</span>
+            <span class="block text-xs font-mono font-bold uppercase text-slate-900 dark:text-white pt-2">LONGER LIFESPAN</span>
+            <span class="block text-xs text-slate-500">Extended engine &amp; battery lifespan under contract</span>
+          </div>
+
+          <div class="space-y-1 border-t sm:border-t-0 lg:border-l rtl:lg:border-r rtl:lg:border-l-0 border-slate-200 dark:border-slate-800 pt-6 sm:pt-0 lg:pl-6 rtl:lg:pr-6 rtl:lg:pl-0">
+            <span class="stat-counter text-4xl sm:text-5xl lg:text-6xl font-black font-mono text-amber-500 tracking-tight" data-target="45" data-suffix="m">&lt;45m</span>
+            <span class="block text-xs font-mono font-bold uppercase text-slate-900 dark:text-white pt-2">PRIORITY SLA</span>
+            <span class="block text-xs text-slate-500">Guaranteed mobile breakdown arrival for AMC clients</span>
+          </div>
+
+          <div class="space-y-1 border-t sm:border-t-0 border-l rtl:border-r rtl:border-l-0 border-slate-200 dark:border-slate-800 pt-6 sm:pt-0 pl-6 rtl:pr-6 rtl:pl-0">
+            <span class="stat-counter text-4xl sm:text-5xl lg:text-6xl font-black font-mono text-emerald-500 tracking-tight" data-target="100" data-suffix="%">100%</span>
+            <span class="block text-xs font-mono font-bold uppercase text-slate-900 dark:text-white pt-2">OEM SPARES</span>
+            <span class="block text-xs text-slate-500">Zero duplicate spurious components used</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================================
+         SECTION 08 — AMC ACTIVATION CTA
+         "KEEP YOUR POWER READY ALL YEAR." (Circular READY Activation Closing)
+         ========================================================================= -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-[#12070A] text-white border-b border-[#2D0F16] tech-grid-bg relative overflow-hidden">
+      
+      <!-- Ambient Radiance Background -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/15 via-slate-950/90 to-slate-950 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
+        
+        <!-- Large Circular READY Indicator -->
+        <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full border-2 border-slate-800 bg-slate-900/90 p-4 flex items-center justify-center mb-10 shadow-2xl">
+          
+          <div class="gauge-ring-outer absolute inset-2 rounded-full border border-dashed border-emerald-500/40 pointer-events-none"></div>
+
+          <!-- 4 Maintenance States Around Ring -->
+          <span class="absolute top-2 font-mono text-[10px] font-bold text-slate-400">INSPECTED</span>
+          <span class="absolute right-2 font-mono text-[10px] font-bold text-slate-400">MAINTAINED</span>
+          <span class="absolute bottom-2 font-mono text-[10px] font-bold text-slate-400">TESTED</span>
+          <span class="absolute left-2 font-mono text-[10px] font-bold text-slate-400">SUPPORTED</span>
+
+          <div class="w-40 h-40 rounded-full bg-slate-950 border-2 border-emerald-500 text-white flex flex-col items-center justify-center p-3">
+            <span class="w-3 h-3 rounded-full bg-emerald-400 power-live-dot mb-1"></span>
+            <span class="text-[10px] font-mono text-slate-400">SYSTEM ASSURED</span>
+            <span class="text-xl font-black font-heading text-emerald-400">POWER READY</span>
+          </div>
+
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-tight max-w-3xl mb-4">
+          Keep Your Power Ready All Year.
+        </h2>
+
+        <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed mb-8">
+          Choose the maintenance coverage that matches your equipment and your dependency on backup power. Our factory engineers take care of the rest.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+          <button type="button" data-modal-open="booking-modal" data-prefill-service="Start Annual Maintenance Contract (AMC)" class="px-8 py-4 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider shadow-lg shadow-amber-500/20">
+            Start AMC Plan →
+          </button>
+
+         
+        </div>
+
+        <a href="tel:18001234567" class="text-xs font-mono font-bold text-amber-400 hover:underline">
+          Need Immediate Help? Call Emergency Support: 1800 123 4567
+        </a>
+
+        <div class="mt-8 pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-500">
+          GENERATOR • INVERTER • BATTERY • PREVENTIVE MAINTENANCE
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================================
+       GLOBAL FOOTER
+       Consistent across all pages with Brand Identity, Quick Links & 24/7 Hotline
+       ========================================================================= -->
+  <footer class="bg-[#0F0A0C] text-slate-400 text-sm border-t border-[#2D0F16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#2D0F16]">
+        
+        <!-- Col 1: Brand & Bio (5 cols on desktop) -->
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group focus:outline-none" aria-label="PowerCore Home">
+            <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+              <i class="fa-solid fa-bolt-lightning text-xl text-white"></i>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center space-x-1.5 rtl:space-x-reverse">
+                <span class="text-xl font-extrabold text-white tracking-tight font-heading">Power<span class="text-amber-500">Core</span></span>
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 power-live-dot" title="Service Network Active"></span>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Generator &amp; Inverter Service Center</span>
+            </div>
+          </a>
+
+          <p class="text-xs sm:text-sm text-white leading-relaxed">
+            Engineered power resilience for homes, commercial complexes, and retail establishments. Multi-brand certified sales, installation, repair, and round-the-clock emergency support.
+          </p>
+
+          <div class="flex items-center space-x-3 rtl:space-x-reverse pt-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500 power-live-dot"></span>
+            <span class="text-xs font-mono text-emerald-400">Dispatch Network Online (24/7 Ready)</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Navigation
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="index.html" class="hover:text-amber-400 text-amber-500 transition-colors text-white">Home 1 (Editorial)</a></li>
+            <li><a href="home-2.html" class="hover:text-amber-400 transition-colors text-white">Home 2 (Industrial)</a></li>
+            <li><a href="about.html" class="hover:text-amber-400 transition-colors text-white">About Us</a></li>
+            <li><a href="products.html" class="hover:text-amber-400 transition-colors text-white">Products</a></li>
+            <li><a href="services.html" class="hover:text-amber-400 transition-colors text-white">Services</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">AMC Plans</a></li>
+            <li><a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Service Areas</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Services (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Core Services
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="services.html?service=sales" class="hover:text-amber-400 transition-colors text-white">Generator Sales &amp; Sizing</a></li>
+            <li><a href="services.html?service=repair" class="hover:text-amber-400 transition-colors text-white">Emergency Generator Repair</a></li>
+            <li><a href="services.html?service=inverter" class="hover:text-amber-400 transition-colors text-white">Pure Sine Wave Inverters</a></li>
+            <li><a href="services.html?service=battery" class="hover:text-amber-400 transition-colors text-white">Tubular &amp; Lithium Battery Solutions</a></li>
+            <li><a href="amc-plans.html" class="hover:text-amber-400 transition-colors text-white">Annual Maintenance Contracts (AMC)</a></li>
+            <li><a href="tel:18001234567" class="hover:text-red-400 text-red-400 transition-colors text-white">24/7 Breakdown Dispatch</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Emergency (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            Emergency Hotline
+          </h3>
+          <div class="p-3 rounded-lg bg-[#1A0E12] border border-[#3B1219] space-y-2">
+            <span class="text-[11px] font-mono text-white block">24/7 TOLL-FREE CALL:</span>
+            <a href="tel:18001234567" class="text-lg font-bold text-amber-400 hover:text-amber-300 block font-mono">
+              1800 123 4567
+            </a>
+            <span class="text-[11px] text-white block">service@powercore.example</span>
+          </div>
+          <p class="text-xs text-white">
+            Headquarters &amp; Central Workshop:<br>
+            PowerCore Tech Park, Industrial Corridor Hub
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white">
+        <div>
+          © 2026 PowerCore. All Rights Reserved. Generator &amp; Inverter Service Center.
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors text-white">Terms of Service</a>
+          <a href="service-areas.html" class="hover:text-amber-400 transition-colors text-white">Sitemap</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       SERVICE BOOKING MODAL (Universal Modal)
+       ========================================================================= -->
+  <div id="booking-modal" class="modal-backdrop fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="modal-content-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl w-full max-w-lg overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-5 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+        <div class="flex items-center space-x-2.5 rtl:space-x-reverse">
+          <div class="w-8 h-8 rounded bg-amber-500/20 text-amber-500 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white font-heading">Book a Service Visit</h3>
+            <span class="text-[10px] font-mono text-slate-500">Fast Certified Engineer Dispatch</span>
+          </div>
+        </div>
+        <button type="button" data-modal-close="booking-modal" class="text-slate-400 hover:text-slate-700 dark:hover:text-white text-lg p-1.5 focus:outline-none" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6">
+        
+        <!-- Form -->
+        <form id="service-booking-form" class="space-y-4">
+          <div>
+            <label for="modal-customer-name" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Your Full Name *</label>
+            <input type="text" id="modal-customer-name" required placeholder="e.g. John Doe" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="modal-customer-phone" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Phone Number *</label>
+              <input type="tel" id="modal-customer-phone" required placeholder="+1 (555) 000-0000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+            <div>
+              <label for="modal-customer-city" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service Location *</label>
+              <input type="text" id="modal-customer-city" required placeholder="City / Zip Code" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+            </div>
+          </div>
+
+          <div>
+            <label for="modal-service-requirement" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Service / Power Requirement</label>
+            <input type="text" id="modal-service-requirement" placeholder="e.g. Generator Repair / 5 kVA Inverter Installation" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500">
+          </div>
+
+          <div>
+            <label for="modal-service-notes" class="block text-xs font-mono uppercase text-slate-500 dark:text-slate-400 mb-1">Additional Issue Details</label>
+            <textarea id="modal-service-notes" rows="2" placeholder="Describe symptoms (e.g. not starting, voltage fluctuation, battery replacement)..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white text-sm focus:border-amber-500"></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full py-3.5 rounded-lg btn-primary text-xs font-bold uppercase tracking-wider flex items-center justify-center space-x-2 rtl:space-x-reverse">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Confirm Service Booking</span>
+            </button>
+            <span class="block text-center text-[10px] text-slate-500 dark:text-slate-400 mt-2 font-mono">
+              Technician schedule will be confirmed via SMS/Phone within 15 minutes.
+            </span>
+          </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="booking-success-message" class="hidden text-center py-8 space-y-4">
+          <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center text-2xl mx-auto">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 dark:text-white font-heading">Service Request Confirmed!</h4>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-sm mx-auto">
+            Your booking request has been logged into our dispatcher queue. An OEM certified engineer will contact you shortly.
+          </p>
+          <div class="pt-2">
+            <button type="button" data-modal-close="booking-modal" class="px-6 py-2.5 rounded-lg btn-secondary text-xs font-bold">
+              Done
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       SCROLL TO TOP (UP ARROW) BUTTON
+       ========================================================================= -->
+  <button type="button" id="scroll-to-top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-red-600 hover:bg-red-700 text-white shadow-xl shadow-red-600/35 border border-red-500/50 flex items-center justify-center opacity-0 invisible translate-y-4 focus:outline-none" aria-label="Scroll to top" title="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-sm sm:text-base"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
