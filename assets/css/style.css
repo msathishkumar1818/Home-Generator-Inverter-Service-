@@ -165,6 +165,34 @@ h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.te
   color: #1E293B !important;
 }
 
+/* AMC Maintenance Detail Content Footer Spacing & Anti-Collision */
+.interval-detail-footer {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  margin-top: 1.25rem !important;
+  padding-top: 1rem !important;
+  border-top: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.dark .interval-detail-footer {
+  border-top-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+@media (min-width: 640px) {
+  .interval-detail-footer {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+  }
+}
+
+.interval-detail-footer a {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
 /* ==========================================================================
    Home 1 Section 04: Capacity Type Toggle Buttons (Generator vs Inverter)
    ========================================================================== */

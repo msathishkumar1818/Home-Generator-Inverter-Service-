@@ -579,10 +579,14 @@ document.addEventListener('DOMContentLoaded', () => {
           </li>
         `).join('')}
       </ul>
-      <div class="mt-5 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-        <span class="text-xs text-slate-700 dark:text-white">Includes 24/7 Priority Emergency Dispatch</span>
-        <a href="amc-plans.html" class="inline-flex items-center text-xs font-bold text-amber-500 hover:text-amber-600 transition-colors">
-          Compare AMC Tiers <i class="fa-solid fa-arrow-right ml-1.5 rtl:mr-1.5 rtl:ml-0" data-rtl-flip></i>
+      <div class="interval-detail-footer mt-5 pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+        <span class="text-xs text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-halved text-amber-500 text-xs flex-shrink-0"></i>
+          <span>Includes 24/7 Priority Emergency Dispatch</span>
+        </span>
+        <a href="amc-plans.html" class="inline-flex items-center text-xs font-bold text-amber-500 hover:text-amber-600 transition-colors flex-shrink-0">
+          <span>Compare AMC Tiers</span>
+          <i class="fa-solid fa-arrow-right ml-1.5 rtl:mr-1.5 rtl:ml-0 rtl-flip" data-rtl-flip></i>
         </a>
       </div>
     `;
