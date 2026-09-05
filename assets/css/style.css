@@ -2424,13 +2424,31 @@ textarea:focus-visible {
   }
 
 
+  /* Left-oriented labels for markers on right half of map */
+  #service-network-section .zone-label.zone-label-left,
+  #service-network-section [data-zone-key="zone-02"] .zone-label,
+  #service-network-section [data-zone-key="zone-04"] .zone-label {
+    left: auto !important;
+    right: 22px !important;
+  }
+
   /* ================================================================
      RTL
      ================================================================ */
   html[dir="rtl"]
   #service-network-section .zone-label {
-    left: auto;
-    right: 22px;
+    left: 22px;
+    right: auto;
+  }
+
+  html[dir="rtl"]
+  #service-network-section .zone-label.zone-label-left,
+  html[dir="rtl"]
+  #service-network-section [data-zone-key="zone-02"] .zone-label,
+  html[dir="rtl"]
+  #service-network-section [data-zone-key="zone-04"] .zone-label {
+    right: 22px !important;
+    left: auto !important;
   }
 
 
@@ -2443,12 +2461,30 @@ textarea:focus-visible {
       font-size: 7px;
       padding: 5px 6px;
       left: 17px;
+      right: auto;
+    }
+
+    #service-network-section .zone-label.zone-label-left,
+    #service-network-section [data-zone-key="zone-02"] .zone-label,
+    #service-network-section [data-zone-key="zone-04"] .zone-label {
+      right: 17px !important;
+      left: auto !important;
     }
 
     html[dir="rtl"]
     #service-network-section .zone-label {
-      right: 17px;
-      left: auto;
+      left: 17px;
+      right: auto;
+    }
+
+    html[dir="rtl"]
+    #service-network-section .zone-label.zone-label-left,
+    html[dir="rtl"]
+    #service-network-section [data-zone-key="zone-02"] .zone-label,
+    html[dir="rtl"]
+    #service-network-section [data-zone-key="zone-04"] .zone-label {
+      right: 17px !important;
+      left: auto !important;
     }
 
     #service-network-section .zone-dot {
